@@ -1,0 +1,78 @@
+{
+  "maaned": "november",
+  "utbetalingsdato": "30.11.2026",
+  "maanederIgjen": 2,
+  "engangskode": "482193",
+  "kontaktLonn": "Mona Lie (øvingsnavn), lønnskontoret",
+  "personer": {
+    "olena": {
+      "skattekortType": "frikort",
+      "fodselsnummer": "010190 00001",
+      "forventetInntektKort": 80000,
+      "inntektHittil": 80000,
+      "skattHittil": 0,
+      "tabellnummer": null,
+      "timelonn": 200,
+      "timerOrdinare": 128,
+      "overtidTimer": 4,
+      "overtidProsent": 50,
+      "kveldTimer": 0,
+      "kveldProsent": 0,
+      "stilling": "Butikkmedarbeider",
+      "stillingsprosent": 80,
+      "ansattnummer": "1001",
+      "kontonummerSkjult": "**** 4321",
+      "arbeidsgiver": {
+        "navn": "Havna Handel",
+        "adresse": "Havnegata 4, 6413 Molde (øving)",
+        "orgnr": "999 111 222"
+      }
+    },
+    "taras": {
+      "skattekortType": "tabell",
+      "fodselsnummer": "020285 00002",
+      "forventetInntektKort": 220000,
+      "inntektHittil": 180000,
+      "skattHittil": 28800,
+      "tabellnummer": "7100",
+      "timelonn": 210,
+      "timerOrdinare": 128,
+      "overtidTimer": 4,
+      "overtidProsent": 50,
+      "kveldTimer": 0,
+      "kveldProsent": 0,
+      "stilling": "Lagermedarbeider",
+      "stillingsprosent": 80,
+      "ansattnummer": "1002",
+      "kontonummerSkjult": "**** 8877",
+      "arbeidsgiver": {
+        "navn": "Fjordlager",
+        "adresse": "Industriveien 12, 6415 Molde (øving)",
+        "orgnr": "999 222 333"
+      }
+    },
+    "sofiia": {
+      "skattekortType": "tabell",
+      "fodselsnummer": "150392 00003",
+      "forventetInntektKort": 200000,
+      "inntektHittil": 160000,
+      "skattHittil": 24800,
+      "tabellnummer": "7107",
+      "timelonn": 205,
+      "timerOrdinare": 128,
+      "overtidTimer": 4,
+      "overtidProsent": 50,
+      "kveldTimer": 0,
+      "kveldProsent": 0,
+      "stilling": "Assistent",
+      "stillingsprosent": 80,
+      "ansattnummer": "1003",
+      "kontonummerSkjult": "**** 6655",
+      "arbeidsgiver": {
+        "navn": "Molde Omsorg",
+        "adresse": "Kirkegata 8, 6413 Molde (øving)",
+        "orgnr": "999 333 444"
+      }
+    }
+  }
+}

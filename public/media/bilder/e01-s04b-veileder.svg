@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Veileder ber om tydeligere melding">
+  <rect width="640" height="360" fill="#E8EEF2"/>
+  <circle cx="220" cy="160" r="70" fill="#005F73"/>
+  <circle cx="220" cy="140" r="32" fill="#E8C4A8"/>
+  <path d="M188 132c8-24 56-24 64 0" fill="#3A2A22"/>
+  <path d="M170 210c12-36 88-36 100 0v40H170z" fill="#D6E4EA"/>
+  <rect x="320" y="110" width="250" height="140" rx="16" fill="#fff" stroke="#EE9B00" stroke-width="3"/>
+  <text x="340" y="155" fill="#003057" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Kan du sende</text>
+  <text x="340" y="185" fill="#003057" font-family="Segoe UI, Arial" font-size="18">en tydeligere</text>
+  <text x="340" y="215" fill="#003057" font-family="Segoe UI, Arial" font-size="18">melding?</text>
+</svg>

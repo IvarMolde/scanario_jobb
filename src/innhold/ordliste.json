@@ -1,0 +1,488 @@
+{
+  "ord": [
+    {
+      "id": "veileder",
+      "ord": "veileder",
+      "forklaring": "En person som hjelper deg hos NAV. Hun eller han snakker med deg om jobb.",
+      "oversettelser": {
+        "uk": "консультант",
+        "en": "counsellor / adviser",
+        "ar": "مستشار"
+      }
+    },
+    {
+      "id": "mote",
+      "ord": "møte",
+      "forklaring": "Når to personer snakker sammen til en avtalt tid.",
+      "oversettelser": {
+        "uk": "зустріч",
+        "en": "meeting",
+        "ar": "اجتماع"
+      }
+    },
+    {
+      "id": "kalender",
+      "ord": "kalender",
+      "forklaring": "En oversikt over dager og avtaler. Du ser når du skal noe.",
+      "oversettelser": {
+        "uk": "календар",
+        "en": "calendar",
+        "ar": "تقويم"
+      }
+    },
+    {
+      "id": "melding",
+      "ord": "melding",
+      "forklaring": "En kort tekst du sender på telefonen, for eksempel en SMS.",
+      "oversettelser": {
+        "uk": "повідомлення",
+        "en": "message",
+        "ar": "رسالة"
+      }
+    },
+    {
+      "id": "bekrefte",
+      "ord": "bekrefte",
+      "forklaring": "Å si ja, at noe stemmer. For eksempel: Ja, jeg kommer til møtet.",
+      "oversettelser": {
+        "uk": "підтвердити",
+        "en": "to confirm",
+        "ar": "يؤكد"
+      }
+    },
+    {
+      "id": "hoflig",
+      "ord": "høflig",
+      "forklaring": "Når du er snill og respektfull i språket. Du sier hei, takk og vennlig hilsen.",
+      "oversettelser": {
+        "uk": "ввічливий",
+        "en": "polite",
+        "ar": "مهذب"
+      }
+    },
+    {
+      "id": "avtale",
+      "ord": "avtale",
+      "forklaring": "Når to personer er enige om tid og sted, for eksempel et møte.",
+      "oversettelser": {
+        "uk": "домовленість",
+        "en": "appointment",
+        "ar": "موعد"
+      }
+    },
+    {
+      "id": "klokka",
+      "ord": "klokka",
+      "forklaring": "Tiden på dagen. Klokka 10.00 er ti om formiddagen.",
+      "oversettelser": {
+        "uk": "година",
+        "en": "the clock / the time",
+        "ar": "الساعة"
+      }
+    },
+    {
+      "id": "gjerne",
+      "ord": "gjerne",
+      "forklaring": "Et høflig ord. «Jeg vil gjerne» betyr at du ønsker noe på en snill måte.",
+      "oversettelser": {
+        "uk": "охоче",
+        "en": "gladly / I would like",
+        "ar": "بكل سرور"
+      }
+    },
+    {
+      "id": "nav",
+      "ord": "NAV",
+      "forklaring": "Et kontor som hjelper mennesker med jobb og støtte. Her øver vi. Dette er ikke den ekte siden.",
+      "oversettelser": {
+        "uk": "NAV (служба зайнятості)",
+        "en": "NAV (the public employment service)",
+        "ar": "ناف (مكتب العمل)"
+      }
+    },
+    {
+      "id": "cv",
+      "ord": "CV",
+      "forklaring": "Et dokument som viser jobb, skole, språk og andre ting du kan.",
+      "oversettelser": { "uk": "резюме", "en": "CV / résumé", "ar": "سيرة ذاتية" }
+    },
+    {
+      "id": "erfaring",
+      "ord": "erfaring",
+      "forklaring": "Det du har gjort i jobb før. For eksempel: Jeg har jobbet i butikk.",
+      "oversettelser": { "uk": "досвід", "en": "experience", "ar": "خبرة" }
+    },
+    {
+      "id": "utdanning",
+      "ord": "utdanning",
+      "forklaring": "Skole og kurs du har gått på.",
+      "oversettelser": { "uk": "освіта", "en": "education", "ar": "تعليم" }
+    },
+    {
+      "id": "sertifikat",
+      "ord": "sertifikat",
+      "forklaring": "Et papir som viser at du kan noe, for eksempel førerkort eller førstehjelp.",
+      "oversettelser": { "uk": "сертифікат", "en": "certificate", "ar": "شهادة" }
+    },
+    {
+      "id": "egenskap",
+      "ord": "egenskap",
+      "forklaring": "Slik du er som person, for eksempel punktlig eller tålmodig.",
+      "oversettelser": { "uk": "риса", "en": "quality / trait", "ar": "صفة" }
+    },
+    {
+      "id": "punktlig",
+      "ord": "punktlig",
+      "forklaring": "Du kommer i god tid. Du er ikke for sen.",
+      "oversettelser": { "uk": "пунктуальний", "en": "punctual", "ar": "دقيق في المواعيد" }
+    },
+    {
+      "id": "referanse",
+      "ord": "referanse",
+      "forklaring": "En person som kan si at du er en god arbeidstaker. Ofte en tidligere leder.",
+      "oversettelser": { "uk": "рекомендація", "en": "reference", "ar": "مرجع" }
+    },
+    {
+      "id": "soknadsfrist",
+      "ord": "søknadsfrist",
+      "forklaring": "Siste dag du kan søke på jobben.",
+      "oversettelser": { "uk": "кінцевий термін", "en": "application deadline", "ar": "آخر موعد للتقديم" }
+    },
+    {
+      "id": "stillingsprosent",
+      "ord": "stillingsprosent",
+      "forklaring": "Hvor mye du skal jobbe. 100 % er heltid. 50 % er halv stilling.",
+      "oversettelser": { "uk": "відсоток ставки", "en": "percentage of full time", "ar": "نسبة الوظيفة" }
+    },
+    {
+      "id": "tiltredelse",
+      "ord": "tiltredelse",
+      "forklaring": "Når du skal begynne i jobben.",
+      "oversettelser": { "uk": "дата початку", "en": "start date", "ar": "تاريخ المباشرة" }
+    },
+    {
+      "id": "kontaktperson",
+      "ord": "kontaktperson",
+      "forklaring": "Personen i bedriften du kan spørre eller sende søknad til.",
+      "oversettelser": { "uk": "контактна особа", "en": "contact person", "ar": "شخص للاتصال" }
+    },
+    {
+      "id": "heltid",
+      "ord": "heltid",
+      "forklaring": "Du jobber hele uka, som regel 100 %.",
+      "oversettelser": { "uk": "повна зайнятість", "en": "full time", "ar": "دوام كامل" }
+    },
+    {
+      "id": "deltid",
+      "ord": "deltid",
+      "forklaring": "Du jobber mindre enn 100 %, for eksempel tre dager i uka.",
+      "oversettelser": { "uk": "неповна зайнятість", "en": "part time", "ar": "دوام جزئي" }
+    },
+    {
+      "id": "sokeord",
+      "ord": "søkeord",
+      "forklaring": "Ord du skriver når du leter etter jobb, for eksempel butikk eller lager.",
+      "oversettelser": { "uk": "пошукове слово", "en": "search word", "ar": "كلمة بحث" }
+    },
+    {
+      "id": "lagermedarbeider",
+      "ord": "lagermedarbeider",
+      "forklaring": "En som jobber på lager. Ordet er satt sammen av lager + medarbeider.",
+      "oversettelser": { "uk": "працівник складу", "en": "warehouse worker", "ar": "عامل مستودع" }
+    },
+    {
+      "id": "butikkmedarbeider",
+      "ord": "butikkmedarbeider",
+      "forklaring": "En som jobber i butikk. Ordet er satt sammen av butikk + medarbeider.",
+      "oversettelser": { "uk": "працівник магазину", "en": "shop assistant", "ar": "بائع" }
+    },
+    {
+      "id": "maa",
+      "ord": "må",
+      "forklaring": "Et krav. Du har ikke valg. For eksempel: Du må ha førerkort.",
+      "oversettelser": { "uk": "повинен", "en": "must", "ar": "يجب" }
+    },
+    {
+      "id": "kan",
+      "ord": "kan",
+      "forklaring": "Det er mulig. For eksempel: Du kan få opplæring.",
+      "oversettelser": { "uk": "може", "en": "can", "ar": "يمكن" }
+    },
+    {
+      "id": "bor",
+      "ord": "bør",
+      "forklaring": "Et råd, ikke et hardt krav. Det er lurt, men ikke helt nødvendig.",
+      "oversettelser": { "uk": "варто", "en": "should", "ar": "ينبغي" }
+    },
+    {
+      "id": "fordel",
+      "ord": "fordel",
+      "forklaring": "Noe som er bra å ha, men ikke et krav. «Det er en fordel» betyr at det hjelper.",
+      "oversettelser": { "uk": "перевага", "en": "an advantage", "ar": "ميزة" }
+    },
+    {
+      "id": "krav",
+      "ord": "krav",
+      "forklaring": "Noe jobben sier at du må ha eller må gjøre.",
+      "oversettelser": { "uk": "вимога", "en": "requirement", "ar": "متطلب" }
+    },
+    {
+      "id": "forerkort",
+      "ord": "førerkort",
+      "forklaring": "Et kort som viser at du kan kjøre bil. Klasse B er vanlig personbil.",
+      "oversettelser": { "uk": "водійські права", "en": "driving licence", "ar": "رخصة قيادة" }
+    },
+    {
+      "id": "reisetid",
+      "ord": "reisetid",
+      "forklaring": "Hvor lang tid du bruker med buss eller bil til jobben.",
+      "oversettelser": { "uk": "час у дорозі", "en": "travel time", "ar": "وقت التنقل" }
+    },
+    {
+      "id": "match",
+      "ord": "match",
+      "forklaring": "Når jobben passer til deg: kompetanse, egenskaper og reise.",
+      "oversettelser": { "uk": "відповідність", "en": "match", "ar": "تطابق" }
+    },
+    {
+      "id": "miljoarbeider",
+      "ord": "miljøarbeider",
+      "forklaring": "En som hjelper beboere i et bofellesskap. Sammensatt ord: miljø + arbeider.",
+      "oversettelser": { "uk": "соціальний працівник", "en": "environmental / social care worker", "ar": "عامل رعاية" }
+    },
+    {
+      "id": "aktivitet",
+      "ord": "aktivitet",
+      "forklaring": "Noe du skal gjøre, for eksempel søke en jobb. I Aktivitetsplanen er hver jobb en aktivitet.",
+      "oversettelser": { "uk": "активність", "en": "activity", "ar": "نشاط" }
+    },
+    {
+      "id": "frist",
+      "ord": "frist",
+      "forklaring": "Siste dag du kan søke. Etter fristen er det for sent.",
+      "oversettelser": { "uk": "кінцевий термін", "en": "deadline", "ar": "موعد نهائي" }
+    },
+    {
+      "id": "innen",
+      "ord": "innen",
+      "forklaring": "Senest på den dagen. Innen fredag betyr at du må være ferdig på fredag, ikke senere.",
+      "oversettelser": { "uk": "до", "en": "by / within", "ar": "بحلول" }
+    },
+    {
+      "id": "soknad",
+      "ord": "søknad",
+      "forklaring": "Teksten du sender til bedriften når du vil ha jobben.",
+      "oversettelser": { "uk": "заява", "en": "application", "ar": "طلب" }
+    },
+    {
+      "id": "fordi",
+      "ord": "fordi",
+      "forklaring": "Gir en grunn. Jeg søker fordi jeg har erfaring.",
+      "oversettelser": { "uk": "тому що", "en": "because", "ar": "لأن" }
+    },
+    {
+      "id": "formelt",
+      "ord": "formelt",
+      "forklaring": "Høflig og seriøst språk. Passer i søknad og e-post til en bedrift.",
+      "oversettelser": { "uk": "офіційно", "en": "formal", "ar": "رسمي" }
+    },
+    {
+      "id": "avslag",
+      "ord": "avslag",
+      "forklaring": "Bedriften sier nei. Du får ikke jobben denne gangen.",
+      "oversettelser": { "uk": "відмова", "en": "rejection", "ar": "رفض" }
+    },
+    {
+      "id": "intervju",
+      "ord": "intervju",
+      "forklaring": "Et møte der bedriften stiller spørsmål, og du forteller om deg selv.",
+      "oversettelser": { "uk": "співбесіда", "en": "interview", "ar": "مقابلة" }
+    },
+    {
+      "id": "talemelding",
+      "ord": "talemelding",
+      "forklaring": "En kort lydmelding på telefonen når du ikke tok telefonen.",
+      "oversettelser": { "uk": "голосове повідомлення", "en": "voicemail", "ar": "رسالة صوتية" }
+    },
+    {
+      "id": "anrop",
+      "ord": "anrop",
+      "forklaring": "Når noen ringer deg. Et tapt anrop betyr at du ikke tok telefonen.",
+      "oversettelser": { "uk": "дзвінок", "en": "call", "ar": "مكالمة" }
+    },
+    {
+      "id": "hilse",
+      "ord": "hilse",
+      "forklaring": "Å si hei. For eksempel: God morgen. Hyggelig å møte deg.",
+      "oversettelser": { "uk": "вітатися", "en": "to greet", "ar": "يحيي" }
+    },
+    {
+      "id": "arbeidstid",
+      "ord": "arbeidstid",
+      "forklaring": "Når du skal jobbe. For eksempel klokka 09.00 til 15.30.",
+      "oversettelser": { "uk": "робочий час", "en": "working hours", "ar": "ساعات العمل" }
+    },
+    {
+      "id": "holdeplass",
+      "ord": "holdeplass",
+      "forklaring": "Stedet der bussen stopper, og der du går på eller av.",
+      "oversettelser": { "uk": "зупинка", "en": "bus stop", "ar": "موقف حافلة" }
+    },
+    {
+      "id": "bytte",
+      "ord": "bytte",
+      "forklaring": "Å gå av én buss og ta en annen buss videre.",
+      "oversettelser": { "uk": "пересадка", "en": "transfer / change", "ar": "تبديل" }
+    },
+    {
+      "id": "forsinkelse",
+      "ord": "forsinkelse",
+      "forklaring": "Når bussen eller du kommer senere enn planlagt.",
+      "oversettelser": { "uk": "затримка", "en": "delay", "ar": "تأخير" }
+    },
+    {
+      "id": "arbeidsavtale",
+      "ord": "arbeidsavtale",
+      "forklaring": "Papiret som sier hvilken jobb du har, arbeidstid og prøvetid.",
+      "oversettelser": { "uk": "трудовий договір", "en": "employment contract", "ar": "عقد عمل" }
+    },
+    {
+      "id": "proveetid",
+      "ord": "prøvetid",
+      "forklaring": "En periode i starten av jobben. Her: seks måneder. I prøvetiden kan både du og arbeidsgiveren avslutte lettere.",
+      "oversettelser": { "uk": "випробувальний термін", "en": "probation period", "ar": "فترة تجربة" }
+    },
+    {
+      "id": "buffer",
+      "ord": "buffer",
+      "forklaring": "Ekstra tid, så du ikke kommer for sent. Gå hjemmefra ti minutter før du må.",
+      "oversettelser": { "uk": "запас часу", "en": "time buffer", "ar": "وقت إضافي" }
+    },
+    {
+      "id": "perfektum",
+      "ord": "perfektum",
+      "forklaring": "Verbform med har + verb. Jeg har jobbet. Vi bruker den om erfaring.",
+      "oversettelser": { "uk": "перфект", "en": "present perfect", "ar": "الماضي القريب" }
+    },
+    {
+      "id": "preteritum",
+      "ord": "preteritum",
+      "forklaring": "Verbform for slutt tid. Jeg jobbet i fjor. Tiden er ferdig og tydelig.",
+      "oversettelser": { "uk": "минулий час", "en": "past tense", "ar": "الماضي" }
+    },
+    {
+      "id": "inversjon",
+      "ord": "inversjon",
+      "forklaring": "Når sted eller tid kommer først, kommer verbet før jeg. I Ukraina jobbet jeg …",
+      "oversettelser": { "uk": "інверсія", "en": "inversion", "ar": "عكس الترتيب" }
+    },
+    {
+      "id": "logistikk",
+      "ord": "logistikk",
+      "forklaring": "Praktiske ting rundt jobben: buss, arbeidstid og førerkort.",
+      "oversettelser": { "uk": "логістика", "en": "logistics", "ar": "الخدمات اللوجستية" }
+    },
+    {
+      "id": "kompetanse",
+      "ord": "kompetanse",
+      "forklaring": "Det du kan: erfaring, utdanning og sertifikater.",
+      "oversettelser": { "uk": "компетентність", "en": "skills / competence", "ar": "كفاءة" }
+    },
+    {
+      "id": "brutto",
+      "ord": "brutto",
+      "forklaring": "Lønn før skatt og andre trekk. Det du tjener før noe blir trukket.",
+      "oversettelser": { "uk": "валовий", "en": "gross", "ar": "إجمالي" }
+    },
+    {
+      "id": "netto",
+      "ord": "netto",
+      "forklaring": "Det du får på konto. Brutto minus skatt og andre trekk.",
+      "oversettelser": { "uk": "чистий", "en": "net", "ar": "صافي" }
+    },
+    {
+      "id": "skattetrekk",
+      "ord": "skattetrekk",
+      "forklaring": "Penger arbeidsgiveren tar fra lønna og sender til skatt.",
+      "oversettelser": { "uk": "утримання податку", "en": "tax deduction", "ar": "اقتطاع الضريبة" }
+    },
+    {
+      "id": "fradrag",
+      "ord": "fradrag",
+      "forklaring": "Beløp som gjør at du betaler mindre skatt. For eksempel minstefradrag.",
+      "oversettelser": { "uk": "відрахування", "en": "deduction", "ar": "خصم" }
+    },
+    {
+      "id": "frikort",
+      "ord": "frikort",
+      "forklaring": "Skattekort når du tjener lite. Ingen trekk før 100 000 kr i året.",
+      "oversettelser": { "uk": "податкова картка без утримань", "en": "tax exemption card", "ar": "بطاقة إعفاء ضريبي" }
+    },
+    {
+      "id": "restskatt",
+      "ord": "restskatt",
+      "forklaring": "Skatt du må betale neste år, fordi det ble trukket for lite i år.",
+      "oversettelser": { "uk": "недоплата податку", "en": "back taxes", "ar": "ضريبة متبقية" }
+    },
+    {
+      "id": "skatteprosent",
+      "ord": "skatteprosent",
+      "forklaring": "Hvor stor del av lønna som går til skatt. For eksempel 20,8 prosent.",
+      "oversettelser": { "uk": "відсоток податку", "en": "tax percentage", "ar": "نسبة الضريبة" }
+    },
+    {
+      "id": "forventet_inntekt",
+      "ord": "forventet inntekt",
+      "forklaring": "Hvor mye du tror du tjener i hele året. Skattekortet bruker dette tallet.",
+      "oversettelser": { "uk": "очікуваний дохід", "en": "expected income", "ar": "الدخل المتوقع" }
+    },
+    {
+      "id": "skattekort",
+      "ord": "skattekort",
+      "forklaring": "Papiret som sier hvor mye skatt arbeidsgiveren skal trekke.",
+      "oversettelser": { "uk": "податкова картка", "en": "tax deduction card", "ar": "بطاقة الضريبة" }
+    },
+    {
+      "id": "trygdeavgift",
+      "ord": "trygdeavgift",
+      "forklaring": "En avgift av lønna. Den går til folketrygden. For lønn: 7,6 prosent.",
+      "oversettelser": { "uk": "внесок соцстраху", "en": "national insurance contribution", "ar": "رسوم التأمين" }
+    },
+    {
+      "id": "trinnskatt",
+      "ord": "trinnskatt",
+      "forklaring": "Ekstra skatt når lønna går over visse beløp. Jo mer du tjener, jo høyere trinn.",
+      "oversettelser": { "uk": "прогресивний податок", "en": "bracket tax", "ar": "ضريبة الشرائح" }
+    },
+    {
+      "id": "feriepenger",
+      "ord": "feriepenger",
+      "forklaring": "Penger du tjener til ferie. 10,2 prosent av lønna. Du får dem neste år.",
+      "oversettelser": { "uk": "відпускні", "en": "holiday pay", "ar": "أجر الإجازة" }
+    },
+    {
+      "id": "overtid",
+      "ord": "overtid",
+      "forklaring": "Timer du jobber etter vanlig arbeidstid. Du får mer betalt, ofte 50 prosent ekstra.",
+      "oversettelser": { "uk": "понаднормові", "en": "overtime", "ar": "عمل إضافي" }
+    },
+    {
+      "id": "timelonn",
+      "ord": "timelønn",
+      "forklaring": "Hva du tjener for én time. Brutto = timer ganger timelønn.",
+      "oversettelser": { "uk": "погодинна оплата", "en": "hourly wage", "ar": "أجر الساعة" }
+    },
+    {
+      "id": "svindel",
+      "ord": "svindel",
+      "forklaring": "Når noen lyver for å ta pengene dine. En falsk SMS kan være svindel.",
+      "oversettelser": { "uk": "шахрайство", "en": "scam / fraud", "ar": "احتيال" }
+    },
+    {
+      "id": "fagforening",
+      "ord": "fagforening",
+      "forklaring": "En organisasjon for ansatte. Du kan betale kontingent. Det kan gi fradrag.",
+      "oversettelser": { "uk": "профспілка", "en": "trade union", "ar": "نقابة" }
+    }
+  ]
+}

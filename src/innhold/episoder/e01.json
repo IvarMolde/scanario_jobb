@@ -1,0 +1,332 @@
+{
+  "id": "e01",
+  "nummer": 1,
+  "tittel": "Melding til NAV-veilederen",
+  "ingress": "Du skal møte veilederen i morgen. Først leser du kalenderen. Så sender du en høflig melding.",
+  "startSceneId": "e01-s01",
+  "tillatteFlagg": ["hoflig_melding", "uhoflig_sms"],
+  "ordIds": ["veileder", "mote", "kalender", "melding", "bekrefte", "hoflig", "avtale", "klokka", "gjerne", "nav"],
+  "oppsummering": [
+    { "tekst": "Leste kalenderen og fant møtet tirsdag klokka 10.00." },
+    { "tekst": "Sendte en høflig melding med hilsen, tydelig innhold og avslutning.", "visHvisFlagg": "hoflig_melding" },
+    { "tekst": "Sendte en melding som var uklar eller for kort. Linn ba om en tydeligere tekst.", "visHvisFlagg": "uhoflig_sms" },
+    { "tekst": "Øvde på verbformen «jeg kommer» i en SMS." }
+  ],
+  "scener": [
+    {
+      "id": "e01-s01",
+      "tittel": "Se i kalenderen",
+      "dag": "Mandag",
+      "klokkeslett": "09:15",
+      "app": "kalender",
+      "media": {
+        "bilde": "e01-s01-kalender.svg",
+        "bildeAlt": "En kalender med et møte merket tirsdag klokka 10.00.",
+        "lyd": "e01-s01-kalender.wav"
+      },
+      "tekst": "I dag er det mandag.\n\nDu har et {{mote|møte}} i morgen.\n\n{{veileder|Veilederen}} heter Linn Holm.\n\nMøtet er klokka 10.00.\n\nSe i {{kalender|kalenderen}}.",
+      "kalenderhendelse": {
+        "id": "mote-linn",
+        "tittel": "Møte med NAV-veileder Linn Holm",
+        "dag": "Tirsdag",
+        "tid": "10:00",
+        "sted": "NAV Molde (øvingsversjon)"
+      },
+      "valg": [
+        {
+          "id": "aapne-meldinger",
+          "tekst": "Åpne Meldinger",
+          "nesteSceneId": "e01-s02",
+          "tilbakemelding": "Bra. Nå skal du sende en melding til Linn."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e01-s01-su",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Møtet med Linn Holm er i dag.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Møtet er i morgen, tirsdag klokka 10.00. I dag er det mandag.",
+          "tilbakemeldingFeil": "Se i kalenderen en gang til. I dag er det mandag. Møtet står på tirsdag."
+        },
+        {
+          "type": "flervalg",
+          "id": "e01-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Når er møtet med Linn?",
+          "alternativer": [
+            { "id": "a", "tekst": "I dag klokka 09.15" },
+            { "id": "b", "tekst": "I morgen klokka 10.00" },
+            { "id": "c", "tekst": "I morgen klokka 12.00" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Kalenderen viser tirsdag klokka 10.00. Det er i morgen.",
+          "tilbakemeldingFeil": "Se på den gule avtalen i kalenderen. Dagen er tirsdag. Tiden er 10.00."
+        }
+      ]
+    },
+    {
+      "id": "e01-s02",
+      "tittel": "En høflig melding",
+      "dag": "Mandag",
+      "klokkeslett": "09:20",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e01-s02-meldinger.svg",
+        "bildeAlt": "En telefon med en tom meldingstråd til Linn Holm.",
+        "lyd": "e01-s02-melding.wav"
+      },
+      "tekst": "Du skal sende en {{melding}} til Linn.\n\nVær {{hoflig|høflig}}.\n\nBruk «Kunne du …» eller «Jeg vil {{gjerne}} …».",
+      "smsTraad": {
+        "kontakt": "Linn Holm",
+        "meldinger": []
+      },
+      "valg": [
+        {
+          "id": "skriv-melding",
+          "tekst": "Skriv meldingen",
+          "nesteSceneId": "e01-s03",
+          "tilbakemelding": "Nå velger du hilsen, innhold og avslutning."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "ordbank",
+          "id": "e01-s02-ob",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Kunne du _____ tiden for møtet?",
+          "ord": ["bekrefte", "glemme", "rope"],
+          "riktig": "bekrefte",
+          "tilbakemeldingRiktig": "Riktig. «Kunne du bekrefte» er en høflig måte å spørre på. Modalverbet kunne gjør spørsmålet mykere.",
+          "tilbakemeldingFeil": "Tenk på ordet {{bekrefte}}. Du vil at Linn skal si ja til tiden."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e01-s02-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge. Lag en høflig setning.",
+          "biter": ["Jeg", "vil", "gjerne", "bekrefte", "møtet", "i", "morgen."],
+          "tilbakemeldingRiktig": "Riktig. «Jeg vil gjerne» er høflig. Gjerne viser at du ønsker noe på en snill måte.",
+          "tilbakemeldingFeil": "Start med Jeg. Så kommer vil gjerne. Deretter bekrefte møtet i morgen."
+        }
+      ]
+    },
+    {
+      "id": "e01-s03",
+      "tittel": "Bygg meldingen",
+      "dag": "Mandag",
+      "klokkeslett": "09:25",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e01-s03-skrive.svg",
+        "bildeAlt": "En person skriver en SMS på telefonen.",
+        "lyd": "e01-s03-melding.wav"
+      },
+      "tekst": "Bygg en {{melding}} til Linn.\n\nVelg hilsen, innhold og avslutning.\n\nEn {{hoflig|høflig}} melding har hei, hele setninger og vennlig hilsen.",
+      "valg": [],
+      "oppgaver": [
+        {
+          "type": "bygg_melding",
+          "id": "e01-s03-bm",
+          "instruksjon": "Velg én hilsen, ett innhold og én avslutning. Send deretter meldingen.",
+          "hilsen": [
+            { "id": "h1", "tekst": "Hei Linn,", "hoflig": true },
+            { "id": "h2", "tekst": "Hei!", "hoflig": false },
+            { "id": "h3", "tekst": "Hva skjer", "hoflig": false }
+          ],
+          "innhold": [
+            {
+              "id": "i1",
+              "tekst": "Jeg vil gjerne bekrefte møtet i morgen klokka 10.00.",
+              "hoflig": true
+            },
+            { "id": "i2", "tekst": "ok i morgen", "hoflig": false },
+            { "id": "i3", "tekst": "Du må møte meg i dag.", "hoflig": false }
+          ],
+          "avslutning": [
+            { "id": "a1", "tekst": "Vennlig hilsen", "hoflig": true },
+            { "id": "a2", "tekst": "Hilsen [navn]", "hoflig": true },
+            { "id": "a3", "tekst": "Bye", "hoflig": false }
+          ],
+          "flaggHoflig": ["hoflig_melding"],
+          "flaggUhoflig": ["uhoflig_sms"],
+          "nesteHoflig": "e01-s04a",
+          "nesteUhoflig": "e01-s04b",
+          "tilbakemeldingRiktig": "Bra. Du bruker høflig hilsen, en hel setning med «Jeg vil gjerne», og en vennlig avslutning. Slik skriver vi til en veileder.",
+          "tilbakemeldingFeil": "Denne meldingen er for kort eller for brå. En veileder trenger hei, tydelig innhold og vennlig hilsen. Du kan prøve igjen."
+        }
+      ]
+    },
+    {
+      "id": "e01-s04a",
+      "tittel": "Linn bekrefter",
+      "dag": "Mandag",
+      "klokkeslett": "09:40",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e01-s04a-veileder.svg",
+        "bildeAlt": "Veileder Linn Holm smiler og holder en telefon.",
+        "lyd": "e01-s04a-svar.wav"
+      },
+      "tekst": "Linn svarer.\n\nHun {{bekrefte|bekrefter}} {{avtale|avtalen}}.\n\nMøtet er i morgen {{klokka}} 10.00.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Linn Holm",
+        "innhold": "Ny melding fra Linn Holm"
+      },
+      "smsTraad": {
+        "kontakt": "Linn Holm",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Hei! Ja, vi møtes i morgen klokka 10.00. Hilsen Linn"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "videre-a",
+          "tekst": "Gå videre",
+          "nesteSceneId": "e01-s05",
+          "tilbakemelding": "Linn har bekreftet tiden. Nå øver du på å rette en feil i en melding."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "lytt_og_velg",
+          "id": "e01-s04a-lv",
+          "instruksjon": "Les eller lytt til svaret fra Linn. Velg det som stemmer.",
+          "spoersmal": "Hva sier Linn?",
+          "alternativer": [
+            { "id": "a", "tekst": "Møtet er i dag." },
+            { "id": "b", "tekst": "Møtet er i morgen klokka 10.00." },
+            { "id": "c", "tekst": "Møtet er avlyst." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Linn skriver: «Ja, vi møtes i morgen klokka 10.00.» Hun bekrefter tiden.",
+          "tilbakemeldingFeil": "Les SMS-en en gang til. Linn sier ja til møtet i morgen klokka 10.00."
+        },
+        {
+          "type": "matching",
+          "id": "e01-s04a-ma",
+          "instruksjon": "Trykk først på et ord til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "veileder",
+              "hoyre": "person som hjelper deg hos NAV"
+            },
+            {
+              "id": "p2",
+              "venstre": "møte",
+              "hoyre": "når to personer snakker sammen til avtalt tid"
+            },
+            {
+              "id": "p3",
+              "venstre": "høflig",
+              "hoyre": "snill og respektfull i språket"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Du kan disse tre ordene. De er viktige når du skriver til {{nav|NAV}}.",
+          "tilbakemeldingFeil": "Prøv igjen. Les forklaringen sakte. Tenk på hva ordet gjør i en melding til veilederen."
+        }
+      ]
+    },
+    {
+      "id": "e01-s04b",
+      "tittel": "Linn spør på nytt",
+      "dag": "Mandag",
+      "klokkeslett": "09:40",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e01-s04b-veileder.svg",
+        "bildeAlt": "Veileder Linn Holm ser spørrende på telefonen.",
+        "lyd": "e01-s04b-svar.wav"
+      },
+      "tekst": "Linn forstår ikke meldingen.\n\nHun spør: Når vil du møte meg?\n\nDu kan prøve igjen. Skriv en tydelig og {{hoflig|høflig}} {{melding}}.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Linn Holm",
+        "innhold": "Ny melding fra Linn Holm"
+      },
+      "smsTraad": {
+        "kontakt": "Linn Holm",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Hei. Kan du sende en tydeligere melding? Når vil du møte meg? Hilsen Linn"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "prov-igjen",
+          "tekst": "Prøv å skrive på nytt",
+          "nesteSceneId": "e01-s03",
+          "tilbakemelding": "Bra. En tydelig melding har hilsen, tid og vennlig avslutning."
+        },
+        {
+          "id": "ga-videre-likevel",
+          "tekst": "Gå videre uten ny melding",
+          "nesteSceneId": "e01-s05",
+          "flagg": ["uhoflig_sms"],
+          "tilbakemelding": "Du kan gå videre. Senere i kurset husker vi at meldingen var uklar. Du kan øve mer nå hvis du vil."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e01-s04b-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor spør Linn på nytt?",
+          "alternativer": [
+            { "id": "a", "tekst": "Hun vil bytte dag." },
+            { "id": "b", "tekst": "Meldingen var uklar eller for kort." },
+            { "id": "c", "tekst": "Hun er sint." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. En kort melding uten tid og hilsen er vanskelig å forstå. Linn ber om en tydeligere tekst.",
+          "tilbakemeldingFeil": "Linn er ikke sint. Hun trenger mer informasjon: hvem, hva og når."
+        }
+      ]
+    },
+    {
+      "id": "e01-s05",
+      "tittel": "Finn og rett feilen",
+      "dag": "Mandag",
+      "klokkeslett": "09:50",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e01-s05-sms.svg",
+        "bildeAlt": "En SMS med en rød strek under et feil ord.",
+        "lyd": "e01-s05-feil.wav"
+      },
+      "tekst": "Se på denne {{melding|meldingen}}.\n\nEtt verb er feil.\n\nFinn feilen og rett den.",
+      "valg": [
+        {
+          "id": "avslutt",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "tilbakemelding": "Du er ferdig med episode 1."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "finn_og_rett",
+          "id": "e01-s05-fr",
+          "instruksjon": "Trykk på ordet som er feil. Velg deretter riktig form.",
+          "tekst": "Hei Linn. Jeg komme i morgen klokka 10.00.",
+          "feilOrd": "komme",
+          "alternativer": [
+            { "id": "a", "tekst": "kom" },
+            { "id": "b", "tekst": "kommer" },
+            { "id": "c", "tekst": "å komme" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. I presens sier vi «jeg kommer». Etter jeg får verbet -er: kommer.",
+          "tilbakemeldingFeil": "Ordet komme mangler -r. Med jeg i nåtid sier vi kommer, ikke komme."
+        }
+      ]
+    }
+  ]
+}

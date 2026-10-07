@@ -1,0 +1,23 @@
+{
+  "aar": 2026,
+  "kilde": "Finansdepartementet, skatte- og avgiftsopplegget 2026. Forenklet øvingsmodell for MBO. Ingen formue, rentefradrag, arbeidsfradrag for unge eller innsatssone.",
+  "skattAlminneligSats": 0.22,
+  "personfradrag": 114540,
+  "minstefradragSats": 0.46,
+  "minstefradragMaks": 95700,
+  "trygdeavgiftSats": 0.076,
+  "trygdeavgiftNedre": 99650,
+  "trygdeavgiftMaksAvOver": 0.25,
+  "frikortgrense": 100000,
+  "frikortProsentOver": 0.5,
+  "feriepengeSats": 0.102,
+  "fagforeningAar": 3850,
+  "fagforeningMaaned": 320,
+  "trinnskatt": [
+    { "fra": 226100, "sats": 0.017 },
+    { "fra": 318300, "sats": 0.04 },
+    { "fra": 725050, "sats": 0.137 },
+    { "fra": 980100, "sats": 0.168 },
+    { "fra": 1467200, "sats": 0.178 }
+  ]
+}

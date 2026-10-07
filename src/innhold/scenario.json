@@ -1,0 +1,74 @@
+{
+  "tittel": "Jobbreisen",
+  "nivaa": "A2",
+  "sted": "Molde",
+  "kurs": "MBO – Målrettet bedriftsopplæring",
+  "episoder": [
+    {
+      "id": "e01",
+      "nummer": 1,
+      "tittel": "Melding til NAV-veilederen",
+      "fil": "e01.json"
+    },
+    {
+      "id": "e02",
+      "nummer": 2,
+      "tittel": "Hvem er jeg som arbeidstaker?",
+      "fil": "e02.json"
+    },
+    {
+      "id": "e03",
+      "nummer": 3,
+      "tittel": "Finn jobber",
+      "fil": "e03.json"
+    },
+    {
+      "id": "e04",
+      "nummer": 4,
+      "tittel": "Passer jobben for meg?",
+      "fil": "e04.json"
+    },
+    {
+      "id": "e05",
+      "nummer": 5,
+      "tittel": "Registrer i Aktivitetsplanen",
+      "fil": "e05.json"
+    },
+    {
+      "id": "e06",
+      "nummer": 6,
+      "tittel": "Søk jobben",
+      "fil": "e06.json"
+    },
+    {
+      "id": "e07",
+      "nummer": 7,
+      "tittel": "Svar fra bedriftene",
+      "fil": "e07.json"
+    },
+    {
+      "id": "e08",
+      "nummer": 8,
+      "tittel": "Jobbintervjuet",
+      "fil": "e08.json"
+    },
+    {
+      "id": "e09",
+      "nummer": 9,
+      "tittel": "Reisen til jobb og første dag",
+      "fil": "e09.json"
+    },
+    {
+      "id": "e10",
+      "nummer": 10,
+      "tittel": "Ny jobb – nytt skattekort",
+      "fil": "e10.json"
+    },
+    {
+      "id": "e11",
+      "nummer": 11,
+      "tittel": "Den første lønnsslippen",
+      "fil": "e11.json"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "holdeplasser": [
+    { "id": "kviltorp-senter", "navn": "Kviltorp senter (øving)", "sone": "kviltorp" },
+    { "id": "molde-sentrum", "navn": "Molde rutebilstasjon (øving)", "sone": "sentrum" },
+    { "id": "aarolia-skole", "navn": "Årølia skole (øving)", "sone": "aarolia" },
+    { "id": "aaro-industri", "navn": "Årø industri (øving)", "sone": "aaro" },
+    { "id": "omsorg-torget", "navn": "Omsorgstorget (øving)", "sone": "sentrum" }
+  ],
+  "linjer": [
+    { "id": "linje-10", "nummer": "10", "navn": "Kviltorp–Sentrum (øving)" },
+    { "id": "linje-20", "nummer": "20", "navn": "Årølia–Sentrum (øving)" },
+    { "id": "linje-30", "nummer": "30", "navn": "Sentrum–Årø (øving)" },
+    { "id": "linje-40", "nummer": "40", "navn": "Sentrum–Omsorgstorget (øving)" }
+  ],
+  "avganger": [
+    {
+      "id": "l10-0805",
+      "linjeId": "linje-10",
+      "fra": "kviltorp-senter",
+      "til": "molde-sentrum",
+      "avgang": "08:05",
+      "ankomst": "08:23",
+      "reisetidMin": 18,
+      "bytte": null
+    },
+    {
+      "id": "l10-0825",
+      "linjeId": "linje-10",
+      "fra": "kviltorp-senter",
+      "til": "molde-sentrum",
+      "avgang": "08:25",
+      "ankomst": "08:43",
+      "reisetidMin": 18,
+      "bytte": null
+    },
+    {
+      "id": "l10-0850",
+      "linjeId": "linje-10",
+      "fra": "kviltorp-senter",
+      "til": "molde-sentrum",
+      "avgang": "08:50",
+      "ankomst": "09:08",
+      "reisetidMin": 18,
+      "bytte": null
+    },
+    {
+      "id": "l20-0545",
+      "linjeId": "linje-20",
+      "fra": "aarolia-skole",
+      "til": "aaro-industri",
+      "avgang": "05:45",
+      "ankomst": "06:28",
+      "reisetidMin": 43,
+      "bytte": {
+        "sted": "Molde rutebilstasjon (øving)",
+        "ankomst": "06:05",
+        "avgang": "06:12",
+        "linjeId": "linje-30"
+      }
+    },
+    {
+      "id": "l20-0610",
+      "linjeId": "linje-20",
+      "fra": "aarolia-skole",
+      "til": "aaro-industri",
+      "avgang": "06:10",
+      "ankomst": "06:48",
+      "reisetidMin": 38,
+      "bytte": {
+        "sted": "Molde rutebilstasjon (øving)",
+        "ankomst": "06:28",
+        "avgang": "06:35",
+        "linjeId": "linje-30"
+      }
+    },
+    {
+      "id": "l20-0640",
+      "linjeId": "linje-20",
+      "fra": "aarolia-skole",
+      "til": "aaro-industri",
+      "avgang": "06:40",
+      "ankomst": "07:18",
+      "reisetidMin": 38,
+      "bytte": {
+        "sted": "Molde rutebilstasjon (øving)",
+        "ankomst": "06:58",
+        "avgang": "07:05",
+        "linjeId": "linje-30"
+      }
+    },
+    {
+      "id": "l40-0720",
+      "linjeId": "linje-40",
+      "fra": "molde-sentrum",
+      "til": "omsorg-torget",
+      "avgang": "07:20",
+      "ankomst": "07:27",
+      "reisetidMin": 7,
+      "bytte": null
+    },
+    {
+      "id": "l40-0740",
+      "linjeId": "linje-40",
+      "fra": "molde-sentrum",
+      "til": "omsorg-torget",
+      "avgang": "07:40",
+      "ankomst": "07:47",
+      "reisetidMin": 7,
+      "bytte": null
+    },
+    {
+      "id": "l40-0805",
+      "linjeId": "linje-40",
+      "fra": "molde-sentrum",
+      "til": "omsorg-torget",
+      "avgang": "08:05",
+      "ankomst": "08:12",
+      "reisetidMin": 7,
+      "bytte": null
+    }
+  ],
+  "oppdrag": {
+    "olena": {
+      "fra": "kviltorp-senter",
+      "til": "molde-sentrum",
+      "ankomst": "09:00",
+      "riktigAvgangId": "l10-0825",
+      "bedrift": "Havna Handel (øvingsversjon)"
+    },
+    "taras": {
+      "fra": "aarolia-skole",
+      "til": "aaro-industri",
+      "ankomst": "07:00",
+      "riktigAvgangId": "l20-0610",
+      "bedrift": "Fjordlager AS (øvingsversjon)"
+    },
+    "sofiia": {
+      "fra": "molde-sentrum",
+      "til": "omsorg-torget",
+      "ankomst": "08:00",
+      "riktigAvgangId": "l40-0740",
+      "bedrift": "Molde Omsorg (øvingsversjon)"
+    }
+  }
+}

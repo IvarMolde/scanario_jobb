@@ -1,0 +1,298 @@
+{
+  "annonser": [
+    {
+      "id": "havna-handel",
+      "tittel": "Butikkmedarbeider",
+      "bedrift": "Havna Handel (øvingsversjon)",
+      "sted": "Molde sentrum",
+      "kommune": "molde",
+      "sone": "sentrum",
+      "stillingsprosent": "100 %",
+      "heltid": true,
+      "soknadsfrist": "15.11.2026",
+      "tiltredelse": "snarest",
+      "kontaktperson": "Kari Strand (øvingsnavn)",
+      "sokkeord": ["butikk", "varehandel"],
+      "bilde": "annonse-havna.svg",
+      "tekst": "Vi søker en {{butikkmedarbeider}} til butikken i sentrum.\n\nDu {{maa|må}} like å møte kunder. Det er en {{fordel}} om du har jobbet i butikk.\n\nArbeidstid: mandag–lørdag, også kveld.\n\nDu trenger ikke {{forerkort|førerkort}}.",
+      "krav": [
+        {
+          "id": "hh-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra butikk er en fordel.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du har jobbet i butikk. Dette kravet passer.",
+          "forklaringPasserIkke": "Du har ikke jobbet i butikk. Kravet passer ikke, men det er bare en fordel."
+        },
+        {
+          "id": "hh-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du bør være blid og punktlig.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du er blid og punktlig. Det passer til butikk.",
+          "forklaringPasserIkke": "Blid og punktlig står ikke på din liste. Du kan likevel være en god kollega."
+        },
+        {
+          "id": "hh-log",
+          "kategori": "logistikk",
+          "tekst": "Jobb i sentrum. Ikke krav om førerkort. Også kveld.",
+          "fasit": { "olena": "passer", "taras": "passer", "sofiia": "passer" },
+          "forklaringPasser": "Du kommer deg til sentrum med buss. Du trenger ikke førerkort.",
+          "forklaringPasserIkke": "Reisen eller tiden passer dårlig."
+        }
+      ]
+    },
+    {
+      "id": "fjordlager",
+      "tittel": "Lagermedarbeider",
+      "bedrift": "Fjordlager AS (øvingsversjon)",
+      "sted": "Årø, Molde",
+      "kommune": "molde",
+      "sone": "aaro",
+      "stillingsprosent": "100 %",
+      "heltid": true,
+      "soknadsfrist": "20.11.2026",
+      "tiltredelse": "01.12.2026",
+      "kontaktperson": "Erik Mo (øvingsnavn)",
+      "sokkeord": ["lager", "lagermedarbeider"],
+      "bilde": "annonse-fjordlager.svg",
+      "tekst": "Vi søker en {{lagermedarbeider}} til lageret på Årø.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B. Du {{kan}} få opplæring på truck.\n\nArbeidstid: 07.00–15.00, heltid.",
+      "krav": [
+        {
+          "id": "fl-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra lager eller bygg.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du har erfaring fra bygg. Det passer til lagerarbeid.",
+          "forklaringPasserIkke": "Du har ikke erfaring fra lager eller bygg."
+        },
+        {
+          "id": "fl-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du må være sterk og pålitelig.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du er sterk og pålitelig. Det passer til lager.",
+          "forklaringPasserIkke": "Sterk og pålitelig står ikke på din liste over egenskaper."
+        },
+        {
+          "id": "fl-log",
+          "kategori": "logistikk",
+          "tekst": "Du må ha førerkort klasse B. Jobb på Årø klokka 07–15.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du har førerkort B, og reisetiden til Årø er kort.",
+          "forklaringPasserIkke": "Du har ikke førerkort. Jobben krever klasse B."
+        }
+      ]
+    },
+    {
+      "id": "molde-omsorg",
+      "tittel": "Assistent i hjemmetjenesten",
+      "bedrift": "Molde Omsorg (øvingsversjon)",
+      "sted": "Molde sentrum",
+      "kommune": "molde",
+      "sone": "sentrum",
+      "stillingsprosent": "80 %",
+      "heltid": false,
+      "soknadsfrist": "10.11.2026",
+      "tiltredelse": "etter avtale",
+      "kontaktperson": "Liv Hauge (øvingsnavn)",
+      "sokkeord": ["helse", "omsorg", "assistent"],
+      "bilde": "annonse-omsorg.svg",
+      "tekst": "Vi søker en assistent i hjemmetjenesten.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDu trenger ikke {{forerkort|førerkort}}. Deltid, 80 %.",
+      "krav": [
+        {
+          "id": "mo-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra omsorg eller helse.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Du har jobbet i omsorg. Dette kravet passer.",
+          "forklaringPasserIkke": "Du har ikke erfaring fra omsorg eller helse."
+        },
+        {
+          "id": "mo-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du bør være omsorgsfull og tålmodig.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Du er omsorgsfull og tålmodig. Det passer til denne jobben.",
+          "forklaringPasserIkke": "Omsorgsfull og tålmodig står ikke på din liste."
+        },
+        {
+          "id": "mo-log",
+          "kategori": "logistikk",
+          "tekst": "Deltid i sentrum. Ikke krav om førerkort.",
+          "fasit": { "olena": "passer", "taras": "passer", "sofiia": "passer" },
+          "forklaringPasser": "Du kommer deg til sentrum. Du trenger ikke førerkort.",
+          "forklaringPasserIkke": "Logistikken passer dårlig."
+        }
+      ]
+    },
+    {
+      "id": "romsdals-renhold",
+      "tittel": "Renholder",
+      "bedrift": "Romsdals Renhold (øvingsversjon)",
+      "sted": "Molde sentrum",
+      "kommune": "molde",
+      "sone": "sentrum",
+      "stillingsprosent": "50 %",
+      "heltid": false,
+      "soknadsfrist": "01.12.2026",
+      "tiltredelse": "januar 2027",
+      "kontaktperson": "Per Bakke (øvingsnavn)",
+      "sokkeord": ["renhold"],
+      "bilde": "annonse-renhold.svg",
+      "tekst": "Vi søker en renholder. Arbeidstid tidlig om morgenen, 06.00–09.00.\n\nDu {{maa|må}} være nøyaktig. Deltid, 50 %.\n\nIkke krav om {{forerkort|førerkort}}.",
+      "krav": [
+        {
+          "id": "rr-komp",
+          "kategori": "kompetanse",
+          "tekst": "Ingen krav om faget. Opplæring blir gitt.",
+          "fasit": { "olena": "passer", "taras": "passer", "sofiia": "passer" },
+          "forklaringPasser": "Jobben krever ikke din yrkeserfaring. Alle kan søke.",
+          "forklaringPasserIkke": "Dette kravet stenger ingen ute."
+        },
+        {
+          "id": "rr-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du må være nøyaktig.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du er nøyaktig. Det passer til renhold.",
+          "forklaringPasserIkke": "Nøyaktig står ikke på din liste. Du kan likevel lære jobben."
+        },
+        {
+          "id": "rr-log",
+          "kategori": "logistikk",
+          "tekst": "Deltid. Start klokka 06.00 i sentrum.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Du bor i sentrum. Tidlig vakt er lettere for deg.",
+          "forklaringPasserIkke": "Første buss kan være for sen til vakt klokka 06.00."
+        }
+      ]
+    },
+    {
+      "id": "kafe-fjord",
+      "tittel": "Kafémedarbeider",
+      "bedrift": "Kafé Fjordutsikt (øvingsversjon)",
+      "sted": "Kviltorp, Molde",
+      "kommune": "molde",
+      "sone": "kviltorp",
+      "stillingsprosent": "40 %",
+      "heltid": false,
+      "soknadsfrist": "08.11.2026",
+      "tiltredelse": "snarest",
+      "kontaktperson": "Mona Lie (øvingsnavn)",
+      "sokkeord": ["butikk", "kafe"],
+      "bilde": "annonse-kafe.svg",
+      "tekst": "Liten kafé på Kviltorp søker medarbeider.\n\nDu {{bor|bør}} like kunder. Erfaring fra butikk eller kafé er en {{fordel}}.\n\nDeltid, helg og kveld. Ikke {{forerkort|førerkort}}.",
+      "krav": [
+        {
+          "id": "kf-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra butikk eller kafé er en fordel.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du har jobbet i butikk. Det passer til kafé.",
+          "forklaringPasserIkke": "Du har ikke jobbet i butikk eller kafé."
+        },
+        {
+          "id": "kf-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du bør være blid med gjestene.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du er blid. Det passer til kafé.",
+          "forklaringPasserIkke": "Blid står ikke på din liste."
+        },
+        {
+          "id": "kf-log",
+          "kategori": "logistikk",
+          "tekst": "Deltid på Kviltorp. Ikke krav om førerkort.",
+          "fasit": { "olena": "passer", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Reisetiden til Kviltorp passer.",
+          "forklaringPasserIkke": "Du bor i Årølia. Bussen til Kviltorp tar lang tid."
+        }
+      ]
+    },
+    {
+      "id": "bygg-tre",
+      "tittel": "Hjelpearbeider bygg",
+      "bedrift": "Bygg og Tre AS (øvingsversjon)",
+      "sted": "Årølia, Molde",
+      "kommune": "molde",
+      "sone": "aarolia",
+      "stillingsprosent": "100 %",
+      "heltid": true,
+      "soknadsfrist": "30.11.2026",
+      "tiltredelse": "etter avtale",
+      "kontaktperson": "Jon Ness (øvingsnavn)",
+      "sokkeord": ["bygg"],
+      "bilde": "annonse-bygg.svg",
+      "tekst": "Vi søker hjelpearbeider til byggeplass i Årølia.\n\nDu {{maa|må}} følge sikkerhet. {{forerkort|Førerkort}} B er en {{fordel}}.\n\nHeltid, 07.00–15.00.",
+      "krav": [
+        {
+          "id": "bt-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra bygg.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du har jobbet på bygg. Dette kravet passer.",
+          "forklaringPasserIkke": "Du har ikke erfaring fra bygg."
+        },
+        {
+          "id": "bt-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du må være pålitelig og rolig.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer_ikke" },
+          "forklaringPasser": "Du er pålitelig og rolig. Det passer på byggeplass.",
+          "forklaringPasserIkke": "Pålitelig og rolig står ikke på din liste."
+        },
+        {
+          "id": "bt-log",
+          "kategori": "logistikk",
+          "tekst": "Heltid i Årølia. Førerkort er en fordel, ikke et krav.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer", "sofiia": "passer" },
+          "forklaringPasser": "Du kommer deg til Årølia. Førerkort er bare en fordel.",
+          "forklaringPasserIkke": "Bussen fra Kviltorp til Årølia tar over 25 minutter."
+        }
+      ]
+    },
+    {
+      "id": "solsiden-bolig",
+      "tittel": "Miljøarbeider",
+      "bedrift": "Solsiden bolig (øvingsversjon)",
+      "sted": "Molde sentrum",
+      "kommune": "molde",
+      "sone": "sentrum",
+      "stillingsprosent": "100 %",
+      "heltid": true,
+      "soknadsfrist": "18.11.2026",
+      "tiltredelse": "01.01.2027",
+      "kontaktperson": "Ane Vik (øvingsnavn)",
+      "sokkeord": ["helse", "omsorg", "assistent"],
+      "bilde": "annonse-solsiden.svg",
+      "tekst": "Bolig for voksne søker {{miljoarbeider|miljøarbeider}}.\n\nDu {{maa|må}} være ansvarlig. Norsk A2 {{kan}} være nok.\n\nHeltid. Ikke {{forerkort|førerkort}}.",
+      "krav": [
+        {
+          "id": "sb-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra omsorg. Norsk A2.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Du har omsorgserfaring og norsk A2. Det passer.",
+          "forklaringPasserIkke": "Du har ikke erfaring fra omsorg."
+        },
+        {
+          "id": "sb-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du må være ansvarlig.",
+          "fasit": { "olena": "passer_ikke", "taras": "passer_ikke", "sofiia": "passer" },
+          "forklaringPasser": "Du er ansvarlig. Det passer til denne jobben.",
+          "forklaringPasserIkke": "Ansvarlig står ikke på din liste."
+        },
+        {
+          "id": "sb-log",
+          "kategori": "logistikk",
+          "tekst": "Heltid i sentrum. Ikke krav om førerkort.",
+          "fasit": { "olena": "passer", "taras": "passer", "sofiia": "passer" },
+          "forklaringPasser": "Du kommer deg til sentrum uten førerkort.",
+          "forklaringPasserIkke": "Logistikken passer dårlig."
+        }
+      ]
+    }
+  ]
+}

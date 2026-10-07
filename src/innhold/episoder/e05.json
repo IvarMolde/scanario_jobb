@@ -1,0 +1,243 @@
+{
+  "id": "e05",
+  "nummer": 5,
+  "tittel": "Registrer i Aktivitetsplanen",
+  "ingress": "Du åpner Aktivitetsplanen. Du registrerer de valgte jobbene med status og frist. Så sender du en kort melding til Linn.",
+  "startSceneId": "e05-s01",
+  "tillatteFlagg": ["aktiviteter_registrert"],
+  "ordIds": ["aktivitet", "frist", "innen", "soknad"],
+  "oppsummering": [
+    { "tekst": "Åpnet Aktivitetsplanen. Dette er en øvingsversjon, ikke ekte NAV." },
+    { "tekst": "Leste statusene Skal søke, Sendt søknad, Innkalt til intervju og Avslag." },
+    { "tekst": "Øvde på datoer og preposisjoner med tid: den 12. oktober, innen fredag." },
+    { "tekst": "Registrerte de valgte jobbene med status og frist.", "visHvisFlagg": "aktiviteter_registrert" },
+    { "tekst": "Sendte en kort melding til Linn om det du har gjort." }
+  ],
+  "scener": [
+    {
+      "id": "e05-s01",
+      "tittel": "Åpne Aktivitetsplanen",
+      "dag": "Fredag",
+      "klokkeslett": "09:10",
+      "app": "aktivitetsplan",
+      "media": {
+        "bilde": "e05-s01-plan.svg",
+        "bildeAlt": "En aktivitetsplan med fire kolonner for søknadsstatus.",
+        "lyd": "e05-s01-plan.wav"
+      },
+      "tekst": "Åpne {{aktivitet|Aktivitetsplanen}}.\n\nDette er en øvingsversjon. Ingen ekte NAV-logo.\n\nDu ser fire kolonner: Skal søke, Sendt søknad, Innkalt til intervju og Avslag.\n\nLes {{frist|fristen}} i annonsen. Søk {{innen}} datoen.",
+      "valg": [
+        {
+          "id": "til-dato",
+          "tekst": "Øv på dato og frist",
+          "nesteSceneId": "e05-s02",
+          "tilbakemelding": "Les instruksjonen i skjemaet. Feltene med stjerne er påkrevd."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "matching",
+          "id": "e05-s01-ma",
+          "instruksjon": "Trykk først på statusen til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "Skal søke", "hoyre": "du har ikke sendt søknad ennå" },
+            { "id": "p2", "venstre": "Sendt søknad", "hoyre": "søknaden er sendt til bedriften" },
+            { "id": "p3", "venstre": "Avslag", "hoyre": "bedriften sier nei" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Status forteller hvor du er i søknaden.",
+          "tilbakemeldingFeil": "Les kolonnene i Aktivitetsplanen en gang til."
+        },
+        {
+          "type": "flervalg",
+          "id": "e05-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr «Søk innen fredag»?",
+          "alternativer": [
+            { "id": "a", "tekst": "Du kan søke etter fredag." },
+            { "id": "b", "tekst": "Du må søke senest på fredag." },
+            { "id": "c", "tekst": "Du skal søke bare på lørdag." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Innen fredag betyr senest på fredag. Ikke senere.",
+          "tilbakemeldingFeil": "{{innen}} betyr før tiden er ute. Innen fredag = senest fredag."
+        }
+      ]
+    },
+    {
+      "id": "e05-s02",
+      "tittel": "Dato og preposisjon",
+      "dag": "Fredag",
+      "klokkeslett": "09:20",
+      "app": "aktivitetsplan",
+      "media": {
+        "bilde": "e05-s02-dato.svg",
+        "bildeAlt": "En kalender med datoen den 12. oktober merket.",
+        "lyd": "e05-s02-dato.wav"
+      },
+      "tekst": "På norsk sier vi den 12. oktober.\n\nVi sier også 12.10.2026.\n\nSkriv {{frist|fristen}} fra annonsen.\n\nSøk {{innen}} den datoen.",
+      "valg": [
+        {
+          "id": "til-registrer",
+          "tekst": "Registrer jobbene",
+          "nesteSceneId": "e05-s03",
+          "tilbakemelding": "Velg status Skal søke. Velg riktig frist. Trykk på Registrer."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "ordbank",
+          "id": "e05-s02-ob",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Møtet er _____ 12. oktober.",
+          "ord": ["den", "på", "hos"],
+          "riktig": "den",
+          "tilbakemeldingRiktig": "Riktig. Vi sier den 12. oktober. Den står foran datoen.",
+          "tilbakemeldingFeil": "Foran dato med dag og måned sier vi den: den 12. oktober."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e05-s02-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["Søk", "innen", "fredag."],
+          "tilbakemeldingRiktig": "Riktig. Innen står foran tid: innen fredag.",
+          "tilbakemeldingFeil": "Start med Søk. Deretter innen. Så fredag."
+        }
+      ]
+    },
+    {
+      "id": "e05-s03",
+      "tittel": "Registrer aktivitetene",
+      "dag": "Fredag",
+      "klokkeslett": "09:35",
+      "app": "aktivitetsplan",
+      "media": {
+        "bilde": "e05-s03-skjema.svg",
+        "bildeAlt": "Et skjema med stjerne ved status og frist.",
+        "lyd": "e05-s03-skjema.wav"
+      },
+      "tekst": "Fyll ut skjemaet.\n\nVelg status. Velg {{frist}}.\n\nFeltene med stjerne er påkrevd.\n\nNå skal du søke, så status er Skal søke.",
+      "valg": [
+        {
+          "id": "til-sms",
+          "tekst": "Send melding til Linn",
+          "nesteSceneId": "e05-s04",
+          "tilbakemelding": "Fortell Linn kort hva du har gjort."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "registrer_aktiviteter",
+          "id": "e05-s03-ra",
+          "instruksjon": "Velg status. Velg frist. Trykk på Registrer aktivitetene.",
+          "statuser": [
+            { "id": "skal_soke", "tekst": "Skal søke" },
+            { "id": "sendt_soknad", "tekst": "Sendt søknad" },
+            { "id": "innkalt", "tekst": "Innkalt til intervju" },
+            { "id": "avslag", "tekst": "Avslag" }
+          ],
+          "riktigStatusId": "skal_soke",
+          "fristDistraktorer": ["i går", "i morgen", "01.01.2020"],
+          "flagg": ["aktiviteter_registrert"],
+          "tilbakemeldingRiktig": "Bra. Jobbene ligger under Skal søke. Fristen er datoen fra annonsen.",
+          "tilbakemeldingFeil": "Velg Skal søke. Velg fristen som står i annonsen, ikke i går eller i morgen."
+        }
+      ]
+    },
+    {
+      "id": "e05-s04",
+      "tittel": "Melding til Linn",
+      "dag": "Fredag",
+      "klokkeslett": "09:50",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e05-s04-sms.svg",
+        "bildeAlt": "En telefon med en meldingstråd til Linn Holm.",
+        "lyd": "e05-s04-sms.wav"
+      },
+      "tekst": "Send en kort {{melding}} til Linn.\n\nSi hva du har gjort i {{aktivitet|Aktivitetsplanen}}.\n\nVær {{hoflig|høflig}}.",
+      "smsTraad": {
+        "kontakt": "Linn Holm",
+        "meldinger": []
+      },
+      "valg": [],
+      "oppgaver": [
+        {
+          "type": "bygg_melding",
+          "id": "e05-s04-bm",
+          "instruksjon": "Velg hilsen, innhold og avslutning. Send deretter meldingen.",
+          "hilsen": [
+            { "id": "h1", "tekst": "Hei Linn,", "hoflig": true },
+            { "id": "h2", "tekst": "Hei!", "hoflig": false },
+            { "id": "h3", "tekst": "Hva skjer", "hoflig": false }
+          ],
+          "innhold": [
+            {
+              "id": "i1",
+              "tekst": "Jeg har registrert jobbene i aktivitetsplanen. Status er Skal søke.",
+              "hoflig": true
+            },
+            { "id": "i2", "tekst": "ok jobber", "hoflig": false },
+            { "id": "i3", "tekst": "Du må sjekke planen nå.", "hoflig": false }
+          ],
+          "avslutning": [
+            { "id": "a1", "tekst": "Vennlig hilsen [navn]", "hoflig": true },
+            { "id": "a2", "tekst": "Hilsen [navn]", "hoflig": true },
+            { "id": "a3", "tekst": "Bye", "hoflig": false }
+          ],
+          "flaggHoflig": [],
+          "flaggUhoflig": [],
+          "nesteHoflig": "e05-s05",
+          "nesteUhoflig": "e05-s05",
+          "tilbakemeldingRiktig": "Bra. Du bruker hei, en hel setning og vennlig hilsen.",
+          "tilbakemeldingFeil": "Meldingen er for kort eller for brå. Prøv igjen, eller send likevel."
+        }
+      ]
+    },
+    {
+      "id": "e05-s05",
+      "tittel": "Linn svarer",
+      "dag": "Fredag",
+      "klokkeslett": "10:05",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e05-s05-svar.svg",
+        "bildeAlt": "Linn Holm smiler og leser en melding.",
+        "lyd": "e05-s05-svar.wav"
+      },
+      "tekst": "Linn svarer.\n\nHun ser at du har registrert {{aktivitet|aktiviteter}}.\n\nHusk {{frist|fristen}}. Søk {{innen}} datoen.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Linn Holm",
+        "innhold": "Ny melding fra Linn Holm"
+      },
+      "smsTraad": {
+        "kontakt": "Linn Holm",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Hei! Bra. Husk fristen. Søk innen datoen i annonsen. Hilsen Linn"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "avslutt-e05",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "tilbakemelding": "Du er ferdig med episode 5."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e05-s05-su",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Linn sier at du kan søke etter fristen.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Linn sier: Søk innen datoen. Ikke senere.",
+          "tilbakemeldingFeil": "Les SMS-en. Linn ber deg søke innen datoen i annonsen."
+        }
+      ]
+    }
+  ]
+}

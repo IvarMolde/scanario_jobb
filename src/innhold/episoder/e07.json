@@ -1,0 +1,403 @@
+{
+  "id": "e07",
+  "nummer": 7,
+  "tittel": "Svar fra bedriftene",
+  "ingress": "Du får tapt anrop, SMS med innkalling og e-post med avslag. Du bekrefter intervjuet høflig og legger det inn i kalenderen.",
+  "startSceneId": "e07-s01",
+  "tillatteFlagg": ["intervju_bekreftet", "intervju_i_kalender"],
+  "ordIds": ["intervju", "avslag", "talemelding", "anrop"],
+  "oppsummering": [
+    { "tekst": "Lyttet til en talemelding og forsto hvem som ringte." },
+    { "tekst": "Leste SMS med innkalling. Bekreftet tid høflig.", "visHvisFlagg": "intervju_bekreftet" },
+    { "tekst": "Svarte høflig på e-post med avslag." },
+    { "tekst": "La intervjuet inn i kalenderen.", "visHvisFlagg": "intervju_i_kalender" },
+    { "tekst": "En tidligere uhøflig SMS ga et kjøligere svar. Du kunne rette opp.", "visHvisFlagg": "uhoflig_sms" }
+  ],
+  "scener": [
+    {
+      "id": "e07-s01",
+      "tittel": "Tapt anrop",
+      "dag": "Tirsdag",
+      "klokkeslett": "08:40",
+      "app": "hjem",
+      "media": {
+        "bilde": "e07-s01-anrop.svg",
+        "bildeAlt": "En telefon med tapt anrop og talemelding.",
+        "lyd": "e07-s01-anrop.wav"
+      },
+      "tekst": "Du har et tapt {{anrop}}.\n\nDet ligger en {{talemelding}}.\n\nLytt. Hvem ringte? Hva vil de?",
+      "varsel": {
+        "type": "anrop",
+        "fra": "Kari Strand (øvingsnavn)",
+        "innhold": "1 tapt anrop. Det ligger en talemelding."
+      },
+      "valg": [
+        {
+          "id": "til-sms-vanlig",
+          "tekst": "Åpne SMS-en",
+          "nesteSceneId": "e07-s02a",
+          "visHvisIkkeFlagg": "uhoflig_sms",
+          "tilbakemelding": "Les innkallingen. Sjekk dag og klokkeslett."
+        },
+        {
+          "id": "til-sms-kjolig",
+          "tekst": "Åpne SMS-en",
+          "nesteSceneId": "e07-s02b",
+          "visHvisFlagg": "uhoflig_sms",
+          "tilbakemelding": "Meldingen er kort. Du kan likevel svare høflig."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "lytt_og_velg",
+          "id": "e07-s01-lv",
+          "instruksjon": "Lytt til talemeldingen. Velg det som stemmer.",
+          "spoersmal": "Hvem ringte, og hva vil de?",
+          "alternativer": [
+            { "id": "a", "tekst": "Linn Holm. Hun vil flytte møtet." },
+            { "id": "b", "tekst": "Kari Strand. Hun vil kalle deg inn til intervju." },
+            { "id": "c", "tekst": "Bussen. Ruten er innstilt." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Kari Strand ringte. Hun vil kalle deg inn til intervju.",
+          "tilbakemeldingFeil": "Lytt en gang til. Navnet er Kari Strand. Hun snakker om intervju."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du etter et tapt anrop med talemelding?",
+          "alternativer": [
+            { "id": "a", "tekst": "Ignorerer det." },
+            { "id": "b", "tekst": "Lytter og leser SMS-en etterpå." },
+            { "id": "c", "tekst": "Sletter nummeret." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Lytt først. Les deretter SMS-en.",
+          "tilbakemeldingFeil": "Et tapt anrop kan være viktig. Lytt til talemeldingen."
+        }
+      ]
+    },
+    {
+      "id": "e07-s02a",
+      "tittel": "SMS med innkalling",
+      "dag": "Tirsdag",
+      "klokkeslett": "08:50",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e07-s02-sms.svg",
+        "bildeAlt": "En vennlig SMS med innkalling til intervju.",
+        "lyd": "e07-s02-sms.wav"
+      },
+      "tekst": "Les SMS-en.\n\nDu er innkalt til {{intervju}}.\n\nNår? På tirsdag. Klokka ti. Om morgenen.\n\nBekreft tiden. Vær {{hoflig|høflig}}.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Kari Strand",
+        "innhold": "Ny melding om intervju"
+      },
+      "smsTraad": {
+        "kontakt": "Kari Strand",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Hei. Vi ønsker å kalle deg inn til intervju på tirsdag klokka 10.00 om morgenen. Kan du komme? Vennlig hilsen Kari Strand (øvingsnavn)"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "til-bekreft-a",
+          "tekst": "Bekreft tiden",
+          "nesteSceneId": "e07-s03",
+          "tilbakemelding": "Svar med hei, tydelig tid og vennlig hilsen."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e07-s02a-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Når er intervjuet?",
+          "alternativer": [
+            { "id": "a", "tekst": "På tirsdag klokka 10.00 om morgenen" },
+            { "id": "b", "tekst": "På mandag klokka 14.00" },
+            { "id": "c", "tekst": "På fredag kveld" }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. På tirsdag. Klokka ti. Om morgenen.",
+          "tilbakemeldingFeil": "Les SMS-en. Dagen er tirsdag. Tiden er 10.00."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s02a-ob",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "_____ kan du komme til intervju?",
+          "ord": ["Når", "Hvorfor ikke", "Hvem sin"],
+          "riktig": "Når",
+          "tilbakemeldingRiktig": "Riktig. Når er et spørreord om tid.",
+          "tilbakemeldingFeil": "Spørreordet når spør om tid."
+        }
+      ]
+    },
+    {
+      "id": "e07-s02b",
+      "tittel": "Kort SMS fra bedriften",
+      "dag": "Tirsdag",
+      "klokkeslett": "08:50",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e07-s02-sms.svg",
+        "bildeAlt": "En kort og kjølig SMS med innkalling til intervju.",
+        "lyd": "e07-s02-sms.wav"
+      },
+      "tekst": "Bedriften skriver kort.\n\nDe husker at en tidligere melding var brå.\n\nDu kan rette opp. Svar {{hoflig|høflig}} nå.\n\n{{intervju|Intervjuet}} er på tirsdag klokka 10.00.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Kari Strand",
+        "innhold": "Ny melding om intervju"
+      },
+      "smsTraad": {
+        "kontakt": "Kari Strand",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Intervju tirsdag kl. 10.00. Gi beskjed. Kari Strand"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "til-bekreft-b",
+          "tekst": "Svar høflig likevel",
+          "nesteSceneId": "e07-s03",
+          "tilbakemelding": "En høflig bekreftelse kan rette opp et dårlig førsteinntrykk."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e07-s02b-su",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du kan fremdeles svare høflig, selv om SMS-en fra bedriften er kort.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Du kan rette opp. Svar med hei, tid og vennlig hilsen.",
+          "tilbakemeldingFeil": "En kort SMS betyr ikke at du skal svare brått. Vær høflig."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s02b-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Når er intervjuet?",
+          "alternativer": [
+            { "id": "a", "tekst": "På tirsdag klokka 10.00" },
+            { "id": "b", "tekst": "På onsdag klokka 12.00" },
+            { "id": "c", "tekst": "Tid er ikke oppgitt." }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Tirsdag klokka 10.00 står i SMS-en.",
+          "tilbakemeldingFeil": "Les den korte SMS-en. Dagen er tirsdag. Klokka er 10.00."
+        }
+      ]
+    },
+    {
+      "id": "e07-s03",
+      "tittel": "Bekreft intervjuet",
+      "dag": "Tirsdag",
+      "klokkeslett": "09:00",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e07-s03-svar.svg",
+        "bildeAlt": "En person skriver en høflig SMS-bekreftelse.",
+        "lyd": "e07-s03-svar.wav"
+      },
+      "tekst": "Bekreft tiden.\n\nSi at du kommer på tirsdag {{klokka}} 10.00.\n\nBruk hei og vennlig hilsen.",
+      "valg": [],
+      "oppgaver": [
+        {
+          "type": "bygg_melding",
+          "id": "e07-s03-bm",
+          "instruksjon": "Velg hilsen, innhold og avslutning. Send deretter meldingen.",
+          "hilsen": [
+            { "id": "h1", "tekst": "Hei Kari,", "hoflig": true },
+            { "id": "h2", "tekst": "ok", "hoflig": false },
+            { "id": "h3", "tekst": "Hva skjer", "hoflig": false }
+          ],
+          "innhold": [
+            {
+              "id": "i1",
+              "tekst": "Takk for innkallingen. Jeg kommer gjerne på tirsdag klokka 10.00 om morgenen.",
+              "hoflig": true
+            },
+            { "id": "i2", "tekst": "ok 10", "hoflig": false },
+            { "id": "i3", "tekst": "Du må flytte tiden.", "hoflig": false }
+          ],
+          "avslutning": [
+            { "id": "a1", "tekst": "Vennlig hilsen [navn]", "hoflig": true },
+            { "id": "a2", "tekst": "Hilsen [navn]", "hoflig": true },
+            { "id": "a3", "tekst": "Bye", "hoflig": false }
+          ],
+          "flaggHoflig": ["intervju_bekreftet"],
+          "flaggUhoflig": [],
+          "nesteHoflig": "e07-s04",
+          "nesteUhoflig": "e07-s03b",
+          "tilbakemeldingRiktig": "Bra. Du bekrefter dag og klokkeslett på en høflig måte.",
+          "tilbakemeldingFeil": "Svaret er for kort eller for brå. Prøv igjen, eller send likevel og rett opp etterpå."
+        }
+      ]
+    },
+    {
+      "id": "e07-s03b",
+      "tittel": "Rett opp svaret",
+      "dag": "Tirsdag",
+      "klokkeslett": "09:10",
+      "app": "meldinger",
+      "media": {
+        "bilde": "e07-s03-svar.svg",
+        "bildeAlt": "En ny sjanse til å skrive en høflig bekreftelse.",
+        "lyd": "e07-s03-svar.wav"
+      },
+      "tekst": "Kari svarer kort.\n\nDu kan rette opp.\n\nVelg et {{hoflig|høflig}} svar med dag og klokkeslett.",
+      "varsel": {
+        "type": "sms",
+        "fra": "Kari Strand",
+        "innhold": "Ny melding fra Kari Strand"
+      },
+      "smsTraad": {
+        "kontakt": "Kari Strand",
+        "meldinger": [
+          {
+            "fra": "veileder",
+            "tekst": "Vi trenger et klart svar. Kommer du tirsdag kl. 10.00?"
+          }
+        ]
+      },
+      "valg": [
+        {
+          "id": "rett-opp",
+          "tekst": "Send det høflige svaret",
+          "nesteSceneId": "e07-s04",
+          "flagg": ["intervju_bekreftet"],
+          "fjernFlagg": ["uhoflig_sms"],
+          "aktivitetStatus": "innkalt",
+          "tilbakemelding": "Bra. Du rettet opp. Tiden er bekreftet."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e07-s03b-fv",
+          "instruksjon": "Velg det høflige svaret.",
+          "spoersmal": "Hvilket svar er høflig og tydelig?",
+          "alternativer": [
+            { "id": "a", "tekst": "ok" },
+            { "id": "b", "tekst": "Hei Kari. Ja, jeg kommer på tirsdag klokka 10.00. Vennlig hilsen" },
+            { "id": "c", "tekst": "Du må vente." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Hei, ja til tiden, og vennlig hilsen.",
+          "tilbakemeldingFeil": "Velg svaret med hei, ja til tirsdag klokka 10.00 og vennlig hilsen."
+        }
+      ]
+    },
+    {
+      "id": "e07-s04",
+      "tittel": "E-post med avslag",
+      "dag": "Tirsdag",
+      "klokkeslett": "11:20",
+      "app": "epost",
+      "media": {
+        "bilde": "e07-s04-avslag.svg",
+        "bildeAlt": "En e-post med avslag fra en bedrift.",
+        "lyd": "e07-s04-avslag.wav"
+      },
+      "tekst": "En annen bedrift sender {{avslag}}.\n\nDet betyr nei denne gangen.\n\nSvar likevel {{hoflig|høflig}}.\n\nIkke skriv at de tar feil.",
+      "varsel": {
+        "type": "epost",
+        "fra": "Romsdals Renhold (øvingsversjon)",
+        "innhold": "Svar på din søknad"
+      },
+      "epost": {
+        "id": "e07-avslag",
+        "fra": "Per Bakke, Romsdals Renhold (øvingsversjon)",
+        "emne": "Svar på din søknad",
+        "innhold": "Hei. Takk for søknaden. Vi har valgt en annen person denne gangen. Vi ønsker deg lykke til. Vennlig hilsen Per Bakke"
+      },
+      "valg": [
+        {
+          "id": "til-kalender",
+          "tekst": "Legg intervjuet i kalenderen",
+          "nesteSceneId": "e07-s05",
+          "aktivitetStatus": "avslag",
+          "tilbakemelding": "Avslaget er registrert. Nå skal du legge inn intervjuet."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e07-s04-fv",
+          "instruksjon": "Velg det høflige svaret på avslaget.",
+          "spoersmal": "Hva svarer du på et avslag?",
+          "alternativer": [
+            { "id": "a", "tekst": "Dere tar feil. Jeg er best." },
+            { "id": "b", "tekst": "Takk for tilbakemeldingen. Jeg ønsker dere lykke til videre." },
+            { "id": "c", "tekst": "Stygge folk. Jeg ringer sjefen." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Takk og lykke til er høflig, også når svaret er nei.",
+          "tilbakemeldingFeil": "Ikke krangle. Si takk for svaret. Det er {{formelt}} og {{hoflig|høflig}}."
+        }
+      ]
+    },
+    {
+      "id": "e07-s05",
+      "tittel": "Intervju i kalenderen",
+      "dag": "Tirsdag",
+      "klokkeslett": "11:40",
+      "app": "kalender",
+      "media": {
+        "bilde": "e07-s05-kalender.svg",
+        "bildeAlt": "En kalender med intervju tirsdag klokka 10.00.",
+        "lyd": "e07-s05-kalender.wav"
+      },
+      "tekst": "Legg {{intervju|intervjuet}} inn i {{kalender|kalenderen}}.\n\nPå tirsdag. Klokka ti. Om morgenen.\n\nSted: resepsjonen.",
+      "kalenderhendelse": {
+        "id": "e07-intervju",
+        "tittel": "Jobbintervju med Kari Strand (øvingsversjon)",
+        "dag": "Tirsdag",
+        "tid": "10:00",
+        "sted": "Resepsjonen (øvingsversjon)"
+      },
+      "valg": [
+        {
+          "id": "avslutt-e07",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "flagg": ["intervju_i_kalender"],
+          "tilbakemelding": "Du er ferdig med episode 7."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sorter_setning",
+          "id": "e07-s05-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["Jeg", "kommer", "på", "tirsdag", "klokka", "ti", "om", "morgenen."],
+          "tilbakemeldingRiktig": "Riktig. På tirsdag. Klokka ti. Om morgenen.",
+          "tilbakemeldingFeil": "Start med Jeg kommer. Deretter på tirsdag klokka ti om morgenen."
+        },
+        {
+          "type": "matching",
+          "id": "e07-s05-ma",
+          "instruksjon": "Trykk først på uttrykket til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "på tirsdag", "hoyre": "dagen i uka" },
+            { "id": "p2", "venstre": "klokka ti", "hoyre": "klokkeslettet 10.00" },
+            { "id": "p3", "venstre": "om morgenen", "hoyre": "før middag, tidlig på dagen" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. På + dag. Klokka + tid. Om + del av døgnet.",
+          "tilbakemeldingFeil": "På tirsdag = dag. Klokka ti = tid. Om morgenen = del av døgnet."
+        }
+      ]
+    }
+  ]
+}

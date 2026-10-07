@@ -1,0 +1,359 @@
+{
+  "id": "e11",
+  "nummer": 11,
+  "tittel": "Den første lønnsslippen",
+  "ingress": "Slutten av første måned. Du leser lønnsslippen, sjekker trekk og finner en feil.",
+  "startSceneId": "e11-s01",
+  "tillatteFlagg": ["oppdaget_lonnsfeil"],
+  "ordIds": ["brutto", "netto", "skattetrekk", "feriepenger", "overtid", "timelonn", "skattekort", "frikort"],
+  "oppsummering": [
+    { "tekst": "Leste lønnsslippen for november." },
+    { "tekst": "Hadde endret skattekort. Trekket følger beregningen.", "visHvisFlagg": "endret_skattekort" },
+    { "tekst": "Hadde ikke endret skattekort. Trekket ble for høyt eller for lavt.", "visHvisIkkeFlagg": "endret_skattekort" },
+    { "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.", "visHvisFlagg": "oppdaget_lonnsfeil" },
+    { "tekst": "Sendte ikke en tydelig e-post om overtiden.", "visHvisIkkeFlagg": "oppdaget_lonnsfeil" }
+  ],
+  "scener": [
+    {
+      "id": "e11-s01",
+      "tittel": "Lønnsslippen er klar",
+      "dag": "Fredag",
+      "klokkeslett": "14:00",
+      "app": "epost",
+      "media": {
+        "bilde": "e11-s01-epost.svg",
+        "bildeAlt": "En e-post om at lønnsslippen for november er klar.",
+        "lyd": "e11-s01-epost.wav"
+      },
+      "tekst": "Slutten av første måned.\n\nE-post fra lønnskontoret.\n\nLønnsslippen din for november er klar.\n\nÅpne appen Lønn.",
+      "varsel": {
+        "type": "epost",
+        "fra": "Lønnskontoret (øving)",
+        "innhold": "Lønnsslippen din for november er klar."
+      },
+      "epost": {
+        "id": "e11-lonn-klar",
+        "fra": "Mona Lie, lønnskontoret (øvingsnavn)",
+        "emne": "Lønnsslippen din for november er klar",
+        "innhold": "Hei. Lønnsslippen din for november er klar i appen Lønn. Dette er øvingsversjon. Vennlig hilsen Mona Lie"
+      },
+      "kalenderhendelse": {
+        "id": "e11-timeliste",
+        "tittel": "Timeliste november",
+        "dag": "November",
+        "tid": "128 t + 4 t overtid",
+        "sted": "Se Kalender. Øvingsversjon."
+      },
+      "valg": [
+        {
+          "id": "til-ok-kort",
+          "tekst": "Åpne lønnsslippen",
+          "nesteSceneId": "e11-s02a",
+          "visHvisFlagg": "endret_skattekort",
+          "tilbakemelding": "Se brutto, trekk og netto."
+        },
+        {
+          "id": "til-feil-kort",
+          "tekst": "Åpne lønnsslippen",
+          "nesteSceneId": "e11-s02b",
+          "visHvisIkkeFlagg": "endret_skattekort",
+          "tilbakemelding": "Se på skattetrekket. Det kan være feil."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e11-s01-su",
+          "instruksjon": "Velg sant eller usant.",
+          "paastand": "Lønnsslippen viser hva du får på konto denne måneden.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Sant. Der står netto utbetalt.",
+          "tilbakemeldingFeil": "Det er sant. Netto er det du får på konto."
+        }
+      ]
+    },
+    {
+      "id": "e11-s02a",
+      "tittel": "Trekk etter nytt kort",
+      "dag": "Fredag",
+      "klokkeslett": "14:10",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s02-slipp.svg",
+        "bildeAlt": "En lønnsslipp med brutto, trekk og netto.",
+        "lyd": "e11-s02-slipp.wav"
+      },
+      "tekst": "Du endret {{skattekort|skattekortet}}.\n\n{{skattetrekk|Skattetrekket}} på slippen følger beregningen i Skattøving.\n\nSamme person. Samme valg. Samme trekk.",
+      "valg": [
+        {
+          "id": "til-finn-a",
+          "tekst": "Finn beløp på konto",
+          "nesteSceneId": "e11-s03",
+          "tilbakemelding": "Trykk på feltet med netto."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "matching",
+          "id": "e11-s02a-ma",
+          "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "brutto", "hoyre": "lønn før trekk" },
+            { "id": "p2", "venstre": "netto", "hoyre": "på konto" },
+            { "id": "p3", "venstre": "skattetrekk", "hoyre": "til skatt" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Brutto minus trekk blir netto.",
+          "tilbakemeldingFeil": "Brutto er før trekk. Netto er på konto."
+        }
+      ]
+    },
+    {
+      "id": "e11-s02b",
+      "tittel": "Trekket ser feil ut",
+      "dag": "Fredag",
+      "klokkeslett": "14:10",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s02-slipp.svg",
+        "bildeAlt": "En lønnsslipp der skattetrekket ser feil ut.",
+        "lyd": "e11-s02-slipp.wav"
+      },
+      "tekst": "Du endret ikke {{skattekort|skattekortet}}.\n\nHar du {{frikort}}? Da kan trekk være 50 prosent av det som går over 100 000 kr.\n\nHar du for lav forventet inntekt? Da trekkes det for lite. Du kan få restskatt.\n\nÅpne Skattøving. Du kan ordne det nå.",
+      "valg": [
+        {
+          "id": "til-finn-b",
+          "tekst": "Gå videre til slippen",
+          "nesteSceneId": "e11-s03",
+          "tilbakemelding": "Finn netto. Deretter sjekker vi timene."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e11-s02b-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor kan trekket være feil?",
+          "alternativer": [
+            { "id": "a", "tekst": "Skattekortet ble ikke endret etter ny lønn." },
+            { "id": "b", "tekst": "Bussen var sen." },
+            { "id": "c", "tekst": "Navnet er feil stavet." }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Ny lønn krever ofte nytt skattekort.",
+          "tilbakemeldingFeil": "Trekket følger skattekortet. Du endret det ikke."
+        }
+      ]
+    },
+    {
+      "id": "e11-s03",
+      "tittel": "Hvor mye får du på konto?",
+      "dag": "Fredag",
+      "klokkeslett": "14:20",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s03-netto.svg",
+        "bildeAlt": "Et felt på lønnsslippen merket netto utbetalt.",
+        "lyd": "e11-s03-netto.wav"
+      },
+      "tekst": "Se på lønnsslippen.\n\n{{brutto|Brutto}} er før trekk.\n{{netto|Netto}} er det du får på konto.\n\nTrykk på riktig felt.",
+      "valg": [
+        {
+          "id": "til-regn",
+          "tekst": "Regn ut brutto",
+          "nesteSceneId": "e11-s04",
+          "tilbakemelding": "Timer ganger timelønn."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "finn_i_dokument",
+          "id": "e11-s03-fi",
+          "instruksjon": "Trykk på riktig felt i lønnsslippen.",
+          "dokument": "lonnsslipp",
+          "spoersmal": "Hvor står det hvor mye du får på konto?",
+          "riktigFeltId": "netto",
+          "tilbakemeldingRiktig": "Riktig. Netto utbetalt er på konto.",
+          "tilbakemeldingFeil": "Trykk på feltet Netto utbetalt."
+        }
+      ]
+    },
+    {
+      "id": "e11-s04",
+      "tittel": "Timer ganger timelønn",
+      "dag": "Fredag",
+      "klokkeslett": "14:30",
+      "app": "kalender",
+      "media": {
+        "bilde": "e11-s04-regn.svg",
+        "bildeAlt": "En timeliste: 128 timer og timelønn.",
+        "lyd": "e11-s04-regn.wav"
+      },
+      "tekst": "Se i Kalender. Timeliste for november.\n\n128 timer. {{timelonn|Timelønn}} står på slippen.\n\nBrutto uten overtid = timer ganger timelønn.\n\nOlena: 128 × 200 = 25 600 kr.\nTaras: 128 × 210 = 26 880 kr.\nSofiia: 128 × 205 = 26 240 kr.",
+      "valg": [
+        {
+          "id": "til-overtid",
+          "tekst": "Sjekk overtiden",
+          "nesteSceneId": "e11-s05",
+          "tilbakemelding": "Kalenderen viser fire timer overtid. Slippen mangler dem."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e11-s04-fv",
+          "instruksjon": "Velg brutto uten overtid for personen du spiller.",
+          "spoersmal": "Hva er 128 timer ganger timelønna di?",
+          "alternativer": [
+            { "id": "a", "tekst": "Olena 25 600 kr. Taras 26 880 kr. Sofiia 26 240 kr." },
+            { "id": "b", "tekst": "100 kr for alle" },
+            { "id": "c", "tekst": "450 000 kr for alle" }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Timer ganger timelønn.",
+          "tilbakemeldingFeil": "Les timelista og timelønna. 128 ganger timelønn."
+        }
+      ]
+    },
+    {
+      "id": "e11-s05",
+      "tittel": "Manglende overtid",
+      "dag": "Fredag",
+      "klokkeslett": "14:40",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s05-overtid.svg",
+        "bildeAlt": "Timeliste med overtid, og en lønnsslipp uten overtid.",
+        "lyd": "e11-s05-overtid.wav"
+      },
+      "tekst": "Kalenderen: 128 vanlige timer og 4 timer {{overtid}}.\n\nLønnsslippen viser ikke overtiden.\n\nOvertid: 50 prosent ekstra per time.\n\nSend høflig e-post til lønnskontoret.",
+      "valg": [],
+      "oppgaver": [
+        {
+          "type": "finn_i_dokument",
+          "id": "e11-s05-fi",
+          "instruksjon": "Trykk på feltet for overtid på slippen.",
+          "dokument": "lonnsslipp",
+          "spoersmal": "Hvor skulle overtiden stått?",
+          "riktigFeltId": "overtid",
+          "tilbakemeldingRiktig": "Riktig. Der skulle overtiden stått.",
+          "tilbakemeldingFeil": "Trykk på feltet Overtid."
+        },
+        {
+          "type": "bygg_melding",
+          "id": "e11-s05-bm",
+          "instruksjon": "Bygg en høflig e-post. Kan du sjekke …? Jeg lurer på om …",
+          "kanal": "epost",
+          "emne": "Spørsmål om overtid, november",
+          "hilsen": [
+            { "id": "h1", "tekst": "Hei Mona.", "hoflig": true },
+            { "id": "h2", "tekst": "Hallo.", "hoflig": false }
+          ],
+          "innhold": [
+            { "id": "i1", "tekst": "Kan du sjekke overtiden for november? Jeg lurer på om fire timer mangler på slippen.", "hoflig": true },
+            { "id": "i2", "tekst": "Dere har glemt alt. Fiks nå.", "hoflig": false }
+          ],
+          "avslutning": [
+            { "id": "a1", "tekst": "Vennlig hilsen [navn].", "hoflig": true },
+            { "id": "a2", "tekst": "[navn]", "hoflig": false }
+          ],
+          "flaggHoflig": ["oppdaget_lonnsfeil"],
+          "flaggUhoflig": [],
+          "nesteHoflig": "e11-s06",
+          "nesteUhoflig": "e11-s06",
+          "tilbakemeldingRiktig": "Riktig. Hei, Kan du sjekke, og vennlig hilsen.",
+          "tilbakemeldingFeil": "Skriv hei. Spør høflig. Avslutt vennlig."
+        }
+      ]
+    },
+    {
+      "id": "e11-s06",
+      "tittel": "Feriepenger",
+      "dag": "Fredag",
+      "klokkeslett": "15:00",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s06-ferie.svg",
+        "bildeAlt": "Feriepenger: 10,2 prosent av lønna.",
+        "lyd": "e11-s06-ferie.wav"
+      },
+      "tekst": "{{feriepenger|Feriepenger}} er 10,2 prosent av lønna.\n\nDe opptjenes hittil i år. Du får dem neste år.\n\nProsent av = en del av beløpet.",
+      "valg": [
+        {
+          "id": "til-gram",
+          "tekst": "Øv på ord om penger og tid",
+          "nesteSceneId": "e11-s07",
+          "tilbakemelding": "Per time. For november. Hittil i år."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "lytt_og_velg",
+          "id": "e11-s06-ly",
+          "instruksjon": "Lytt. En kollega forklarer feriepenger.",
+          "instruksjonLyd": "e11-s06-kollega.wav",
+          "spoersmal": "Når får du feriepengene?",
+          "alternativer": [
+            { "id": "a", "tekst": "Neste år. De opptjenes i år." },
+            { "id": "b", "tekst": "Hver fredag sammen med kaffen." },
+            { "id": "c", "tekst": "Aldri." }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. 10,2 prosent. Du får dem neste år.",
+          "tilbakemeldingFeil": "Feriepenger opptjenes i år. Du får dem neste år."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s06-su",
+          "instruksjon": "Velg sant eller usant.",
+          "paastand": "Netto er alltid høyere enn brutto.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Usant. Netto er brutto minus trekk. Netto er lavere.",
+          "tilbakemeldingFeil": "Påstanden er usann. Netto er lavere enn brutto."
+        }
+      ]
+    },
+    {
+      "id": "e11-s07",
+      "tittel": "Per time, for november",
+      "dag": "Fredag",
+      "klokkeslett": "15:15",
+      "app": "lonn",
+      "media": {
+        "bilde": "e11-s07-prep.svg",
+        "bildeAlt": "Uttrykk: per time, for november, hittil i år.",
+        "lyd": "e11-s07-prep.wav"
+      },
+      "tekst": "Jeg tjener 200 kr per time.\n\nLønn for november.\n\nHittil i år har jeg tjent så mye.\n\nMinus = trekk fra. Ganger = ganger. Prosent av = en del av.",
+      "valg": [
+        {
+          "id": "avslutt-e11",
+          "tekst": "Avslutt Jobbreisen",
+          "nesteSceneId": "slutt",
+          "tilbakemelding": "Du er ferdig med hele øvingsløpet."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "matching",
+          "id": "e11-s07-ma",
+          "instruksjon": "Trykk først på uttrykket til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "per time", "hoyre": "for hver time" },
+            { "id": "p2", "venstre": "for november", "hoyre": "denne måneden" },
+            { "id": "p3", "venstre": "hittil i år", "hoyre": "fra januar til nå" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Per, for og hittil i år.",
+          "tilbakemeldingFeil": "Per time = hver time. For november = måneden. Hittil i år = fra januar."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s07-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["Kan", "du", "sjekke", "lønnsslippen", "for", "november?"],
+          "tilbakemeldingRiktig": "Riktig. Et høflig spørsmål.",
+          "tilbakemeldingFeil": "Start med Kan du sjekke. Deretter lønnsslippen for november?"
+        }
+      ]
+    }
+  ]
+}

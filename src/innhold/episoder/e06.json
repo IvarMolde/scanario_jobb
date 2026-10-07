@@ -1,0 +1,277 @@
+{
+  "id": "e06",
+  "nummer": 6,
+  "tittel": "Søk jobben",
+  "ingress": "Du vurderer match mot den valgte annonsen. Du bygger en søknad av ferdige avsnitt og retter en feil i utkastet.",
+  "startSceneId": "e06-s01",
+  "tillatteFlagg": ["soknad_tilpasset"],
+  "ordIds": ["soknad", "fordi", "formelt", "avslag", "kompetanse", "logistikk", "match", "egenskap"],
+  "oppsummering": [
+    { "tekst": "Vurderte CV-punkter mot annonsen med matchvurdering." },
+    { "tekst": "Bygget søknaden av innledning, hvorfor meg og avslutning.", "visHvisFlagg": "soknad_tilpasset" },
+    { "tekst": "Øvde på leddsetninger med fordi, som og at. Plasserte ikke i leddsetning." },
+    { "tekst": "Så forskjell på formelt og uformelt språk i en søknad." }
+  ],
+  "scener": [
+    {
+      "id": "e06-s01",
+      "tittel": "Hva passer i søknaden?",
+      "dag": "Mandag",
+      "klokkeslett": "09:15",
+      "app": "cv",
+      "media": {
+        "bilde": "e06-s01-cv.svg",
+        "bildeAlt": "En CV ved siden av en stillingsannonse.",
+        "lyd": "e06-s01-cv.wav"
+      },
+      "tekst": "Les CV-en og annonsen.\n\nHvilke punkter passer?\n\nBruk {{match|matchvurderingen}}.\n\nDu søker {{fordi}} noe i CV-en passer til jobben.",
+      "valg": [
+        {
+          "id": "til-match",
+          "tekst": "Vurder match",
+          "nesteSceneId": "e06-s02",
+          "tilbakemelding": "Velg passer, passer ikke eller vet ikke. Vet ikke er ikke det riktige svaret."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e06-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva skal du legge vekt på i søknaden?",
+          "alternativer": [
+            { "id": "a", "tekst": "Punkter fra CV-en som passer til annonsen" },
+            { "id": "b", "tekst": "Bare hobbyene dine" },
+            { "id": "c", "tekst": "Bare navnet på veilederen" }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Søknaden skal vise hvorfor du passer til denne jobben.",
+          "tilbakemeldingFeil": "Tenk på match. Hva i CV-en passer til kravene i annonsen?"
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s01-ob",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg søker jobben _____ jeg har relevant erfaring.",
+          "ord": ["fordi", "men", "eller"],
+          "riktig": "fordi",
+          "tilbakemeldingRiktig": "Riktig. Fordi innleder en leddsetning som gir grunn.",
+          "tilbakemeldingFeil": "{{fordi}} forklarer hvorfor. Jeg søker fordi jeg har erfaring."
+        }
+      ]
+    },
+    {
+      "id": "e06-s02",
+      "tittel": "Match mot annonsen",
+      "dag": "Mandag",
+      "klokkeslett": "09:30",
+      "app": "jobbmagasin",
+      "media": {
+        "bilde": "e06-s02-match.svg",
+        "bildeAlt": "Tre bokser: kompetanse, egenskaper og logistikk.",
+        "lyd": "e06-s02-match.wav"
+      },
+      "tekst": "Se på den jobben du vil søke først.\n\nVurder {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.\n\nDet som passer, kan du bruke i {{soknad|søknaden}}.",
+      "valg": [
+        {
+          "id": "til-soknad",
+          "tekst": "Bygg søknaden",
+          "nesteSceneId": "e06-s03",
+          "tilbakemelding": "Velg innledning, hvorfor meg og avslutning. Bruk formelt språk."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "match_sjekkliste",
+          "id": "e06-s02-ms",
+          "instruksjon": "Vurder kompetanse, egenskaper og logistikk for jobben du søker.",
+          "fallbackPerPerson": {
+            "olena": "havna-handel",
+            "taras": "fjordlager",
+            "sofiia": "molde-omsorg"
+          },
+          "kategorier": ["kompetanse", "egenskaper", "logistikk"],
+          "tilbakemeldingRiktig": "Bra. Nå vet du hvilke CV-punkter som passer i søknaden.",
+          "tilbakemeldingFeil": "Se på personens erfaring og egenskaper. Vet ikke er ikke det riktige svaret."
+        }
+      ]
+    },
+    {
+      "id": "e06-s03",
+      "tittel": "Bygg søknaden",
+      "dag": "Mandag",
+      "klokkeslett": "09:50",
+      "app": "epost",
+      "media": {
+        "bilde": "e06-s03-soknad.svg",
+        "bildeAlt": "Tre avsnitt i en søknad: innledning, hvorfor meg og avslutning.",
+        "lyd": "e06-s03-soknad.wav"
+      },
+      "tekst": "Bygg {{soknad|søknaden}} av tre avsnitt.\n\nInnledning. Hvorfor meg. Avslutning.\n\nBruk {{formelt}} språk. Ikke hei og hade.\n\nSkriv {{fordi}} og at i hele setninger.",
+      "valg": [
+        {
+          "id": "til-rett",
+          "tekst": "Rett en feil i utkastet",
+          "nesteSceneId": "e06-s04",
+          "tilbakemelding": "Finn ordet som står feil. Velg deretter riktig setning."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "bygg_soknad",
+          "id": "e06-s03-bs",
+          "instruksjon": "Velg ett avsnitt i hver del. Velg tekst som passer til personen og jobben.",
+          "innledning": [
+            {
+              "id": "in1",
+              "tekst": "Jeg viser til stillingsannonsen. Jeg søker jobben fordi jeg har erfaring som passer.",
+              "personer": ["olena", "taras", "sofiia"]
+            },
+            {
+              "id": "in2",
+              "tekst": "Yo, gi meg jobben nå!!!",
+              "personer": []
+            },
+            {
+              "id": "in3",
+              "tekst": "Jeg søker jobben at jeg vil jobbe.",
+              "personer": []
+            }
+          ],
+          "hvorfor": [
+            {
+              "id": "hv1",
+              "tekst": "Jeg har jobbet i butikk, og jeg er blid og punktlig.",
+              "personer": ["olena"]
+            },
+            {
+              "id": "hv2",
+              "tekst": "Jeg har jobbet på bygg, og jeg er sterk og pålitelig. Jeg har førerkort klasse B.",
+              "personer": ["taras"]
+            },
+            {
+              "id": "hv3",
+              "tekst": "Jeg har jobbet i omsorg, og jeg er tålmodig og omsorgsfull. Jeg har førstehjelpskurs.",
+              "personer": ["sofiia"]
+            },
+            {
+              "id": "hv4",
+              "tekst": "Jeg er best, og dere må ta meg.",
+              "personer": []
+            }
+          ],
+          "avslutning": [
+            {
+              "id": "av1",
+              "tekst": "Jeg håper at jeg hører fra dere. Vennlig hilsen [navn]",
+              "personer": ["olena", "taras", "sofiia"]
+            },
+            {
+              "id": "av2",
+              "tekst": "Hade da, ring meg.",
+              "personer": []
+            }
+          ],
+          "flagg": ["soknad_tilpasset"],
+          "tilbakemeldingRiktig": "Bra. Du bruker formelt språk og punkter som passer til personen.",
+          "tilbakemeldingFeil": "Velg avsnitt som passer til CV-en. Unngå hei, hade og kommandoer."
+        }
+      ]
+    },
+    {
+      "id": "e06-s04",
+      "tittel": "Finn og rett feilen",
+      "dag": "Mandag",
+      "klokkeslett": "10:10",
+      "app": "epost",
+      "media": {
+        "bilde": "e06-s04-rett.svg",
+        "bildeAlt": "Et søknadsutkast med en markert feil.",
+        "lyd": "e06-s04-rett.wav"
+      },
+      "tekst": "Les utkastet.\n\nI en leddsetning med {{fordi}} står ikke etter at og før verbet: fordi jeg ikke har …\n\nIkke: fordi jeg har ikke …",
+      "valg": [
+        {
+          "id": "til-formelt",
+          "tekst": "Formelt eller uformelt?",
+          "nesteSceneId": "e06-s05",
+          "tilbakemelding": "En søknad skal være formell."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "finn_og_rett",
+          "id": "e06-s04-fr",
+          "instruksjon": "Trykk på ordet som står feil. Velg deretter riktig setning.",
+          "tekst": "Jeg søker fordi jeg har ikke erfaring som passer.",
+          "feilOrd": "ikke",
+          "alternativer": [
+            { "id": "a", "tekst": "Jeg søker fordi jeg ikke har erfaring som passer." },
+            { "id": "b", "tekst": "Jeg søker fordi ikke jeg har erfaring som passer." },
+            { "id": "c", "tekst": "Jeg søker ikke fordi jeg har erfaring som passer." }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. I leddsetning står ikke etter jeg: fordi jeg ikke har …",
+          "tilbakemeldingFeil": "Etter fordi kommer jeg. Deretter ikke. Så har."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e06-s04-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["Jeg", "håper", "at", "jeg", "hører", "fra", "dere."],
+          "tilbakemeldingRiktig": "Riktig. At innleder en leddsetning: at jeg hører fra dere.",
+          "tilbakemeldingFeil": "Start med Jeg håper. Deretter at jeg hører fra dere."
+        }
+      ]
+    },
+    {
+      "id": "e06-s05",
+      "tittel": "Formelt språk",
+      "dag": "Mandag",
+      "klokkeslett": "10:25",
+      "app": "epost",
+      "media": {
+        "bilde": "e06-s05-formelt.svg",
+        "bildeAlt": "To kolonner: formelt språk og uformelt språk.",
+        "lyd": "e06-s05-formelt.wav"
+      },
+      "tekst": "{{formelt|Formelt}} språk passer i en {{soknad}}.\n\nUformelt språk passer i SMS til en venn.\n\nEn leddsetning med som forteller mer: erfaring som passer.",
+      "valg": [
+        {
+          "id": "avslutt-e06",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "tilbakemelding": "Du er ferdig med episode 6."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e06-s05-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken avslutning er formell?",
+          "alternativer": [
+            { "id": "a", "tekst": "Hade da, ring meg." },
+            { "id": "b", "tekst": "Vennlig hilsen" },
+            { "id": "c", "tekst": "Yo!!!" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Vennlig hilsen er formelt. Det passer i en søknad.",
+          "tilbakemeldingFeil": "{{formelt}} språk bruker hele setninger og vennlig hilsen, ikke hade."
+        },
+        {
+          "type": "matching",
+          "id": "e06-s05-ma",
+          "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "fordi", "hoyre": "gir en grunn" },
+            { "id": "p2", "venstre": "som", "hoyre": "forteller mer om et ord foran" },
+            { "id": "p3", "venstre": "at", "hoyre": "innleder en leddsetning etter håper eller vet" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Fordi, som og at innleder leddsetninger.",
+          "tilbakemeldingFeil": "Fordi = grunn. Som = mer info. At = etter håper eller vet."
+        }
+      ]
+    }
+  ]
+}

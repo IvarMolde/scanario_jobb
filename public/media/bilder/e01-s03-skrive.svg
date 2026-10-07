@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Skriv en melding">
+  <rect width="640" height="360" fill="#E8EEF2"/>
+  <rect x="90" y="70" width="460" height="200" rx="16" fill="#fff" stroke="#005F73" stroke-width="3"/>
+  <text x="120" y="120" fill="#003057" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Hei Linn,</text>
+  <rect x="120" y="150" width="320" height="12" rx="6" fill="#c5d0d6"/>
+  <rect x="120" y="178" width="260" height="12" rx="6" fill="#c5d0d6"/>
+  <rect x="400" y="230" width="120" height="28" rx="8" fill="#EE9B00"/>
+</svg>

@@ -1,0 +1,328 @@
+{
+  "id": "e08",
+  "nummer": 8,
+  "tittel": "Jobbintervjuet",
+  "ingress": "Du forbereder deg, øver på intervjusvar og stiller et spørsmål til arbeidsgiveren.",
+  "startSceneId": "e08-s01",
+  "tillatteFlagg": ["forberedt_intervju"],
+  "ordIds": ["intervju", "erfaring", "cv", "hoflig", "punktlig", "hilse", "inversjon", "perfektum"],
+  "oppsummering": [
+    { "tekst": "Øvde på vanlige intervjuspørsmål og hva som er et godt svar." },
+    { "tekst": "Visste hva du tar med, og hvordan du hilser." },
+    { "tekst": "Svarte med hele setninger. Ikke for kort, og ikke for langt." },
+    { "tekst": "Stilte et spørsmål til arbeidsgiveren." },
+    { "tekst": "Du var forberedt til intervjuet.", "visHvisFlagg": "forberedt_intervju" }
+  ],
+  "scener": [
+    {
+      "id": "e08-s01",
+      "tittel": "Vanlige spørsmål",
+      "dag": "Mandag",
+      "klokkeslett": "18:10",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s01-forbered.svg",
+        "bildeAlt": "Tre vanlige spørsmål på et ark før intervjuet.",
+        "lyd": "e08-s01-forbered.wav"
+      },
+      "tekst": "I morgen er det {{intervju}}.\n\nVanlige spørsmål:\nFortell om deg selv.\nHvorfor vil du ha jobben?\nHar du spørsmål til oss?\n\nVelg et godt svar. Ikke for kort. Ikke for langt.",
+      "valg": [
+        {
+          "id": "til-pakke",
+          "tekst": "Hva tar jeg med?",
+          "nesteSceneId": "e08-s02",
+          "tilbakemelding": "Ta med CV og ID. Hils med god morgen og navnet ditt."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "matching",
+          "id": "e08-s01-ma",
+          "instruksjon": "Trykk først på spørsmålet til venstre. Trykk deretter på forklaringen til høyre.",
+          "par": [
+            { "id": "p1", "venstre": "Fortell om deg selv", "hoyre": "Hvem du er, og hva du har gjort" },
+            { "id": "p2", "venstre": "Hvorfor vil du ha jobben?", "hoyre": "Hva som passer hos dem" },
+            { "id": "p3", "venstre": "Har du spørsmål til oss?", "hoyre": "Du kan spørre om arbeidstid" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Øv på disse tre spørsmålene.",
+          "tilbakemeldingFeil": "Fortell om deg selv = hvem du er. Hvorfor = hvorfor jobben passer."
+        },
+        {
+          "type": "flervalg",
+          "id": "e08-s01-fv",
+          "instruksjon": "Velg det beste svaret.",
+          "spoersmal": "Hva er et godt intervjusvar?",
+          "alternativer": [
+            { "id": "a", "tekst": "Ett ord. For eksempel: Butikk." },
+            { "id": "b", "tekst": "En hel setning om erfaring, uten å snakke for lenge." },
+            { "id": "c", "tekst": "En lang historie om hele livet." }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. En hel setning. Ikke for kort. Ikke for langt.",
+          "tilbakemeldingFeil": "Ikke svar med ett ord. Ikke fortell alt. Si det viktigste i hele setninger."
+        }
+      ]
+    },
+    {
+      "id": "e08-s02",
+      "tittel": "Pakke og hilse",
+      "dag": "Mandag",
+      "klokkeslett": "18:25",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s02-pakke.svg",
+        "bildeAlt": "En mappe med CV og ID-kort.",
+        "lyd": "e08-s02-pakke.wav"
+      },
+      "tekst": "Hva tar du med til {{intervju|intervjuet}}?\n\n{{cv|CV}} og ID.\n\nHvordan {{hilse|hilser}} du?\n\nGod morgen. Jeg heter … Hyggelig å møte deg.",
+      "valg": [
+        {
+          "id": "til-q1",
+          "tekst": "Start intervjuet",
+          "nesteSceneId": "e08-s03",
+          "tilbakemelding": "Lytt til Kari. Velg et godt svar."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e08-s02-fv",
+          "instruksjon": "Velg det du tar med.",
+          "spoersmal": "Hva tar du med til intervjuet?",
+          "alternativer": [
+            { "id": "a", "tekst": "CV og ID" },
+            { "id": "b", "tekst": "Middag og en høyttaler" },
+            { "id": "c", "tekst": "Ingenting" }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Ta med CV og ID.",
+          "tilbakemeldingFeil": "Ta med CV og ID. Ikke mat. Ikke høyttaler."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s02-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["God", "morgen.", "Hyggelig", "å", "møte", "deg."],
+          "tilbakemeldingRiktig": "Riktig. God morgen. Hyggelig å møte deg.",
+          "tilbakemeldingFeil": "Start med God morgen. Avslutt med Hyggelig å møte deg."
+        }
+      ]
+    },
+    {
+      "id": "e08-s03",
+      "tittel": "Fortell om deg selv",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:02",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s03-intervju.svg",
+        "bildeAlt": "Kari Strand sitter ved et bord og stiller spørsmål.",
+        "lyd": "e08-s03-q.wav"
+      },
+      "tekst": "Kari Strand (øvingsnavn) hilser.\n\nGod morgen. Hyggelig å møte deg.\n\nLytt. Velg et godt svar. Ikke for kort. Ikke for langt.",
+      "valg": [
+        {
+          "id": "til-q2",
+          "tekst": "Neste spørsmål",
+          "nesteSceneId": "e08-s04",
+          "tilbakemelding": "Nå spør Kari hvorfor du vil ha jobben."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "intervju_svar",
+          "id": "e08-s03-is",
+          "instruksjon": "Lytt til spørsmålet. Velg det gode svaret.",
+          "spoersmal": "Fortell om deg selv.",
+          "spoersmalLyd": "e08-s03-q.wav",
+          "alternativer": [
+            { "id": "olena-kort", "tekst": "Butikk.", "kvalitet": "kort", "personer": ["olena"] },
+            { "id": "olena-langt", "tekst": "Jeg er født i 1994, og jeg har tre søsken, og jeg liker kaffe, og jeg har bodd mange steder, og jeg kan fortelle om hele livet mitt nå.", "kvalitet": "langt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "I Ukraina jobbet jeg i butikk i tre år. Jeg har erfaring med kasse og kunder.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "taras-kort", "tekst": "Bygg.", "kvalitet": "kort", "personer": ["taras"] },
+            { "id": "taras-langt", "tekst": "Jeg kan fortelle om alle husene jeg har bygget, og om bussen, og om været, og om alt jeg har gjort siden jeg var liten.", "kvalitet": "langt", "personer": ["taras"] },
+            { "id": "taras-godt", "tekst": "I Ukraina jobbet jeg på bygg i to år. Jeg har førerkort. Nå vil jeg gjerne jobbe på lager.", "kvalitet": "godt", "personer": ["taras"] },
+            { "id": "sofiia-kort", "tekst": "Omsorg.", "kvalitet": "kort", "personer": ["sofiia"] },
+            { "id": "sofiia-langt", "tekst": "Jeg har hjulpet mange mennesker, og jeg kan fortelle om hver eneste dag, og om familien min, og om alt jeg tenker på jobben.", "kvalitet": "langt", "personer": ["sofiia"] },
+            { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre i to år. Jeg har kurs i omsorg og førstehjelp.", "kvalitet": "godt", "personer": ["sofiia"] }
+          ],
+          "tilbakemeldingRiktig": "Riktig. En hel setning om erfaring. Det er et godt svar.",
+          "tilbakemeldingFeil": "Ett ord er for kort. En lang historie er for mye. Si det viktigste."
+        }
+      ]
+    },
+    {
+      "id": "e08-s04",
+      "tittel": "Hvorfor denne jobben",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:08",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s03-intervju.svg",
+        "bildeAlt": "Kari Strand venter på svar om hvorfor du vil ha jobben.",
+        "lyd": "e08-s04-q.wav"
+      },
+      "tekst": "Kari spør igjen.\n\nHvorfor vil du ha denne jobben?\n\nBruk {{erfaring}}. Bruk {{fordi}}.",
+      "valg": [
+        {
+          "id": "til-q3",
+          "tekst": "Neste spørsmål",
+          "nesteSceneId": "e08-s05",
+          "tilbakemelding": "Nå spør Kari hva du har gjort før."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "intervju_svar",
+          "id": "e08-s04-is",
+          "instruksjon": "Lytt. Velg det gode svaret med fordi.",
+          "spoersmal": "Hvorfor vil du ha denne jobben?",
+          "spoersmalLyd": "e08-s04-q.wav",
+          "alternativer": [
+            { "id": "olena-kort", "tekst": "Penger.", "kvalitet": "kort", "personer": ["olena"] },
+            { "id": "olena-langt", "tekst": "Jeg vil ha jobben fordi jeg trenger penger, og fordi bussen går, og fordi jeg liker Molde, og fordi jeg kan snakke lenge om dette.", "kvalitet": "langt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "Jeg søker fordi jeg har jobbet i butikk, og fordi jeg er blid med kunder.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "taras-kort", "tekst": "Ja.", "kvalitet": "kort", "personer": ["taras"] },
+            { "id": "taras-langt", "tekst": "Jeg vil ha alle jobber, og jeg kan fortelle om hver stilling jeg har sett, og om alle vennene mine som også søker.", "kvalitet": "langt", "personer": ["taras"] },
+            { "id": "taras-godt", "tekst": "Jeg søker fordi jeg har jobbet på bygg, og fordi jeg har førerkort.", "kvalitet": "godt", "personer": ["taras"] },
+            { "id": "sofiia-kort", "tekst": "Helse.", "kvalitet": "kort", "personer": ["sofiia"] },
+            { "id": "sofiia-langt", "tekst": "Jeg kan snakke lenge om hvorfor omsorg er viktig i hele verden, og om alt jeg har lest, og om alle kursene.", "kvalitet": "langt", "personer": ["sofiia"] },
+            { "id": "sofiia-godt", "tekst": "Jeg søker fordi jeg har hjulpet eldre, og fordi jeg er tålmodig.", "kvalitet": "godt", "personer": ["sofiia"] }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Du sier fordi, og du knytter svaret til erfaringen din.",
+          "tilbakemeldingFeil": "Si hvorfor med en hel setning. Bruk fordi og erfaringen din."
+        }
+      ]
+    },
+    {
+      "id": "e08-s05",
+      "tittel": "Hva har du gjort før",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:14",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s03-intervju.svg",
+        "bildeAlt": "Kari Strand spør om tidligere jobb.",
+        "lyd": "e08-s05-q.wav"
+      },
+      "tekst": "Kari spør om {{erfaring}}.\n\nStart med stedet: I Ukraina jobbet jeg …\n\nDet heter {{inversjon}}. Tid eller sted først. Deretter verbet.",
+      "valg": [
+        {
+          "id": "til-gram",
+          "tekst": "Øv mer på setninger",
+          "nesteSceneId": "e08-s06",
+          "tilbakemelding": "Øv på inversjon og perfektum."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "intervju_svar",
+          "id": "e08-s05-is",
+          "instruksjon": "Lytt. Velg svaret med inversjon og perfektum.",
+          "spoersmal": "Hva har du gjort før?",
+          "spoersmalLyd": "e08-s05-q.wav",
+          "alternativer": [
+            { "id": "olena-kort", "tekst": "Jobbet.", "kvalitet": "kort", "personer": ["olena"] },
+            { "id": "olena-langt", "tekst": "Jeg har gjort så mye at jeg nesten ikke vet hvor jeg skal starte, og jeg kan telle opp hver dag på jobben i tre år.", "kvalitet": "langt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "I Ukraina jobbet jeg i butikk. Jeg har jobbet med kasse i tre år.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "taras-kort", "tekst": "Bygde.", "kvalitet": "kort", "personer": ["taras"] },
+            { "id": "taras-langt", "tekst": "Jeg har løftet, båret, ryddet, ventet, kjørt og gjort alt mulig, og jeg kan fortsette lenge.", "kvalitet": "langt", "personer": ["taras"] },
+            { "id": "taras-godt", "tekst": "I Ukraina jobbet jeg på bygg. Jeg har jobbet med sikkerhet og tunge løft.", "kvalitet": "godt", "personer": ["taras"] },
+            { "id": "sofiia-kort", "tekst": "Hjalp.", "kvalitet": "kort", "personer": ["sofiia"] },
+            { "id": "sofiia-langt", "tekst": "Jeg har hjulpet så mange at jeg kan snakke i en time om hver person jeg har møtt.", "kvalitet": "langt", "personer": ["sofiia"] },
+            { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre. Jeg har hjulpet hjemme i to år.", "kvalitet": "godt", "personer": ["sofiia"] }
+          ],
+          "tilbakemeldingRiktig": "Riktig. I Ukraina jobbet jeg … Deretter: Jeg har jobbet …",
+          "tilbakemeldingFeil": "Start med I Ukraina jobbet jeg. Bruk også har jobbet."
+        }
+      ]
+    },
+    {
+      "id": "e08-s06",
+      "tittel": "Inversjon og perfektum",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:20",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s06-grammatikk.svg",
+        "bildeAlt": "To setninger: I Ukraina jobbet jeg, og Jeg har jobbet.",
+        "lyd": "e08-s06-grammatikk.wav"
+      },
+      "tekst": "I Ukraina jobbet jeg …\n\nSted først. Deretter verbet jobbet. Deretter jeg.\n\nJeg har jobbet i tre år.\n\nHar + jobbet = {{perfektum}}. Det du har gjort.",
+      "valg": [
+        {
+          "id": "til-sporsmal",
+          "tekst": "Still et spørsmål",
+          "nesteSceneId": "e08-s07",
+          "tilbakemelding": "Velg et høflig spørsmål til Kari."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sorter_setning",
+          "id": "e08-s06-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["I", "Ukraina", "jobbet", "jeg", "i", "tre", "år."],
+          "tilbakemeldingRiktig": "Riktig. I Ukraina jobbet jeg i tre år.",
+          "tilbakemeldingFeil": "Start med I Ukraina. Deretter jobbet jeg."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s06-ob",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ jobbet i tre år.",
+          "ord": ["har", "skal", "ikke"],
+          "riktig": "har",
+          "tilbakemeldingRiktig": "Riktig. Jeg har jobbet. Det er perfektum.",
+          "tilbakemeldingFeil": "Bruk har + jobbet når du snakker om erfaring."
+        }
+      ]
+    },
+    {
+      "id": "e08-s07",
+      "tittel": "Spørsmål til arbeidsgiveren",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:28",
+      "app": "hjem",
+      "media": {
+        "bilde": "e08-s07-sporsmal.svg",
+        "bildeAlt": "Eleven stiller et spørsmål til Kari Strand.",
+        "lyd": "e08-s07-sporsmal.wav"
+      },
+      "tekst": "Kari sier: Har du spørsmål til oss?\n\nVelg et {{hoflig|høflig}} spørsmål.\n\nSpør om {{arbeidstid}} eller opplæring. Ikke spør om sjefens lønn.",
+      "valg": [
+        {
+          "id": "avslutt-e08",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "flagg": ["forberedt_intervju"],
+          "tilbakemelding": "Du er ferdig med intervjuet. Du var forberedt."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e08-s07-fv",
+          "instruksjon": "Velg det høflige spørsmålet.",
+          "spoersmal": "Hva spør du Kari om?",
+          "alternativer": [
+            { "id": "a", "tekst": "Hvor mye tjener sjefen?" },
+            { "id": "b", "tekst": "Hva er arbeidstiden, og når får jeg opplæring?" },
+            { "id": "c", "tekst": "Kan jeg få fri hver dag?" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Arbeidstid og opplæring er et godt spørsmål.",
+          "tilbakemeldingFeil": "Ikke spør om sjefens lønn. Spør om arbeidstid eller opplæring."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s07-ss",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": ["Hva", "er", "arbeidstiden?"],
+          "tilbakemeldingRiktig": "Riktig. Hva er arbeidstiden?",
+          "tilbakemeldingFeil": "Start med Hva er. Deretter arbeidstiden?"
+        }
+      ]
+    }
+  ]
+}

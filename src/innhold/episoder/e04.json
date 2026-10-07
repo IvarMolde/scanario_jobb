@@ -1,0 +1,247 @@
+{
+  "id": "e04",
+  "nummer": 4,
+  "tittel": "Passer jobben for meg?",
+  "ingress": "Du blar i Jobbmagasinet. Du leser annonser og vurderer match: kompetanse, egenskaper og logistikk. Så velger du to eller tre jobber.",
+  "startSceneId": "e04-s01",
+  "tillatteFlagg": ["valgte_jobber"],
+  "ordIds": ["match", "krav", "fordel", "maa", "kan", "bor", "forerkort", "reisetid", "logistikk", "kompetanse", "egenskap"],
+  "oppsummering": [
+    { "tekst": "Bla gjennom de samme øvingsannonsene som de andre elevene." },
+    { "tekst": "Leste krav og ønsker: må, kan, bør og «det er en fordel»." },
+    { "tekst": "Vurderte match: kompetanse, egenskaper og logistikk (arbeidstid, buss, førerkort)." },
+    { "tekst": "Valgte to eller tre jobber å gå videre med.", "visHvisFlagg": "valgte_jobber" }
+  ],
+  "scener": [
+    {
+      "id": "e04-s01",
+      "tittel": "Jobbmagasinet",
+      "dag": "Torsdag",
+      "klokkeslett": "09:15",
+      "app": "jobbmagasin",
+      "media": {
+        "bilde": "e04-s01-magasin.svg",
+        "bildeAlt": "Et magasin med flere stillingsannonser fra Molde.",
+        "lyd": "e04-s01-magasin.wav"
+      },
+      "tekst": "Bla gjennom magasinets annonser.\n\nAlle elever ser de samme sju øvingsannonsene.\n\n{{match|Match}} betyr: passer jobben til deg?\n\nDu ser på {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.",
+      "valg": [
+        {
+          "id": "til-lese",
+          "tekst": "Les en annonse",
+          "nesteSceneId": "e04-s02",
+          "tilbakemelding": "Les kravene. Hva betyr må, og hva er en fordel?"
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e04-s01-su",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Hver elev får ulike annonser i magasinet.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Annonsene er like. Det riktige svaret avhenger av personen.",
+          "tilbakemeldingFeil": "Dere leser de samme annonsene. Matchen er ulike, fordi personene er ulike."
+        },
+        {
+          "type": "flervalg",
+          "id": "e04-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er logistikk i en matchvurdering her?",
+          "alternativer": [
+            { "id": "a", "tekst": "Arbeidstid, reisetid med buss og krav om førerkort" },
+            { "id": "b", "tekst": "Bare lønn" },
+            { "id": "c", "tekst": "Bare navnet på bedriften" }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Kan du rekke jobben med buss? Må du ha førerkort?",
+          "tilbakemeldingFeil": "Logistikk her er tid og reise, ikke lønn."
+        }
+      ]
+    },
+    {
+      "id": "e04-s02",
+      "tittel": "Krav og ønske",
+      "dag": "Torsdag",
+      "klokkeslett": "09:30",
+      "app": "jobbmagasin",
+      "annonseId": "havna-handel",
+      "media": {
+        "bilde": "e04-s02-krav.svg",
+        "bildeAlt": "Tekst med ordene må, bør og det er en fordel.",
+        "lyd": "e04-s02-krav.wav"
+      },
+      "tekst": "Les annonsen i magasinet.\n\n{{maa|Må}} er et {{krav}}.\n\n{{bor|Bør}} er et råd.\n\n«Det er en {{fordel}}» er et ønske, ikke et krav.\n\n{{kan|Kan}} betyr at noe er mulig.",
+      "valg": [
+        {
+          "id": "til-match-butikk",
+          "tekst": "Vurder match mot butikken",
+          "nesteSceneId": "e04-s03",
+          "tilbakemelding": "Velg passer, passer ikke eller vet ikke. Vet ikke er ikke det riktige svaret."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "matching",
+          "id": "e04-s02-ma",
+          "instruksjon": "Koble modalverbet til betydningen.",
+          "par": [
+            { "id": "p1", "venstre": "må", "hoyre": "krav. Du har ikke valg." },
+            { "id": "p2", "venstre": "bør", "hoyre": "råd. Det er lurt, men ikke helt nødvendig." },
+            { "id": "p3", "venstre": "kan", "hoyre": "mulig. Det går an." },
+            { "id": "p4", "venstre": "det er en fordel", "hoyre": "ønske. Bra å ha, ikke et krav." }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Skill krav og ønske når du leser annonser.",
+          "tilbakemeldingFeil": "Må = krav. Bør = råd. Fordel = ønske."
+        },
+        {
+          "type": "finn_og_rett",
+          "id": "e04-s02-fr",
+          "instruksjon": "Finn feilen og velg riktig plassering av «ikke».",
+          "tekst": "Du trenger førerkort ikke.",
+          "feilOrd": "ikke",
+          "alternativer": [
+            { "id": "a", "tekst": "Du trenger ikke førerkort." },
+            { "id": "b", "tekst": "Du ikke trenger førerkort." },
+            { "id": "c", "tekst": "Ikke du trenger førerkort." }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. «Ikke» står etter det første verbet: Du trenger ikke …",
+          "tilbakemeldingFeil": "I norsk står «ikke» ofte etter første verb: Du trenger ikke førerkort."
+        }
+      ]
+    },
+    {
+      "id": "e04-s03",
+      "tittel": "Match: butikk",
+      "dag": "Torsdag",
+      "klokkeslett": "09:50",
+      "app": "jobbmagasin",
+      "annonseId": "havna-handel",
+      "media": {
+        "bilde": "e04-s03-match.svg",
+        "bildeAlt": "Tre bokser: kompetanse, egenskaper og logistikk.",
+        "lyd": "e04-s03-match.wav"
+      },
+      "tekst": "Vurder annonsen fra Havna Handel.\n\nTre deler: {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.\n\nSe på personen du spiller. Har du butikkerfaring? Kommer du til sentrum med buss?",
+      "valg": [
+        {
+          "id": "til-lager",
+          "tekst": "Vurder lagerjobben",
+          "nesteSceneId": "e04-s04",
+          "tilbakemelding": "Lageret krever førerkort. Det skiller personene."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "match_sjekkliste",
+          "id": "e04-s03-ms",
+          "instruksjon": "For hvert krav: passer, passer ikke eller vet ikke. Trykk Sjekk match.",
+          "annonseId": "havna-handel",
+          "kategorier": ["kompetanse", "egenskaper", "logistikk"],
+          "tilbakemeldingRiktig": "Riktig. Du har sett på personen, ikke på hva du selv liker.",
+          "tilbakemeldingFeil": "Se på personens erfaring, egenskaper og reise. «Vet ikke» teller ikke som riktig."
+        }
+      ]
+    },
+    {
+      "id": "e04-s04",
+      "tittel": "Match: lager",
+      "dag": "Torsdag",
+      "klokkeslett": "10:10",
+      "app": "jobbmagasin",
+      "annonseId": "fjordlager",
+      "media": {
+        "bilde": "e04-s04-lager.svg",
+        "bildeAlt": "Et lager på Årø og et førerkort.",
+        "lyd": "e04-s04-lager.wav"
+      },
+      "tekst": "Les Fjordlager.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B.\n\n{{reisetid|Reisetid}} med buss til Årø er kort fra Årølia, lenger fra Kviltorp.",
+      "valg": [
+        {
+          "id": "til-omsorg",
+          "tekst": "Vurder omsorgsjobben",
+          "nesteSceneId": "e04-s05",
+          "tilbakemelding": "Omsorg i sentrum passer best for Sofiia, men alle kan reise dit."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "match_sjekkliste",
+          "id": "e04-s04-ms",
+          "instruksjon": "Vurder kompetanse, egenskaper og logistikk for lagerjobben.",
+          "annonseId": "fjordlager",
+          "kategorier": ["kompetanse", "egenskaper", "logistikk"],
+          "tilbakemeldingRiktig": "Riktig. Førerkort er et krav her, ikke bare en fordel.",
+          "tilbakemeldingFeil": "Har personen førerkort B og erfaring fra bygg eller lager?"
+        }
+      ]
+    },
+    {
+      "id": "e04-s05",
+      "tittel": "Match: omsorg",
+      "dag": "Torsdag",
+      "klokkeslett": "10:25",
+      "app": "jobbmagasin",
+      "annonseId": "molde-omsorg",
+      "media": {
+        "bilde": "e04-s05-omsorg.svg",
+        "bildeAlt": "Hjemmetjeneste i Molde sentrum.",
+        "lyd": "e04-s05-omsorg.wav"
+      },
+      "tekst": "Molde Omsorg søker assistent.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDeltid i sentrum. Ikke {{forerkort|førerkort}}.",
+      "valg": [
+        {
+          "id": "til-velg",
+          "tekst": "Velg jobber å gå videre med",
+          "nesteSceneId": "e04-s06",
+          "tilbakemelding": "Velg to eller tre stillinger."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "match_sjekkliste",
+          "id": "e04-s05-ms",
+          "instruksjon": "Vurder kompetanse, egenskaper og logistikk for omsorgsjobben.",
+          "annonseId": "molde-omsorg",
+          "kategorier": ["kompetanse", "egenskaper", "logistikk"],
+          "tilbakemeldingRiktig": "Riktig. Her er omsorgserfaring viktig. Førerkort er ikke et krav.",
+          "tilbakemeldingFeil": "Se på personens omsorgserfaring og egenskaper som tålmodig."
+        }
+      ]
+    },
+    {
+      "id": "e04-s06",
+      "tittel": "Velg to eller tre jobber",
+      "dag": "Torsdag",
+      "klokkeslett": "10:40",
+      "app": "jobbmagasin",
+      "media": {
+        "bilde": "e04-s06-valg.svg",
+        "bildeAlt": "Tre stillingskort merket som valgt.",
+        "lyd": "e04-s06-valg.wav"
+      },
+      "tekst": "Bla i magasinet om du vil.\n\nVelg 2 eller 3 jobber du vil gå videre med.\n\nSenere skal du søke. Nå lagrer du valget.",
+      "valg": [
+        {
+          "id": "avslutt-e04",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "tilbakemelding": "Du er ferdig med episode 4."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "velg_jobber",
+          "id": "e04-s06-vj",
+          "instruksjon": "Trykk på to eller tre stillinger. Trykk deretter Gå videre med disse jobbene.",
+          "min": 2,
+          "max": 3,
+          "flagg": ["valgte_jobber"],
+          "tilbakemeldingRiktig": "Bra. Du har valgt jobber å gå videre med. Valget blir lagret.",
+          "tilbakemeldingFeil": "Velg minst to og høyst tre stillinger."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "id": "e02",
+  "nummer": 2,
+  "tittel": "Hvem er jeg som arbeidstaker?",
+  "ingress": "Linn ber om oppdatert CV. Du sorterer erfaring og velger egenskaper. Så skriver du CV-setninger med har jobbet og jobbet.",
+  "startSceneId": "e02-s01",
+  "tillatteFlagg": ["har_oppdatert_cv", "cv_mangler_referanse"],
+  "ordIds": ["cv", "erfaring", "utdanning", "sertifikat", "egenskap", "punktlig", "referanse", "perfektum", "preteritum"],
+  "oppsummering": [
+    { "tekst": "Leste e-post fra veilederen om oppdatert CV." },
+    { "tekst": "Sorterte erfaring, utdanning, språk og sertifikater." },
+    { "tekst": "Valgte egenskaper og koblet dem til eksempler." },
+    { "tekst": "Oppdaterte CV-en med preteritum og perfektum.", "visHvisFlagg": "har_oppdatert_cv" },
+    { "tekst": "Sendte CV uten referanse. Linn minnet om referanse.", "visHvisFlagg": "cv_mangler_referanse" }
+  ],
+  "scener": [
+    {
+      "id": "e02-s01",
+      "tittel": "E-post fra Linn",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:20",
+      "app": "epost",
+      "media": {
+        "bilde": "e02-s01-epost.svg",
+        "bildeAlt": "En e-post fra veileder Linn Holm om oppdatert CV.",
+        "lyd": "e02-s01-epost.wav"
+      },
+      "tekst": "Linn har sendt e-post.\n\nHun ber om en oppdatert {{cv}}.\n\nEn CV viser {{erfaring}}, {{utdanning}}, språk og {{sertifikat|sertifikater}}.",
+      "varsel": {
+        "type": "epost",
+        "fra": "Linn Holm",
+        "innhold": "Ny e-post: Oppdatert CV"
+      },
+      "epost": {
+        "id": "e02-cv",
+        "fra": "Linn Holm (øvingsversjon)",
+        "emne": "Kan du oppdatere CVen?",
+        "innhold": "Hei. Etter møtet vårt trenger jeg en oppdatert CV. Skriv hva du har gjort i jobb, hvilken skole du har, språk og sertifikater. Husk en referanse hvis du kan. Hilsen Linn"
+      },
+      "valg": [
+        {
+          "id": "aapne-cv",
+          "tekst": "Åpne CV",
+          "nesteSceneId": "e02-s02",
+          "tilbakemelding": "Nå sorterer du det som skal stå i CVen."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sant_usant",
+          "id": "e02-s01-su",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Linn ber om en ny søknad til en bedrift.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Linn ber om en oppdatert CV, ikke en søknad til en bedrift.",
+          "tilbakemeldingFeil": "Les e-posten igjen. Linn skriver om CV, ikke om en søknad."
+        },
+        {
+          "type": "flervalg",
+          "id": "e02-s01-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva skal stå i CVen, ifølge Linn?",
+          "alternativer": [
+            { "id": "a", "tekst": "Bare navn og telefon" },
+            { "id": "b", "tekst": "Jobb, skole, språk, sertifikater og gjerne referanse" },
+            { "id": "c", "tekst": "Bare hobbyer" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. CV er et oversiktsdokument over det du kan og har gjort.",
+          "tilbakemeldingFeil": "Linn nevner jobb, skole, språk, sertifikater og referanse."
+        }
+      ]
+    },
+    {
+      "id": "e02-s02",
+      "tittel": "Sorter opplysninger",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:35",
+      "app": "cv",
+      "media": {
+        "bilde": "e02-s02-cv.svg",
+        "bildeAlt": "Fire bokser: erfaring, utdanning, språk og sertifikater.",
+        "lyd": "e02-s02-cv.wav"
+      },
+      "tekst": "Hva hører hjemme hvor?\n\n{{erfaring}} er jobb du har gjort.\n\n{{utdanning}} er skole og kurs.\n\nSpråk er språk du kan.\n\n{{sertifikat|Sertifikater}} er kort og bevis, for eksempel {{forerkort|førerkort}}.",
+      "valg": [
+        {
+          "id": "til-egenskaper",
+          "tekst": "Velg egenskaper",
+          "nesteSceneId": "e02-s03",
+          "tilbakemelding": "Nå velger du ord som beskriver deg."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "sorter_kategori",
+          "id": "e02-s02-sk",
+          "instruksjon": "Trykk først på en opplysning. Trykk deretter på riktig boks.",
+          "kategorier": [
+            { "id": "erfaring", "tittel": "Erfaring" },
+            { "id": "utdanning", "tittel": "Utdanning" },
+            { "id": "sprak", "tittel": "Språk" },
+            { "id": "sertifikater", "tittel": "Sertifikater" }
+          ],
+          "elementer": [
+            { "id": "o1", "tekst": "Tre år i dagligvarebutikk", "kategori": "erfaring", "personId": "olena" },
+            { "id": "o2", "tekst": "Videregående skole i Kyiv", "kategori": "utdanning", "personId": "olena" },
+            { "id": "o3", "tekst": "Ukrainsk, norsk og engelsk", "kategori": "sprak", "personId": "olena" },
+            { "id": "o4", "tekst": "Hygienebevis", "kategori": "sertifikater", "personId": "olena" },
+            { "id": "t1", "tekst": "To år som hjelpearbeider på bygg", "kategori": "erfaring", "personId": "taras" },
+            { "id": "t2", "tekst": "Yrkesfag bygg", "kategori": "utdanning", "personId": "taras" },
+            { "id": "t3", "tekst": "Ukrainsk og norsk", "kategori": "sprak", "personId": "taras" },
+            { "id": "t4", "tekst": "Førerkort klasse B", "kategori": "sertifikater", "personId": "taras" },
+            { "id": "s1", "tekst": "To år med omsorg i hjemmet", "kategori": "erfaring", "personId": "sofiia" },
+            { "id": "s2", "tekst": "Kurs i omsorg", "kategori": "utdanning", "personId": "sofiia" },
+            { "id": "s3", "tekst": "Ukrainsk, norsk og polsk", "kategori": "sprak", "personId": "sofiia" },
+            { "id": "s4", "tekst": "Førstehjelpskurs", "kategori": "sertifikater", "personId": "sofiia" }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Du har delt opplysningene i fire deler. Slik bygger du en CV.",
+          "tilbakemeldingFeil": "Prøv igjen. Jobb = erfaring. Skole = utdanning. Språk = språk. Førerkort og kursbevis = sertifikater."
+        }
+      ]
+    },
+    {
+      "id": "e02-s03",
+      "tittel": "Egenskaper og eksempler",
+      "dag": "Tirsdag",
+      "klokkeslett": "10:50",
+      "app": "cv",
+      "media": {
+        "bilde": "e02-s03-egenskaper.svg",
+        "bildeAlt": "Ord for personlige egenskaper ved siden av korte setninger.",
+        "lyd": "e02-s03-egenskaper.wav"
+      },
+      "tekst": "En {{egenskap}} sier hvordan du er.\n\nVelg tre egenskaper som passer deg.\n\nKoble dem til et eksempel. Eksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»",
+      "valg": [
+        {
+          "id": "til-setninger",
+          "tekst": "Skriv CV-setninger",
+          "nesteSceneId": "e02-s04",
+          "tilbakemelding": "Nå velger du riktig verbform i CVen."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "egenskap_kobling",
+          "id": "e02-s03-ek",
+          "instruksjon": "Velg tre egenskaper som passer personen. Trykk deretter på egenskap og så på eksempelet.",
+          "min": 3,
+          "max": 3,
+          "egenskaper": [
+            { "id": "noyaktig", "ord": "nøyaktig", "eksempel": "Jeg er nøyaktig. Jeg sjekker prisen to ganger.", "personer": ["olena"] },
+            { "id": "blid", "ord": "blid", "eksempel": "Jeg er blid. Jeg smiler til kundene.", "personer": ["olena"] },
+            { "id": "punktlig", "ord": "punktlig", "eksempel": "Jeg er punktlig. Jeg kommer alltid i god tid.", "personer": ["olena"] },
+            { "id": "sterk", "ord": "sterk", "eksempel": "Jeg er sterk. Jeg kan løfte tunge esker.", "personer": ["taras"] },
+            { "id": "rolig", "ord": "rolig", "eksempel": "Jeg er rolig. Jeg blir ikke sint når det er travelt.", "personer": ["taras"] },
+            { "id": "palitelig", "ord": "pålitelig", "eksempel": "Jeg er pålitelig. Jeg gjør det jeg har sagt.", "personer": ["taras"] },
+            { "id": "omsorgsfull", "ord": "omsorgsfull", "eksempel": "Jeg er omsorgsfull. Jeg passer godt på andre.", "personer": ["sofiia"] },
+            { "id": "talmodig", "ord": "tålmodig", "eksempel": "Jeg er tålmodig. Jeg forklarer sakte.", "personer": ["sofiia"] },
+            { "id": "ansvarlig", "ord": "ansvarlig", "eksempel": "Jeg er ansvarlig. Jeg sier ifra hvis noe er galt.", "personer": ["sofiia"] }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Du bruker adjektiv og et konkret eksempel. Slik forklarer vi egenskaper i Norge.",
+          "tilbakemeldingFeil": "Velg egenskapene som står på personens liste. Koble deretter hvert ord til setningen som passer."
+        }
+      ]
+    },
+    {
+      "id": "e02-s04",
+      "tittel": "Riktige CV-setninger",
+      "dag": "Tirsdag",
+      "klokkeslett": "11:05",
+      "app": "cv",
+      "media": {
+        "bilde": "e02-s04-setninger.svg",
+        "bildeAlt": "To setninger: Jeg jobbet og Jeg har jobbet.",
+        "lyd": "e02-s04-setninger.wav"
+      },
+      "tekst": "I CV bruker vi ofte {{perfektum}}: «Jeg har jobbet …»\n\n{{preteritum|Preteritum}}: «Jeg jobbet …» når tiden er slutt og tydelig.\n\nVelg setningene som passer personen.",
+      "valg": [
+        {
+          "id": "med-referanse",
+          "tekst": "Legg inn referanse og lagre",
+          "nesteSceneId": "e02-s06",
+          "flagg": ["har_oppdatert_cv"],
+          "fjernFlagg": ["cv_mangler_referanse"],
+          "tilbakemelding": "Bra. CVen har nå også en referanse."
+        },
+        {
+          "id": "uten-referanse",
+          "tekst": "Lagre uten referanse",
+          "nesteSceneId": "e02-s05",
+          "flagg": ["har_oppdatert_cv", "cv_mangler_referanse"],
+          "tilbakemelding": "CVen er oppdatert, men referanse mangler."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "cv_valg",
+          "id": "e02-s04-cv",
+          "instruksjon": "Velg én setning i hver del. Tenk på personen du spiller.",
+          "seksjoner": [
+            {
+              "id": "erfaring",
+              "tittel": "Erfaring",
+              "alternativer": [
+                { "id": "e-o", "tekst": "Jeg har jobbet i butikk i tre år.", "personer": ["olena"] },
+                { "id": "e-t", "tekst": "Jeg har jobbet på bygg i to år.", "personer": ["taras"] },
+                { "id": "e-s", "tekst": "Jeg har hjulpet eldre hjemme i to år.", "personer": ["sofiia"] },
+                { "id": "e-x", "tekst": "Jeg har jobbe i butikk.", "personer": [] }
+              ]
+            },
+            {
+              "id": "utdanning",
+              "tittel": "Utdanning",
+              "alternativer": [
+                { "id": "u-o", "tekst": "Jeg har videregående skole fra Ukraina.", "personer": ["olena"] },
+                { "id": "u-t", "tekst": "Jeg har yrkesfag bygg fra Ukraina.", "personer": ["taras"] },
+                { "id": "u-s", "tekst": "Jeg har kurs i omsorg.", "personer": ["sofiia"] },
+                { "id": "u-x", "tekst": "Jeg går på skole i går.", "personer": [] }
+              ]
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. «Jeg har jobbet» er perfektum. Vi bruker det når erfaringen fortsatt gjelder.",
+          "tilbakemeldingFeil": "Se på personens jobb og skole. Unngå setninger med feil verbform, som «har jobbe»."
+        }
+      ]
+    },
+    {
+      "id": "e02-s05",
+      "tittel": "Linn spør om referanse",
+      "dag": "Tirsdag",
+      "klokkeslett": "11:20",
+      "app": "epost",
+      "media": {
+        "bilde": "e02-s05-referanse.svg",
+        "bildeAlt": "E-post som ber om en referanse i CVen.",
+        "lyd": "e02-s05-referanse.wav"
+      },
+      "tekst": "Linn svarer.\n\nHun savner en {{referanse}}.\n\nEn referanse er en person som kan si at du er en god arbeidstaker.\n\nDu kan legge den inn nå, eller gå videre.",
+      "varsel": {
+        "type": "epost",
+        "fra": "Linn Holm",
+        "innhold": "Ny e-post: Referanse i CVen"
+      },
+      "epost": {
+        "id": "e02-ref",
+        "fra": "Linn Holm (øvingsversjon)",
+        "emne": "Kan du legge inn en referanse?",
+        "innhold": "Hei. Takk for CVen. Kan du legge inn en referanse? Det kan være en tidligere leder. Hilsen Linn"
+      },
+      "valg": [
+        {
+          "id": "legg-inn-ref",
+          "tekst": "Legg inn referanse",
+          "nesteSceneId": "e02-s06",
+          "flagg": ["har_oppdatert_cv"],
+          "fjernFlagg": ["cv_mangler_referanse"],
+          "tilbakemelding": "Bra. Nå har CVen en referanse."
+        },
+        {
+          "id": "ga-videre-uten",
+          "tekst": "Gå videre uten referanse",
+          "nesteSceneId": "e02-s06",
+          "flagg": ["cv_mangler_referanse"],
+          "tilbakemelding": "Du kan gå videre. Senere i kurset husker vi at referanse mangler."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e02-s05-fv",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er en referanse i en CV?",
+          "alternativer": [
+            { "id": "a", "tekst": "Et telefonnummer til NAV" },
+            { "id": "b", "tekst": "En person som kan si at du er en god arbeidstaker" },
+            { "id": "c", "tekst": "En stillingsannonse" }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. I Norge spør arbeidsgiver ofte om en tidligere leder.",
+          "tilbakemeldingFeil": "En referanse er et menneske, ofte en tidligere leder, ikke et skjema."
+        }
+      ]
+    },
+    {
+      "id": "e02-s06",
+      "tittel": "Verb i CVen",
+      "dag": "Tirsdag",
+      "klokkeslett": "11:30",
+      "app": "cv",
+      "media": {
+        "bilde": "e02-s06-verb.svg",
+        "bildeAlt": "Setningene Jeg jobbet og Jeg har jobbet side om side.",
+        "lyd": "e02-s06-verb.wav"
+      },
+      "tekst": "Siste øving: verbform.\n\nPreteritum: Jeg jobbet i butikk i 2022.\n\nPerfektum: Jeg har jobbet i butikk i tre år.",
+      "valg": [
+        {
+          "id": "avslutt-e02",
+          "tekst": "Se oppsummering",
+          "nesteSceneId": "oppsummering",
+          "tilbakemelding": "Du er ferdig med episode 2."
+        }
+      ],
+      "oppgaver": [
+        {
+          "type": "ordbank",
+          "id": "e02-s06-ob",
+          "instruksjon": "Velg verbet som passer.",
+          "setning": "Jeg _____ i butikk i tre år. Jeg kan det fortsatt.",
+          "ord": ["har jobbet", "jobbet", "skal jobbe"],
+          "riktig": "har jobbet",
+          "tilbakemeldingRiktig": "Riktig. Perfektum (har + verb) bruker vi når erfaringen fortsatt gjelder.",
+          "tilbakemeldingFeil": "Når jobben fortsatt er en del av deg, sier vi «jeg har jobbet», ikke bare «jeg jobbet»."
+        }
+      ]
+    }
+  ]
+}

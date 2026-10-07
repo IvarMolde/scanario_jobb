@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jobbreisen.local/innhold.schema.json",
+  "title": "Jobbreisen innholdsmodell",
+  "description": "Scenario → Episode → Scene → media, tekst, valg og oppgaver.",
+  "type": "object",
+  "required": ["id", "nummer", "tittel", "ingress", "startSceneId", "tillatteFlagg", "scener"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^e[0-9]{2}$" },
+    "nummer": { "type": "integer", "minimum": 1 },
+    "tittel": { "type": "string" },
+    "ingress": { "type": "string" },
+    "startSceneId": { "type": "string" },
+    "tillatteFlagg": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "scener": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scene" }
+    }
+  },
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "required": ["id", "tittel", "dag", "klokkeslett", "app", "media", "tekst", "valg", "oppgaver"],
+      "properties": {
+        "id": { "type": "string" },
+        "tittel": { "type": "string" },
+        "dag": { "type": "string" },
+        "klokkeslett": { "type": "string" },
+        "app": {
+          "type": "string",
+          "enum": [
+            "hjem",
+            "meldinger",
+            "epost",
+            "kalender",
+            "jobbportal",
+            "aktivitetsplan",
+            "cv",
+            "reise",
+            "jobbmagasin",
+            "skatt",
+            "lonn",
+            "innstillinger"
+          ]
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "bilde": { "type": "string" },
+            "bildeAlt": { "type": "string" },
+            "lyd": { "type": "string" }
+          }
+        },
+        "tekst": {
+          "type": "string",
+          "description": "Klikkbare ord skrives som {{id}} eller {{id|visning}}."
+        },
+        "valg": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "tekst", "nesteSceneId", "tilbakemelding"],
+            "properties": {
+              "id": { "type": "string" },
+              "tekst": { "type": "string" },
+              "nesteSceneId": { "type": "string" },
+              "flagg": { "type": "array", "items": { "type": "string" } },
+              "fjernFlagg": { "type": "array", "items": { "type": "string" } },
+              "visHvisFlagg": { "type": "string" },
+              "visHvisIkkeFlagg": { "type": "string" },
+              "aktivitetStatus": {
+                "type": "string",
+                "enum": ["skal_soke", "sendt_soknad", "innkalt", "avslag"]
+              },
+              "tilbakemelding": { "type": "string" }
+            }
+          }
+        },
+        "oppgaver": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["type", "id", "instruksjon"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "flervalg",
+                  "sant_usant",
+                  "ordbank",
+                  "sorter_setning",
+                  "matching",
+                  "finn_og_rett",
+                  "lytt_og_velg",
+                  "bygg_melding",
+                  "sorter_kategori",
+                  "egenskap_kobling",
+                  "cv_valg",
+                  "portal_sok",
+                  "match_sjekkliste",
+                  "velg_jobber",
+                  "registrer_aktiviteter",
+                  "bygg_soknad",
+                  "intervju_svar",
+                  "reiseplan",
+                  "fyll_tall",
+                  "finn_i_dokument"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

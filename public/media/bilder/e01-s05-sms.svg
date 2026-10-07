@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="SMS med en feil">
+  <rect width="640" height="360" fill="#E8EEF2"/>
+  <rect x="80" y="100" width="480" height="140" rx="16" fill="#fff" stroke="#8B1E1E" stroke-width="3"/>
+  <text x="110" y="150" fill="#003057" font-family="Segoe UI, Arial" font-size="22">Hei Linn. Jeg</text>
+  <text x="250" y="150" fill="#8B1E1E" font-family="Segoe UI, Arial" font-size="22" font-weight="700" text-decoration="underline">komme</text>
+  <text x="110" y="190" fill="#003057" font-family="Segoe UI, Arial" font-size="22">i morgen klokka 10.00.</text>
+</svg>

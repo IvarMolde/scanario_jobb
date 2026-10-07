@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Kalender med mote tirsdag klokka 10">
+  <rect width="640" height="360" fill="#E8EEF2"/>
+  <rect x="80" y="40" width="480" height="280" rx="16" fill="#fff" stroke="#003057" stroke-width="4"/>
+  <rect x="80" y="40" width="480" height="56" rx="16" fill="#003057"/>
+  <rect x="80" y="80" width="480" height="16" fill="#003057"/>
+  <text x="320" y="76" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="28" font-weight="700">Uke i Molde</text>
+  <text x="140" y="140" fill="#005F73" font-family="Segoe UI, Arial" font-size="18" font-weight="700">MAN</text>
+  <text x="250" y="140" fill="#005F73" font-family="Segoe UI, Arial" font-size="18" font-weight="700">TIR</text>
+  <text x="360" y="140" fill="#005F73" font-family="Segoe UI, Arial" font-size="18" font-weight="700">ONS</text>
+  <rect x="220" y="160" width="120" height="90" rx="10" fill="#EE9B00"/>
+  <text x="280" y="198" text-anchor="middle" fill="#1a1a1a" font-family="Segoe UI, Arial" font-size="20" font-weight="700">10.00</text>
+  <text x="280" y="226" text-anchor="middle" fill="#1a1a1a" font-family="Segoe UI, Arial" font-size="14">Linn Holm</text>
+</svg>
