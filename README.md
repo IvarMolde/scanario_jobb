@@ -110,6 +110,8 @@ Plassholderlyd lages med `npm run lag-lyd`. Bytt dem ut med innspilte filer når
 
 Statiske filer. `base` i Vite er `./`, slik at bygget kan ligge på Vercel eller GitHub Pages.
 
+GitHub Pages bruker GitHub Actions (`npm run build`, deretter mappen `dist`). Koden i `main` kan ikke vises direkte: nettleseren kjører ikke TypeScript. Etter push: sjekk **Actions** i repoet. Under **Settings → Pages** skal kilden være **GitHub Actions**.
+
 ```bash
 npm run build
 ```
