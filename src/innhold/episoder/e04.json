@@ -258,7 +258,7 @@
     },
     {
       "id": "e04-s03",
-      "tittel": "Match: butikk",
+      "tittel": "Match: Bunnpris",
       "dag": "Torsdag",
       "klokkeslett": "09:50",
       "app": "jobbmagasin",
@@ -268,7 +268,7 @@
         "bildeAlt": "Tre bokser: kompetanse, egenskaper og logistikk.",
         "lyd": "e04-s03-match.wav"
       },
-      "tekst": "Vurder annonsen fra Havna Handel.\n\nTre deler: {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.\n\nSe på personen du spiller. Har du butikkerfaring? Kommer du til sentrum med buss?",
+      "tekst": "Vurder annonsen fra Bunnpris i sentrum.\n\nTre deler: {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.\n\nSe på personen du spiller. Har du butikkerfaring? Kommer du til sentrum med buss?",
       "valg": [
         {
           "id": "til-lager",
@@ -355,7 +355,7 @@
     },
     {
       "id": "e04-s04",
-      "tittel": "Match: lager",
+      "tittel": "Match: Posten Bring",
       "dag": "Torsdag",
       "klokkeslett": "10:10",
       "app": "jobbmagasin",
@@ -365,7 +365,7 @@
         "bildeAlt": "Et lager på Årø og et førerkort.",
         "lyd": "e04-s04-lager.wav"
       },
-      "tekst": "Les Fjordlager.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B.\n\n{{reisetid|Reisetid}} med buss til Årø er kort fra Årølia, lenger fra Kviltorp.",
+      "tekst": "Les annonsen fra Posten Bring i Årødalen.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B.\n\n{{reisetid|Reisetid}} med buss til Årødalen er kort fra Årølia, lenger fra Kviltorp.",
       "valg": [
         {
           "id": "til-omsorg",
@@ -452,7 +452,7 @@
     },
     {
       "id": "e04-s05",
-      "tittel": "Match: omsorg",
+      "tittel": "Match: Kirkebakken",
       "dag": "Torsdag",
       "klokkeslett": "10:25",
       "app": "jobbmagasin",
@@ -462,7 +462,7 @@
         "bildeAlt": "Hjemmetjeneste i Molde sentrum.",
         "lyd": "e04-s05-omsorg.wav"
       },
-      "tekst": "Molde Omsorg søker assistent.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDeltid i sentrum. Ikke {{forerkort|førerkort}}.",
+      "tekst": "Kirkebakken søker pleieassistent.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDeltid ved Kirkebakken. Ikke {{forerkort|førerkort}}.",
       "valg": [
         {
           "id": "til-velg",

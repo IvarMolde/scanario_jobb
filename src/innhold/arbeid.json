@@ -23,8 +23,8 @@
       "ansattnummer": "1001",
       "kontonummerSkjult": "**** 4321",
       "arbeidsgiver": {
-        "navn": "Havna Handel",
-        "adresse": "Havnegata 4, 6413 Molde",
+        "navn": "Bunnpris",
+        "adresse": "Storgata 12, 6413 Molde",
         "orgnr": "999 111 222"
       }
     },
@@ -46,8 +46,8 @@
       "ansattnummer": "1002",
       "kontonummerSkjult": "**** 8877",
       "arbeidsgiver": {
-        "navn": "Fjordlager",
-        "adresse": "Industriveien 12, 6415 Molde",
+        "navn": "Posten Bring",
+        "adresse": "Årødalen 8, 6421 Molde",
         "orgnr": "999 222 333"
       }
     },
@@ -64,13 +64,13 @@
       "overtidProsent": 50,
       "kveldTimer": 0,
       "kveldProsent": 0,
-      "stilling": "Assistent",
+      "stilling": "Pleieassistent",
       "stillingsprosent": 80,
       "ansattnummer": "1003",
       "kontonummerSkjult": "**** 6655",
       "arbeidsgiver": {
-        "navn": "Molde Omsorg",
-        "adresse": "Kirkegata 8, 6413 Molde",
+        "navn": "Kirkebakken",
+        "adresse": "Kirkebakken 2, 6413 Molde",
         "orgnr": "999 333 444"
       }
     }

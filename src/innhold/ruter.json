@@ -161,21 +161,21 @@
       "til": "molde-rutebilstasjon",
       "ankomst": "09:00",
       "riktigAvgangId": "l10-0825",
-      "bedrift": "Havna Handel"
+      "bedrift": "Bunnpris"
     },
     "taras": {
       "fra": "aarolia-skole",
       "til": "aaro-flyplass",
       "ankomst": "07:00",
       "riktigAvgangId": "l20-0610",
-      "bedrift": "Fjordlager AS"
+      "bedrift": "Posten Bring"
     },
     "sofiia": {
       "fra": "molde-rutebilstasjon",
       "til": "bergmo-omsorg",
       "ankomst": "08:00",
       "riktigAvgangId": "l40-0740",
-      "bedrift": "Molde Omsorg"
+      "bedrift": "Kirkebakken"
     }
   }
 }

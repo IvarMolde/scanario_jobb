@@ -3,7 +3,7 @@
     {
       "id": "havna-handel",
       "tittel": "Butikkmedarbeider",
-      "bedrift": "Havna Handel",
+      "bedrift": "Bunnpris",
       "sted": "Molde sentrum",
       "kommune": "molde",
       "sone": "sentrum",
@@ -17,7 +17,7 @@
         "varehandel"
       ],
       "bilde": "annonse-havna.svg",
-      "tekst": "Vi søker en {{butikkmedarbeider}} til butikken i sentrum.\n\nDu {{maa|må}} like å møte kunder. Det er en {{fordel}} om du har jobbet i butikk.\n\nArbeidstid: mandag–lørdag, også kveld.\n\nDu trenger ikke {{forerkort|førerkort}}.",
+      "tekst": "Vi søker en {{butikkmedarbeider}} til Bunnpris i sentrum.\n\nDu {{maa|må}} like å møte kunder. Det er en {{fordel}} om du har jobbet i butikk.\n\nArbeidstid: mandag–lørdag, også kveld.\n\nDu trenger ikke {{forerkort|førerkort}}.",
       "krav": [
         {
           "id": "hh-komp",
@@ -60,8 +60,8 @@
     {
       "id": "fjordlager",
       "tittel": "Lagermedarbeider",
-      "bedrift": "Fjordlager AS",
-      "sted": "Årø, Molde",
+      "bedrift": "Posten Bring",
+      "sted": "Årødalen",
       "kommune": "molde",
       "sone": "aaro",
       "stillingsprosent": "100 %",
@@ -74,7 +74,7 @@
         "lagermedarbeider"
       ],
       "bilde": "annonse-fjordlager.svg",
-      "tekst": "Vi søker en {{lagermedarbeider}} til lageret på Årø.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B. Du {{kan}} få opplæring på truck.\n\nArbeidstid: 07.00–15.00, heltid.",
+      "tekst": "Vi søker en {{lagermedarbeider}} til Posten Bring i Årødalen.\n\nDu {{maa|må}} ha {{forerkort|førerkort}} klasse B. Du {{kan}} få opplæring på truck.\n\nArbeidstid: 07.00–15.00, heltid.",
       "krav": [
         {
           "id": "fl-komp",
@@ -103,22 +103,22 @@
         {
           "id": "fl-log",
           "kategori": "logistikk",
-          "tekst": "Du må ha førerkort klasse B. Jobb på Årø klokka 07–15.",
+          "tekst": "Du må ha førerkort klasse B. Jobb i Årødalen klokka 07–15.",
           "fasit": {
             "olena": "passer_ikke",
             "taras": "passer",
             "sofiia": "passer_ikke"
           },
-          "forklaringPasser": "Du har førerkort B, og reisetiden til Årø er kort.",
+          "forklaringPasser": "Du har førerkort B, og reisetiden til Årødalen er kort.",
           "forklaringPasserIkke": "Du har ikke førerkort. Jobben krever klasse B."
         }
       ]
     },
     {
       "id": "molde-omsorg",
-      "tittel": "Assistent i hjemmetjenesten",
-      "bedrift": "Molde Omsorg",
-      "sted": "Molde sentrum",
+      "tittel": "Pleieassistent",
+      "bedrift": "Kirkebakken",
+      "sted": "Kirkebakken, Molde",
       "kommune": "molde",
       "sone": "sentrum",
       "stillingsprosent": "80 %",
@@ -132,7 +132,7 @@
         "assistent"
       ],
       "bilde": "annonse-omsorg.svg",
-      "tekst": "Vi søker en assistent i hjemmetjenesten.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDu trenger ikke {{forerkort|førerkort}}. Deltid, 80 %.",
+      "tekst": "Vi søker en pleieassistent ved Kirkebakken.\n\nDu {{bor|bør}} like å hjelpe eldre. Førstehjelp er en {{fordel}}.\n\nDu trenger ikke {{forerkort|førerkort}}. Deltid, 80 %.",
       "krav": [
         {
           "id": "mo-komp",
@@ -161,13 +161,13 @@
         {
           "id": "mo-log",
           "kategori": "logistikk",
-          "tekst": "Deltid i sentrum. Ikke krav om førerkort.",
+          "tekst": "Deltid ved Kirkebakken. Ikke krav om førerkort.",
           "fasit": {
             "olena": "passer",
             "taras": "passer",
             "sofiia": "passer"
           },
-          "forklaringPasser": "Du kommer deg til sentrum. Du trenger ikke førerkort.",
+          "forklaringPasser": "Du kommer deg til Kirkebakken. Du trenger ikke førerkort.",
           "forklaringPasserIkke": "Logistikken passer dårlig."
         }
       ]
@@ -175,7 +175,7 @@
     {
       "id": "romsdals-renhold",
       "tittel": "Renholder",
-      "bedrift": "Romsdals Renhold",
+      "bedrift": "Toma AS",
       "sted": "Molde sentrum",
       "kommune": "molde",
       "sone": "sentrum",
@@ -188,7 +188,7 @@
         "renhold"
       ],
       "bilde": "annonse-renhold.svg",
-      "tekst": "Vi søker en renholder. Arbeidstid tidlig om morgenen, 06.00–09.00.\n\nDu {{maa|må}} være nøyaktig. Deltid, 50 %.\n\nIkke krav om {{forerkort|førerkort}}.",
+      "tekst": "Toma AS søker en renholder. Arbeidstid tidlig om morgenen, 06.00–09.00.\n\nDu {{maa|må}} være nøyaktig. Deltid, 50 %.\n\nIkke krav om {{forerkort|førerkort}}.",
       "krav": [
         {
           "id": "rr-komp",
@@ -231,10 +231,10 @@
     {
       "id": "kafe-fjord",
       "tittel": "Kafémedarbeider",
-      "bedrift": "Kafé Fjordutsikt",
-      "sted": "Kviltorp, Molde",
+      "bedrift": "Syd Moldetorget",
+      "sted": "Syd Moldetorget, Molde",
       "kommune": "molde",
-      "sone": "kviltorp",
+      "sone": "sentrum",
       "stillingsprosent": "40 %",
       "heltid": false,
       "soknadsfrist": "08.11.2026",
@@ -245,7 +245,7 @@
         "kafe"
       ],
       "bilde": "annonse-kafe.svg",
-      "tekst": "Liten kafé på Kviltorp søker medarbeider.\n\nDu {{bor|bør}} like kunder. Erfaring fra butikk eller kafé er en {{fordel}}.\n\nDeltid, helg og kveld. Ikke {{forerkort|førerkort}}.",
+      "tekst": "Kafé ved Syd Moldetorget søker medarbeider.\n\nDu {{bor|bør}} like kunder. Erfaring fra butikk eller kafé er en {{fordel}}.\n\nDeltid, helg og kveld. Ikke {{forerkort|førerkort}}.",
       "krav": [
         {
           "id": "kf-komp",
@@ -274,22 +274,22 @@
         {
           "id": "kf-log",
           "kategori": "logistikk",
-          "tekst": "Deltid på Kviltorp. Ikke krav om førerkort.",
+          "tekst": "Deltid ved Syd Moldetorget. Ikke krav om førerkort.",
           "fasit": {
             "olena": "passer",
-            "taras": "passer_ikke",
+            "taras": "passer",
             "sofiia": "passer"
           },
-          "forklaringPasser": "Reisetiden til Kviltorp passer.",
-          "forklaringPasserIkke": "Du bor i Årølia. Bussen til Kviltorp tar lang tid."
+          "forklaringPasser": "Du kommer deg til Syd Moldetorget i sentrum.",
+          "forklaringPasserIkke": "Reisen til Syd Moldetorget passer dårlig."
         }
       ]
     },
     {
       "id": "bygg-tre",
-      "tittel": "Hjelpearbeider bygg",
-      "bedrift": "Bygg og Tre AS",
-      "sted": "Årølia, Molde",
+      "tittel": "Hjelpearbeider",
+      "bedrift": "Jatre",
+      "sted": "Hustadvika",
       "kommune": "molde",
       "sone": "aarolia",
       "stillingsprosent": "100 %",
@@ -301,7 +301,7 @@
         "bygg"
       ],
       "bilde": "annonse-bygg.svg",
-      "tekst": "Vi søker hjelpearbeider til byggeplass i Årølia.\n\nDu {{maa|må}} følge sikkerhet. {{forerkort|Førerkort}} B er en {{fordel}}.\n\nHeltid, 07.00–15.00.",
+      "tekst": "Jatre søker hjelpearbeider til arbeid i Hustadvika.\n\nDu {{maa|må}} følge sikkerhet. {{forerkort|Førerkort}} B er en {{fordel}}.\n\nHeltid, 07.00–15.00.",
       "krav": [
         {
           "id": "bt-komp",
@@ -330,22 +330,22 @@
         {
           "id": "bt-log",
           "kategori": "logistikk",
-          "tekst": "Heltid i Årølia. Førerkort er en fordel, ikke et krav.",
+          "tekst": "Heltid hos Jatre i Hustadvika. Førerkort er en fordel, ikke et krav.",
           "fasit": {
             "olena": "passer_ikke",
             "taras": "passer",
-            "sofiia": "passer"
+            "sofiia": "passer_ikke"
           },
-          "forklaringPasser": "Du kommer deg til Årølia. Førerkort er bare en fordel.",
-          "forklaringPasserIkke": "Bussen fra Kviltorp til Årølia tar over 25 minutter."
+          "forklaringPasser": "Du har førerkort og kan komme deg til Hustadvika.",
+          "forklaringPasserIkke": "Reisen til Hustadvika kan være lang uten bil."
         }
       ]
     },
     {
       "id": "solsiden-bolig",
       "tittel": "Miljøarbeider",
-      "bedrift": "Solsiden bolig",
-      "sted": "Molde sentrum",
+      "bedrift": "Bekkevoll ungdomsskole",
+      "sted": "Bekkevoll, Molde",
       "kommune": "molde",
       "sone": "sentrum",
       "stillingsprosent": "100 %",
@@ -359,7 +359,7 @@
         "assistent"
       ],
       "bilde": "annonse-solsiden.svg",
-      "tekst": "Bolig for voksne søker {{miljoarbeider|miljøarbeider}}.\n\nDu {{maa|må}} være ansvarlig. Norsk A2 {{kan}} være nok.\n\nHeltid. Ikke {{forerkort|førerkort}}.",
+      "tekst": "Bekkevoll ungdomsskole søker {{miljoarbeider|miljøarbeider}}.\n\nDu {{maa|må}} være ansvarlig. Norsk A2 {{kan}} være nok.\n\nHeltid. Ikke {{forerkort|førerkort}}.",
       "krav": [
         {
           "id": "sb-komp",
@@ -388,13 +388,13 @@
         {
           "id": "sb-log",
           "kategori": "logistikk",
-          "tekst": "Heltid i sentrum. Ikke krav om førerkort.",
+          "tekst": "Heltid ved Bekkevoll. Ikke krav om førerkort.",
           "fasit": {
             "olena": "passer",
             "taras": "passer",
             "sofiia": "passer"
           },
-          "forklaringPasser": "Du kommer deg til sentrum uten førerkort.",
+          "forklaringPasser": "Du kommer deg til Bekkevoll uten førerkort.",
           "forklaringPasserIkke": "Logistikken passer dårlig."
         }
       ]

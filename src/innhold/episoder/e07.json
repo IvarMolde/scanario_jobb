@@ -45,7 +45,7 @@
         "bilde": "e07-s01-anrop.svg",
         "bildeAlt": "En telefon med tapt anrop og talemelding.",
         "lyd": "e07-s01-anrop.wav",
-        "manus": "Hei, dette er Kari Strand. Jeg ringer fra Havna Handel. Vi vil gjerne kalle deg inn til intervju. Jeg sender også en SMS. Ha en fin dag."
+        "manus": "Hei, dette er Kari Strand. Jeg ringer fra Bunnpris. Vi vil gjerne kalle deg inn til intervju. Jeg sender også en SMS. Ha en fin dag."
       },
       "tekst": "Du har et tapt {{anrop}}.\n\nDet ligger en {{talemelding}}.\n\nLytt. Hvem ringte? Hva vil de?",
       "varsel": {
@@ -660,12 +660,12 @@
       "tekst": "En annen bedrift sender {{avslag}}.\n\nDet betyr nei denne gangen.\n\nSvar likevel {{hoflig|høflig}}.\n\nIkke skriv at de tar feil.",
       "varsel": {
         "type": "epost",
-        "fra": "Romsdals Renhold",
+        "fra": "Toma AS",
         "innhold": "Svar på din søknad"
       },
       "epost": {
         "id": "e07-avslag",
-        "fra": "Per Bakke, Romsdals Renhold",
+        "fra": "Per Bakke, Toma AS",
         "emne": "Svar på din søknad",
         "innhold": "Hei. Takk for søknaden. Vi har valgt en annen person denne gangen. Vi ønsker deg lykke til. Vennlig hilsen Per Bakke"
       },
