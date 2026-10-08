@@ -1,7 +1,10 @@
+import { useEffect, useMemo, useState } from 'react'
 import type { Kalenderhendelse } from '../../modell/typer'
 
 interface Props {
   hendelser: Kalenderhendelse[]
+  /** Dagens navn fra scenen, f.eks. «Mandag» */
+  sceneDag?: string | null
 }
 
 const UKEDAGER = [
@@ -14,6 +17,8 @@ const UKEDAGER = [
   { kort: 'Søn', full: 'Søndag' },
 ] as const
 
+type UkeDag = (typeof UKEDAGER)[number]['full']
+
 function rensSted(sted: string): string {
   return sted.replace(/\s*\(øvingsversjon\)\s*/gi, '').trim()
 }
@@ -23,31 +28,77 @@ function matcherDag(hendelseDag: string, full: string, kort: string): boolean {
   return d === full.toLowerCase() || d === kort.toLowerCase() || d.startsWith(kort.toLowerCase())
 }
 
-export function Kalender({ hendelser }: Props) {
-  const renset = hendelser.map((h) => ({ ...h, sted: rensSted(h.sted) }))
-  const harAvtaler = renset.length > 0
+function finnUkeDag(navn: string | null | undefined): UkeDag | null {
+  if (!navn) return null
+  const treff = UKEDAGER.find((dag) => matcherDag(navn, dag.full, dag.kort))
+  return treff?.full ?? null
+}
+
+function startDag(hendelser: Kalenderhendelse[], sceneDag?: string | null): UkeDag {
+  const scene = finnUkeDag(sceneDag)
+  if (scene && hendelser.some((h) => matcherDag(h.dag, scene, scene.slice(0, 3)))) {
+    return scene
+  }
+  for (const dag of UKEDAGER) {
+    if (hendelser.some((h) => matcherDag(h.dag, dag.full, dag.kort))) {
+      return dag.full
+    }
+  }
+  return scene ?? 'Mandag'
+}
+
+export function Kalender({ hendelser, sceneDag = null }: Props) {
+  const renset = useMemo(
+    () => hendelser.map((h) => ({ ...h, sted: rensSted(h.sted) })),
+    [hendelser],
+  )
+  const [valgtDag, setValgtDag] = useState<UkeDag>(() => startDag(renset, sceneDag))
+  const iDag = finnUkeDag(sceneDag)
+
+  useEffect(() => {
+    setValgtDag(startDag(renset, sceneDag))
+  }, [renset, sceneDag])
+
+  const avtalerValgtDag = renset.filter((h) => {
+    const dag = UKEDAGER.find((d) => d.full === valgtDag)
+    return dag ? matcherDag(h.dag, dag.full, dag.kort) : false
+  })
 
   return (
     <div className="kalender-app">
       <header className="hjem-hode">
         <h1>Kalender</h1>
-        <p>Denne uken</p>
+        <p>Denne uken · trykk på en dag</p>
       </header>
 
-      <div className="kalender-uke" role="grid" aria-label="Ukeoversikt mandag til søndag">
+      <div className="kalender-uke" role="tablist" aria-label="Ukeoversikt mandag til søndag">
         {UKEDAGER.map((dag) => {
           const dagens = renset.filter((h) => matcherDag(h.dag, dag.full, dag.kort))
-          const aktiv = dagens.length > 0
+          const harAvtale = dagens.length > 0
+          const valgt = valgtDag === dag.full
+          const erIDag = iDag === dag.full
+          const klasse = [
+            'kalender-celle',
+            harAvtale ? 'kalender-celle-har-avtale' : '',
+            valgt ? 'kalender-celle-valgt' : '',
+            erIDag ? 'kalender-celle-idag' : '',
+          ]
+            .filter(Boolean)
+            .join(' ')
+
           return (
-            <div
+            <button
               key={dag.full}
-              className={aktiv ? 'kalender-celle kalender-celle-aktiv' : 'kalender-celle'}
-              role="gridcell"
+              type="button"
+              className={klasse}
+              role="tab"
+              aria-selected={valgt}
               aria-label={
-                aktiv
+                harAvtale
                   ? `${dag.full}: ${dagens.map((h) => `${h.tid} ${h.tittel}`).join('. ')}`
                   : dag.full
               }
+              onClick={() => setValgtDag(dag.full)}
             >
               <span className="kalender-celle-dag">{dag.kort}</span>
               {dagens.map((h) => (
@@ -55,18 +106,18 @@ export function Kalender({ hendelser }: Props) {
                   {h.tid}
                 </span>
               ))}
-            </div>
+            </button>
           )
         })}
       </div>
 
-      {!harAvtaler ? (
-        <p className="tom-tilstand">Ingen avtaler denne uken.</p>
-      ) : (
-        <div className="kalender-detaljer">
-          <h2 className="kalender-detaljer-tittel">Avtaler</h2>
+      <div className="kalender-detaljer">
+        <h2 className="kalender-detaljer-tittel">Avtaler · {valgtDag}</h2>
+        {avtalerValgtDag.length === 0 ? (
+          <p className="tom-tilstand kalender-tom-dag">Ingen avtaler {valgtDag.toLowerCase()}.</p>
+        ) : (
           <ul className="kalender-liste">
-            {renset.map((hendelse) => (
+            {avtalerValgtDag.map((hendelse) => (
               <li className="kalender-avtale" key={hendelse.id}>
                 <div className="kalender-avtale-tid">
                   <span className="kalender-avtale-dag">{hendelse.dag}</span>
@@ -79,8 +130,8 @@ export function Kalender({ hendelser }: Props) {
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }

@@ -147,7 +147,9 @@ export function Telefon() {
               />
             ) : null}
             {app === 'epost' ? <Epost eposter={fremdrift.eposter} person={person} /> : null}
-            {app === 'kalender' ? <Kalender hendelser={fremdrift.kalender} /> : null}
+            {app === 'kalender' ? (
+              <Kalender hendelser={fremdrift.kalender} sceneDag={scene?.dag ?? null} />
+            ) : null}
             {app === 'cv' ? (
               <Cv
                 person={person}

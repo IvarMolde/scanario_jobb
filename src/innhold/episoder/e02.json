@@ -116,7 +116,7 @@
         "bildeAlt": "En CV på et bord. Den viser erfaring, kurs og sertifikater.",
         "lyd": "e02-s02-cv.wav"
       },
-      "tekst": "Hva hører hjemme hvor?\n\n{{erfaring}} er jobb du har gjort.\n\n{{utdanning}} er skole og kurs.\n\nSpråk er språk du kan.\n\n{{sertifikat|Sertifikater}} er kort og bevis, for eksempel {{forerkort|førerkort}}.",
+      "tekst": "Hva hører hjemme hvor?\n\n{{erfaring}} er jobb og arbeid du har gjort før. Det kan være vanlig jobb, sommerjobb, praksis eller frivillig arbeid. Eksempel: To år med omsorg i hjemmet. Eller: Jobb i butikk.\n\n{{utdanning}} er skole, studie og kurs du har gått på. Skriv navn på skolen eller kurset, og hvor lenge du gikk der. Eksempel: Pleieassistentkurs i 12 måneder ved Molde voksenopplæringssenter. Eller: Videregående skole.\n\nSpråk er språk du kan bruke i jobb og privat. Skriv morsmål først. Skriv også norsk og andre språk, og nivå hvis du kan. Eksempel: Ukrainsk, norsk A2 og polsk.\n\n{{sertifikat|Sertifikater}} er kort og bevis som viser at du kan noe spesielt. Eksempel: {{forerkort|førerkort}} klasse B, førstehjelpskurs eller hygienebevis.",
       "valg": [
         {
           "id": "til-egenskaper",

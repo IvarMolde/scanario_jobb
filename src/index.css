@@ -1475,17 +1475,36 @@ a {
   min-height: 4.2rem;
   border-radius: 8px;
   background: #f4f7f9;
+  border: 1.5px solid transparent;
   padding: 0.3rem 0.15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
   text-align: center;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
 }
 
-.kalender-celle-aktiv {
+.kalender-celle:hover {
+  background: #e8f0f4;
+  border-color: #a8bec9;
+}
+
+.kalender-celle-har-avtale {
+  background: #e8f6ec;
+}
+
+.kalender-celle-idag:not(.kalender-celle-valgt) {
+  box-shadow: inset 0 -3px 0 #1b6b93;
+}
+
+.kalender-celle-valgt {
   background: #d8f3dc;
-  border: 1.5px solid #146c43;
+  border-color: #146c43;
+  box-shadow: 0 0 0 2px rgba(20, 108, 67, 0.18);
 }
 
 .kalender-celle-dag {
@@ -1506,6 +1525,11 @@ a {
   background: #fff;
   border-radius: 4px;
   padding: 0.15rem 0.1rem;
+}
+
+.kalender-tom-dag {
+  padding: 1rem 0.5rem;
+  font-size: 0.95rem;
 }
 
 .kalender-detaljer-tittel {
