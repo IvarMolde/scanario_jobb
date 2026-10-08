@@ -36,8 +36,6 @@ export function Telefon() {
     tilbakeTilEpisoder,
   } = useSpill()
 
-  const dag = scene?.dag ?? 'Mandag'
-  const klokke = scene?.klokkeslett ?? '09:00'
   const app = fremdrift.aktivApp
   const ulesteSms = fremdrift.varsler.filter((v) => !v.lest && v.type === 'sms').length
   const ulestEpost = fremdrift.varsler.filter((v) => !v.lest && v.type === 'epost').length
@@ -132,7 +130,7 @@ export function Telefon() {
       <div className={rammeKlasse} role="region" aria-label="Telefon">
         <div className="telefon-skjerm">
           <div className="telefon-hakk" aria-hidden="true" />
-          <Statuslinje dag={dag} klokkeslett={klokke} />
+          <Statuslinje />
           <Varsler varsler={fremdrift.varsler} onLukk={lestVarsel} />
           <div className={app === 'meldinger' ? 'app-innhold app-innhold-sms' : 'app-innhold'}>
             {app === 'hjem' ? (
