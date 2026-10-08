@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { EgenskapKoblingOppgave, Person } from '../../modell/typer'
 import { stokk } from '../../utils/miks'
+import { PersonHjelpDialog } from './PersonHjelpDialog'
 import { TilbakemeldingBoks } from './TilbakemeldingBoks'
 
 interface Props {
@@ -22,6 +23,7 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
     ferdig ? Object.fromEntries(mine.map((e) => [e.id, e.eksempel])) : {},
   )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
+  const [visHjelp, setVisHjelp] = useState(false)
   const eksempler = useMemo(
     () => stokk(oppgave.egenskaper.map((e) => e.eksempel)),
     [oppgave.egenskaper],
@@ -59,7 +61,16 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
 
   return (
     <div>
-      <p>Velg {oppgave.min} egenskaper:</p>
+      <div className="egenskap-topp">
+        <p className="egenskap-topp-tekst">Velg {oppgave.min} egenskaper:</p>
+        <button type="button" className="egenskap-hjelp-knapp" onClick={() => setVisHjelp(true)}>
+          <span className="egenskap-hjelp-ikon" aria-hidden="true">
+            ?
+          </span>
+          Hjelp
+        </button>
+      </div>
+
       <div className="brikker">
         {oppgave.egenskaper.map((e) => (
           <button
@@ -131,6 +142,8 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
         riktig={oppgave.tilbakemeldingRiktig}
         feil={oppgave.tilbakemeldingFeil}
       />
+
+      <PersonHjelpDialog person={person} aapen={visHjelp} onLukk={() => setVisHjelp(false)} />
     </div>
   )
 }
