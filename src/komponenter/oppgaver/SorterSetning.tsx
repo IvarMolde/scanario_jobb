@@ -32,11 +32,17 @@ export function SorterSetning({ oppgave, ferdig, onSvar }: Props) {
 
   return (
     <div>
-      <p>
-        <strong>
-          {valgtTekst.length === 0 ? 'Trykk på ordene i riktig rekkefølge.' : valgtTekst.join(' ')}
-        </strong>
-      </p>
+      <div className="brikker" aria-live="polite">
+        {valgtTekst.length === 0 ? (
+          <p>Ordene du trykker på, kommer her.</p>
+        ) : (
+          valgtTekst.map((bit, i) => (
+            <span key={`${bit}-${i}`} className="brikke brikke-valgt">
+              {bit}
+            </span>
+          ))
+        )}
+      </div>
       <div className="brikker">
         {ubrukte.map(({ bit, i }) => (
           <button

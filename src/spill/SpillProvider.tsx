@@ -48,6 +48,7 @@ interface SpillApi {
   lukkTilbakemelding: () => void
   aapneInnstillinger: () => void
   tilbakeTilEpisoder: () => void
+  tilStart: () => void
   lagreSok: (sok: LagretSok, flagg: string[]) => void
   settValgteJobber: (ids: string[], flagg: string[]) => void
   settMagasinAnnonse: (id: string) => void
@@ -177,6 +178,7 @@ function SpillProviderIndre({
       lukkTilbakemelding: () => dispatch({ type: 'LUKK_TILBAKEMELDING' }),
       aapneInnstillinger: () => dispatch({ type: 'APNE_INNSTILLINGER' }),
       tilbakeTilEpisoder: () => dispatch({ type: 'TILBAKE_EPISODER' }),
+      tilStart: () => dispatch({ type: 'TIL_START' }),
       lagreSok: (sok, flagg) => dispatch({ type: 'LAGRE_SOK', sok, flagg }),
       settValgteJobber: (ids, flagg) => dispatch({ type: 'SETT_VALGTE_JOBBER', ids, flagg }),
       settMagasinAnnonse: (id) => dispatch({ type: 'SETT_MAGASIN_ANNONSE', id }),

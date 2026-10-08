@@ -9,7 +9,7 @@ interface Props {
 }
 
 export function Flervalg({ oppgave, ferdig, onSvar }: Props) {
-  const [valgt, setValgt] = useState<string | null>(null)
+  const [valgt, setValgt] = useState<string | null>(ferdig ? oppgave.riktigId : null)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   return (

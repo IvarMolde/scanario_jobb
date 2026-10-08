@@ -7,16 +7,16 @@ export function erRiktigMatchSvar(krav: MatchKrav, personId: string, svar: Match
 
 export function forklaringForKrav(krav: MatchKrav, personId: string, svar: MatchSvar): string {
   if (svar === 'vet_ikke') {
-    return 'Velg passer eller passer ikke. Se på personens erfaring, egenskaper og reise.'
+    return 'Trykk på Passer eller Passer ikke. Se på hva personen kan, og hvordan personen kommer seg til jobben.'
   }
   const fasit = krav.fasit[personId]
   return fasit === 'passer' ? krav.forklaringPasser : krav.forklaringPasserIkke
 }
 
 export const KATEGORI_NAVN: Record<MatchKrav['kategori'], string> = {
-  kompetanse: 'Kompetanse',
-  egenskaper: 'Egenskaper',
-  logistikk: 'Logistikk',
+  kompetanse: 'Det du kan',
+  egenskaper: 'Slik du er',
+  logistikk: 'Reise til jobben',
 }
 
 export const MATCH_SVAR: Array<{ id: MatchSvar; tekst: string }> = [

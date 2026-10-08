@@ -43,7 +43,7 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
             key={e.id}
             type="button"
             className="brikke"
-            aria-pressed={valgt === e.id}
+            aria-pressed={valgt === e.id || Boolean(plassert[e.id])}
             disabled={status === 'ok' || Boolean(plassert[e.id])}
             onClick={() => {
               setValgt(e.id)
@@ -60,10 +60,11 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
             key={kat.id}
             type="button"
             className="kategori-boks"
+            aria-pressed={elementer.some((e) => plassert[e.id] === kat.id)}
             disabled={status === 'ok'}
             onClick={() => {
               if (!valgt) {
-                setHint('Velg et kort først.')
+                setHint('Trykk på et kort først.')
                 return
               }
               setHint(null)

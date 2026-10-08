@@ -86,7 +86,7 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
                   key={id}
                   type="button"
                   className="knapp knapp-sekundaer"
-                  aria-pressed={valgtEgenskap === id}
+                  aria-pressed={valgtEgenskap === id || Boolean(par[id])}
                   disabled={Boolean(par[id])}
                   onClick={() => {
                     setValgtEgenskap(id)
@@ -105,9 +105,10 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
                 key={tekst}
                 type="button"
                 className="brikke"
+                aria-pressed={Object.values(par).includes(tekst)}
                 onClick={() => {
                   if (!valgtEgenskap) {
-                    setHint('Velg en egenskap først.')
+                    setHint('Trykk på et ord først.')
                     return
                   }
                   setHint(null)

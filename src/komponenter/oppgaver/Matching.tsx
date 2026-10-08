@@ -38,7 +38,7 @@ export function Matching({ oppgave, ferdig, onSvar }: Props) {
             key={p.id}
             type="button"
             className="knapp knapp-sekundaer"
-            aria-pressed={valgtVenstre === p.id}
+            aria-pressed={valgtVenstre === p.id || Boolean(par[p.id])}
             disabled={status === 'ok' || Boolean(par[p.id])}
             onClick={() => {
               setValgtVenstre(p.id)
@@ -50,17 +50,18 @@ export function Matching({ oppgave, ferdig, onSvar }: Props) {
           </button>
         ))}
       </div>
-      <p>Forklaringer:</p>
+      <p>Hva betyr ordet?</p>
       <div className="brikker">
         {hoyre.map((tekst) => (
           <button
             key={tekst}
             type="button"
             className="brikke"
+            aria-pressed={Object.values(par).includes(tekst)}
             disabled={status === 'ok'}
             onClick={() => {
               if (!valgtVenstre) {
-                setHint('Velg et ord til venstre først.')
+                setHint('Trykk på ordet først.')
                 return
               }
               setHint(null)

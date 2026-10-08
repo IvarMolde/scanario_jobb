@@ -19,7 +19,16 @@ export function FyllTall({ oppgave, personId, ferdig, onSvar }: Props) {
     () => skjemaVerdier(innhold.arbeid, personId),
     [innhold.arbeid, personId],
   )
-  const [valg, setValg] = useState<Record<string, number>>({})
+  const [valg, setValg] = useState<Record<string, number>>(() =>
+    ferdig
+      ? Object.fromEntries(
+          oppgave.felt.flatMap((felt) => {
+            const tall = fasit[felt.nokkel]
+            return tall === undefined ? [] : [[felt.id, tall]]
+          }),
+        )
+      : {},
+  )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const visTall = (n: number, nokkel: string) =>

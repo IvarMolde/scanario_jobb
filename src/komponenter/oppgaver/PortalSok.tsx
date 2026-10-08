@@ -12,10 +12,11 @@ interface Props {
 }
 
 export function PortalSok({ oppgave, person, ferdig, onSvar, onLagreSok }: Props) {
-  const [sokkeordId, setSokkeordId] = useState<string | null>(null)
-  const [stedId, setStedId] = useState<string | null>(null)
-  const [stillingId, setStillingId] = useState<string | null>(null)
-  const [varsel, setVarsel] = useState(false)
+  const lagret = ferdig ? oppgave.riktigPerPerson[person.id] : undefined
+  const [sokkeordId, setSokkeordId] = useState<string | null>(lagret?.sokkeordId ?? null)
+  const [stedId, setStedId] = useState<string | null>(lagret?.stedId ?? null)
+  const [stillingId, setStillingId] = useState<string | null>(lagret?.stillingId ?? null)
+  const [varsel, setVarsel] = useState(ferdig)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const lagre = () => {

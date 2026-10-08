@@ -4,6 +4,7 @@ import { EpisodeVelger } from './sider/EpisodeVelger'
 import { Oppsummering } from './sider/Oppsummering'
 import { ScenePanel } from './sider/ScenePanel'
 import { Slutt } from './sider/Slutt'
+import { SpillMeny } from './sider/SpillMeny'
 import { Startskjerm } from './sider/Startskjerm'
 
 function Skjerm() {
@@ -14,15 +15,26 @@ function Skjerm() {
   }
 
   if (fremdrift.visning === 'oppsummering') {
-    return <Oppsummering />
+    return (
+      <div className="startside">
+        <SpillMeny />
+        <Oppsummering />
+      </div>
+    )
   }
 
   if (fremdrift.visning === 'slutt') {
-    return <Slutt />
+    return (
+      <div className="startside">
+        <SpillMeny />
+        <Slutt />
+      </div>
+    )
   }
 
   return (
     <div className="skjerm">
+      <SpillMeny />
       <Telefon />
       {fremdrift.visning === 'scene' ? <ScenePanel /> : <EpisodeVelger />}
     </div>

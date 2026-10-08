@@ -10,6 +10,7 @@ interface Props {
 
 export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
   const [funnet, setFunnet] = useState(ferdig)
+  const [valgtAlt, setValgtAlt] = useState<string | null>(ferdig ? oppgave.riktigId : null)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
   const [hint, setHint] = useState<string | null>(null)
   const ord = oppgave.tekst.split(/(\s+)/)
@@ -25,6 +26,7 @@ export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
               key={`o-${i}-${bit}`}
               type="button"
               className="ordlenke"
+              aria-pressed={funnet && rent === oppgave.feilOrd}
               disabled={status === 'ok'}
               onClick={() => {
                 if (rent === oppgave.feilOrd) {
@@ -48,8 +50,10 @@ export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
               key={alt.id}
               type="button"
               className="knapp knapp-sekundaer"
+              aria-pressed={valgtAlt === alt.id}
               disabled={status === 'ok'}
               onClick={() => {
+                setValgtAlt(alt.id)
                 const riktig = alt.id === oppgave.riktigId
                 setStatus(riktig ? 'ok' : 'feil')
                 onSvar(riktig)

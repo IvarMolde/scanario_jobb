@@ -22,6 +22,7 @@ import { SorterSetning } from './SorterSetning'
 import { VelgJobber } from './VelgJobber'
 import { FyllTall } from './FyllTall'
 import { FinnIDokument } from './FinnIDokument'
+import { oppgaveHjelp, visEgenInstruksjon } from '../../spill/oppgavehjelp'
 
 interface Props {
   oppgave: Oppgave
@@ -70,7 +71,8 @@ export function OppgaveVisning({
   return (
     <section className="oppgave" aria-labelledby={`oppgave-${oppgave.id}`}>
       <h3 id={`oppgave-${oppgave.id}`}>Oppgave</h3>
-      <p>{oppgave.instruksjon}</p>
+      <p className="oppgave-hjelp">{oppgaveHjelp(oppgave.type)}</p>
+      {visEgenInstruksjon(oppgave.instruksjon) ? <p>{oppgave.instruksjon}</p> : null}
       <Lydspiller
         fil={oppgave.instruksjonLyd}
         etikett={oppgave.type === 'lytt_og_velg' ? 'Lytt' : 'Instruksjon'}

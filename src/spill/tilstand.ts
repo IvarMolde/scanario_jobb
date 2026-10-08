@@ -286,6 +286,7 @@ export type Handling =
   | { type: 'LUKK_TILBAKEMELDING' }
   | { type: 'APNE_INNSTILLINGER' }
   | { type: 'TILBAKE_EPISODER' }
+  | { type: 'TIL_START' }
   | { type: 'FULLFOR_EPISODE' }
   | { type: 'LAGRE_SOK'; sok: LagretSok; flagg: string[] }
   | { type: 'SETT_VALGTE_JOBBER'; ids: string[]; flagg: string[] }
@@ -428,6 +429,15 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         aktivApp: 'hjem',
         aktivSceneId: null,
         aktivEpisodeId: state.aktivEpisodeId,
+        valgtOrdId: null,
+        valgTilbakemelding: null,
+      }
+    case 'TIL_START':
+      return {
+        ...state,
+        visning: 'start',
+        aktivApp: 'hjem',
+        aktivSceneId: null,
         valgtOrdId: null,
         valgTilbakemelding: null,
       }

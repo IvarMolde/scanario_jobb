@@ -69,7 +69,7 @@ export function ScenePanel() {
         />
       ))}
       {!oppgaverFerdige && scene.oppgaver.length > 0 ? (
-        <p className="skjema-hjelp">Gjør oppgavene ferdig. Da kommer knappene for å gå videre.</p>
+        <p className="skjema-hjelp">Gjør oppgaven ferdig. Da kan du gå videre.</p>
       ) : null}
       {oppgaverFerdige && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
         <div className="handlinger">

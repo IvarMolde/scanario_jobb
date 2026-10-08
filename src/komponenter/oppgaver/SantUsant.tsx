@@ -9,9 +9,11 @@ interface Props {
 }
 
 export function SantUsant({ oppgave, ferdig, onSvar }: Props) {
+  const [valgt, setValgt] = useState<boolean | null>(ferdig ? oppgave.riktigErSant : null)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const svar = (sant: boolean) => {
+    setValgt(sant)
     const riktig = sant === oppgave.riktigErSant
     setStatus(riktig ? 'ok' : 'feil')
     onSvar(riktig)
@@ -23,12 +25,19 @@ export function SantUsant({ oppgave, ferdig, onSvar }: Props) {
         <strong>{oppgave.paastand}</strong>
       </p>
       <div className="valggruppe">
-        <button type="button" className="knapp" disabled={status === 'ok'} onClick={() => svar(true)}>
+        <button
+          type="button"
+          className="knapp knapp-sekundaer"
+          aria-pressed={valgt === true}
+          disabled={status === 'ok'}
+          onClick={() => svar(true)}
+        >
           Sant
         </button>
         <button
           type="button"
           className="knapp knapp-sekundaer"
+          aria-pressed={valgt === false}
           disabled={status === 'ok'}
           onClick={() => svar(false)}
         >

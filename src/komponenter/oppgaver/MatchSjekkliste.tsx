@@ -17,7 +17,16 @@ export function MatchSjekkliste({ oppgave, person, annonse, ferdig, onSvar }: Pr
     () => (annonse ? annonse.krav.filter((k) => oppgave.kategorier.includes(k.kategori)) : []),
     [annonse, oppgave.kategorier],
   )
-  const [svar, setSvar] = useState<Record<string, MatchSvar>>({})
+  const [svar, setSvar] = useState<Record<string, MatchSvar>>(() =>
+    ferdig
+      ? Object.fromEntries(
+          krav.flatMap((k) => {
+            const fasit = k.fasit[person.id]
+            return fasit ? [[k.id, fasit]] : []
+          }),
+        )
+      : {},
+  )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const sjekk = () => {

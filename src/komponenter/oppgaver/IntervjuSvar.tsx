@@ -16,7 +16,9 @@ export function IntervjuSvar({ oppgave, person, ferdig, onSvar }: Props) {
     () => oppgave.alternativer.filter((a) => a.personer.includes(person.id)),
     [oppgave.alternativer, person.id],
   )
-  const [valgt, setValgt] = useState<string | null>(null)
+  const [valgt, setValgt] = useState<string | null>(
+    ferdig ? (alternativer.find((a) => a.kvalitet === 'godt')?.id ?? null) : null,
+  )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
   const valgtAlt = alternativer.find((a) => a.id === valgt)
 

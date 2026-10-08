@@ -608,6 +608,11 @@ a {
   margin: 0 0 0.7rem;
 }
 
+.ordlenke[aria-pressed='true'] {
+  background: #d8f3dc;
+  color: #14532d;
+}
+
 .ordlenke {
   background: none;
   border: 0;
@@ -690,9 +695,13 @@ a {
   font-weight: 700;
 }
 
-.brikke[aria-pressed='true'] {
-  background: var(--teal);
-  color: #fff;
+.brikke[aria-pressed='true'],
+.brikke-valgt,
+.knapp[aria-pressed='true'],
+.kategori-boks[aria-pressed='true'] {
+  background: #d8f3dc;
+  border-color: #146c43;
+  color: #14532d;
 }
 
 .brikke:disabled,
@@ -700,6 +709,16 @@ a {
 .dok-klikk:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+.brikke[aria-pressed='true']:disabled,
+.knapp[aria-pressed='true']:disabled,
+.kategori-boks[aria-pressed='true']:disabled,
+.dok-klikk.valgt:disabled {
+  background: #d8f3dc;
+  border-color: #146c43;
+  color: #14532d;
+  opacity: 1;
 }
 
 .ordkort {
@@ -745,8 +764,9 @@ a {
 }
 
 .personkort[aria-pressed='true'] {
-  border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(238, 155, 0, 0.35);
+  background: #d8f3dc;
+  border-color: #146c43;
+  box-shadow: none;
 }
 
 .personkort img,
@@ -772,9 +792,9 @@ a {
 }
 
 .morsmal-valg button[aria-pressed='true'] {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: #fff;
+  background: #d8f3dc;
+  border-color: #146c43;
+  color: #14532d;
 }
 
 .episodekort {
@@ -1040,8 +1060,9 @@ a {
 }
 
 .reise-kort.valgt {
-  border-color: var(--amber);
-  box-shadow: 0 0 0 2px #f5d58a;
+  background: #d8f3dc;
+  border-color: #146c43;
+  box-shadow: none;
 }
 
 .reise-kort h2 {
@@ -1321,8 +1342,35 @@ a {
 }
 
 .dok-klikk.valgt {
-  border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(238, 155, 0, 0.35);
+  background: #d8f3dc;
+  border-color: #146c43;
+  box-shadow: none;
+  color: #14532d;
+}
+
+.oppgave-hjelp {
+  margin: 0 0 0.7rem;
+  padding: 0.6rem 0.75rem;
+  background: #e7f1f6;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.spill-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.skjerm > .spill-nav {
+  grid-column: 1 / -1;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  margin: 0;
+  padding: 0.35rem 0 0.6rem;
+  background: var(--bakgrunn);
 }
 
 .dok-netto {

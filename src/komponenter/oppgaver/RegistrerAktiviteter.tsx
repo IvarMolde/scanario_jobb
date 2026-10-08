@@ -26,8 +26,12 @@ export function RegistrerAktiviteter({
     () => jobberForPerson(valgteJobber, person.id, annonser),
     [annonser, person.id, valgteJobber],
   )
-  const [status, setStatus] = useState<Record<string, string>>({})
-  const [frist, setFrist] = useState<Record<string, string>>({})
+  const [status, setStatus] = useState<Record<string, string>>(() =>
+    ferdig ? Object.fromEntries(jobber.map((jobb) => [jobb.id, oppgave.riktigStatusId])) : {},
+  )
+  const [frist, setFrist] = useState<Record<string, string>>(() =>
+    ferdig ? Object.fromEntries(jobber.map((jobb) => [jobb.id, jobb.soknadsfrist])) : {},
+  )
   const [resultat, setResultat] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const lagre = () => {

@@ -14,7 +14,7 @@ interface Props {
 
 export function FinnIDokument({ oppgave, ferdig, onSvar }: Props) {
   const { innhold, person, fremdrift } = useSpill()
-  const [valgt, setValgt] = useState<string | null>(null)
+  const [valgt, setValgt] = useState<string | null>(ferdig ? oppgave.riktigFeltId : null)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
   const forhold = person ? innhold.arbeid.personer[person.id] : undefined
   const slipp = person ? byggLonnsslipp(person, innhold.arbeid, fremdrift.skattekort, false) : null

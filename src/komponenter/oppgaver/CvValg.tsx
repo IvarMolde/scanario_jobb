@@ -10,7 +10,16 @@ interface Props {
 }
 
 export function CvValg({ oppgave, person, ferdig, onSvar }: Props) {
-  const [valg, setValg] = useState<Record<string, string>>({})
+  const [valg, setValg] = useState<Record<string, string>>(() =>
+    ferdig
+      ? Object.fromEntries(
+          oppgave.seksjoner.flatMap((seksjon) => {
+            const alt = seksjon.alternativer.find((a) => a.personer.includes(person.id))
+            return alt ? [[seksjon.id, alt.id]] : []
+          }),
+        )
+      : {},
+  )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
   const velg = (seksjonId: string, altId: string) => {
