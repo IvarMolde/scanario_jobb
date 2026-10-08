@@ -340,8 +340,8 @@
       "klokkeslett": "11:05",
       "app": "cv",
       "media": {
-        "bilde": "e02-s04-setninger.svg",
-        "bildeAlt": "To setninger: Jeg jobbet og Jeg har jobbet.",
+        "bilde": "e02-s04-cv-setninger-foto.jpg",
+        "bildeAlt": "En CV på et bord med arbeidserfaring og utdanning.",
         "lyd": "e02-s04-setninger.wav"
       },
       "tekst": "I CV bruker vi ofte {{perfektum}}: «Jeg har jobbet …»\n\n{{preteritum|Preteritum}}: «Jeg jobbet …» når tiden er slutt og tydelig.\n\nVelg setningene som passer personen.",
