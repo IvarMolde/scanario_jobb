@@ -234,8 +234,8 @@
       "klokkeslett": "10:50",
       "app": "cv",
       "media": {
-        "bilde": "e02-s03-egenskaper.svg",
-        "bildeAlt": "Ord for personlige egenskaper ved siden av korte setninger.",
+        "bilde": "e02-s03-egenskaper-foto.jpg",
+        "bildeAlt": "Et papir om egenskaper: omsorgsfull, strukturert, læringsvillig og samarbeidsorientert.",
         "lyd": "e02-s03-egenskaper.wav"
       },
       "tekst": "En {{egenskap}} sier hvordan du er.\n\nVelg tre egenskaper som passer deg.\n\nKoble dem til et eksempel. Eksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»",
