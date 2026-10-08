@@ -376,6 +376,41 @@ a {
   animation: telefon-ramme-blink 0.35s ease-in-out 14;
 }
 
+/* Vibrasjon ~5 sekunder ved ny SMS / e-post */
+@keyframes telefon-vibrer {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  12% {
+    transform: translate3d(-4px, 1px, 0) rotate(-0.9deg);
+  }
+  25% {
+    transform: translate3d(4px, -1px, 0) rotate(0.9deg);
+  }
+  37% {
+    transform: translate3d(-3px, 0, 0) rotate(-0.6deg);
+  }
+  50% {
+    transform: translate3d(3px, 1px, 0) rotate(0.6deg);
+  }
+  62% {
+    transform: translate3d(-3px, -1px, 0) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate3d(3px, 0, 0) rotate(0.5deg);
+  }
+  87% {
+    transform: translate3d(-2px, 1px, 0) rotate(-0.3deg);
+  }
+}
+
+.telefon-kolonne.telefon-vibrerer {
+  animation: telefon-vibrer 0.14s linear 36;
+  transform-origin: center top;
+  will-change: transform;
+}
+
 .telefon-hjelp {
   margin: 0;
   width: 100%;

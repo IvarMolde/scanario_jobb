@@ -42,13 +42,23 @@ export function Telefon() {
   const ulesteSms = fremdrift.varsler.filter((v) => !v.lest && v.type === 'sms').length
   const ulestEpost = fremdrift.varsler.filter((v) => !v.lest && v.type === 'epost').length
   const ulesteVarsler = fremdrift.varsler.filter((v) => !v.lest).length
+  const ulesteMeldinger = fremdrift.varsler.filter(
+    (v) => !v.lest && (v.type === 'sms' || v.type === 'epost'),
+  ).length
+  const innkommendeAntall =
+    fremdrift.sms.filter((m) => m.fra !== 'elev').length +
+    fremdrift.eposter.filter((e) => e.id !== 'ovingsmail').length
   const brukTelefon =
     fremdrift.visning === 'scene' && scene != null && sceneKreverTelefon(scene)
 
   const [blinker, setBlinker] = useState(false)
+  const [vibrerer, setVibrerer] = useState(false)
   const forrigeSceneId = useRef<string | null>(null)
   const forrigeUleste = useRef(0)
-  const blinkTimeout = useRef<number | null>(null)
+  const forrigeMeldinger = useRef(0)
+  const forrigeInnkommende = useRef(0)
+  const effektTimeout = useRef<number | null>(null)
+  const hapticInterval = useRef<number | null>(null)
 
   useEffect(() => {
     const sceneId = scene?.id ?? null
@@ -58,23 +68,54 @@ export function Telefon() {
       sceneKreverTelefon(scene) &&
       sceneId !== forrigeSceneId.current
     const nyttVarsel = ulesteVarsler > forrigeUleste.current
+    const nyMelding =
+      ulesteMeldinger > forrigeMeldinger.current ||
+      innkommendeAntall > forrigeInnkommende.current
 
     forrigeSceneId.current = sceneId
     forrigeUleste.current = ulesteVarsler
+    forrigeMeldinger.current = ulesteMeldinger
+    forrigeInnkommende.current = innkommendeAntall
 
-    if (!nySceneKreverTelefon && !nyttVarsel) return
+    if (!nySceneKreverTelefon && !nyttVarsel && !nyMelding) return
 
-    setBlinker(true)
-    if (blinkTimeout.current != null) window.clearTimeout(blinkTimeout.current)
-    blinkTimeout.current = window.setTimeout(() => {
+    if (nySceneKreverTelefon || nyttVarsel || nyMelding) setBlinker(true)
+    if (nyMelding) {
+      setVibrerer(true)
+      if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') {
+        if (hapticInterval.current != null) window.clearInterval(hapticInterval.current)
+        const start = Date.now()
+        navigator.vibrate([35, 55, 35])
+        hapticInterval.current = window.setInterval(() => {
+          if (Date.now() - start >= BLINK_MS) {
+            if (hapticInterval.current != null) window.clearInterval(hapticInterval.current)
+            hapticInterval.current = null
+            navigator.vibrate?.(0)
+            return
+          }
+          navigator.vibrate?.([30, 50, 30])
+        }, 160)
+      }
+    }
+
+    if (effektTimeout.current != null) window.clearTimeout(effektTimeout.current)
+    effektTimeout.current = window.setTimeout(() => {
       setBlinker(false)
-      blinkTimeout.current = null
+      setVibrerer(false)
+      effektTimeout.current = null
+      if (hapticInterval.current != null) {
+        window.clearInterval(hapticInterval.current)
+        hapticInterval.current = null
+      }
+      navigator.vibrate?.(0)
     }, BLINK_MS)
-  }, [scene, fremdrift.visning, ulesteVarsler])
+  }, [scene, fremdrift.visning, ulesteVarsler, ulesteMeldinger, innkommendeAntall])
 
   useEffect(() => {
     return () => {
-      if (blinkTimeout.current != null) window.clearTimeout(blinkTimeout.current)
+      if (effektTimeout.current != null) window.clearTimeout(effektTimeout.current)
+      if (hapticInterval.current != null) window.clearInterval(hapticInterval.current)
+      navigator.vibrate?.(0)
     }
   }, [])
 
@@ -87,7 +128,7 @@ export function Telefon() {
     .join(' ')
 
   return (
-    <div className="telefon-kolonne">
+    <div className={vibrerer ? 'telefon-kolonne telefon-vibrerer' : 'telefon-kolonne'}>
       <div className={rammeKlasse} role="region" aria-label="Telefon">
         <div className="telefon-skjerm">
           <div className="telefon-hakk" aria-hidden="true" />
