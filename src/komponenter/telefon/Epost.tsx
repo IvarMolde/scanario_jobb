@@ -20,6 +20,15 @@ function forhandsvisning(tekst: string): string {
   return ren.length > 72 ? `${ren.slice(0, 69)}…` : ren
 }
 
+function epostAvsnitt(tekst: string): string[] {
+  const medLinjeskift = tekst
+    .split(/\n+/)
+    .map((del) => del.trim())
+    .filter(Boolean)
+  if (medLinjeskift.length > 1) return medLinjeskift
+  return tekst.split(/(?<=\.)\s+/).filter(Boolean)
+}
+
 export function Epost({ eposter, person }: Props) {
   const synlige = eposter.filter((e) => e.id !== 'ovingsmail')
   const sisteId = synlige[synlige.length - 1]?.id ?? null
@@ -73,7 +82,7 @@ export function Epost({ eposter, person }: Props) {
           </div>
 
           <div className="epost-brødtekst">
-            {apnet.innhold.split(/(?<=\.)\s+/).map((del, i) => (
+            {epostAvsnitt(apnet.innhold).map((del, i) => (
               <p key={`${apnet.id}-p-${i}`}>{del}</p>
             ))}
           </div>
