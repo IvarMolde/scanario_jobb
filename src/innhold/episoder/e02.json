@@ -525,7 +525,7 @@
       "app": "cv",
       "media": {
         "bilde": "e02-s06-verb.svg",
-        "bildeAlt": "Plakat om verb i en CV: preteritum og perfektum med eksempler.",
+        "bildeAlt": "En renholder vasker kontor. Tekst: jobbet / har jobbet.",
         "lyd": "e02-s06-verb.wav"
       },
       "tekst": "{{preteritum|Preteritum}}: Jeg jobbet i en butikk i 2022.\n\n{{perfektum|Perfektum}}: Jeg har jobbet i en butikk i tre år.",
