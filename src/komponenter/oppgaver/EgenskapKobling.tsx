@@ -76,7 +76,7 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
       </div>
       {kanKoble ? (
         <>
-          <p>Koble egenskap til eksempel:</p>
+          <p>Koble egenskap til forklaring:</p>
           <div className="valggruppe">
             {valgte.map((id) => {
               const e = oppgave.egenskaper.find((x) => x.id === id)

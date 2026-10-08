@@ -238,7 +238,7 @@
         "bildeAlt": "Et papir om egenskaper: omsorgsfull, strukturert, læringsvillig og samarbeidsorientert.",
         "lyd": "e02-s03-egenskaper.wav"
       },
-      "tekst": "En {{egenskap}} – eller personlig egenskap – sier hvordan du er som person og arbeidstaker. Det er ikke det samme som utdanning. Det er måten du jobber og møter andre på.\n\nHer er noen viktige egenskaper:\n\n• {{fleksibel}} – du kan endre planer og gjøre nye oppgaver.\n• {{motivert}} – du vil gjerne lære og gjøre en god jobb.\n• {{samarbeidsvillig}} – du liker å jobbe sammen med andre.\n• {{effektiv}} – du gjør arbeidet godt og bruker tiden godt.\n• {{laeringsvillig|læringsvillig}} – du vil lære nye ting på jobben.\n\nI CV og søknad er det lurt å lese jobbannonsen først. Se hvilke egenskaper arbeidsgiveren søker. Velg noen av dem som passer deg. Skriv deretter et kort eksempel fra livet ditt.\n\nEksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»\n\nVelg tre egenskaper som passer deg. Koble hver egenskap til et eksempel.",
+      "tekst": "En {{egenskap}} – eller personlig egenskap – sier hvordan du er som person og arbeidstaker. Det er ikke det samme som utdanning. Det er måten du jobber og møter andre på.\n\nHer er noen viktige egenskaper:\n\n• {{fleksibel}} – du kan endre planer og gjøre nye oppgaver.\n• {{motivert}} – du vil gjerne lære og gjøre en god jobb.\n• {{samarbeidsvillig}} – du liker å jobbe sammen med andre.\n• {{effektiv}} – du gjør arbeidet godt og bruker tiden godt.\n• {{laeringsvillig|læringsvillig}} – du vil lære nye ting på jobben.\n\nI CV og søknad er det lurt å lese jobbannonsen først. Se hvilke egenskaper arbeidsgiveren søker. Velg noen av dem som passer deg. Skriv deretter et kort eksempel fra livet ditt.\n\nEksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»\n\nVelg tre egenskaper som passer deg. Koble hver egenskap til riktig forklaring.",
       "valg": [
         {
           "id": "til-setninger",
@@ -251,14 +251,14 @@
         {
           "type": "egenskap_kobling",
           "id": "e02-s03-ek",
-          "instruksjon": "Velg tre egenskaper som passer personen. Trykk deretter på egenskap og så på eksempelet.",
+          "instruksjon": "Velg tre egenskaper som passer personen. Trykk deretter på egenskap og så på forklaringen.",
           "min": 3,
           "max": 3,
           "egenskaper": [
             {
               "id": "noyaktig",
               "ord": "nøyaktig",
-              "eksempel": "Jeg er nøyaktig. Jeg sjekker prisen to ganger.",
+              "eksempel": "Sjekker at ting er riktig, for eksempel prisen to ganger.",
               "personer": [
                 "olena"
               ]
@@ -266,7 +266,7 @@
             {
               "id": "blid",
               "ord": "blid",
-              "eksempel": "Jeg er blid. Jeg smiler til kundene.",
+              "eksempel": "Smiler og er vennlig mot kunder.",
               "personer": [
                 "olena"
               ]
@@ -274,7 +274,7 @@
             {
               "id": "punktlig",
               "ord": "punktlig",
-              "eksempel": "Jeg er punktlig. Jeg kommer alltid i god tid.",
+              "eksempel": "Kommer alltid i god tid.",
               "personer": [
                 "olena"
               ]
@@ -282,7 +282,7 @@
             {
               "id": "sterk",
               "ord": "sterk",
-              "eksempel": "Jeg er sterk. Jeg kan løfte tunge esker.",
+              "eksempel": "Kan løfte tunge esker.",
               "personer": [
                 "taras"
               ]
@@ -290,7 +290,7 @@
             {
               "id": "rolig",
               "ord": "rolig",
-              "eksempel": "Jeg er rolig. Jeg blir ikke sint når det er travelt.",
+              "eksempel": "Blir ikke sint når det er travelt.",
               "personer": [
                 "taras"
               ]
@@ -298,7 +298,7 @@
             {
               "id": "palitelig",
               "ord": "pålitelig",
-              "eksempel": "Jeg er pålitelig. Jeg gjør det jeg har sagt.",
+              "eksempel": "Gjør det du har sagt.",
               "personer": [
                 "taras"
               ]
@@ -306,7 +306,7 @@
             {
               "id": "omsorgsfull",
               "ord": "omsorgsfull",
-              "eksempel": "Jeg er omsorgsfull. Jeg passer godt på andre.",
+              "eksempel": "Passer godt på andre.",
               "personer": [
                 "sofiia"
               ]
@@ -314,7 +314,7 @@
             {
               "id": "talmodig",
               "ord": "tålmodig",
-              "eksempel": "Jeg er tålmodig. Jeg forklarer sakte.",
+              "eksempel": "Forklarer sakte og venter på andre.",
               "personer": [
                 "sofiia"
               ]
@@ -322,14 +322,14 @@
             {
               "id": "ansvarlig",
               "ord": "ansvarlig",
-              "eksempel": "Jeg er ansvarlig. Jeg sier ifra hvis noe er galt.",
+              "eksempel": "Sier ifra hvis noe er galt.",
               "personer": [
                 "sofiia"
               ]
             }
           ],
-          "tilbakemeldingRiktig": "Riktig. Du bruker adjektiv og et konkret eksempel. Slik forklarer vi egenskaper i Norge.",
-          "tilbakemeldingFeil": "Velg egenskapene som står på personens liste. Koble deretter hvert ord til setningen som passer."
+          "tilbakemeldingRiktig": "Riktig. Du har koblet egenskapene til riktige forklaringer.",
+          "tilbakemeldingFeil": "Velg egenskapene som passer personen. Koble deretter hvert ord til riktig forklaring."
         }
       ]
     },

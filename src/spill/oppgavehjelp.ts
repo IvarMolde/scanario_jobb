@@ -10,7 +10,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   finn_og_rett: 'Klikk på ordet som er feil. Velg deretter riktig form.',
   bygg_melding: 'Velg en start, en tekst og en slutt. De vises på telefonen. Trykk så på Send.',
   sorter_kategori: 'Trykk på et kort. Trykk så på boksen det hører til.',
-  egenskap_kobling: 'Trykk på ordene som passer.',
+  egenskap_kobling: 'Velg tre egenskaper. Trykk på ordet, og velg forklaringen som passer.',
   cv_valg: 'Trykk på setningen som passer personen.',
   portal_sok: 'Trykk på ett valg i hver gruppe.',
   match_sjekkliste: 'Trykk på Passer eller Passer ikke.',
