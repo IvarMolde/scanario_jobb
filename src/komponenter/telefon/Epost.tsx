@@ -21,12 +21,13 @@ function forhandsvisning(tekst: string): string {
 }
 
 function epostAvsnitt(tekst: string): string[] {
-  const medLinjeskift = tekst
-    .split(/\n+/)
-    .map((del) => del.trim())
-    .filter(Boolean)
-  if (medLinjeskift.length > 1) return medLinjeskift
-  return tekst.split(/(?<=\.)\s+/).filter(Boolean)
+  if (tekst.includes('\n')) {
+    return tekst
+      .split(/\n+/)
+      .map((del) => del.trim())
+      .filter(Boolean)
+  }
+  return tekst.split(/(?<=\.)\s+/).map((del) => del.trim()).filter(Boolean)
 }
 
 export function Epost({ eposter, person }: Props) {
