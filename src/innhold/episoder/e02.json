@@ -46,8 +46,8 @@
       "klokkeslett": "10:20",
       "app": "epost",
       "media": {
-        "bilde": "e02-s01-epost.svg",
-        "bildeAlt": "En e-post fra veileder Linn Holm om oppdatert CV.",
+        "bilde": "e02-s01-cv-foto.jpg",
+        "bildeAlt": "En CV ligger på et bord. Den viser profil, erfaring, utdanning og språk.",
         "lyd": "e02-s01-epost.wav"
       },
       "tekst": "Linn har sendt e-post.\n\nHun ber om en oppdatert {{cv}}.\n\nEn CV viser {{erfaring}}, {{utdanning}}, språk og {{sertifikat|sertifikater}}.",
