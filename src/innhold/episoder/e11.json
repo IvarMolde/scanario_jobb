@@ -83,7 +83,7 @@
         "bildeAlt": "En lønnsslipp med brutto, trekk og netto.",
         "lyd": "e11-s02-slipp.wav"
       },
-      "tekst": "Du endret {{skattekort|skattekortet}}.\n\n{{skattetrekk|Skattetrekket}} på slippen følger beregningen i Skattøving.\n\nSamme person. Samme valg. Samme trekk.",
+      "tekst": "Du endret {{skattekort|skattekortet}}.\n\n{{skattetrekk|Skattetrekket}} på slippen følger beregningen i Skatteøving.\n\nSamme person. Samme valg. Samme trekk.",
       "valg": [
         {
           "id": "til-finn-a",
@@ -118,7 +118,7 @@
         "bildeAlt": "En lønnsslipp der skattetrekket ser feil ut.",
         "lyd": "e11-s02-slipp.wav"
       },
-      "tekst": "Du endret ikke {{skattekort|skattekortet}}.\n\nHar du {{frikort}}? Da kan trekk være 50 prosent av det som går over 100 000 kr.\n\nHar du for lav forventet inntekt? Da trekkes det for lite. Du kan få restskatt.\n\nÅpne Skattøving. Du kan ordne det nå.",
+      "tekst": "Du endret ikke {{skattekort|skattekortet}}.\n\nHar du {{frikort}}? Da kan trekk være 50 prosent av det som går over 100 000 kr.\n\nHar du for lav forventet inntekt? Da trekkes det for lite. Du kan få restskatt.\n\nÅpne Skatteøving. Du kan ordne det nå.",
       "valg": [
         {
           "id": "til-finn-b",

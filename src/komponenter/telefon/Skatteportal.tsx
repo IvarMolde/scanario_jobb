@@ -41,7 +41,7 @@ export function Skatteportal() {
     return (
       <div>
         <header className="hjem-hode">
-          <h1>Skattøving</h1>
+          <h1>Skatteøving</h1>
           <p>Øvingsversjon. Ikke skatteetaten.no.</p>
         </header>
         <p>Velg en person først.</p>
@@ -77,7 +77,7 @@ export function Skatteportal() {
         <div className="skatt-logo" aria-hidden="true">
           SØ
         </div>
-        <h1>Skattøving</h1>
+        <h1>Skatteøving</h1>
         <p>Øvingsversjon. Eget navn og eget utseende. Ikke skatteetaten.no. Ingenting sendes noe sted.</p>
       </header>
 

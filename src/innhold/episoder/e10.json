@@ -2,7 +2,7 @@
   "id": "e10",
   "nummer": 10,
   "tittel": "Ny jobb – nytt skattekort",
-  "ingress": "Første arbeidsuke. Du sjekker skattekortet, kjenner igjen svindel og øver på innlogging i Skattøving.",
+  "ingress": "Første arbeidsuke. Du sjekker skattekortet, kjenner igjen svindel og øver på innlogging i Skatteøving.",
   "startSceneId": "e10-s01",
   "tillatteFlagg": ["endret_skattekort", "avslo_svindel"],
   "ordIds": ["skattekort", "frikort", "brutto", "netto", "skattetrekk", "fradrag", "restskatt", "skatteprosent", "forventet_inntekt", "svindel", "trygdeavgift", "trinnskatt"],
@@ -10,7 +10,7 @@
     { "tekst": "Leste SMS fra lønnskontoret om skattekort før første lønn." },
     { "tekst": "Sa nei til en falsk skatte-SMS.", "visHvisFlagg": "avslo_svindel" },
     { "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.", "visHvisIkkeFlagg": "avslo_svindel" },
-    { "tekst": "Endret skattekortet i Skattøving.", "visHvisFlagg": "endret_skattekort" },
+    { "tekst": "Endret skattekortet i Skatteøving.", "visHvisFlagg": "endret_skattekort" },
     { "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.", "visHvisIkkeFlagg": "endret_skattekort" }
   ],
   "scener": [
@@ -133,13 +133,13 @@
         "bildeAlt": "En trygg innlogging. Riktig adresse. Øvingsversjon.",
         "lyd": "e10-s03-trygg.wav"
       },
-      "tekst": "Du logget ikke inn på den falske lenken.\n\nEkte innlogging skjer bare på den ekte adressen.\n\nI spillet bruker vi appen Skattøving. Den er fiktiv.",
+      "tekst": "Du logget ikke inn på den falske lenken.\n\nEkte innlogging skjer bare på den ekte adressen.\n\nI spillet bruker vi appen Skatteøving. Den er fiktiv.",
       "valg": [
         {
           "id": "til-login-a",
           "tekst": "Øv på innlogging",
           "nesteSceneId": "e10-s04",
-          "tilbakemelding": "Sorter trinnene. Deretter åpner du Skattøving."
+          "tilbakemelding": "Sorter trinnene. Deretter åpner du Skatteøving."
         }
       ],
       "oppgaver": [
@@ -171,7 +171,7 @@
           "id": "til-login-b",
           "tekst": "Øv på innlogging",
           "nesteSceneId": "e10-s04",
-          "tilbakemelding": "Sorter trinnene. Deretter åpner du Skattøving."
+          "tilbakemelding": "Sorter trinnene. Deretter åpner du Skatteøving."
         }
       ],
       "oppgaver": [
@@ -193,23 +193,23 @@
     },
     {
       "id": "e10-s04",
-      "tittel": "Logg inn i Skattøving",
+      "tittel": "Logg inn i Skatteøving",
       "dag": "Mandag",
       "klokkeslett": "09:00",
       "app": "skatt",
       "media": {
         "bilde": "e10-s04-login.svg",
-        "bildeAlt": "Innlogging i den fiktive appen Skattøving.",
+        "bildeAlt": "Innlogging i den fiktive appen Skatteøving.",
         "lyd": "e10-s04-login.wav"
       },
-      "tekst": "Åpne Skattøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet. Koden kommer som SMS.\n\nKoden er 482193. Dette er øving.",
+      "tekst": "Åpne Skatteøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet. Koden kommer som SMS.\n\nKoden er 482193. Dette er øving.",
       "varsel": {
         "type": "sms",
-        "fra": "Skattøving (øving)",
+        "fra": "Skatteøving (øving)",
         "innhold": "Engangskode: 482193. Ikke del koden. Øvingsversjon."
       },
       "smsTraad": {
-        "kontakt": "Skattøving (øving)",
+        "kontakt": "Skatteøving (øving)",
         "meldinger": [
           {
             "fra": "veileder",
@@ -286,7 +286,7 @@
       "valg": [
         {
           "id": "til-endre",
-          "tekst": "Endre i Skattøving",
+          "tekst": "Endre i Skatteøving",
           "nesteSceneId": "e10-s07",
           "tilbakemelding": "Gå gjennom trinnene. Bekreft hvis tallene stemmer."
         }
@@ -335,7 +335,7 @@
         "bildeAlt": "En kvittering for nytt skattekort i øvingsappen.",
         "lyd": "e10-s07-bekreft.wav"
       },
-      "tekst": "I Skattøving: se beregning.\n\n{{trygdeavgift|Trygdeavgift}} av lønn. {{trinnskatt|Trinnskatt}} i trinn. Skatt på alminnelig inntekt.\n\nSkatte + kort = skattekort. Trygde + avgift = trygdeavgift.\n\nHvis du tjener mer, må du endre.\n\nBekreft i appen. Eller gå videre uten å endre.",
+      "tekst": "I Skatteøving: se beregning.\n\n{{trygdeavgift|Trygdeavgift}} av lønn. {{trinnskatt|Trinnskatt}} i trinn. Skatt på alminnelig inntekt.\n\nSkatte + kort = skattekort. Trygde + avgift = trygdeavgift.\n\nHvis du tjener mer, må du endre.\n\nBekreft i appen. Eller gå videre uten å endre.",
       "valg": [
         {
           "id": "ferdig-endret",

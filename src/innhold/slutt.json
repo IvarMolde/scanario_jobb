@@ -58,7 +58,7 @@
     { "tekst": "Glemte å sende en tydelig beskjed om forsinkelsen.", "visHvisIkkeFlagg": "sendte_beskjed_om_forsinkelse" },
     { "tekst": "Sa nei til en falsk skatte-SMS.", "visHvisFlagg": "avslo_svindel" },
     { "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.", "visHvisIkkeFlagg": "avslo_svindel" },
-    { "tekst": "Endret skattekortet i Skattøving.", "visHvisFlagg": "endret_skattekort" },
+    { "tekst": "Endret skattekortet i Skatteøving.", "visHvisFlagg": "endret_skattekort" },
     { "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.", "visHvisIkkeFlagg": "endret_skattekort" },
     { "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.", "visHvisFlagg": "oppdaget_lonnsfeil" },
     { "tekst": "Sendte ikke en tydelig e-post om overtiden.", "visHvisIkkeFlagg": "oppdaget_lonnsfeil" }

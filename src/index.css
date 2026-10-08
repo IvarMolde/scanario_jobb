@@ -441,13 +441,22 @@ a {
   line-height: 1.05;
 }
 
-.bunnmeny button[aria-current='page'] {
-  color: var(--teal);
+.bunnmeny button[aria-current='page'],
+.bunnmeny button:active {
+  background: #d8f3dc;
+  color: #14532d;
 }
 
 .bunnmeny svg {
   width: 22px;
   height: 22px;
+}
+
+@media (hover: hover) {
+  .bunnmeny button:hover {
+    background: #d8f3dc;
+    color: #14532d;
+  }
 }
 
 .hjem-hode {
@@ -493,6 +502,20 @@ a {
 .app-ikon svg {
   width: 32px;
   height: 32px;
+}
+
+.app-ikon:active:not(:disabled) {
+  background: #d8f3dc;
+  border-color: #146c43;
+  color: #14532d;
+}
+
+@media (hover: hover) {
+  .app-ikon:hover:not(:disabled) {
+    background: #d8f3dc;
+    border-color: #146c43;
+    color: #14532d;
+  }
 }
 
 .app-ikon:disabled,

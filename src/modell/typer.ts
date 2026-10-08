@@ -127,7 +127,7 @@ export const APP_ETIKETTER: Record<AppId, string> = {
   cv: 'CV',
   reise: 'Reiseplanlegger',
   jobbmagasin: 'Jobbmagasinet',
-  skatt: 'Skattøving',
+  skatt: 'Skatteøving',
   lonn: 'Lønn',
   innstillinger: 'Innstillinger',
 }
