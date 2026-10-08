@@ -1,11 +1,18 @@
+import { useEffect, useState } from 'react'
 import { KlikkbarTekst } from '../komponenter/KlikkbarTekst'
 import { Lydspiller } from '../komponenter/Lydspiller'
 import { OppgaveVisning } from '../komponenter/oppgaver/OppgaveVisning'
 import { Ordkort } from '../komponenter/Ordkort'
+import { ReferanseSkjema } from '../komponenter/ReferanseSkjema'
 import { SceneBilde } from '../komponenter/SceneBilde'
+import type { Valg } from '../modell/typer'
 import { visValg } from '../spill/aktiviteter'
 import { oppgaveVidereTekst } from '../spill/oppgavehjelp'
 import { useSpill } from '../spill/SpillProvider'
+
+function kreverReferanseSkjema(valg: Valg): boolean {
+  return valg.id === 'med-referanse' || valg.id === 'legg-inn-ref'
+}
 
 export function ScenePanel() {
   const {
@@ -25,11 +32,26 @@ export function ScenePanel() {
     lagreAktiviteter,
     lagreSoknad,
     lagreReise,
+    lagreCvReferanse,
     innhold,
   } = useSpill()
+  const [referanseValg, setReferanseValg] = useState<Valg | null>(null)
+
+  useEffect(() => {
+    setReferanseValg(null)
+  }, [scene?.id])
 
   if (!scene || !episode) return null
   const morsmal = fremdrift.morsmal ?? 'uk'
+
+  const klikkValg = (valg: Valg) => {
+    if (kreverReferanseSkjema(valg)) {
+      setReferanseValg(valg)
+      return
+    }
+    setReferanseValg(null)
+    velgValg(valg)
+  }
 
   return (
     <section className="panel" id="oppgave-innhold" aria-labelledby="scene-tittel" tabIndex={-1}>
@@ -73,14 +95,24 @@ export function ScenePanel() {
       {!oppgaverFerdige && scene.oppgaver.length > 0 ? (
         <p className="skjema-hjelp">{oppgaveVidereTekst(scene.oppgaver.length)}</p>
       ) : null}
-      {oppgaverFerdige && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
+      {referanseValg ? (
+        <ReferanseSkjema
+          startverdi={fremdrift.cvReferanse}
+          onAvbryt={() => setReferanseValg(null)}
+          onLagre={(referanse) => {
+            lagreCvReferanse(referanse, referanseValg)
+            setReferanseValg(null)
+          }}
+        />
+      ) : null}
+      {oppgaverFerdige && !referanseValg && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
         <div className="handlinger">
           {scene.valg.filter((valg) => visValg(valg, fremdrift.flagg)).map((valg) => (
             <button
               key={valg.id}
               type="button"
               className="knapp knapp-amber"
-              onClick={() => velgValg(valg)}
+              onClick={() => klikkValg(valg)}
             >
               {valg.tekst}
             </button>

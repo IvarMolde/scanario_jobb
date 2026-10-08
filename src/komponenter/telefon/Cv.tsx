@@ -1,12 +1,20 @@
 import type { Person } from '../../modell/typer'
+import type { CvReferanse } from '../../spill/tilstand'
 
 interface Props {
   person: Person | null
   harOppdatert: boolean
   manglerReferanse: boolean
+  cvReferanse: CvReferanse | null
 }
 
-export function Cv({ person, harOppdatert, manglerReferanse }: Props) {
+function referanseTekst(referanse: CvReferanse | null, fallback: string): string {
+  if (!referanse) return fallback
+  const navn = `${referanse.fornavn} ${referanse.etternavn}`.trim()
+  return `Referanse: ${referanse.rolle} ${navn}. Tlf. ${referanse.telefon}`
+}
+
+export function Cv({ person, harOppdatert, manglerReferanse, cvReferanse }: Props) {
   if (!person) {
     return (
       <div>
@@ -52,7 +60,11 @@ export function Cv({ person, harOppdatert, manglerReferanse }: Props) {
         {manglerReferanse ? (
           <p className="advarsel">Referanse mangler. Linn ber om en referanse.</p>
         ) : (
-          <p>{harOppdatert ? person.cvReferanse : 'Ikke lagt inn ennå.'}</p>
+          <p>
+            {harOppdatert
+              ? referanseTekst(cvReferanse, person.cvReferanse)
+              : 'Ikke lagt inn ennå.'}
+          </p>
         )}
       </article>
     </div>

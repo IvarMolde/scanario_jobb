@@ -153,6 +153,7 @@ export function Telefon() {
                 person={person}
                 harOppdatert={fremdrift.flagg.includes('har_oppdatert_cv')}
                 manglerReferanse={fremdrift.flagg.includes('cv_mangler_referanse')}
+                cvReferanse={fremdrift.cvReferanse}
               />
             ) : null}
             {app === 'jobbportal' ? (

@@ -18,6 +18,7 @@ import {
   reduser,
   sceneOppgaverFerdige,
   tomFremdrift,
+  type CvReferanse,
   type Fremdrift,
   type LagretSok,
 } from './tilstand'
@@ -59,6 +60,7 @@ interface SpillApi {
   lagreSoknad: (tekst: string, annonseId: string | null, flagg: string[]) => void
   lagreReise: (reise: LagretReise, flagg: string[]) => void
   lagreSkattekort: (skattekort: LagretSkattekort, flagg: string[]) => void
+  lagreCvReferanse: (referanse: CvReferanse, valg: Valg) => void
   aapneSlutt: () => void
   nullstill: () => void
 }
@@ -221,6 +223,16 @@ function SpillProviderIndre({
       lagreSoknad: (tekst, annonseId, flagg) => dispatch({ type: 'LAGRE_SOKNAD', tekst, annonseId, flagg }),
       lagreReise: (reise, flagg) => dispatch({ type: 'LAGRE_REISE', reise, flagg }),
       lagreSkattekort: (skattekort, flagg) => dispatch({ type: 'LAGRE_SKATTEKORT', skattekort, flagg }),
+      lagreCvReferanse: (referanse, valg) => {
+        dispatch({
+          type: 'LAGRE_CV_REFERANSE',
+          referanse,
+          flagg: valg.flagg,
+          fjernFlagg: valg.fjernFlagg,
+          tilbakemelding: valg.tilbakemelding,
+        })
+        gaTilNeste(valg.nesteSceneId)
+      },
       aapneSlutt: () => dispatch({ type: 'APNE_SLUTT' }),
       nullstill: () => {
         slettLagring()

@@ -36,6 +36,13 @@ export interface LagretSok {
   varsel: boolean
 }
 
+export type CvReferanse = {
+  fornavn: string
+  etternavn: string
+  rolle: string
+  telefon: string
+}
+
 export interface Fremdrift {
   personId: string | null
   morsmal: Morsmal | null
@@ -63,6 +70,7 @@ export interface Fremdrift {
   soknadTekst: string | null
   lagretReise: LagretReise | null
   skattekort: LagretSkattekort | null
+  cvReferanse: CvReferanse | null
 }
 
 const visningSkjema = z.enum(['start', 'episoder', 'scene', 'oppsummering', 'slutt', 'innstillinger'])
@@ -167,6 +175,15 @@ const fremdriftSkjema = z.object({
     })
     .nullable()
     .optional(),
+  cvReferanse: z
+    .object({
+      fornavn: z.string(),
+      etternavn: z.string(),
+      rolle: z.string(),
+      telefon: z.string(),
+    })
+    .nullable()
+    .optional(),
 })
 
 export function tomFremdrift(): Fremdrift {
@@ -197,6 +214,7 @@ export function tomFremdrift(): Fremdrift {
     soknadTekst: null,
     lagretReise: null,
     skattekort: null,
+    cvReferanse: null,
   }
 }
 
@@ -214,6 +232,7 @@ export function parseFremdrift(raw: unknown): Fremdrift {
     soknadTekst: resultat.data.soknadTekst ?? null,
     lagretReise: resultat.data.lagretReise ?? null,
     skattekort: resultat.data.skattekort ?? null,
+    cvReferanse: resultat.data.cvReferanse ?? null,
     eposter: resultat.data.eposter.filter((e) => e.id !== 'ovingsmail'),
   }
 }
@@ -299,6 +318,13 @@ export type Handling =
   | { type: 'LAGRE_SOKNAD'; tekst: string; annonseId: string | null; flagg: string[] }
   | { type: 'LAGRE_REISE'; reise: LagretReise; flagg: string[] }
   | { type: 'LAGRE_SKATTEKORT'; skattekort: LagretSkattekort; flagg: string[] }
+  | {
+      type: 'LAGRE_CV_REFERANSE'
+      referanse: CvReferanse | null
+      flagg?: string[]
+      fjernFlagg?: string[]
+      tilbakemelding?: string | null
+    }
   | { type: 'FULLFOR_SPILL' }
   | { type: 'APNE_SLUTT' }
   | { type: 'NULLSTILL' }
@@ -333,6 +359,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         soknadTekst: fjern.has('soknad_tilpasset') ? null : state.soknadTekst,
         lagretReise: fjern.has('kom_presis') ? null : state.lagretReise,
         skattekort: fjern.has('endret_skattekort') ? null : state.skattekort,
+        cvReferanse: fjern.has('cv_mangler_referanse') || fjern.has('har_oppdatert_cv') ? null : state.cvReferanse,
         sms: state.sms.filter((s) => !s.id.startsWith(`${handling.episodeId}-`)),
         eposter: state.eposter.filter(
           (e) => e.id !== 'ovingsmail' && !e.id.startsWith(`${handling.episodeId}-`),
@@ -380,10 +407,12 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
       if (flagg.includes('intervju_bekreftet') && !state.flagg.includes('intervju_bekreftet')) {
         aktiviteter = settStatus(aktiviteter, 'innkalt')
       }
+      const cvReferanse = flagg.includes('cv_mangler_referanse') ? null : state.cvReferanse
       return {
         ...state,
         flagg,
         aktiviteter,
+        cvReferanse,
         valgTilbakemelding: handling.valg.tilbakemelding,
       }
     }
@@ -501,6 +530,17 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         skattekort: handling.skattekort,
         flagg: unik([...state.flagg, ...handling.flagg]),
       }
+    case 'LAGRE_CV_REFERANSE': {
+      const fjern = new Set(handling.fjernFlagg ?? [])
+      const flagg = unik([...state.flagg, ...(handling.flagg ?? [])]).filter((f) => !fjern.has(f))
+      return {
+        ...state,
+        cvReferanse: handling.referanse,
+        flagg,
+        aktivApp: 'cv',
+        valgTilbakemelding: handling.tilbakemelding ?? state.valgTilbakemelding,
+      }
+    }
     case 'FULLFOR_SPILL': {
       const sluttId = state.aktivEpisodeId
       return {
