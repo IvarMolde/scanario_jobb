@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="SMS uten markert feil">
+  <rect width="640" height="360" fill="#E8EEF2"/>
+  <rect x="80" y="100" width="480" height="140" rx="16" fill="#fff" stroke="#005F73" stroke-width="3"/>
+  <text x="110" y="170" fill="#003057" font-family="Segoe UI, Arial" font-size="22">Hei Linn. Jeg komme i morgen klokka 10.00.</text>
+</svg>

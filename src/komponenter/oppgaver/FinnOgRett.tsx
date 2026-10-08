@@ -9,10 +9,12 @@ interface Props {
 }
 
 export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
+  const harAlternativer = (oppgave.alternativer?.length ?? 0) > 0
   const [funnet, setFunnet] = useState(ferdig)
-  const [valgtAlt, setValgtAlt] = useState<string | null>(ferdig ? oppgave.riktigId : null)
+  const [valgtAlt, setValgtAlt] = useState<string | null>(
+    ferdig && harAlternativer ? (oppgave.riktigId ?? null) : null,
+  )
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
-  const [hint, setHint] = useState<string | null>(null)
   const ord = oppgave.tekst.split(/(\s+)/)
 
   return (
@@ -31,9 +33,15 @@ export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
               onClick={() => {
                 if (rent === oppgave.feilOrd) {
                   setFunnet(true)
-                  setHint(null)
-                } else {
-                  setHint('Dette ordet er riktig. Finn ordet som er feil.')
+                  if (!harAlternativer) {
+                    setStatus('ok')
+                    onSvar(true)
+                  } else {
+                    setStatus(null)
+                  }
+                } else if (status !== 'ok') {
+                  setStatus('feil')
+                  onSvar(false)
                 }
               }}
             >
@@ -42,10 +50,9 @@ export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
           )
         })}
       </p>
-      {hint ? <p className="tilbakemelding info">{hint}</p> : null}
-      {funnet ? (
+      {funnet && harAlternativer ? (
         <div className="valggruppe">
-          {oppgave.alternativer.map((alt) => (
+          {(oppgave.alternativer ?? []).map((alt) => (
             <button
               key={alt.id}
               type="button"
@@ -63,9 +70,7 @@ export function FinnOgRett({ oppgave, ferdig, onSvar }: Props) {
             </button>
           ))}
         </div>
-      ) : (
-        <p>Trykk på ordet som er feil.</p>
-      )}
+      ) : null}
       <TilbakemeldingBoks
         status={status}
         riktig={oppgave.tilbakemeldingRiktig}

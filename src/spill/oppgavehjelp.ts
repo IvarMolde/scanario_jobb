@@ -7,7 +7,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   ordbank: 'Trykk på ordet som passer i setningen.',
   sorter_setning: 'Trykk på ordene i den rekkefølgen de skal stå.',
   matching: 'Trykk på ordet, og velg forklaringen under som passer til ordet.',
-  finn_og_rett: 'Trykk på ordet som er feil. Velg så det riktige ordet.',
+  finn_og_rett: 'Klikk på ordet som er feil. Velg deretter riktig form.',
   bygg_melding: 'Velg en start, en tekst og en slutt. De vises på telefonen. Trykk så på Send.',
   sorter_kategori: 'Trykk på et kort. Trykk så på boksen det hører til.',
   egenskap_kobling: 'Trykk på ordene som passer.',

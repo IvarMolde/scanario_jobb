@@ -165,14 +165,33 @@ export const matchingSkjema = z.object({
   par: z.array(matchingParSkjema).min(2),
 })
 
-export const finnOgRettSkjema = z.object({
-  type: z.literal('finn_og_rett'),
-  ...oppgaveFelles,
-  tekst: z.string().min(1),
-  feilOrd: z.string().min(1),
-  alternativer: z.array(alternativSkjema).min(2),
-  riktigId: z.string().min(1),
-})
+export const finnOgRettSkjema = z
+  .object({
+    type: z.literal('finn_og_rett'),
+    ...oppgaveFelles,
+    tekst: z.string().min(1),
+    feilOrd: z.string().min(1),
+    /** Hvis utelatt: kun marker feil ord (Mark the word). */
+    alternativer: z.array(alternativSkjema).min(2).optional(),
+    riktigId: z.string().min(1).optional(),
+  })
+  .superRefine((verdi, ctx) => {
+    const harAlt = (verdi.alternativer?.length ?? 0) > 0
+    if (harAlt && !verdi.riktigId) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'riktigId kreves når alternativer er satt',
+        path: ['riktigId'],
+      })
+    }
+    if (!harAlt && verdi.riktigId) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'riktigId brukes bare sammen med alternativer',
+        path: ['riktigId'],
+      })
+    }
+  })
 
 export const lyttOgVelgSkjema = z.object({
   type: z.literal('lytt_og_velg'),

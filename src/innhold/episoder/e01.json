@@ -393,16 +393,16 @@
     },
     {
       "id": "e01-s05",
-      "tittel": "Finn og rett feilen",
+      "tittel": "Finn feilen",
       "dag": "Mandag",
       "klokkeslett": "09:50",
       "app": "meldinger",
       "media": {
-        "bilde": "e01-s05-sms.svg",
-        "bildeAlt": "En SMS med en rød strek under et feil ord.",
+        "bilde": "e01-s05-sms-tekst.svg",
+        "bildeAlt": "En SMS: Hei Linn. Jeg komme i morgen klokka 10.00.",
         "lyd": "e01-s05-feil.wav"
       },
-      "tekst": "Se på denne {{melding|meldingen}}.\n\nEtt verb er feil.\n\nFinn feilen og rett den.",
+      "tekst": "Se på denne {{melding|meldingen}}.\n\nEtt verb er feil.\n\nFinn ordet som er feil.",
       "valg": [
         {
           "id": "avslutt",
@@ -415,7 +415,7 @@
         {
           "type": "finn_og_rett",
           "id": "e01-s05-fr",
-          "instruksjon": "Trykk på ordet som er feil. Velg deretter riktig form.",
+          "instruksjon": "Klikk på ordet som er feil. Velg deretter riktig form.",
           "tekst": "Hei Linn. Jeg komme i morgen klokka 10.00.",
           "feilOrd": "komme",
           "alternativer": [
@@ -434,7 +434,7 @@
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. I presens sier vi «jeg kommer». Etter jeg får verbet -er: kommer.",
-          "tilbakemeldingFeil": "Ordet komme mangler -r. Med jeg i nåtid sier vi kommer, ikke komme."
+          "tilbakemeldingFeil": "Dette ordet er riktig. Finn verbet som er feil, eller velg formen «kommer»."
         }
       ]
     }
