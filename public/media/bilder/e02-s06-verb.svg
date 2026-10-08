@@ -1,10 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Preteritum og perfektum">
-  <rect width="640" height="360" fill="#E8EEF2"/>
-  <rect x="80" y="40" width="480" height="280" rx="16" fill="#fff" stroke="#003057" stroke-width="4"/>
-  <rect x="80" y="40" width="480" height="56" rx="16" fill="#003057"/>
-  <rect x="80" y="80" width="480" height="16" fill="#003057"/>
-  <text x="320" y="76" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial" font-size="24" font-weight="700">Verb</text>
-  <text x="320" y="200" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial" font-size="22">jobbet / har jobbet</text>
-  <rect x="120" y="240" width="160" height="12" rx="6" fill="#EE9B00"/>
-  <rect x="300" y="240" width="220" height="12" rx="6" fill="#005F73"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 700" role="img" aria-label="Verb i en CV – preteritum og perfektum">
+  <rect width="640" height="700" fill="#E8EEF2"/>
+  <rect x="40" y="24" width="560" height="652" rx="16" fill="#fff" stroke="#003057" stroke-width="4"/>
+  <rect x="40" y="24" width="560" height="60" rx="16" fill="#003057"/>
+  <rect x="40" y="68" width="560" height="16" fill="#003057"/>
+  <text x="320" y="64" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">Verb i en CV</text>
+
+  <g fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="15.5">
+    <text x="68" y="118">Når du skriver en CV, forteller du arbeidsgiveren hva du har</text>
+    <text x="68" y="140">gjort i tidligere jobber og på kurs.</text>
+
+    <text x="68" y="176">Vi bruker ofte preteritum (fortid) når vi snakker om en jobb</text>
+    <text x="68" y="198">som er helt ferdig. For eksempel kan du skrive:</text>
+    <text x="68" y="220" font-style="italic">«Jeg jobbet i en matbutikk i to år»</text>
+    <text x="68" y="242">eller</text>
+    <text x="68" y="264" font-style="italic">«Jeg vasket kontorer hver kveld».</text>
+
+    <text x="68" y="300">Andre ganger bruker vi perfektum (har + verb) for å vise</text>
+    <text x="68" y="322">hva vi har lært og kan bruke i dag. Da passer det fint</text>
+    <text x="68" y="344">å skrive:</text>
+    <text x="68" y="366" font-style="italic">«Jeg har fullført et datakurs i Molde kommune»</text>
+    <text x="68" y="388">eller</text>
+    <text x="68" y="410" font-style="italic">«Jeg har lært god kundebehandling på butikken».</text>
+
+    <text x="68" y="446">Velg alltid verb som viser tydelig hva du faktisk gjorde,</text>
+    <text x="68" y="468">slik som hjalp, kjørte, lagde eller passet.</text>
+
+    <text x="68" y="504">Tydelige og enkle setninger gjør det lett for sjefen å</text>
+    <text x="68" y="526">forstå den gode erfaringen din.</text>
+  </g>
+
+  <rect x="68" y="560" width="200" height="44" rx="8" fill="#EE9B00"/>
+  <text x="168" y="588" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">preteritum</text>
+  <text x="168" y="620" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="14">jobbet · vasket</text>
+
+  <rect x="292" y="560" width="260" height="44" rx="8" fill="#005F73"/>
+  <text x="422" y="588" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">perfektum</text>
+  <text x="422" y="620" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="14">har fullført · har lært</text>
+
+  <rect x="80" y="660" width="160" height="12" rx="6" fill="#EE9B00"/>
+  <rect x="260" y="660" width="220" height="12" rx="6" fill="#005F73"/>
 </svg>

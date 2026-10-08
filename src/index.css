@@ -1130,6 +1130,11 @@ a {
   margin-bottom: 0.8rem;
 }
 
+.scene-bilde[src$='.svg'] {
+  object-fit: contain;
+  background: #e8eef2;
+}
+
 .plassholder-bilde {
   width: 100%;
   min-height: 140px;

@@ -195,7 +195,7 @@ Les dette:
 ### `e02-s06-verb.wav`
 
 - Rolle: Scene · les teksten
-- Spilles: Episode 2 · Verb i CVen
+- Spilles: Episode 2 · Verb i en CV
 
 Les dette:
 

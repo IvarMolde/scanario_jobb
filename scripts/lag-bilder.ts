@@ -32,7 +32,6 @@ const filer: Array<[string, string, string, string]> = [
   ['e02-s03-egenskaper.svg', 'Egenskaper og eksempler', 'Egenskaper', 'Punktlig · blid · nøyaktig'],
   ['e02-s04-setninger.svg', 'Jeg har jobbet og jeg jobbet', 'CV-setninger', 'Jeg har jobbet …'],
   ['e02-s05-referanse.svg', 'E-post som ber om referanse', 'Referanse', 'En tidligere leder'],
-  ['e02-s06-verb.svg', 'Preteritum og perfektum', 'Verb', 'jobbet / har jobbet'],
   ['e03-s01-portal.svg', 'Søkeside i jobbportalen', 'Jobbportal', 'Søkeord · sted · stilling'],
   ['e03-s02-sok.svg', 'Lagre søk og varsel', 'Lagre søk', 'Varsel er på'],
   ['e03-s03-treff.svg', 'Treffliste med nøkkelord', 'Treffliste', 'Frist · prosent · start'],
