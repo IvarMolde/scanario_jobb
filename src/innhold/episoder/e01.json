@@ -245,8 +245,8 @@
       "klokkeslett": "09:40",
       "app": "meldinger",
       "media": {
-        "bilde": "e01-s04a-linn-bekrefte.svg",
-        "bildeAlt": "Veileder Linn Holm smiler og holder en telefon.",
+        "bilde": "e01-s04a-linn-foto.jpg",
+        "bildeAlt": "Veileder Linn Holm ved pulten på NAV. Boble: Ja, vi møtes i morgen klokka 10.00.",
         "lyd": "e01-s04a-svar.wav"
       },
       "tekst": "Linn svarer.\n\nHun {{bekrefte|bekrefter}} {{avtale|avtalen}}.\n\nMøtet er i morgen {{klokka}} 10.00.",
