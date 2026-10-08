@@ -45,6 +45,7 @@ export interface Fremdrift {
   aktivApp: AppId
   fullforteEpisoder: string[]
   fullforteScener: string[]
+  sceneHistorikk: string[]
   flagg: string[]
   oppgaver: OppgaveResultat[]
   kalender: Kalenderhendelse[]
@@ -75,6 +76,7 @@ const fremdriftSkjema = z.object({
   aktivApp: appIdSkjema,
   fullforteEpisoder: z.array(z.string()),
   fullforteScener: z.array(z.string()),
+  sceneHistorikk: z.array(z.string()).optional(),
   flagg: z.array(z.string()),
   oppgaver: z.array(
     z.object({
@@ -177,6 +179,7 @@ export function tomFremdrift(): Fremdrift {
     aktivApp: 'hjem',
     fullforteEpisoder: [],
     fullforteScener: [],
+    sceneHistorikk: [],
     flagg: [],
     oppgaver: [],
     kalender: [],
@@ -203,6 +206,7 @@ export function parseFremdrift(raw: unknown): Fremdrift {
   return {
     ...resultat.data,
     smsUtkast: resultat.data.smsUtkast ?? null,
+    sceneHistorikk: resultat.data.sceneHistorikk ?? [],
     valgteJobber: resultat.data.valgteJobber ?? [],
     lagretSok: resultat.data.lagretSok ?? null,
     magasinAnnonseId: resultat.data.magasinAnnonseId ?? null,
@@ -237,8 +241,11 @@ export function anvendScene(state: Fremdrift, scene: Scene): Fremdrift {
     magasinAnnonseId: scene.annonseId ?? state.magasinAnnonseId,
   }
 
-  if (scene.kalenderhendelse && !state.kalender.some((h) => h.id === scene.kalenderhendelse?.id)) {
-    neste.kalender = [...state.kalender, scene.kalenderhendelse]
+  if (scene.kalenderhendelse) {
+    const finnes = state.kalender.some((h) => h.id === scene.kalenderhendelse!.id)
+    neste.kalender = finnes
+      ? state.kalender.map((h) => (h.id === scene.kalenderhendelse!.id ? scene.kalenderhendelse! : h))
+      : [...state.kalender, scene.kalenderhendelse]
   }
 
   if (scene.smsTraad) {
@@ -280,7 +287,7 @@ export type Handling =
   | { type: 'VELG_MORSMAL'; morsmal: Morsmal }
   | { type: 'START_SPILL' }
   | { type: 'START_EPISODE'; episodeId: string; startScene: Scene; tillatteFlagg: string[] }
-  | { type: 'GA_TIL_SCENE'; scene: Scene }
+  | { type: 'GA_TIL_SCENE'; scene: Scene; fraTilbake?: boolean }
   | { type: 'SETT_APP'; app: AppId }
   | { type: 'REGISTRER_OPPGAVE'; oppgaveId: string; oppgaveType: string; riktig: boolean }
   | { type: 'VELG_VALG'; valg: Valg }
@@ -324,6 +331,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         aktivEpisodeId: handling.episodeId,
         aktivSceneId: handling.startScene.id,
         aktivApp: handling.startScene.app,
+        sceneHistorikk: [],
         fullforteEpisoder: state.fullforteEpisoder.filter((id) => id !== handling.episodeId),
         fullforteScener: state.fullforteScener.filter((id) => !id.startsWith(`${handling.episodeId}-`)),
         flagg: state.flagg.filter((f) => !fjern.has(f)),
@@ -343,8 +351,16 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
       }
       return anvendScene(start, handling.startScene)
     }
-    case 'GA_TIL_SCENE':
-      return anvendScene(state, handling.scene)
+    case 'GA_TIL_SCENE': {
+      if (handling.fraTilbake) {
+        const historikk = state.sceneHistorikk.slice(0, -1)
+        return { ...anvendScene(state, handling.scene), sceneHistorikk: historikk }
+      }
+      const historikk = state.aktivSceneId
+        ? [...state.sceneHistorikk, state.aktivSceneId]
+        : state.sceneHistorikk
+      return anvendScene({ ...state, sceneHistorikk: historikk }, handling.scene)
+    }
     case 'SETT_APP':
       return { ...state, aktivApp: handling.app }
     case 'REGISTRER_OPPGAVE': {
@@ -439,6 +455,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         aktivApp: 'hjem',
         aktivSceneId: null,
         aktivEpisodeId: state.aktivEpisodeId,
+        sceneHistorikk: [],
         smsUtkast: null,
         valgtOrdId: null,
         valgTilbakemelding: null,
@@ -449,6 +466,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         visning: 'start',
         aktivApp: 'hjem',
         aktivSceneId: null,
+        sceneHistorikk: [],
         smsUtkast: null,
         valgtOrdId: null,
         valgTilbakemelding: null,
@@ -506,10 +524,14 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
       return { ...state, visning: 'slutt', aktivApp: 'hjem' }
     case 'FULLFOR_EPISODE': {
       const id = state.aktivEpisodeId
-      if (!id) return { ...state, visning: 'oppsummering' }
+      const historikk = state.aktivSceneId
+        ? [...state.sceneHistorikk, state.aktivSceneId]
+        : state.sceneHistorikk
+      if (!id) return { ...state, visning: 'oppsummering', sceneHistorikk: historikk }
       return {
         ...state,
         visning: 'oppsummering',
+        sceneHistorikk: historikk,
         fullforteEpisoder: unik([...state.fullforteEpisoder, id]),
         aktivApp: 'hjem',
         varsler: state.varsler.map((v) => ({ ...v, lest: true })),

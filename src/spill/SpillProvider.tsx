@@ -48,8 +48,10 @@ interface SpillApi {
   lestVarsel: (id: string) => void
   lukkTilbakemelding: () => void
   aapneInnstillinger: () => void
+  tilbake: () => void
   tilbakeTilEpisoder: () => void
   tilStart: () => void
+  kanGaTilbake: boolean
   lagreSok: (sok: LagretSok, flagg: string[]) => void
   settValgteJobber: (ids: string[], flagg: string[]) => void
   settMagasinAnnonse: (id: string) => void
@@ -130,6 +132,31 @@ function SpillProviderIndre({
     dispatch({ type: 'SETT_SMS_UTKAST', tekst })
   }, [])
 
+  const kanGaTilbake = fremdrift.visning !== 'start'
+
+  const tilbake = useCallback(() => {
+    const { visning, sceneHistorikk } = fremdrift
+    if (
+      (visning === 'scene' || visning === 'oppsummering') &&
+      sceneHistorikk.length > 0 &&
+      episode
+    ) {
+      const forrigeId = sceneHistorikk[sceneHistorikk.length - 1]
+      const forrige = forrigeId ? hentScene(episode, forrigeId) : undefined
+      if (forrige) {
+        dispatch({ type: 'GA_TIL_SCENE', scene: forrige, fraTilbake: true })
+        return
+      }
+    }
+    if (visning === 'scene' || visning === 'oppsummering' || visning === 'slutt') {
+      dispatch({ type: 'TILBAKE_EPISODER' })
+      return
+    }
+    if (visning === 'episoder' || visning === 'innstillinger') {
+      dispatch({ type: 'TIL_START' })
+    }
+  }, [episode, fremdrift])
+
   const api = useMemo<SpillApi>(
     () => ({
       innhold,
@@ -183,8 +210,10 @@ function SpillProviderIndre({
       lestVarsel: (id) => dispatch({ type: 'LEST_VARSEL', id }),
       lukkTilbakemelding: () => dispatch({ type: 'LUKK_TILBAKEMELDING' }),
       aapneInnstillinger: () => dispatch({ type: 'APNE_INNSTILLINGER' }),
+      tilbake,
       tilbakeTilEpisoder: () => dispatch({ type: 'TILBAKE_EPISODER' }),
       tilStart: () => dispatch({ type: 'TIL_START' }),
+      kanGaTilbake,
       lagreSok: (sok, flagg) => dispatch({ type: 'LAGRE_SOK', sok, flagg }),
       settValgteJobber: (ids, flagg) => dispatch({ type: 'SETT_VALGTE_JOBBER', ids, flagg }),
       settMagasinAnnonse: (id) => dispatch({ type: 'SETT_MAGASIN_ANNONSE', id }),
@@ -198,7 +227,19 @@ function SpillProviderIndre({
         dispatch({ type: 'NULLSTILL' })
       },
     }),
-    [episode, fremdrift, gaTilNeste, innhold, oppgaverFerdige, person, scene, settSmsUtkast, valgtOrd],
+    [
+      episode,
+      fremdrift,
+      gaTilNeste,
+      innhold,
+      kanGaTilbake,
+      oppgaverFerdige,
+      person,
+      scene,
+      settSmsUtkast,
+      tilbake,
+      valgtOrd,
+    ],
   )
 
   return <SpillContext.Provider value={api}>{children}</SpillContext.Provider>

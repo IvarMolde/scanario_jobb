@@ -4,6 +4,7 @@ import { OppgaveVisning } from '../komponenter/oppgaver/OppgaveVisning'
 import { Ordkort } from '../komponenter/Ordkort'
 import { SceneBilde } from '../komponenter/SceneBilde'
 import { visValg } from '../spill/aktiviteter'
+import { oppgaveVidereTekst } from '../spill/oppgavehjelp'
 import { useSpill } from '../spill/SpillProvider'
 
 export function ScenePanel() {
@@ -70,11 +71,7 @@ export function ScenePanel() {
         />
       ))}
       {!oppgaverFerdige && scene.oppgaver.length > 0 ? (
-        <p className="skjema-hjelp">
-          {scene.oppgaver.length === 1
-            ? 'Gjør oppgave 1 ferdig. Da kan du gå videre.'
-            : `Gjør oppgave 1–${scene.oppgaver.length} ferdig. Da kan du gå videre.`}
-        </p>
+        <p className="skjema-hjelp">{oppgaveVidereTekst(scene.oppgaver.length)}</p>
       ) : null}
       {oppgaverFerdige && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
         <div className="handlinger">
