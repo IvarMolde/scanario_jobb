@@ -41,8 +41,8 @@
       "klokkeslett": "09:10",
       "app": "jobbportal",
       "media": {
-        "bilde": "e03-s01-portal.svg",
-        "bildeAlt": "En søkeside med felt for søkeord, sted og heltid eller deltid.",
+        "bilde": "e03-s01-portal-foto.jpg",
+        "bildeAlt": "Jobbportalen med søkefelt, filtre for geografi og en liste med ledige stillinger.",
         "lyd": "e03-s01-portal.wav"
       },
       "tekst": "Nå skal du finne jobber.\n\nI portalen skriver du {{sokeord|søkeord}}.\n\nDu velger sted: Molde, Vestnes eller Aukra.\n\nDu velger {{heltid}} eller {{deltid}}.",
