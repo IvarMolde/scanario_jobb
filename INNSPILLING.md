@@ -24,7 +24,7 @@ Les dette:
 
 Les dette:
 
-> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Tidligere har jeg jobbet med å hjelpe gamle mennesker hjemme i boligene sine. Nå vil jeg gjerne jobbe som pleieassistent. Jeg har ikke førerkort. Jeg kommer fra Ukraina, og jeg har bodd i Molde i seks måneder. Jeg er tålmodig, og jeg liker å snakke rolig med folk.
+> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Tidligere har jeg jobbet med å hjelpe gamle mennesker hjemme i boligene sine. Jeg har tatt pleieassistentkurs i 12 måneder ved Molde voksenopplæringssenter. Nå vil jeg gjerne jobbe som pleieassistent. Jeg har ikke førerkort. Jeg kommer fra Ukraina, og jeg har bodd i Molde i seks måneder. Jeg er tålmodig, og jeg liker å snakke rolig med folk.
 
 ### `taras-presentasjon.wav`
 

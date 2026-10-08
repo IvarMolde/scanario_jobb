@@ -205,7 +205,7 @@
             },
             {
               "id": "s2",
-              "tekst": "Kurs i omsorg",
+              "tekst": "Pleieassistentkurs, 12 måneder",
               "kategori": "utdanning",
               "personId": "sofiia"
             },
@@ -427,7 +427,7 @@
                 },
                 {
                   "id": "u-s",
-                  "tekst": "Jeg har kurs i omsorg.",
+                  "tekst": "Jeg har tatt pleieassistentkurs i 12 måneder ved Molde voksenopplæringssenter.",
                   "personer": [
                     "sofiia"
                   ]
