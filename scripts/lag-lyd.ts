@@ -32,7 +32,7 @@ const mappe = join(dirname(fileURLToPath(import.meta.url)), '../public/media/lyd
 mkdirSync(mappe, { recursive: true })
 
 const filer: Array<[string, number]> = [
-  ['olena-presentasjon.wav', 392],
+  ['olena-presentasjon.mp3', 392],
   ['taras-presentasjon.wav', 330],
   ['sofiia-presentasjon.wav', 494],
   ['e01-s01-kalender.wav', 349],

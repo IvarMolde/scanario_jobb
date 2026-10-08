@@ -8,7 +8,7 @@ Antall unike lydfiler: **70**.
 
 ## Startskjerm
 
-### `olena-presentasjon.wav`
+### `olena-presentasjon.mp3`
 
 - Rolle: Startskjerm · person
 - Spilles: Startskjerm · Olena Bondar

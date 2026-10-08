@@ -21,7 +21,7 @@ Nå ligger det **plassholder-lyd** (korte toner). Bytt dem ut med innlest tale. 
 1. Åpne innspillingslista: `?laerer=1` (fane **Innspilling**), eller filen `INNSPILLING.md`.
 2. Filtrer på én episode. Les teksten som står under filnavnet. Det er det eleven hører på det stedet.
 3. Ta opp med telefon eller datamaskin. Snakk sakte, tydelig, bokmål, A2. Pause mellom setninger.
-4. Eksporter som `wav` (eller `mp3` hvis du også endrer endelsen i JSON). **Filnavnet må være identisk**, for eksempel `e07-s01-anrop.wav`.
+4. Eksporter som **`mp3`** (anbefalt i nettleseren) eller `wav` (16-bit PCM, 44100 Hz, mono). **Filnavn og endelse må stemme med JSON**, for eksempel `olena-presentasjon.mp3`.
 5. Legg fila i `public/media/lyd` og overskriv plassholderen.
 6. Sjekk i spillet: knappen «Lytt til teksten» på scenen, «Lytt» på lytt-oppgaver, «Spørsmål fra intervjueren» i episode 8.
 
@@ -33,7 +33,7 @@ Tre slags klipp:
 | Intervju | Bare spørsmålet fra Kari | Episode 8, oppgaven |
 | Annen stemme | Eget manus (talemelding, kollega) | Lytt-oppgave eller scene med `manus` |
 
-Startskjermen har tre personklipp (`olena-presentasjon.wav` og så videre).
+Startskjermen har tre personklipp (`olena-presentasjon.mp3` og så videre).
 
 Oppdater lista etter innholdsendringer: `npm run lydmanus`.
 
