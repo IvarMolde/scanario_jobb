@@ -15,7 +15,7 @@ Antall unike lydfiler: **70**.
 
 Les dette:
 
-> Hei. Jeg heter Olena Bondar. Jeg bor på Kviltorp i Molde. Jeg har jobbet i butikk. Nå vil jeg gjerne jobbe i en butikk her. Jeg har ikke førerkort.
+> Hei. Jeg heter Olena Bondar. Jeg bor på Kviltorp i Molde. Tidligere har jeg jobbet i en sportsbutikk. Nå vil jeg gjerne jobbe i en matbutikk her i Molde. Jeg har ikke førerkort. Jeg kommer fra Polen, og jeg har bodd i Molde i sju måneder.
 
 ### `sofiia-presentasjon.wav`
 
@@ -24,7 +24,7 @@ Les dette:
 
 Les dette:
 
-> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Jeg har jobbet i omsorg. Nå vil jeg gjerne jobbe som assistent i helse. Jeg har ikke førerkort.
+> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Tidligere har jeg jobbet i omsorg og hjulpet eldre hjemme. Nå vil jeg gjerne jobbe som assistent i helse. Jeg har ikke førerkort. Jeg kommer fra Ukraina, og jeg har bodd i Molde i seks måneder. Jeg er tålmodig, og jeg liker å snakke rolig med folk.
 
 ### `taras-presentasjon.wav`
 
@@ -33,7 +33,7 @@ Les dette:
 
 Les dette:
 
-> Hei. Jeg heter Taras Hnatiuk. Jeg bor i Årølia i Molde. Jeg har jobbet på bygg. Nå vil jeg gjerne jobbe på lager. Jeg har førerkort klasse B.
+> Hei. Jeg heter Taras Hnatiuk. Jeg bor i Årølia i Molde. Tidligere har jeg jobbet på bygg. Nå vil jeg gjerne jobbe på lager. Jeg har førerkort klasse B. Jeg kommer fra Bulgaria, og jeg har bodd i Molde i åtte måneder. Jeg er sterk, og jeg liker å jobbe med orden og sikkerhet.
 
 ## Episode 1: Melding til NAV-veilederen
 
@@ -648,7 +648,7 @@ Les dette:
 
 Les dette:
 
-> I Ukraina jobbet jeg …
+> I hjemlandet jobbet jeg …
 > 
 > Sted først. Deretter verbet jobbet. Deretter jeg.
 > 

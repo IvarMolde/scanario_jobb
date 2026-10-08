@@ -103,13 +103,13 @@
             { "id": "sertifikater", "tittel": "Sertifikater" }
           ],
           "elementer": [
-            { "id": "o1", "tekst": "Tre år i dagligvarebutikk", "kategori": "erfaring", "personId": "olena" },
-            { "id": "o2", "tekst": "Videregående skole i Kyiv", "kategori": "utdanning", "personId": "olena" },
-            { "id": "o3", "tekst": "Ukrainsk, norsk og engelsk", "kategori": "sprak", "personId": "olena" },
+            { "id": "o1", "tekst": "Tre år i sportsbutikk", "kategori": "erfaring", "personId": "olena" },
+            { "id": "o2", "tekst": "Videregående skole i Polen", "kategori": "utdanning", "personId": "olena" },
+            { "id": "o3", "tekst": "Polsk, norsk og engelsk", "kategori": "sprak", "personId": "olena" },
             { "id": "o4", "tekst": "Hygienebevis", "kategori": "sertifikater", "personId": "olena" },
             { "id": "t1", "tekst": "To år som hjelpearbeider på bygg", "kategori": "erfaring", "personId": "taras" },
             { "id": "t2", "tekst": "Yrkesfag bygg", "kategori": "utdanning", "personId": "taras" },
-            { "id": "t3", "tekst": "Ukrainsk og norsk", "kategori": "sprak", "personId": "taras" },
+            { "id": "t3", "tekst": "Bulgarsk og norsk", "kategori": "sprak", "personId": "taras" },
             { "id": "t4", "tekst": "Førerkort klasse B", "kategori": "sertifikater", "personId": "taras" },
             { "id": "s1", "tekst": "To år med omsorg i hjemmet", "kategori": "erfaring", "personId": "sofiia" },
             { "id": "s2", "tekst": "Kurs i omsorg", "kategori": "utdanning", "personId": "sofiia" },
@@ -203,7 +203,7 @@
               "id": "erfaring",
               "tittel": "Erfaring",
               "alternativer": [
-                { "id": "e-o", "tekst": "Jeg har jobbet i butikk i tre år.", "personer": ["olena"] },
+                { "id": "e-o", "tekst": "Jeg har jobbet i sportsbutikk i tre år.", "personer": ["olena"] },
                 { "id": "e-t", "tekst": "Jeg har jobbet på bygg i to år.", "personer": ["taras"] },
                 { "id": "e-s", "tekst": "Jeg har hjulpet eldre hjemme i to år.", "personer": ["sofiia"] },
                 { "id": "e-x", "tekst": "Jeg har jobbe i butikk.", "personer": [] }
@@ -213,8 +213,8 @@
               "id": "utdanning",
               "tittel": "Utdanning",
               "alternativer": [
-                { "id": "u-o", "tekst": "Jeg har videregående skole fra Ukraina.", "personer": ["olena"] },
-                { "id": "u-t", "tekst": "Jeg har yrkesfag bygg fra Ukraina.", "personer": ["taras"] },
+                { "id": "u-o", "tekst": "Jeg har videregående skole fra Polen.", "personer": ["olena"] },
+                { "id": "u-t", "tekst": "Jeg har yrkesfag bygg fra Bulgaria.", "personer": ["taras"] },
                 { "id": "u-s", "tekst": "Jeg har kurs i omsorg.", "personer": ["sofiia"] },
                 { "id": "u-x", "tekst": "Jeg går på skole i går.", "personer": [] }
               ]

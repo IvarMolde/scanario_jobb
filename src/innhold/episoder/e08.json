@@ -138,10 +138,10 @@
           "alternativer": [
             { "id": "olena-kort", "tekst": "Butikk.", "kvalitet": "kort", "personer": ["olena"] },
             { "id": "olena-langt", "tekst": "Jeg er født i 1994, og jeg har tre søsken, og jeg liker kaffe, og jeg har bodd mange steder, og jeg kan fortelle om hele livet mitt nå.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "I Ukraina jobbet jeg i butikk i tre år. Jeg har erfaring med kasse og kunder.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "I Polen jobbet jeg i sportsbutikk i tre år. Jeg har erfaring med kasse og kunder.", "kvalitet": "godt", "personer": ["olena"] },
             { "id": "taras-kort", "tekst": "Bygg.", "kvalitet": "kort", "personer": ["taras"] },
             { "id": "taras-langt", "tekst": "Jeg kan fortelle om alle husene jeg har bygget, og om bussen, og om været, og om alt jeg har gjort siden jeg var liten.", "kvalitet": "langt", "personer": ["taras"] },
-            { "id": "taras-godt", "tekst": "I Ukraina jobbet jeg på bygg i to år. Jeg har førerkort. Nå vil jeg gjerne jobbe på lager.", "kvalitet": "godt", "personer": ["taras"] },
+            { "id": "taras-godt", "tekst": "I Bulgaria jobbet jeg på bygg i to år. Jeg har førerkort. Nå vil jeg gjerne jobbe på lager.", "kvalitet": "godt", "personer": ["taras"] },
             { "id": "sofiia-kort", "tekst": "Omsorg.", "kvalitet": "kort", "personer": ["sofiia"] },
             { "id": "sofiia-langt", "tekst": "Jeg har hjulpet mange mennesker, og jeg kan fortelle om hver eneste dag, og om familien min, og om alt jeg tenker på jobben.", "kvalitet": "langt", "personer": ["sofiia"] },
             { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre i to år. Jeg har kurs i omsorg og førstehjelp.", "kvalitet": "godt", "personer": ["sofiia"] }
@@ -181,7 +181,7 @@
           "alternativer": [
             { "id": "olena-kort", "tekst": "Penger.", "kvalitet": "kort", "personer": ["olena"] },
             { "id": "olena-langt", "tekst": "Jeg vil ha jobben fordi jeg trenger penger, og fordi bussen går, og fordi jeg liker Molde, og fordi jeg kan snakke lenge om dette.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "Jeg søker fordi jeg har jobbet i butikk, og fordi jeg er blid med kunder.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "Jeg søker fordi jeg har jobbet i butikk, og fordi jeg er blid med kunder. Nå vil jeg gjerne jobbe i matbutikk.", "kvalitet": "godt", "personer": ["olena"] },
             { "id": "taras-kort", "tekst": "Ja.", "kvalitet": "kort", "personer": ["taras"] },
             { "id": "taras-langt", "tekst": "Jeg vil ha alle jobber, og jeg kan fortelle om hver stilling jeg har sett, og om alle vennene mine som også søker.", "kvalitet": "langt", "personer": ["taras"] },
             { "id": "taras-godt", "tekst": "Jeg søker fordi jeg har jobbet på bygg, og fordi jeg har førerkort.", "kvalitet": "godt", "personer": ["taras"] },
@@ -205,7 +205,7 @@
         "bildeAlt": "Kari Strand spør om tidligere jobb.",
         "lyd": "e08-s05-q.wav"
       },
-      "tekst": "Kari spør om {{erfaring}}.\n\nStart med stedet: I Ukraina jobbet jeg …\n\nDet heter {{inversjon}}. Tid eller sted først. Deretter verbet.",
+      "tekst": "Kari spør om {{erfaring}}.\n\nStart med stedet: I hjemlandet jobbet jeg …\n\nDet heter {{inversjon}}. Tid eller sted først. Deretter verbet.",
       "valg": [
         {
           "id": "til-gram",
@@ -224,16 +224,16 @@
           "alternativer": [
             { "id": "olena-kort", "tekst": "Jobbet.", "kvalitet": "kort", "personer": ["olena"] },
             { "id": "olena-langt", "tekst": "Jeg har gjort så mye at jeg nesten ikke vet hvor jeg skal starte, og jeg kan telle opp hver dag på jobben i tre år.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "I Ukraina jobbet jeg i butikk. Jeg har jobbet med kasse i tre år.", "kvalitet": "godt", "personer": ["olena"] },
+            { "id": "olena-godt", "tekst": "I Polen jobbet jeg i sportsbutikk. Jeg har jobbet med kasse i tre år.", "kvalitet": "godt", "personer": ["olena"] },
             { "id": "taras-kort", "tekst": "Bygde.", "kvalitet": "kort", "personer": ["taras"] },
             { "id": "taras-langt", "tekst": "Jeg har løftet, båret, ryddet, ventet, kjørt og gjort alt mulig, og jeg kan fortsette lenge.", "kvalitet": "langt", "personer": ["taras"] },
-            { "id": "taras-godt", "tekst": "I Ukraina jobbet jeg på bygg. Jeg har jobbet med sikkerhet og tunge løft.", "kvalitet": "godt", "personer": ["taras"] },
+            { "id": "taras-godt", "tekst": "I Bulgaria jobbet jeg på bygg. Jeg har jobbet med sikkerhet og tunge løft.", "kvalitet": "godt", "personer": ["taras"] },
             { "id": "sofiia-kort", "tekst": "Hjalp.", "kvalitet": "kort", "personer": ["sofiia"] },
             { "id": "sofiia-langt", "tekst": "Jeg har hjulpet så mange at jeg kan snakke i en time om hver person jeg har møtt.", "kvalitet": "langt", "personer": ["sofiia"] },
             { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre. Jeg har hjulpet hjemme i to år.", "kvalitet": "godt", "personer": ["sofiia"] }
           ],
-          "tilbakemeldingRiktig": "Riktig. I Ukraina jobbet jeg … Deretter: Jeg har jobbet …",
-          "tilbakemeldingFeil": "Start med I Ukraina jobbet jeg. Bruk også har jobbet."
+          "tilbakemeldingRiktig": "Riktig. Start med stedet. Deretter: Jeg har jobbet …",
+          "tilbakemeldingFeil": "Start med stedet, for eksempel I Polen, I Bulgaria eller I Ukraina. Bruk også har jobbet."
         }
       ]
     },
@@ -245,10 +245,10 @@
       "app": "hjem",
       "media": {
         "bilde": "e08-s06-grammatikk.svg",
-        "bildeAlt": "To setninger: I Ukraina jobbet jeg, og Jeg har jobbet.",
+        "bildeAlt": "To setninger: I hjemlandet jobbet jeg, og Jeg har jobbet.",
         "lyd": "e08-s06-grammatikk.wav"
       },
-      "tekst": "I Ukraina jobbet jeg …\n\nSted først. Deretter verbet jobbet. Deretter jeg.\n\nJeg har jobbet i tre år.\n\nHar + jobbet = {{perfektum}}. Det du har gjort.",
+      "tekst": "I hjemlandet jobbet jeg …\n\nSted først. Deretter verbet jobbet. Deretter jeg.\n\nJeg har jobbet i tre år.\n\nHar + jobbet = {{perfektum}}. Det du har gjort.",
       "valg": [
         {
           "id": "til-sporsmal",
@@ -262,9 +262,9 @@
           "type": "sorter_setning",
           "id": "e08-s06-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["I", "Ukraina", "jobbet", "jeg", "i", "tre", "år."],
-          "tilbakemeldingRiktig": "Riktig. I Ukraina jobbet jeg i tre år.",
-          "tilbakemeldingFeil": "Start med I Ukraina. Deretter jobbet jeg."
+          "biter": ["I", "hjemlandet", "jobbet", "jeg", "i", "tre", "år."],
+          "tilbakemeldingRiktig": "Riktig. I hjemlandet jobbet jeg i tre år.",
+          "tilbakemeldingFeil": "Start med I hjemlandet. Deretter jobbet jeg."
         },
         {
           "type": "ordbank",
