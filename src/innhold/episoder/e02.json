@@ -50,7 +50,7 @@
         "bildeAlt": "En CV ligger på et bord. Den viser profil, erfaring, utdanning og språk.",
         "lyd": "e02-s01-epost.wav"
       },
-      "tekst": "Linn har sendt e-post.\n\nHun ber om en oppdatert {{cv}}.\n\nEn CV viser {{erfaring}}, {{utdanning}}, språk og {{sertifikat|sertifikater}}.",
+      "tekst": "Linn har sendt e-post.\n\nHun ber om en oppdatert {{cv}}.\n\nEn CV er et kort papir om deg som arbeidstaker. Den viser {{erfaring}}, {{utdanning}}, språk og {{sertifikat|sertifikater}}. Arbeidsgivere leser CVen for å se hva du kan, og hva du har gjort før.\n\nDet er lurt å oppdatere CVen din på www.nav.no, under «Min side». Da kan veilederen din i NAV se CVen. Hun kan også prøve å koble deg mot aktuelle arbeidsgivere.\n\nSkriv tydelig og ærlig. Bruk korte setninger. Oppdater CVen når du får ny jobb, ny skole eller nye sertifikater.",
       "varsel": {
         "type": "epost",
         "fra": "Linn Holm",
