@@ -50,10 +50,11 @@ export function ScenePanel() {
       <SceneBilde fil={scene.media.bilde} alt={scene.media.bildeAlt ?? scene.tittel} prioritet />
       <Lydspiller fil={scene.media.lyd} etikett="Lytt til teksten" />
       <KlikkbarTekst tekst={scene.tekst} onVelgOrd={velgOrd} />
-      {scene.oppgaver.map((oppgave) => (
+      {scene.oppgaver.map((oppgave, indeks) => (
         <OppgaveVisning
           key={oppgave.id}
           oppgave={oppgave}
+          nummer={indeks + 1}
           person={person}
           ferdig={fremdrift.oppgaver.some((o) => o.oppgaveId === oppgave.id && o.riktig)}
           onSvar={(riktig) => registrerOppgave(oppgave.id, oppgave.type, riktig)}
@@ -69,7 +70,11 @@ export function ScenePanel() {
         />
       ))}
       {!oppgaverFerdige && scene.oppgaver.length > 0 ? (
-        <p className="skjema-hjelp">Gjør oppgaven ferdig. Da kan du gå videre.</p>
+        <p className="skjema-hjelp">
+          {scene.oppgaver.length === 1
+            ? 'Gjør oppgave 1 ferdig. Da kan du gå videre.'
+            : `Gjør oppgave 1–${scene.oppgaver.length} ferdig. Da kan du gå videre.`}
+        </p>
       ) : null}
       {oppgaverFerdige && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
         <div className="handlinger">

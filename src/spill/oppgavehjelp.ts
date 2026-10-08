@@ -6,7 +6,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   sant_usant: 'Les setningen. Trykk på Sant eller Usant. Valget blir lysegrønt.',
   ordbank: 'Trykk på ordet som passer i setningen. Ordet blir lysegrønt.',
   sorter_setning: 'Trykk på ordene i den rekkefølgen de skal stå. Ordene blir lysegrønne.',
-  matching: 'Trykk på ordet. Trykk så på det som betyr det samme. Valget blir lysegrønt.',
+  matching: 'Trykk på ordet, og velg forklaringen under som passer til ordet.',
   finn_og_rett: 'Trykk på ordet som er feil. Velg så det riktige ordet. Valget blir lysegrønt.',
   bygg_melding: 'Velg en start, en tekst og en slutt. De blir lysegrønne og vises på telefonen. Trykk så på Send.',
   sorter_kategori: 'Trykk på et kort. Trykk så på boksen det hører til. Kortet blir lysegrønt.',
@@ -24,12 +24,15 @@ const HJELP: Record<Oppgave['type'], string> = {
 }
 
 const GENERELL =
-  /^(Velg det riktige svaret\.|Velg sant eller usant\.|Les påstanden\. Velg sant eller usant\.|Velg ordet som passer\.|Velg ordet som passer i setningen\.|Trykk på ordene i riktig rekkefølge\.|Trykk på trinnene i riktig rekkefølge\.|Trykk først på )/
+  /^(Velg det riktige svaret\.|Velg sant eller usant\.|Les påstanden\. Velg sant eller usant\.|Velg ordet som passer\.|Velg ordet som passer i setningen\.|Trykk på ordene i riktig rekkefølge\.|Trykk på trinnene i riktig rekkefølge\.|Trykk først på |Trykk på ordet,)/
 
 export function oppgaveHjelp(type: Oppgave['type']): string {
   return HJELP[type]
 }
 
-export function visEgenInstruksjon(instruksjon: string): boolean {
-  return !GENERELL.test(instruksjon.trim())
+export function visEgenInstruksjon(instruksjon: string, type?: Oppgave['type']): boolean {
+  const tekst = instruksjon.trim()
+  if (GENERELL.test(tekst)) return false
+  if (type && tekst === HJELP[type]) return false
+  return true
 }

@@ -61,7 +61,7 @@ export function Matching({ oppgave, ferdig, onSvar }: Props) {
             disabled={status === 'ok'}
             onClick={() => {
               if (!valgtVenstre) {
-                setHint('Trykk på ordet først.')
+                setHint('Trykk på ordet først. Velg deretter forklaringen under.')
                 return
               }
               setHint(null)

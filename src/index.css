@@ -1630,12 +1630,37 @@ a {
   color: #14532d;
 }
 
-.oppgave-hjelp {
-  margin: 0 0 0.7rem;
-  padding: 0.6rem 0.75rem;
-  background: #e7f1f6;
+.oppgave-hode {
+  margin: 0 0 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: #d6eaf2;
+  border: 1px solid #7aa8bc;
+  border-left: 5px solid #0f5f82;
   border-radius: 8px;
+}
+
+.oppgave-hode h3 {
+  margin: 0 0 0.35rem;
+  color: #062a3a;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.oppgave-hjelp {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #062a3a;
   font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.oppgave-instruksjon {
+  margin: 0.45rem 0 0;
+  color: #0a3548;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .spill-nav {

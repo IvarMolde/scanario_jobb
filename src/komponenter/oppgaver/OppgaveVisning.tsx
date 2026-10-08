@@ -26,6 +26,7 @@ import { oppgaveHjelp, visEgenInstruksjon } from '../../spill/oppgavehjelp'
 
 interface Props {
   oppgave: Oppgave
+  nummer: number
   person: Person | null
   ferdig: boolean
   annonser: Annonse[]
@@ -47,6 +48,7 @@ interface Props {
 
 export function OppgaveVisning({
   oppgave,
+  nummer,
   person,
   ferdig,
   annonser,
@@ -70,9 +72,13 @@ export function OppgaveVisning({
 
   return (
     <section className="oppgave" aria-labelledby={`oppgave-${oppgave.id}`}>
-      <h3 id={`oppgave-${oppgave.id}`}>Oppgave</h3>
-      <p className="oppgave-hjelp">{oppgaveHjelp(oppgave.type)}</p>
-      {visEgenInstruksjon(oppgave.instruksjon) ? <p>{oppgave.instruksjon}</p> : null}
+      <div className="oppgave-hode">
+        <h3 id={`oppgave-${oppgave.id}`}>Oppgave {nummer}</h3>
+        <p className="oppgave-hjelp">{oppgaveHjelp(oppgave.type)}</p>
+        {visEgenInstruksjon(oppgave.instruksjon, oppgave.type) ? (
+          <p className="oppgave-instruksjon">{oppgave.instruksjon}</p>
+        ) : null}
+      </div>
       <Lydspiller
         fil={oppgave.instruksjonLyd}
         etikett={oppgave.type === 'lytt_og_velg' ? 'Lytt' : 'Instruksjon'}

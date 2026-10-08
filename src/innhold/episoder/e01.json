@@ -299,7 +299,7 @@
         {
           "type": "matching",
           "id": "e01-s04a-ma",
-          "instruksjon": "Trykk først på et ord til venstre. Trykk deretter på forklaringen til høyre.",
+          "instruksjon": "Trykk på ordet, og velg forklaringen under som passer til ordet.",
           "par": [
             {
               "id": "p1",
