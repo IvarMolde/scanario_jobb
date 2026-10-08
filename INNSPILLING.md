@@ -24,7 +24,7 @@ Les dette:
 
 Les dette:
 
-> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Tidligere har jeg jobbet i omsorg og hjulpet eldre hjemme. Nå vil jeg gjerne jobbe som assistent i helse. Jeg har ikke førerkort. Jeg kommer fra Ukraina, og jeg har bodd i Molde i seks måneder. Jeg er tålmodig, og jeg liker å snakke rolig med folk.
+> Hei. Jeg heter Sofiia Kravets. Jeg bor i sentrum i Molde. Tidligere har jeg jobbet med å hjelpe gamle mennesker hjemme i boligene sine. Nå vil jeg gjerne jobbe som pleieassistent. Jeg har ikke førerkort. Jeg kommer fra Ukraina, og jeg har bodd i Molde i seks måneder. Jeg er tålmodig, og jeg liker å snakke rolig med folk.
 
 ### `taras-presentasjon.wav`
 
@@ -33,7 +33,7 @@ Les dette:
 
 Les dette:
 
-> Hei. Jeg heter Taras Hnatiuk. Jeg bor i Årølia i Molde. Tidligere har jeg jobbet på bygg. Nå vil jeg gjerne jobbe på lager. Jeg har førerkort klasse B. Jeg kommer fra Bulgaria, og jeg har bodd i Molde i åtte måneder. Jeg er sterk, og jeg liker å jobbe med orden og sikkerhet.
+> Hei. Jeg heter Taras Hnatiuk. Jeg bor i Årølia i Molde. Tidligere har jeg jobbet som bygningsarbeider i hjemlandet mitt. Nå vil jeg gjerne jobbe på lager. Jeg har førerkort klasse B. Jeg kommer fra Bulgaria, og jeg har bodd i Molde i åtte måneder. Jeg er sterk, og jeg liker å jobbe med orden og sikkerhet.
 
 ## Episode 1: Melding til NAV-veilederen
 
