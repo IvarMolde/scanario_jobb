@@ -43,6 +43,7 @@ interface SpillApi {
     flagg: string[],
     ekstra?: { kanal?: 'sms' | 'epost'; emne?: string },
   ) => void
+  settSmsUtkast: (tekst: string | null) => void
   velgOrd: (id: string | null) => void
   lestVarsel: (id: string) => void
   lukkTilbakemelding: () => void
@@ -125,6 +126,10 @@ function SpillProviderIndre({
     [episode],
   )
 
+  const settSmsUtkast = useCallback((tekst: string | null) => {
+    dispatch({ type: 'SETT_SMS_UTKAST', tekst })
+  }, [])
+
   const api = useMemo<SpillApi>(
     () => ({
       innhold,
@@ -173,6 +178,7 @@ function SpillProviderIndre({
         })
         gaTilNeste(nesteSceneId)
       },
+      settSmsUtkast,
       velgOrd: (id) => dispatch({ type: 'VELG_ORD', id }),
       lestVarsel: (id) => dispatch({ type: 'LEST_VARSEL', id }),
       lukkTilbakemelding: () => dispatch({ type: 'LUKK_TILBAKEMELDING' }),
@@ -192,7 +198,7 @@ function SpillProviderIndre({
         dispatch({ type: 'NULLSTILL' })
       },
     }),
-    [episode, fremdrift, gaTilNeste, innhold, oppgaverFerdige, person, scene, valgtOrd],
+    [episode, fremdrift, gaTilNeste, innhold, oppgaverFerdige, person, scene, settSmsUtkast, valgtOrd],
   )
 
   return <SpillContext.Provider value={api}>{children}</SpillContext.Provider>

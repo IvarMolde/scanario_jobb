@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { ByggMeldingOppgave, Person } from '../../modell/typer'
+import { useSpill } from '../../spill/SpillProvider'
 import { fyllNavn } from '../../utils/tekst'
 import { TilbakemeldingBoks } from './TilbakemeldingBoks'
 
@@ -17,6 +18,7 @@ interface Props {
 }
 
 export function ByggMelding({ oppgave, person, ferdig, onSvar, onSend }: Props) {
+  const { settSmsUtkast } = useSpill()
   const [hilsen, setHilsen] = useState<string | null>(null)
   const [innhold, setInnhold] = useState<string | null>(null)
   const [avslutning, setAvslutning] = useState<string | null>(null)
@@ -32,6 +34,13 @@ export function ByggMelding({ oppgave, person, ferdig, onSvar, onSend }: Props) 
     .filter(Boolean)
     .join(' ')
   const ferdigTekst = fyllNavn(tekst, person)
+  const erSms = oppgave.kanal !== 'epost'
+
+  useEffect(() => {
+    if (!erSms) return undefined
+    settSmsUtkast(tekst.trim() ? ferdigTekst : null)
+    return () => settSmsUtkast(null)
+  }, [erSms, ferdigTekst, settSmsUtkast, tekst])
 
   const sjekk = () => {
     if (!komplett) return
@@ -98,7 +107,9 @@ export function ByggMelding({ oppgave, person, ferdig, onSvar, onSend }: Props) 
           ))}
         </div>
       </fieldset>
-      {komplett ? (
+      {erSms ? (
+        <p className="skjema-hjelp">Se meldingen på telefonen mens du velger.</p>
+      ) : komplett ? (
         <p className="kort">
           <strong>Meldingen:</strong> {ferdigTekst}
         </p>

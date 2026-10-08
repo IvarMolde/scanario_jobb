@@ -50,6 +50,7 @@ export interface Fremdrift {
   kalender: Kalenderhendelse[]
   sms: SmsISpill[]
   smsKontakt: string
+  smsUtkast: string | null
   eposter: Epost[]
   varsler: VarselISpill[]
   valgtOrdId: string | null
@@ -100,6 +101,7 @@ const fremdriftSkjema = z.object({
     }),
   ),
   smsKontakt: z.string(),
+  smsUtkast: z.string().nullable().optional(),
   eposter: z.array(
     z.object({
       id: z.string(),
@@ -180,6 +182,7 @@ export function tomFremdrift(): Fremdrift {
     kalender: [],
     sms: [],
     smsKontakt: 'Linn Holm',
+    smsUtkast: null,
     eposter: [],
     varsler: [],
     valgtOrdId: null,
@@ -199,6 +202,7 @@ export function parseFremdrift(raw: unknown): Fremdrift {
   if (!resultat.success) return tomFremdrift()
   return {
     ...resultat.data,
+    smsUtkast: resultat.data.smsUtkast ?? null,
     valgteJobber: resultat.data.valgteJobber ?? [],
     lagretSok: resultat.data.lagretSok ?? null,
     magasinAnnonseId: resultat.data.magasinAnnonseId ?? null,
@@ -228,6 +232,7 @@ export function anvendScene(state: Fremdrift, scene: Scene): Fremdrift {
     visning: 'scene',
     aktivSceneId: scene.id,
     aktivApp: scene.app,
+    smsUtkast: null,
     fullforteScener: unik([...state.fullforteScener, scene.id]),
     magasinAnnonseId: scene.annonseId ?? state.magasinAnnonseId,
   }
@@ -280,6 +285,7 @@ export type Handling =
   | { type: 'REGISTRER_OPPGAVE'; oppgaveId: string; oppgaveType: string; riktig: boolean }
   | { type: 'VELG_VALG'; valg: Valg }
   | { type: 'SEND_MELDING'; tekst: string; nesteSceneId: string; flagg: string[]; kanal?: 'sms' | 'epost'; emne?: string }
+  | { type: 'SETT_SMS_UTKAST'; tekst: string | null }
   | { type: 'VELG_ORD'; id: string | null }
   | { type: 'LEST_VARSEL'; id: string }
   | { type: 'LUKK_TILBAKEMELDING' }
@@ -385,6 +391,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
           ...state,
           flagg,
           aktiviteter,
+          smsUtkast: null,
           eposter: [
             ...state.eposter,
             {
@@ -400,6 +407,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         ...state,
         flagg,
         aktiviteter,
+        smsUtkast: null,
         sms: [
           ...state.sms,
           {
@@ -410,6 +418,9 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         ],
       }
     }
+    case 'SETT_SMS_UTKAST':
+      if (state.smsUtkast === handling.tekst) return state
+      return { ...state, smsUtkast: handling.tekst }
     case 'VELG_ORD':
       return { ...state, valgtOrdId: handling.id }
     case 'LEST_VARSEL':
@@ -428,6 +439,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         aktivApp: 'hjem',
         aktivSceneId: null,
         aktivEpisodeId: state.aktivEpisodeId,
+        smsUtkast: null,
         valgtOrdId: null,
         valgTilbakemelding: null,
       }
@@ -437,6 +449,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         visning: 'start',
         aktivApp: 'hjem',
         aktivSceneId: null,
+        smsUtkast: null,
         valgtOrdId: null,
         valgTilbakemelding: null,
       }

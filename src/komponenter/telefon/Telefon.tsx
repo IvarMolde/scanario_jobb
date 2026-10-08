@@ -50,14 +50,20 @@ export function Telefon() {
         aria-label="Telefon"
       >
         <div className="telefon-skjerm">
+          <div className="telefon-hakk" aria-hidden="true" />
           <Statuslinje dag={dag} klokkeslett={klokke} />
           <Varsler varsler={fremdrift.varsler} onLukk={lestVarsel} />
-          <div className="app-innhold">
+          <div className={app === 'meldinger' ? 'app-innhold app-innhold-sms' : 'app-innhold'}>
             {app === 'hjem' ? (
               <Hjem onAapne={aapneApp} ulesteSms={ulesteSms} ulestEpost={ulestEpost} />
             ) : null}
             {app === 'meldinger' ? (
-              <Meldinger kontakt={fremdrift.smsKontakt} meldinger={fremdrift.sms} person={person} />
+              <Meldinger
+                kontakt={fremdrift.smsKontakt}
+                meldinger={fremdrift.sms}
+                person={person}
+                utkast={fremdrift.smsUtkast}
+              />
             ) : null}
             {app === 'epost' ? <Epost eposter={fremdrift.eposter} /> : null}
             {app === 'kalender' ? <Kalender hendelser={fremdrift.kalender} /> : null}
@@ -128,6 +134,7 @@ export function Telefon() {
               </button>
             ))}
           </nav>
+          <div className="telefon-home" aria-hidden="true" />
         </div>
       </div>
       {brukTelefon ? (

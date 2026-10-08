@@ -8,7 +8,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   sorter_setning: 'Trykk på ordene i den rekkefølgen de skal stå. Ordene blir lysegrønne.',
   matching: 'Trykk på ordet. Trykk så på det som betyr det samme. Valget blir lysegrønt.',
   finn_og_rett: 'Trykk på ordet som er feil. Velg så det riktige ordet. Valget blir lysegrønt.',
-  bygg_melding: 'Velg en start, en tekst og en slutt. De blir lysegrønne. Trykk så på Send.',
+  bygg_melding: 'Velg en start, en tekst og en slutt. De blir lysegrønne og vises på telefonen. Trykk så på Send.',
   sorter_kategori: 'Trykk på et kort. Trykk så på boksen det hører til. Kortet blir lysegrønt.',
   egenskap_kobling: 'Trykk på ordene som passer. De blir lysegrønne.',
   cv_valg: 'Trykk på setningen som passer personen. Den blir lysegrønn.',
