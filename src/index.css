@@ -348,6 +348,34 @@ a {
     inset 0 0 0 3px #0a1018;
 }
 
+/* ~2,9 blink/sek i 5 sekunder – fanger oppmerksomhet ved melding / «bruk telefon» */
+@keyframes telefon-ramme-blink {
+  0%,
+  100% {
+    box-shadow:
+      var(--skygge),
+      0 0 0 3px #0b1220,
+      inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+      inset 0 0 0 3px #0a1018;
+    outline: 3px solid transparent;
+    outline-offset: 2px;
+  }
+  50% {
+    box-shadow:
+      var(--skygge),
+      0 0 0 5px #ee9b00,
+      0 0 22px 6px rgba(238, 155, 0, 0.55),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.22),
+      inset 0 0 0 3px #0a1018;
+    outline: 3px solid #ee9b00;
+    outline-offset: 2px;
+  }
+}
+
+.telefon-ramme.telefon-blink {
+  animation: telefon-ramme-blink 0.35s ease-in-out 14;
+}
+
 .telefon-hjelp {
   margin: 0;
   width: 100%;
@@ -1697,6 +1725,24 @@ a {
     box-shadow: none;
     outline: 3px solid #1b6b93;
     outline-offset: -3px;
+  }
+
+  .telefon-ramme.telefon-blink {
+    animation-name: telefon-ramme-blink-mobil;
+  }
+
+  @keyframes telefon-ramme-blink-mobil {
+    0%,
+    100% {
+      outline: 3px solid transparent;
+      outline-offset: -3px;
+      box-shadow: none;
+    }
+    50% {
+      outline: 4px solid #ee9b00;
+      outline-offset: -3px;
+      box-shadow: 0 0 16px 2px rgba(238, 155, 0, 0.45);
+    }
   }
 
   .telefon-skjerm {

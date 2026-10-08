@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { APP_ETIKETTER, type AppId } from '../../modell/typer'
 import { useSpill } from '../../spill/SpillProvider'
 import { sceneKreverTelefon } from '../../spill/telefonhjelp'
@@ -18,6 +19,7 @@ import { Skatteportal } from './Skatteportal'
 import { Lonn } from './Lonn'
 
 const BUNN: AppId[] = ['hjem', 'meldinger', 'epost', 'kalender', 'innstillinger']
+const BLINK_MS = 5000
 
 export function Telefon() {
   const {
@@ -39,16 +41,54 @@ export function Telefon() {
   const app = fremdrift.aktivApp
   const ulesteSms = fremdrift.varsler.filter((v) => !v.lest && v.type === 'sms').length
   const ulestEpost = fremdrift.varsler.filter((v) => !v.lest && v.type === 'epost').length
+  const ulesteVarsler = fremdrift.varsler.filter((v) => !v.lest).length
   const brukTelefon =
     fremdrift.visning === 'scene' && scene != null && sceneKreverTelefon(scene)
 
+  const [blinker, setBlinker] = useState(false)
+  const forrigeSceneId = useRef<string | null>(null)
+  const forrigeUleste = useRef(0)
+  const blinkTimeout = useRef<number | null>(null)
+
+  useEffect(() => {
+    const sceneId = scene?.id ?? null
+    const nySceneKreverTelefon =
+      fremdrift.visning === 'scene' &&
+      scene != null &&
+      sceneKreverTelefon(scene) &&
+      sceneId !== forrigeSceneId.current
+    const nyttVarsel = ulesteVarsler > forrigeUleste.current
+
+    forrigeSceneId.current = sceneId
+    forrigeUleste.current = ulesteVarsler
+
+    if (!nySceneKreverTelefon && !nyttVarsel) return
+
+    setBlinker(true)
+    if (blinkTimeout.current != null) window.clearTimeout(blinkTimeout.current)
+    blinkTimeout.current = window.setTimeout(() => {
+      setBlinker(false)
+      blinkTimeout.current = null
+    }, BLINK_MS)
+  }, [scene, fremdrift.visning, ulesteVarsler])
+
+  useEffect(() => {
+    return () => {
+      if (blinkTimeout.current != null) window.clearTimeout(blinkTimeout.current)
+    }
+  }, [])
+
+  const rammeKlasse = [
+    'telefon-ramme',
+    brukTelefon ? 'telefon-aktiv' : '',
+    blinker ? 'telefon-blink' : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
     <div className="telefon-kolonne">
-      <div
-        className={brukTelefon ? 'telefon-ramme telefon-aktiv' : 'telefon-ramme'}
-        role="region"
-        aria-label="Telefon"
-      >
+      <div className={rammeKlasse} role="region" aria-label="Telefon">
         <div className="telefon-skjerm">
           <div className="telefon-hakk" aria-hidden="true" />
           <Statuslinje dag={dag} klokkeslett={klokke} />
