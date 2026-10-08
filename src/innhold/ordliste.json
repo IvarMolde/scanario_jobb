@@ -161,6 +161,56 @@
       }
     },
     {
+      "id": "fleksibel",
+      "ord": "fleksibel",
+      "forklaring": "Du kan endre planer og gjøre nye oppgaver når det trengs.",
+      "oversettelser": {
+        "uk": "гнучкий",
+        "en": "flexible",
+        "ar": "مرن"
+      }
+    },
+    {
+      "id": "motivert",
+      "ord": "motivert",
+      "forklaring": "Du vil gjerne lære og gjøre en god jobb.",
+      "oversettelser": {
+        "uk": "мотивований",
+        "en": "motivated",
+        "ar": "متحمس"
+      }
+    },
+    {
+      "id": "samarbeidsvillig",
+      "ord": "samarbeidsvillig",
+      "forklaring": "Du liker å jobbe sammen med andre og hjelpe til.",
+      "oversettelser": {
+        "uk": "готовий до співпраці",
+        "en": "cooperative",
+        "ar": "متعاون"
+      }
+    },
+    {
+      "id": "effektiv",
+      "ord": "effektiv",
+      "forklaring": "Du gjør arbeidet godt og bruker tiden godt.",
+      "oversettelser": {
+        "uk": "ефективний",
+        "en": "efficient",
+        "ar": "فعّال"
+      }
+    },
+    {
+      "id": "laeringsvillig",
+      "ord": "læringsvillig",
+      "forklaring": "Du vil lære nye ting på jobben og i kurs.",
+      "oversettelser": {
+        "uk": "готовий вчитися",
+        "en": "willing to learn",
+        "ar": "راغب في التعلم"
+      }
+    },
+    {
       "id": "referanse",
       "ord": "referanse",
       "forklaring": "En person som kan si at du er en god arbeidstaker. Ofte en tidligere leder.",

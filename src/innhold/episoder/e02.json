@@ -238,7 +238,7 @@
         "bildeAlt": "Et papir om egenskaper: omsorgsfull, strukturert, læringsvillig og samarbeidsorientert.",
         "lyd": "e02-s03-egenskaper.wav"
       },
-      "tekst": "En {{egenskap}} sier hvordan du er.\n\nVelg tre egenskaper som passer deg.\n\nKoble dem til et eksempel. Eksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»",
+      "tekst": "En {{egenskap}} – eller personlig egenskap – sier hvordan du er som person og arbeidstaker. Det er ikke det samme som utdanning. Det er måten du jobber og møter andre på.\n\nHer er noen viktige egenskaper:\n\n• {{fleksibel}} – du kan endre planer og gjøre nye oppgaver.\n• {{motivert}} – du vil gjerne lære og gjøre en god jobb.\n• {{samarbeidsvillig}} – du liker å jobbe sammen med andre.\n• {{effektiv}} – du gjør arbeidet godt og bruker tiden godt.\n• {{laeringsvillig|læringsvillig}} – du vil lære nye ting på jobben.\n\nI CV og søknad er det lurt å lese jobbannonsen først. Se hvilke egenskaper arbeidsgiveren søker. Velg noen av dem som passer deg. Skriv deretter et kort eksempel fra livet ditt.\n\nEksempel: «Jeg er {{punktlig}}. Jeg kommer alltid i god tid.»\n\nVelg tre egenskaper som passer deg. Koble hver egenskap til et eksempel.",
       "valg": [
         {
           "id": "til-setninger",
