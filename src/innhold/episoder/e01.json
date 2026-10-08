@@ -44,8 +44,8 @@
       "klokkeslett": "09:15",
       "app": "kalender",
       "media": {
-        "bilde": "e01-s01-kalender.svg",
-        "bildeAlt": "En kalender med et møte merket tirsdag klokka 10.00.",
+        "bilde": "e01-s01-uke-kalender.svg",
+        "bildeAlt": "En uke-kalender fra mandag til søndag. Tirsdag klokka 10.00 står møte med Linn Holm.",
         "lyd": "e01-s01-kalender.wav"
       },
       "tekst": "I dag er det mandag.\n\nDu har et {{mote|møte}} i morgen.\n\n{{veileder|Veilederen}} heter Linn Holm.\n\nMøtet er klokka 10.00.\n\nSe i {{kalender|kalenderen}}.",
