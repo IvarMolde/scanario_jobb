@@ -26,7 +26,7 @@
         "bildeAlt": "En fiktiv rutetabell med linjenummer og holdeplasser i Molde.",
         "lyd": "e09-s01-rute.wav"
       },
-      "tekst": "I morgen er første arbeidsdag.\n\nÅpne Reiseplanleggeren.\n\nSe {{holdeplass|holdeplassen}} og {{klokka}}.\n\nDu trenger ti minutter ekstra. Det er {{buffer}}.\n\nNoen ruter har {{bytte}}.",
+      "tekst": "I morgen er første arbeidsdag.\n\nÅpne Reiseplanleggeren.\n\nVelg Fra og Til. Holdeplassene er: Årølia skole, Årø flyplass, Kviltorp skole, Bergmo omsorgssenter og Molde rutebilstasjon.\n\nSe {{holdeplass|holdeplassen}} og {{klokka}}.\n\nDu trenger ti minutter ekstra. Det er {{buffer}}.\n\nNoen ruter har {{bytte}}.",
       "valg": [
         {
           "id": "til-buss",
