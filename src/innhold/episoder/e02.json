@@ -112,8 +112,8 @@
       "klokkeslett": "10:35",
       "app": "cv",
       "media": {
-        "bilde": "e02-s02-cv.svg",
-        "bildeAlt": "Fire bokser: erfaring, utdanning, språk og sertifikater.",
+        "bilde": "e02-s02-cv-foto.jpg",
+        "bildeAlt": "En CV på et bord. Den viser erfaring, kurs og sertifikater.",
         "lyd": "e02-s02-cv.wav"
       },
       "tekst": "Hva hører hjemme hvor?\n\n{{erfaring}} er jobb du har gjort.\n\n{{utdanning}} er skole og kurs.\n\nSpråk er språk du kan.\n\n{{sertifikat|Sertifikater}} er kort og bevis, for eksempel {{forerkort|førerkort}}.",
