@@ -528,7 +528,7 @@
         "bildeAlt": "Plakat om verb i en CV: preteritum og perfektum med eksempler.",
         "lyd": "e02-s06-verb.wav"
       },
-      "tekst": "Når du skriver en CV, forteller du arbeidsgiveren hva du har gjort i tidligere jobber og på kurs.\n\nVi bruker ofte {{preteritum}} (fortid) når vi snakker om en jobb som er helt ferdig. For eksempel kan du skrive: «Jeg jobbet i en matbutikk i to år» eller «Jeg vasket kontorer hver kveld».\n\nAndre ganger bruker vi {{perfektum}} (har + verb) for å vise hva vi har lært og kan bruke i dag. Da passer det fint å skrive: «Jeg har fullført et datakurs i Molde kommune» eller «Jeg har lært god kundebehandling på butikken».\n\nVelg alltid verb som viser tydelig hva du faktisk gjorde, slik som hjalp, kjørte, lagde eller passet. Tydelige og enkle setninger gjør det lett for sjefen å forstå den gode erfaringen din.",
+      "tekst": "{{preteritum|Preteritum}}: Jeg jobbet i en butikk i 2022.\n\n{{perfektum|Perfektum}}: Jeg har jobbet i en butikk i tre år.",
       "valg": [
         {
           "id": "avslutt-e02",
@@ -542,7 +542,7 @@
           "type": "ordbank",
           "id": "e02-s06-ob",
           "instruksjon": "Velg verbet som passer.",
-          "setning": "Jeg _____ i butikk i tre år. Jeg kan det fortsatt.",
+          "setning": "Jeg _____ i en butikk.",
           "ord": [
             "har jobbet",
             "jobbet",
@@ -550,7 +550,7 @@
           ],
           "riktig": "har jobbet",
           "tilbakemeldingRiktig": "Riktig. Perfektum (har + verb) bruker vi når erfaringen fortsatt gjelder.",
-          "tilbakemeldingFeil": "Når jobben fortsatt er en del av deg, sier vi «jeg har jobbet», ikke bare «jeg jobbet»."
+          "tilbakemeldingFeil": "Når erfaringen fortsatt gjelder, sier vi «jeg har jobbet», ikke bare «jeg jobbet»."
         }
       ]
     }
