@@ -45,7 +45,7 @@
         "bildeAlt": "Jobbportalen med søkefelt, filtre for geografi og en liste med ledige stillinger.",
         "lyd": "e03-s01-portal.wav"
       },
-      "tekst": "Nå skal du finne jobber.\n\nI portalen skriver du {{sokeord|søkeord}}.\n\nDu velger sted: Molde, Vestnes eller Aukra.\n\nDu velger {{heltid}} eller {{deltid}}.",
+      "tekst": "Nå skal du finne jobber.\n\nEn jobbportal er en nettside der mange ledige stillinger ligger samlet. Det er lurt å bruke en portal fordi du slipper å lete hos hver bedrift for seg. Du kan søke raskt, sammenligne flere jobber, og se frist, sted og arbeidstid på ett sted. Hvis du lagrer søket, kan du også få varsel når det kommer nye stillinger som passer deg.\n\nI portalen skriver du {{sokeord|søkeord}}.\n\nDu velger sted: Molde, Vestnes eller Aukra.\n\nDu velger {{heltid}} eller {{deltid}}.",
       "valg": [
         {
           "id": "til-sok",
