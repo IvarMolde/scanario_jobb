@@ -4,14 +4,32 @@
   "tittel": "Registrer i Aktivitetsplanen",
   "ingress": "Du åpner Aktivitetsplanen. Du registrerer de valgte jobbene med status og frist. Så sender du en kort melding til Linn.",
   "startSceneId": "e05-s01",
-  "tillatteFlagg": ["aktiviteter_registrert"],
-  "ordIds": ["aktivitet", "frist", "innen", "soknad"],
+  "tillatteFlagg": [
+    "aktiviteter_registrert"
+  ],
+  "ordIds": [
+    "aktivitet",
+    "frist",
+    "innen",
+    "soknad"
+  ],
   "oppsummering": [
-    { "tekst": "Åpnet Aktivitetsplanen. Dette er en øvingsversjon, ikke ekte NAV." },
-    { "tekst": "Leste statusene Skal søke, Sendt søknad, Innkalt til intervju og Avslag." },
-    { "tekst": "Øvde på datoer og preposisjoner med tid: den 12. oktober, innen fredag." },
-    { "tekst": "Registrerte de valgte jobbene med status og frist.", "visHvisFlagg": "aktiviteter_registrert" },
-    { "tekst": "Sendte en kort melding til Linn om det du har gjort." }
+    {
+      "tekst": "Åpnet Aktivitetsplanen."
+    },
+    {
+      "tekst": "Leste statusene Skal søke, Sendt søknad, Innkalt til intervju og Avslag."
+    },
+    {
+      "tekst": "Øvde på datoer og preposisjoner med tid: den 12. oktober, innen fredag."
+    },
+    {
+      "tekst": "Registrerte de valgte jobbene med status og frist.",
+      "visHvisFlagg": "aktiviteter_registrert"
+    },
+    {
+      "tekst": "Sendte en kort melding til Linn om det du har gjort."
+    }
   ],
   "scener": [
     {
@@ -25,7 +43,7 @@
         "bildeAlt": "En aktivitetsplan med fire kolonner for søknadsstatus.",
         "lyd": "e05-s01-plan.wav"
       },
-      "tekst": "Åpne {{aktivitet|Aktivitetsplanen}}.\n\nDette er en øvingsversjon. Ingen ekte NAV-logo.\n\nDu ser fire kolonner: Skal søke, Sendt søknad, Innkalt til intervju og Avslag.\n\nLes {{frist|fristen}} i annonsen. Søk {{innen}} datoen.",
+      "tekst": "Åpne {{aktivitet|Aktivitetsplanen}}.\n\nDu ser fire kolonner: Skal søke, Sendt søknad, Innkalt til intervju og Avslag.\n\nLes {{frist|fristen}} i annonsen. Søk {{innen}} datoen.",
       "valg": [
         {
           "id": "til-dato",
@@ -40,9 +58,21 @@
           "id": "e05-s01-ma",
           "instruksjon": "Trykk først på statusen til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "Skal søke", "hoyre": "du har ikke sendt søknad ennå" },
-            { "id": "p2", "venstre": "Sendt søknad", "hoyre": "søknaden er sendt til bedriften" },
-            { "id": "p3", "venstre": "Avslag", "hoyre": "bedriften sier nei" }
+            {
+              "id": "p1",
+              "venstre": "Skal søke",
+              "hoyre": "du har ikke sendt søknad ennå"
+            },
+            {
+              "id": "p2",
+              "venstre": "Sendt søknad",
+              "hoyre": "søknaden er sendt til bedriften"
+            },
+            {
+              "id": "p3",
+              "venstre": "Avslag",
+              "hoyre": "bedriften sier nei"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Status forteller hvor du er i søknaden.",
           "tilbakemeldingFeil": "Les kolonnene i Aktivitetsplanen en gang til."
@@ -53,9 +83,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva betyr «Søk innen fredag»?",
           "alternativer": [
-            { "id": "a", "tekst": "Du kan søke etter fredag." },
-            { "id": "b", "tekst": "Du må søke senest på fredag." },
-            { "id": "c", "tekst": "Du skal søke bare på lørdag." }
+            {
+              "id": "a",
+              "tekst": "Du kan søke etter fredag."
+            },
+            {
+              "id": "b",
+              "tekst": "Du må søke senest på fredag."
+            },
+            {
+              "id": "c",
+              "tekst": "Du skal søke bare på lørdag."
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Innen fredag betyr senest på fredag. Ikke senere.",
@@ -89,7 +128,11 @@
           "id": "e05-s02-ob",
           "instruksjon": "Velg ordet som passer i setningen.",
           "setning": "Møtet er _____ 12. oktober.",
-          "ord": ["den", "på", "hos"],
+          "ord": [
+            "den",
+            "på",
+            "hos"
+          ],
           "riktig": "den",
           "tilbakemeldingRiktig": "Riktig. Vi sier den 12. oktober. Den står foran datoen.",
           "tilbakemeldingFeil": "Foran dato med dag og måned sier vi den: den 12. oktober."
@@ -98,7 +141,11 @@
           "type": "sorter_setning",
           "id": "e05-s02-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["Søk", "innen", "fredag."],
+          "biter": [
+            "Søk",
+            "innen",
+            "fredag."
+          ],
           "tilbakemeldingRiktig": "Riktig. Innen står foran tid: innen fredag.",
           "tilbakemeldingFeil": "Start med Søk. Deretter innen. Så fredag."
         }
@@ -130,14 +177,32 @@
           "id": "e05-s03-ra",
           "instruksjon": "Velg status. Velg frist. Trykk på Registrer aktivitetene.",
           "statuser": [
-            { "id": "skal_soke", "tekst": "Skal søke" },
-            { "id": "sendt_soknad", "tekst": "Sendt søknad" },
-            { "id": "innkalt", "tekst": "Innkalt til intervju" },
-            { "id": "avslag", "tekst": "Avslag" }
+            {
+              "id": "skal_soke",
+              "tekst": "Skal søke"
+            },
+            {
+              "id": "sendt_soknad",
+              "tekst": "Sendt søknad"
+            },
+            {
+              "id": "innkalt",
+              "tekst": "Innkalt til intervju"
+            },
+            {
+              "id": "avslag",
+              "tekst": "Avslag"
+            }
           ],
           "riktigStatusId": "skal_soke",
-          "fristDistraktorer": ["i går", "i morgen", "01.01.2020"],
-          "flagg": ["aktiviteter_registrert"],
+          "fristDistraktorer": [
+            "i går",
+            "i morgen",
+            "01.01.2020"
+          ],
+          "flagg": [
+            "aktiviteter_registrert"
+          ],
           "tilbakemeldingRiktig": "Bra. Jobbene ligger under Skal søke. Fristen er datoen fra annonsen.",
           "tilbakemeldingFeil": "Velg Skal søke. Velg fristen som står i annonsen, ikke i går eller i morgen."
         }
@@ -166,9 +231,21 @@
           "id": "e05-s04-bm",
           "instruksjon": "Velg hilsen, innhold og avslutning. Send deretter meldingen.",
           "hilsen": [
-            { "id": "h1", "tekst": "Hei Linn,", "hoflig": true },
-            { "id": "h2", "tekst": "Hei!", "hoflig": false },
-            { "id": "h3", "tekst": "Hva skjer", "hoflig": false }
+            {
+              "id": "h1",
+              "tekst": "Hei Linn,",
+              "hoflig": true
+            },
+            {
+              "id": "h2",
+              "tekst": "Hei!",
+              "hoflig": false
+            },
+            {
+              "id": "h3",
+              "tekst": "Hva skjer",
+              "hoflig": false
+            }
           ],
           "innhold": [
             {
@@ -176,13 +253,33 @@
               "tekst": "Jeg har registrert jobbene i aktivitetsplanen. Status er Skal søke.",
               "hoflig": true
             },
-            { "id": "i2", "tekst": "ok jobber", "hoflig": false },
-            { "id": "i3", "tekst": "Du må sjekke planen nå.", "hoflig": false }
+            {
+              "id": "i2",
+              "tekst": "ok jobber",
+              "hoflig": false
+            },
+            {
+              "id": "i3",
+              "tekst": "Du må sjekke planen nå.",
+              "hoflig": false
+            }
           ],
           "avslutning": [
-            { "id": "a1", "tekst": "Vennlig hilsen [navn]", "hoflig": true },
-            { "id": "a2", "tekst": "Hilsen [navn]", "hoflig": true },
-            { "id": "a3", "tekst": "Bye", "hoflig": false }
+            {
+              "id": "a1",
+              "tekst": "Vennlig hilsen [navn]",
+              "hoflig": true
+            },
+            {
+              "id": "a2",
+              "tekst": "Hilsen [navn]",
+              "hoflig": true
+            },
+            {
+              "id": "a3",
+              "tekst": "Bye",
+              "hoflig": false
+            }
           ],
           "flaggHoflig": [],
           "flaggUhoflig": [],

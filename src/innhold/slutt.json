@@ -1,8 +1,8 @@
 {
   "tittel": "Jobbreisen er ferdig",
-  "ingress": "Du har øvd på å søke jobb, reise til jobb, sjekke skattekort og lese lønnsslipp. Dette er en øvingsversjon. Ingen ekte søknad er sendt.",
+  "ingress": "Du har øvd på å søke jobb, reise til jobb, sjekke skattekort og lese lønnsslipp. Ingen ekte søknad er sendt.",
   "bevisTittel": "Kursbevis · Jobbreisen",
-  "bevisTekst": "har fullført øvingsløpet Jobbreisen i Målrettet bedriftsopplæring (MBO) ved Molde voksenopplæringssenter. Alle bedrifter, rutetabeller og skatteopplysninger er fiktive.",
+  "bevisTekst": "har fullført Jobbreisen i Målrettet bedriftsopplæring (MBO) ved Molde voksenopplæringssenter.",
   "utfall": [
     {
       "id": "trygg-start",
@@ -16,21 +16,29 @@
         "endret_skattekort",
         "oppdaget_lonnsfeil"
       ],
-      "unngaFlagg": ["uhoflig_sms"]
+      "unngaFlagg": [
+        "uhoflig_sms"
+      ]
     },
     {
       "id": "i-mal",
       "tittel": "I mål – med noe å huske",
       "tekst": "Du fikk jobbtilbud og sa ja. Noe gikk bra, noe kan bli bedre neste gang: tid, beskjed, skattekort eller lønnsslipp. Du kan øve på det samme en gang til.",
-      "kreverFlagg": ["forberedt_intervju"],
+      "kreverFlagg": [
+        "forberedt_intervju"
+      ],
       "unngaFlagg": []
     },
     {
       "id": "sen-beskjed",
       "tittel": "Framme, fordi du sa ifra",
       "tekst": "Bussen eller tiden var knapp. Du sendte beskjed til arbeidsgiveren. Det er viktig. Neste gang kan du gå hjemmefra med mer ekstra tid, og sjekke skattekortet før første lønn.",
-      "kreverFlagg": ["sendte_beskjed_om_forsinkelse"],
-      "unngaFlagg": ["kom_presis"]
+      "kreverFlagg": [
+        "sendte_beskjed_om_forsinkelse"
+      ],
+      "unngaFlagg": [
+        "kom_presis"
+      ]
     },
     {
       "id": "ov-mer",
@@ -41,26 +49,89 @@
     }
   ],
   "reisePunkter": [
-    { "tekst": "Sendte en høflig melding til veilederen.", "visHvisFlagg": "hoflig_melding" },
-    { "tekst": "En melding var for kort eller brå. Du kan øve på hei og hele setninger.", "visHvisFlagg": "uhoflig_sms" },
-    { "tekst": "Oppdaterte CV-en med erfaring, utdanning, språk og sertifikater.", "visHvisFlagg": "har_oppdatert_cv" },
-    { "tekst": "CV-en manglet referanse. Linn ba om en referanse.", "visHvisFlagg": "cv_mangler_referanse" },
-    { "tekst": "Lagret et søk i jobbportalen.", "visHvisFlagg": "har_lagret_sok" },
-    { "tekst": "Valgte jobber å gå videre med.", "visHvisFlagg": "valgte_jobber" },
-    { "tekst": "Registrerte aktiviteter med status og frist.", "visHvisFlagg": "aktiviteter_registrert" },
-    { "tekst": "Bygget en tilpasset søknad.", "visHvisFlagg": "soknad_tilpasset" },
-    { "tekst": "Bekreftet intervjuet.", "visHvisFlagg": "intervju_bekreftet" },
-    { "tekst": "La intervjuet inn i kalenderen.", "visHvisFlagg": "intervju_i_kalender" },
-    { "tekst": "Forberedte intervjuet og øvde på gode svar.", "visHvisFlagg": "forberedt_intervju" },
-    { "tekst": "Regnet ut bussen med buffer og kom i rett tid.", "visHvisFlagg": "kom_presis" },
-    { "tekst": "Gikk hjemmefra for sent, eller valgte en buss uten nok buffer.", "visHvisIkkeFlagg": "kom_presis" },
-    { "tekst": "Sendte beskjed da bussen var forsinket.", "visHvisFlagg": "sendte_beskjed_om_forsinkelse" },
-    { "tekst": "Glemte å sende en tydelig beskjed om forsinkelsen.", "visHvisIkkeFlagg": "sendte_beskjed_om_forsinkelse" },
-    { "tekst": "Sa nei til en falsk skatte-SMS.", "visHvisFlagg": "avslo_svindel" },
-    { "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.", "visHvisIkkeFlagg": "avslo_svindel" },
-    { "tekst": "Endret skattekortet i Skatteøving.", "visHvisFlagg": "endret_skattekort" },
-    { "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.", "visHvisIkkeFlagg": "endret_skattekort" },
-    { "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.", "visHvisFlagg": "oppdaget_lonnsfeil" },
-    { "tekst": "Sendte ikke en tydelig e-post om overtiden.", "visHvisIkkeFlagg": "oppdaget_lonnsfeil" }
+    {
+      "tekst": "Sendte en høflig melding til veilederen.",
+      "visHvisFlagg": "hoflig_melding"
+    },
+    {
+      "tekst": "En melding var for kort eller brå. Du kan øve på hei og hele setninger.",
+      "visHvisFlagg": "uhoflig_sms"
+    },
+    {
+      "tekst": "Oppdaterte CV-en med erfaring, utdanning, språk og sertifikater.",
+      "visHvisFlagg": "har_oppdatert_cv"
+    },
+    {
+      "tekst": "CV-en manglet referanse. Linn ba om en referanse.",
+      "visHvisFlagg": "cv_mangler_referanse"
+    },
+    {
+      "tekst": "Lagret et søk i jobbportalen.",
+      "visHvisFlagg": "har_lagret_sok"
+    },
+    {
+      "tekst": "Valgte jobber å gå videre med.",
+      "visHvisFlagg": "valgte_jobber"
+    },
+    {
+      "tekst": "Registrerte aktiviteter med status og frist.",
+      "visHvisFlagg": "aktiviteter_registrert"
+    },
+    {
+      "tekst": "Bygget en tilpasset søknad.",
+      "visHvisFlagg": "soknad_tilpasset"
+    },
+    {
+      "tekst": "Bekreftet intervjuet.",
+      "visHvisFlagg": "intervju_bekreftet"
+    },
+    {
+      "tekst": "La intervjuet inn i kalenderen.",
+      "visHvisFlagg": "intervju_i_kalender"
+    },
+    {
+      "tekst": "Forberedte intervjuet og øvde på gode svar.",
+      "visHvisFlagg": "forberedt_intervju"
+    },
+    {
+      "tekst": "Regnet ut bussen med buffer og kom i rett tid.",
+      "visHvisFlagg": "kom_presis"
+    },
+    {
+      "tekst": "Gikk hjemmefra for sent, eller valgte en buss uten nok buffer.",
+      "visHvisIkkeFlagg": "kom_presis"
+    },
+    {
+      "tekst": "Sendte beskjed da bussen var forsinket.",
+      "visHvisFlagg": "sendte_beskjed_om_forsinkelse"
+    },
+    {
+      "tekst": "Glemte å sende en tydelig beskjed om forsinkelsen.",
+      "visHvisIkkeFlagg": "sendte_beskjed_om_forsinkelse"
+    },
+    {
+      "tekst": "Sa nei til en falsk skatte-SMS.",
+      "visHvisFlagg": "avslo_svindel"
+    },
+    {
+      "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.",
+      "visHvisIkkeFlagg": "avslo_svindel"
+    },
+    {
+      "tekst": "Endret skattekortet i Skatteøving.",
+      "visHvisFlagg": "endret_skattekort"
+    },
+    {
+      "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.",
+      "visHvisIkkeFlagg": "endret_skattekort"
+    },
+    {
+      "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.",
+      "visHvisFlagg": "oppdaget_lonnsfeil"
+    },
+    {
+      "tekst": "Sendte ikke en tydelig e-post om overtiden.",
+      "visHvisIkkeFlagg": "oppdaget_lonnsfeil"
+    }
   ]
 }

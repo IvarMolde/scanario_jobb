@@ -4,14 +4,44 @@
   "tittel": "Ny jobb – nytt skattekort",
   "ingress": "Første arbeidsuke. Du sjekker skattekortet, kjenner igjen svindel og øver på innlogging i Skatteøving.",
   "startSceneId": "e10-s01",
-  "tillatteFlagg": ["endret_skattekort", "avslo_svindel"],
-  "ordIds": ["skattekort", "frikort", "brutto", "netto", "skattetrekk", "fradrag", "restskatt", "skatteprosent", "forventet_inntekt", "svindel", "trygdeavgift", "trinnskatt"],
+  "tillatteFlagg": [
+    "endret_skattekort",
+    "avslo_svindel"
+  ],
+  "ordIds": [
+    "skattekort",
+    "frikort",
+    "brutto",
+    "netto",
+    "skattetrekk",
+    "fradrag",
+    "restskatt",
+    "skatteprosent",
+    "forventet_inntekt",
+    "svindel",
+    "trygdeavgift",
+    "trinnskatt"
+  ],
   "oppsummering": [
-    { "tekst": "Leste SMS fra lønnskontoret om skattekort før første lønn." },
-    { "tekst": "Sa nei til en falsk skatte-SMS.", "visHvisFlagg": "avslo_svindel" },
-    { "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.", "visHvisIkkeFlagg": "avslo_svindel" },
-    { "tekst": "Endret skattekortet i Skatteøving.", "visHvisFlagg": "endret_skattekort" },
-    { "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.", "visHvisIkkeFlagg": "endret_skattekort" }
+    {
+      "tekst": "Leste SMS fra lønnskontoret om skattekort før første lønn."
+    },
+    {
+      "tekst": "Sa nei til en falsk skatte-SMS.",
+      "visHvisFlagg": "avslo_svindel"
+    },
+    {
+      "tekst": "Klikket på en mistenkelig lenke. Neste gang: sjekk adressen.",
+      "visHvisIkkeFlagg": "avslo_svindel"
+    },
+    {
+      "tekst": "Endret skattekortet i Skatteøving.",
+      "visHvisFlagg": "endret_skattekort"
+    },
+    {
+      "tekst": "Endret ikke skattekortet. Da kan trekk på lønnsslippen bli feil.",
+      "visHvisIkkeFlagg": "endret_skattekort"
+    }
   ],
   "scener": [
     {
@@ -28,15 +58,15 @@
       "tekst": "Første arbeidsuke.\n\nLønnskontoret sender SMS.\n\nHusk å sjekke {{skattekort|skattekortet}} ditt før første lønn.\n\nÅpne Meldinger.",
       "varsel": {
         "type": "sms",
-        "fra": "Lønnskontoret (øving)",
+        "fra": "Lønnskontoret",
         "innhold": "Husk å sjekke skattekortet ditt før første lønn."
       },
       "smsTraad": {
-        "kontakt": "Lønnskontoret (øving)",
+        "kontakt": "Lønnskontoret",
         "meldinger": [
           {
             "fra": "veileder",
-            "tekst": "Husk å sjekke skattekortet ditt før første lønn. Vennlig hilsen Mona Lie, lønnskontoret (øvingsnavn)"
+            "tekst": "Husk å sjekke skattekortet ditt før første lønn. Vennlig hilsen Mona Lie, lønnskontoret"
           }
         ]
       },
@@ -54,10 +84,26 @@
           "id": "e10-s01-ma",
           "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "brutto", "hoyre": "lønn før trekk" },
-            { "id": "p2", "venstre": "netto", "hoyre": "det du får på konto" },
-            { "id": "p3", "venstre": "skattetrekk", "hoyre": "penger til skatt" },
-            { "id": "p4", "venstre": "fradrag", "hoyre": "gjør at skatten kan bli lavere" }
+            {
+              "id": "p1",
+              "venstre": "brutto",
+              "hoyre": "lønn før trekk"
+            },
+            {
+              "id": "p2",
+              "venstre": "netto",
+              "hoyre": "det du får på konto"
+            },
+            {
+              "id": "p3",
+              "venstre": "skattetrekk",
+              "hoyre": "penger til skatt"
+            },
+            {
+              "id": "p4",
+              "venstre": "fradrag",
+              "hoyre": "gjør at skatten kan bli lavere"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Brutto, netto, trekk og fradrag.",
           "tilbakemeldingFeil": "Brutto er før trekk. Netto er på konto. Skattetrekk går til skatt."
@@ -78,11 +124,11 @@
       "tekst": "Ny SMS.\n\n«Du har penger til gode – logg inn her.»\n\nLenken ser feil ut. De har hastverk. De ber om kode.\n\nDette kan være {{svindel}}.",
       "varsel": {
         "type": "sms",
-        "fra": "Skatt-hjelp24 (øving)",
+        "fra": "Skatt-hjelp24",
         "innhold": "Du har penger til gode – logg inn her: skatt-hjelp24.eksempel"
       },
       "smsTraad": {
-        "kontakt": "Skatt-hjelp24 (øving)",
+        "kontakt": "Skatt-hjelp24",
         "meldinger": [
           {
             "fra": "veileder",
@@ -95,14 +141,16 @@
           "id": "nei-svindel",
           "tekst": "Slett. Jeg logger ikke inn her",
           "nesteSceneId": "e10-s03a",
-          "flagg": ["avslo_svindel"],
+          "flagg": [
+            "avslo_svindel"
+          ],
           "tilbakemelding": "Bra. Feil adresse, hastverk og be om kode er fare."
         },
         {
           "id": "ja-svindel",
           "tekst": "Åpne lenken",
           "nesteSceneId": "e10-s03b",
-          "tilbakemelding": "Adressen er feil. Dette er øving. Gå tilbake."
+          "tilbakemelding": "Adressen er feil. Gå tilbake."
         }
       ],
       "oppgaver": [
@@ -112,9 +160,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva viser at SMS-en kan være svindel?",
           "alternativer": [
-            { "id": "a", "tekst": "Feil adresse, hastverk, og de ber om kode" },
-            { "id": "b", "tekst": "Den kommer på mandag" },
-            { "id": "c", "tekst": "Den handler om skatt" }
+            {
+              "id": "a",
+              "tekst": "Feil adresse, hastverk, og de ber om kode"
+            },
+            {
+              "id": "b",
+              "tekst": "Den kommer på mandag"
+            },
+            {
+              "id": "c",
+              "tekst": "Den handler om skatt"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Sjekk adressen. Ikke gi bort koden.",
@@ -130,10 +187,10 @@
       "app": "meldinger",
       "media": {
         "bilde": "e10-s03-trygg.svg",
-        "bildeAlt": "En trygg innlogging. Riktig adresse. Øvingsversjon.",
+        "bildeAlt": "En trygg innlogging. Riktig adresse.",
         "lyd": "e10-s03-trygg.wav"
       },
-      "tekst": "Du logget ikke inn på den falske lenken.\n\nEkte innlogging skjer bare på den ekte adressen.\n\nI spillet bruker vi appen Skatteøving. Den er fiktiv.",
+      "tekst": "Du logget ikke inn på den falske lenken.\n\nEkte innlogging skjer bare på den ekte adressen.\n\nI spillet bruker vi appen Skatteøving.",
       "valg": [
         {
           "id": "til-login-a",
@@ -162,10 +219,10 @@
       "app": "hjem",
       "media": {
         "bilde": "e10-s03-trygg.svg",
-        "bildeAlt": "En side som ikke er ekte. Øvingsversjon.",
+        "bildeAlt": "En side som ikke er ekte.",
         "lyd": "e10-s03-trygg.wav"
       },
-      "tekst": "Adressen er feil.\n\nDette er øving. Ingen ekte innlogging skjedde.\n\nNeste gang: sjekk adressen. Ikke send koden.",
+      "tekst": "Adressen er feil.\n\nIngen ekte innlogging skjedde.\n\nNeste gang: sjekk adressen. Ikke send koden.",
       "valg": [
         {
           "id": "til-login-b",
@@ -181,9 +238,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva gjør du neste gang?",
           "alternativer": [
-            { "id": "a", "tekst": "Sjekker adressen. Logger ikke inn via SMS-lenke." },
-            { "id": "b", "tekst": "Sender koden med en gang." },
-            { "id": "c", "tekst": "Trykker på alle lenker." }
+            {
+              "id": "a",
+              "tekst": "Sjekker adressen. Logger ikke inn via SMS-lenke."
+            },
+            {
+              "id": "b",
+              "tekst": "Sender koden med en gang."
+            },
+            {
+              "id": "c",
+              "tekst": "Trykker på alle lenker."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Sjekk adressen først.",
@@ -199,21 +265,21 @@
       "app": "skatt",
       "media": {
         "bilde": "e10-s04-login.svg",
-        "bildeAlt": "Innlogging i den fiktive appen Skatteøving.",
+        "bildeAlt": "Innlogging i appen Skatteøving.",
         "lyd": "e10-s04-login.wav"
       },
-      "tekst": "Åpne Skatteøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet. Koden kommer som SMS.\n\nKoden er 482193. Dette er øving.",
+      "tekst": "Åpne Skatteøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet. Koden kommer som SMS.\n\nKoden er 482193.",
       "varsel": {
         "type": "sms",
-        "fra": "Skatteøving (øving)",
-        "innhold": "Engangskode: 482193. Ikke del koden. Øvingsversjon."
+        "fra": "Skatteøving",
+        "innhold": "Engangskode: 482193. Ikke del koden."
       },
       "smsTraad": {
-        "kontakt": "Skatteøving (øving)",
+        "kontakt": "Skatteøving",
         "meldinger": [
           {
             "fra": "veileder",
-            "tekst": "Engangskode: 482193. Ikke del koden med andre. Dette er øving."
+            "tekst": "Engangskode: 482193. Ikke del koden med andre."
           }
         ]
       },
@@ -230,8 +296,15 @@
           "type": "sorter_setning",
           "id": "e10-s04-ss",
           "instruksjon": "Trykk på trinnene i riktig rekkefølge.",
-          "biter": ["Startside.", "Logg inn.", "Velg metode.", "Skriv nummer og kode.", "Min side.", "Skattekort."],
-          "tilbakemeldingRiktig": "Riktig. Slik logger du inn i øvingen.",
+          "biter": [
+            "Startside.",
+            "Logg inn.",
+            "Velg metode.",
+            "Skriv nummer og kode.",
+            "Min side.",
+            "Skattekort."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik logger du inn .",
           "tilbakemeldingFeil": "Start med Startside. Deretter Logg inn. Så metode, kode, Min side, Skattekort."
         }
       ]
@@ -262,9 +335,33 @@
           "id": "e10-s05-ft",
           "instruksjon": "Velg månedslønn, inntekt hittil og måneder igjen. Bruk tallene for personen du spiller.",
           "felt": [
-            { "id": "ml", "ledetekst": "Månedslønn", "nokkel": "maanedslonn", "distraktorer": [10000, 80000] },
-            { "id": "ih", "ledetekst": "Inntekt hittil i år", "nokkel": "inntektHittil", "distraktorer": [0, 450000] },
-            { "id": "mi", "ledetekst": "Måneder igjen av året", "nokkel": "maanederIgjen", "distraktorer": [12, 1] }
+            {
+              "id": "ml",
+              "ledetekst": "Månedslønn",
+              "nokkel": "maanedslonn",
+              "distraktorer": [
+                10000,
+                80000
+              ]
+            },
+            {
+              "id": "ih",
+              "ledetekst": "Inntekt hittil i år",
+              "nokkel": "inntektHittil",
+              "distraktorer": [
+                0,
+                450000
+              ]
+            },
+            {
+              "id": "mi",
+              "ledetekst": "Måneder igjen av året",
+              "nokkel": "maanederIgjen",
+              "distraktorer": [
+                12,
+                1
+              ]
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Du fant tallene.",
           "tilbakemeldingFeil": "Se e-posten og personen du spiller. Prøv igjen."
@@ -298,9 +395,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva kan skje hvis du ikke endrer skattekortet?",
           "alternativer": [
-            { "id": "a", "tekst": "Du kan betale for mye eller for lite skatt." },
-            { "id": "b", "tekst": "Du mister jobben med en gang." },
-            { "id": "c", "tekst": "Ingenting. Skatt fikser seg selv." }
+            {
+              "id": "a",
+              "tekst": "Du kan betale for mye eller for lite skatt."
+            },
+            {
+              "id": "b",
+              "tekst": "Du mister jobben med en gang."
+            },
+            {
+              "id": "c",
+              "tekst": "Ingenting. Skatt fikser seg selv."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. For mye trekk, eller restskatt senere.",
@@ -314,9 +420,18 @@
           "lydManus": "Hei. Jeg heter Mona. I fjor endret jeg ikke skattekortet. Da ble det trukket for lite skatt. Neste år måtte jeg betale restskatt. Restskatt er skatt du skylder, fordi trekket var for lavt.",
           "spoersmal": "Hva er restskatt?",
           "alternativer": [
-            { "id": "a", "tekst": "Skatt du må betale neste år, fordi det ble trukket for lite." },
-            { "id": "b", "tekst": "Ekstra lønn i juli." },
-            { "id": "c", "tekst": "En type bussbillett." }
+            {
+              "id": "a",
+              "tekst": "Skatt du må betale neste år, fordi det ble trukket for lite."
+            },
+            {
+              "id": "b",
+              "tekst": "Ekstra lønn i juli."
+            },
+            {
+              "id": "c",
+              "tekst": "En type bussbillett."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Restskatt kommer når trekk var for lavt.",
@@ -332,7 +447,7 @@
       "app": "skatt",
       "media": {
         "bilde": "e10-s07-bekreft.svg",
-        "bildeAlt": "En kvittering for nytt skattekort i øvingsappen.",
+        "bildeAlt": "En kvittering for nytt skattekort i appen.",
         "lyd": "e10-s07-bekreft.wav"
       },
       "tekst": "I Skatteøving: se beregning.\n\n{{trygdeavgift|Trygdeavgift}} av lønn. {{trinnskatt|Trinnskatt}} i trinn. Skatt på alminnelig inntekt.\n\nSkatte + kort = skattekort. Trygde + avgift = trygdeavgift.\n\nHvis du tjener mer, må du endre.\n\nBekreft i appen. Eller gå videre uten å endre.",
@@ -342,7 +457,7 @@
           "tekst": "Jeg har bekreftet. Avslutt episoden",
           "nesteSceneId": "oppsummering",
           "visHvisFlagg": "endret_skattekort",
-          "tilbakemelding": "Nytt skattekort er laget i øvingen. Arbeidsgiveren henter det automatisk."
+          "tilbakemelding": "Nytt skattekort er laget . Arbeidsgiveren henter det automatisk."
         },
         {
           "id": "ferdig-ikke",
@@ -358,7 +473,11 @@
           "id": "e10-s07-ob",
           "instruksjon": "Velg ordet som passer.",
           "setning": "Hvis du tjener mer, _____ du endre skattekortet.",
-          "ord": ["må", "har", "var"],
+          "ord": [
+            "må",
+            "har",
+            "var"
+          ],
           "riktig": "må",
           "tilbakemeldingRiktig": "Riktig. Må + infinitiv: må endre.",
           "tilbakemeldingFeil": "Bruk må: Hvis du tjener mer, må du endre."

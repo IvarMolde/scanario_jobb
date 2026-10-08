@@ -47,7 +47,7 @@ export function Telefon() {
       <div
         className={brukTelefon ? 'telefon-ramme telefon-aktiv' : 'telefon-ramme'}
         role="region"
-        aria-label="Øvingstelefon"
+        aria-label="Telefon"
       >
         <div className="telefon-skjerm">
           <Statuslinje dag={dag} klokkeslett={klokke} />

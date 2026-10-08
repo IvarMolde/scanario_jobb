@@ -4,14 +4,39 @@
   "tittel": "Den første lønnsslippen",
   "ingress": "Slutten av første måned. Du leser lønnsslippen, sjekker trekk og finner en feil.",
   "startSceneId": "e11-s01",
-  "tillatteFlagg": ["oppdaget_lonnsfeil"],
-  "ordIds": ["brutto", "netto", "skattetrekk", "feriepenger", "overtid", "timelonn", "skattekort", "frikort"],
+  "tillatteFlagg": [
+    "oppdaget_lonnsfeil"
+  ],
+  "ordIds": [
+    "brutto",
+    "netto",
+    "skattetrekk",
+    "feriepenger",
+    "overtid",
+    "timelonn",
+    "skattekort",
+    "frikort"
+  ],
   "oppsummering": [
-    { "tekst": "Leste lønnsslippen for november." },
-    { "tekst": "Hadde endret skattekort. Trekket følger beregningen.", "visHvisFlagg": "endret_skattekort" },
-    { "tekst": "Hadde ikke endret skattekort. Trekket ble for høyt eller for lavt.", "visHvisIkkeFlagg": "endret_skattekort" },
-    { "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.", "visHvisFlagg": "oppdaget_lonnsfeil" },
-    { "tekst": "Sendte ikke en tydelig e-post om overtiden.", "visHvisIkkeFlagg": "oppdaget_lonnsfeil" }
+    {
+      "tekst": "Leste lønnsslippen for november."
+    },
+    {
+      "tekst": "Hadde endret skattekort. Trekket følger beregningen.",
+      "visHvisFlagg": "endret_skattekort"
+    },
+    {
+      "tekst": "Hadde ikke endret skattekort. Trekket ble for høyt eller for lavt.",
+      "visHvisIkkeFlagg": "endret_skattekort"
+    },
+    {
+      "tekst": "Fant manglende overtid og sendte høflig e-post til lønnskontoret.",
+      "visHvisFlagg": "oppdaget_lonnsfeil"
+    },
+    {
+      "tekst": "Sendte ikke en tydelig e-post om overtiden.",
+      "visHvisIkkeFlagg": "oppdaget_lonnsfeil"
+    }
   ],
   "scener": [
     {
@@ -28,21 +53,21 @@
       "tekst": "Slutten av første måned.\n\nE-post fra lønnskontoret.\n\nLønnsslippen din for november er klar.\n\nÅpne appen Lønn.",
       "varsel": {
         "type": "epost",
-        "fra": "Lønnskontoret (øving)",
+        "fra": "Lønnskontoret",
         "innhold": "Lønnsslippen din for november er klar."
       },
       "epost": {
         "id": "e11-lonn-klar",
-        "fra": "Mona Lie, lønnskontoret (øvingsnavn)",
+        "fra": "Mona Lie, lønnskontoret",
         "emne": "Lønnsslippen din for november er klar",
-        "innhold": "Hei. Lønnsslippen din for november er klar i appen Lønn. Dette er øvingsversjon. Vennlig hilsen Mona Lie"
+        "innhold": "Hei. Lønnsslippen din for november er klar i appen Lønn. Vennlig hilsen Mona Lie"
       },
       "kalenderhendelse": {
         "id": "e11-timeliste",
         "tittel": "Timeliste november",
         "dag": "November",
         "tid": "128 t + 4 t overtid",
-        "sted": "Se Kalender. Øvingsversjon."
+        "sted": "Se Kalender."
       },
       "valg": [
         {
@@ -98,9 +123,21 @@
           "id": "e11-s02a-ma",
           "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "brutto", "hoyre": "lønn før trekk" },
-            { "id": "p2", "venstre": "netto", "hoyre": "på konto" },
-            { "id": "p3", "venstre": "skattetrekk", "hoyre": "til skatt" }
+            {
+              "id": "p1",
+              "venstre": "brutto",
+              "hoyre": "lønn før trekk"
+            },
+            {
+              "id": "p2",
+              "venstre": "netto",
+              "hoyre": "på konto"
+            },
+            {
+              "id": "p3",
+              "venstre": "skattetrekk",
+              "hoyre": "til skatt"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Brutto minus trekk blir netto.",
           "tilbakemeldingFeil": "Brutto er før trekk. Netto er på konto."
@@ -134,9 +171,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvorfor kan trekket være feil?",
           "alternativer": [
-            { "id": "a", "tekst": "Skattekortet ble ikke endret etter ny lønn." },
-            { "id": "b", "tekst": "Bussen var sen." },
-            { "id": "c", "tekst": "Navnet er feil stavet." }
+            {
+              "id": "a",
+              "tekst": "Skattekortet ble ikke endret etter ny lønn."
+            },
+            {
+              "id": "b",
+              "tekst": "Bussen var sen."
+            },
+            {
+              "id": "c",
+              "tekst": "Navnet er feil stavet."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Ny lønn krever ofte nytt skattekort.",
@@ -204,9 +250,18 @@
           "instruksjon": "Velg brutto uten overtid for personen du spiller.",
           "spoersmal": "Hva er 128 timer ganger timelønna di?",
           "alternativer": [
-            { "id": "a", "tekst": "Olena 25 600 kr. Taras 26 880 kr. Sofiia 26 240 kr." },
-            { "id": "b", "tekst": "100 kr for alle" },
-            { "id": "c", "tekst": "450 000 kr for alle" }
+            {
+              "id": "a",
+              "tekst": "Olena 25 600 kr. Taras 26 880 kr. Sofiia 26 240 kr."
+            },
+            {
+              "id": "b",
+              "tekst": "100 kr for alle"
+            },
+            {
+              "id": "c",
+              "tekst": "450 000 kr for alle"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Timer ganger timelønn.",
@@ -245,18 +300,44 @@
           "kanal": "epost",
           "emne": "Spørsmål om overtid, november",
           "hilsen": [
-            { "id": "h1", "tekst": "Hei Mona.", "hoflig": true },
-            { "id": "h2", "tekst": "Hallo.", "hoflig": false }
+            {
+              "id": "h1",
+              "tekst": "Hei Mona.",
+              "hoflig": true
+            },
+            {
+              "id": "h2",
+              "tekst": "Hallo.",
+              "hoflig": false
+            }
           ],
           "innhold": [
-            { "id": "i1", "tekst": "Kan du sjekke overtiden for november? Jeg lurer på om fire timer mangler på slippen.", "hoflig": true },
-            { "id": "i2", "tekst": "Dere har glemt alt. Fiks nå.", "hoflig": false }
+            {
+              "id": "i1",
+              "tekst": "Kan du sjekke overtiden for november? Jeg lurer på om fire timer mangler på slippen.",
+              "hoflig": true
+            },
+            {
+              "id": "i2",
+              "tekst": "Dere har glemt alt. Fiks nå.",
+              "hoflig": false
+            }
           ],
           "avslutning": [
-            { "id": "a1", "tekst": "Vennlig hilsen [navn].", "hoflig": true },
-            { "id": "a2", "tekst": "[navn]", "hoflig": false }
+            {
+              "id": "a1",
+              "tekst": "Vennlig hilsen [navn].",
+              "hoflig": true
+            },
+            {
+              "id": "a2",
+              "tekst": "[navn]",
+              "hoflig": false
+            }
           ],
-          "flaggHoflig": ["oppdaget_lonnsfeil"],
+          "flaggHoflig": [
+            "oppdaget_lonnsfeil"
+          ],
           "flaggUhoflig": [],
           "nesteHoflig": "e11-s06",
           "nesteUhoflig": "e11-s06",
@@ -294,9 +375,18 @@
           "lydManus": "Hei. Feriepenger er 10,2 prosent av lønna. Du tjener dem i år. Du får dem neste år, når du har ferie.",
           "spoersmal": "Når får du feriepengene?",
           "alternativer": [
-            { "id": "a", "tekst": "Neste år. De opptjenes i år." },
-            { "id": "b", "tekst": "Hver fredag sammen med kaffen." },
-            { "id": "c", "tekst": "Aldri." }
+            {
+              "id": "a",
+              "tekst": "Neste år. De opptjenes i år."
+            },
+            {
+              "id": "b",
+              "tekst": "Hver fredag sammen med kaffen."
+            },
+            {
+              "id": "c",
+              "tekst": "Aldri."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. 10,2 prosent. Du får dem neste år.",
@@ -330,7 +420,7 @@
           "id": "avslutt-e11",
           "tekst": "Avslutt Jobbreisen",
           "nesteSceneId": "slutt",
-          "tilbakemelding": "Du er ferdig med hele øvingsløpet."
+          "tilbakemelding": "Du er ferdig med hele Jobbreisen."
         }
       ],
       "oppgaver": [
@@ -339,9 +429,21 @@
           "id": "e11-s07-ma",
           "instruksjon": "Trykk først på uttrykket til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "per time", "hoyre": "for hver time" },
-            { "id": "p2", "venstre": "for november", "hoyre": "denne måneden" },
-            { "id": "p3", "venstre": "hittil i år", "hoyre": "fra januar til nå" }
+            {
+              "id": "p1",
+              "venstre": "per time",
+              "hoyre": "for hver time"
+            },
+            {
+              "id": "p2",
+              "venstre": "for november",
+              "hoyre": "denne måneden"
+            },
+            {
+              "id": "p3",
+              "venstre": "hittil i år",
+              "hoyre": "fra januar til nå"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Per, for og hittil i år.",
           "tilbakemeldingFeil": "Per time = hver time. For november = måneden. Hittil i år = fra januar."
@@ -350,7 +452,14 @@
           "type": "sorter_setning",
           "id": "e11-s07-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["Kan", "du", "sjekke", "lønnsslippen", "for", "november?"],
+          "biter": [
+            "Kan",
+            "du",
+            "sjekke",
+            "lønnsslippen",
+            "for",
+            "november?"
+          ],
           "tilbakemeldingRiktig": "Riktig. Et høflig spørsmål.",
           "tilbakemeldingFeil": "Start med Kan du sjekke. Deretter lønnsslippen for november?"
         }

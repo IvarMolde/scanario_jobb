@@ -18,8 +18,7 @@ export function LonnsslippDokument({ slipp, klikkbar, valgtFelt, onFelt }: Props
   )
 
   return (
-    <article className="lonnsslipp-dokument" aria-label="Lønnsslipp, øvingsversjon">
-      <p className="ovingsmerke">Øvingsversjon · ikke et ekte lønnsdokument</p>
+    <article className="lonnsslipp-dokument" aria-label="Lønnsslipp">
       {felt(
         'arbeidsgiver',
         <>

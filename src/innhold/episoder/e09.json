@@ -4,15 +4,44 @@
   "tittel": "Reisen til jobb og første dag",
   "ingress": "Du planlegger bussen med buffer, sender beskjed ved forsinkelse, leser arbeidsavtalen og møter på første dag.",
   "startSceneId": "e09-s01",
-  "tillatteFlagg": ["kom_presis", "sendte_beskjed_om_forsinkelse"],
-  "ordIds": ["klokka", "reisetid", "holdeplass", "bytte", "forsinkelse", "arbeidsavtale", "stillingsprosent", "arbeidstid", "proveetid", "buffer"],
+  "tillatteFlagg": [
+    "kom_presis",
+    "sendte_beskjed_om_forsinkelse"
+  ],
+  "ordIds": [
+    "klokka",
+    "reisetid",
+    "holdeplass",
+    "bytte",
+    "forsinkelse",
+    "arbeidsavtale",
+    "stillingsprosent",
+    "arbeidstid",
+    "proveetid",
+    "buffer"
+  ],
   "oppsummering": [
-    { "tekst": "Brukte Reiseplanleggeren. Så avganger, reisetid og ankomst." },
-    { "tekst": "Regnet ut når du må gå hjemmefra, med buffer.", "visHvisFlagg": "kom_presis" },
-    { "tekst": "Gikk hjemmefra for sent, eller valgte en buss uten nok buffer.", "visHvisIkkeFlagg": "kom_presis" },
-    { "tekst": "Sendte beskjed da bussen var forsinket.", "visHvisFlagg": "sendte_beskjed_om_forsinkelse" },
-    { "tekst": "Leste en forenklet arbeidsavtale og takket ja." },
-    { "tekst": "Hilste på første arbeidsdag og stilte et spørsmål." }
+    {
+      "tekst": "Brukte Reiseplanleggeren. Så avganger, reisetid og ankomst."
+    },
+    {
+      "tekst": "Regnet ut når du må gå hjemmefra, med buffer.",
+      "visHvisFlagg": "kom_presis"
+    },
+    {
+      "tekst": "Gikk hjemmefra for sent, eller valgte en buss uten nok buffer.",
+      "visHvisIkkeFlagg": "kom_presis"
+    },
+    {
+      "tekst": "Sendte beskjed da bussen var forsinket.",
+      "visHvisFlagg": "sendte_beskjed_om_forsinkelse"
+    },
+    {
+      "tekst": "Leste en forenklet arbeidsavtale og takket ja."
+    },
+    {
+      "tekst": "Hilste på første arbeidsdag og stilte et spørsmål."
+    }
   ],
   "scener": [
     {
@@ -23,7 +52,7 @@
       "app": "reise",
       "media": {
         "bilde": "e09-s01-rute.svg",
-        "bildeAlt": "En fiktiv rutetabell med linjenummer og holdeplasser i Molde.",
+        "bildeAlt": "En rutetabell med linjenummer og holdeplasser i Molde.",
         "lyd": "e09-s01-rute.wav"
       },
       "tekst": "I morgen er første arbeidsdag.\n\nÅpne Reiseplanleggeren.\n\nVelg Fra og Til. Holdeplassene er: Årølia skole, Årø flyplass, Kviltorp skole, Bergmo omsorgssenter og Molde rutebilstasjon.\n\nSe {{holdeplass|holdeplassen}} og {{klokka}}.\n\nDu trenger ti minutter ekstra. Det er {{buffer}}.\n\nNoen ruter har {{bytte}}.",
@@ -41,7 +70,9 @@
           "id": "e09-s01-rp",
           "instruksjon": "Velg en avgang som kommer minst ti minutter før du skal være der.",
           "bufferMin": 10,
-          "flagg": ["kom_presis"],
+          "flagg": [
+            "kom_presis"
+          ],
           "tilbakemeldingRiktig": "Riktig. Du kommer før tiden, med buffer.",
           "tilbakemeldingFeil": "Se ankomsten. Du trenger ti minutter før start. Velg en tidligere buss, eller gå likevel."
         },
@@ -51,9 +82,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva betyr buffer her?",
           "alternativer": [
-            { "id": "a", "tekst": "Ekstra tid, så du ikke kommer for sent" },
-            { "id": "b", "tekst": "En type bussbillett" },
-            { "id": "c", "tekst": "Navnet på holdeplassen" }
+            {
+              "id": "a",
+              "tekst": "Ekstra tid, så du ikke kommer for sent"
+            },
+            {
+              "id": "b",
+              "tekst": "En type bussbillett"
+            },
+            {
+              "id": "c",
+              "tekst": "Navnet på holdeplassen"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Buffer er ekstra tid.",
@@ -75,7 +115,7 @@
       "tekst": "Varsel: Bussen er {{forsinkelse|forsinket}}.\n\nSend SMS til Kari Strand.\n\nSi hei. Si at bussen er forsinket. Si at du kommer så fort du kan.",
       "varsel": {
         "type": "sms",
-        "fra": "Rutevarsel (øving)",
+        "fra": "Rutevarsel",
         "innhold": "Linjen er femten minutter forsinket."
       },
       "smsTraad": {
@@ -83,7 +123,7 @@
         "meldinger": [
           {
             "fra": "veileder",
-            "tekst": "Hei. Velkommen i dag. Si ifra hvis noe skjer. Vennlig hilsen Kari Strand (øvingsnavn)"
+            "tekst": "Hei. Velkommen i dag. Si ifra hvis noe skjer. Vennlig hilsen Kari Strand"
           }
         ]
       },
@@ -94,18 +134,44 @@
           "id": "e09-s02-bm",
           "instruksjon": "Bygg en høflig SMS om forsinkelsen.",
           "hilsen": [
-            { "id": "h1", "tekst": "Hei Kari.", "hoflig": true },
-            { "id": "h2", "tekst": "Hallo.", "hoflig": false }
+            {
+              "id": "h1",
+              "tekst": "Hei Kari.",
+              "hoflig": true
+            },
+            {
+              "id": "h2",
+              "tekst": "Hallo.",
+              "hoflig": false
+            }
           ],
           "innhold": [
-            { "id": "i1", "tekst": "Bussen er forsinket. Jeg kommer så fort jeg kan.", "hoflig": true },
-            { "id": "i2", "tekst": "Sen. Kommer når jeg kommer.", "hoflig": false }
+            {
+              "id": "i1",
+              "tekst": "Bussen er forsinket. Jeg kommer så fort jeg kan.",
+              "hoflig": true
+            },
+            {
+              "id": "i2",
+              "tekst": "Sen. Kommer når jeg kommer.",
+              "hoflig": false
+            }
           ],
           "avslutning": [
-            { "id": "a1", "tekst": "Vennlig hilsen [navn].", "hoflig": true },
-            { "id": "a2", "tekst": "[navn]", "hoflig": false }
+            {
+              "id": "a1",
+              "tekst": "Vennlig hilsen [navn].",
+              "hoflig": true
+            },
+            {
+              "id": "a2",
+              "tekst": "[navn]",
+              "hoflig": false
+            }
           ],
-          "flaggHoflig": ["sendte_beskjed_om_forsinkelse"],
+          "flaggHoflig": [
+            "sendte_beskjed_om_forsinkelse"
+          ],
           "flaggUhoflig": [],
           "nesteHoflig": "e09-s03a",
           "nesteUhoflig": "e09-s03b",
@@ -191,9 +257,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvorfor svarer Kari bare «Ok»?",
           "alternativer": [
-            { "id": "a", "tekst": "Meldingen din var for kort eller brå." },
-            { "id": "b", "tekst": "Hun er alltid sint." },
-            { "id": "c", "tekst": "Du fikk ikke jobben." }
+            {
+              "id": "a",
+              "tekst": "Meldingen din var for kort eller brå."
+            },
+            {
+              "id": "b",
+              "tekst": "Hun er alltid sint."
+            },
+            {
+              "id": "c",
+              "tekst": "Du fikk ikke jobben."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. En kort melding kan gi et kort svar.",
@@ -216,12 +291,12 @@
       "varsel": {
         "type": "epost",
         "fra": "Kari Strand",
-        "innhold": "Jobbtilbud – øvingsversjon"
+        "innhold": "Jobbtilbud"
       },
       "epost": {
         "id": "e09-tilbud",
-        "fra": "Kari Strand (øvingsnavn)",
-        "emne": "Jobbtilbud – øvingsversjon",
+        "fra": "Kari Strand",
+        "emne": "Jobbtilbud",
         "innhold": "Hei. Vi tilbyr deg jobben. Stillingsprosent: 80 %. Arbeidstid: klokka 09.00 til 15.30. Prøvetid: seks måneder. Månedslønn: Olena 25 600 kr. Taras 26 880 kr. Sofiia 26 240 kr. Svar ja hvis du tar jobben. Vennlig hilsen Kari Strand"
       },
       "valg": [
@@ -247,9 +322,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvor lang er prøvetiden?",
           "alternativer": [
-            { "id": "a", "tekst": "Seks måneder" },
-            { "id": "b", "tekst": "En uke" },
-            { "id": "c", "tekst": "Ti år" }
+            {
+              "id": "a",
+              "tekst": "Seks måneder"
+            },
+            {
+              "id": "b",
+              "tekst": "En uke"
+            },
+            {
+              "id": "c",
+              "tekst": "Ti år"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Prøvetid er seks måneder.",
@@ -260,9 +344,21 @@
           "id": "e09-s04-ma",
           "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "stillingsprosent", "hoyre": "hvor stor del av en full stilling, her 80 %" },
-            { "id": "p2", "venstre": "arbeidstid", "hoyre": "når du skal jobbe, klokka 09.00 til 15.30" },
-            { "id": "p3", "venstre": "prøvetid", "hoyre": "en periode i starten, her seks måneder" }
+            {
+              "id": "p1",
+              "venstre": "stillingsprosent",
+              "hoyre": "hvor stor del av en full stilling, her 80 %"
+            },
+            {
+              "id": "p2",
+              "venstre": "arbeidstid",
+              "hoyre": "når du skal jobbe, klokka 09.00 til 15.30"
+            },
+            {
+              "id": "p3",
+              "venstre": "prøvetid",
+              "hoyre": "en periode i starten, her seks måneder"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Prosent, tid og prøvetid.",
           "tilbakemeldingFeil": "Stillingsprosent = 80 %. Arbeidstid = 09.00–15.30. Prøvetid = seks måneder."
@@ -296,9 +392,18 @@
           "instruksjon": "Velg det høflige du sier første dag.",
           "spoersmal": "Hva sier du når du kommer?",
           "alternativer": [
-            { "id": "a", "tekst": "God morgen. Hyggelig å være her. Hvor er garderoben?" },
-            { "id": "b", "tekst": "Hvor er kaffen. Jeg går." },
-            { "id": "c", "tekst": "Ingenting. Sett deg uten å si hei." }
+            {
+              "id": "a",
+              "tekst": "God morgen. Hyggelig å være her. Hvor er garderoben?"
+            },
+            {
+              "id": "b",
+              "tekst": "Hvor er kaffen. Jeg går."
+            },
+            {
+              "id": "c",
+              "tekst": "Ingenting. Sett deg uten å si hei."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Hils. Si at du er glad for å være her. Spør om garderoben.",
@@ -310,9 +415,18 @@
           "instruksjon": "Velg et godt spørsmål første dag.",
           "spoersmal": "Hva spør du om?",
           "alternativer": [
-            { "id": "a", "tekst": "Hvem er sjefens samboer?" },
-            { "id": "b", "tekst": "Hvem kan jeg spørre hvis jeg lurer på noe?" },
-            { "id": "c", "tekst": "Kan jeg gå hjem nå?" }
+            {
+              "id": "a",
+              "tekst": "Hvem er sjefens samboer?"
+            },
+            {
+              "id": "b",
+              "tekst": "Hvem kan jeg spørre hvis jeg lurer på noe?"
+            },
+            {
+              "id": "c",
+              "tekst": "Kan jeg gå hjem nå?"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Det er et godt spørsmål første dag.",
@@ -346,10 +460,26 @@
           "id": "e09-s06-ma",
           "instruksjon": "Trykk først på uttrykket til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "på jobb", "hoyre": "sted: der du arbeider" },
-            { "id": "p2", "venstre": "i Molde", "hoyre": "sted: byen" },
-            { "id": "p3", "venstre": "til bussen", "hoyre": "retning: dit du går" },
-            { "id": "p4", "venstre": "klokka tolv", "hoyre": "tid: 12.00" }
+            {
+              "id": "p1",
+              "venstre": "på jobb",
+              "hoyre": "sted: der du arbeider"
+            },
+            {
+              "id": "p2",
+              "venstre": "i Molde",
+              "hoyre": "sted: byen"
+            },
+            {
+              "id": "p3",
+              "venstre": "til bussen",
+              "hoyre": "retning: dit du går"
+            },
+            {
+              "id": "p4",
+              "venstre": "klokka tolv",
+              "hoyre": "tid: 12.00"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. På og i = sted. Til = retning. Klokka = tid.",
           "tilbakemeldingFeil": "På jobb og i Molde er sted. Til bussen er retning. Klokka tolv er tid."
@@ -359,7 +489,11 @@
           "id": "e09-s06-ob",
           "instruksjon": "Velg ordet som passer i setningen.",
           "setning": "I morgen _____ jeg på jobb klokka ni.",
-          "ord": ["skal", "har", "var"],
+          "ord": [
+            "skal",
+            "har",
+            "var"
+          ],
           "riktig": "skal",
           "tilbakemeldingRiktig": "Riktig. Skal = en plan i framtiden.",
           "tilbakemeldingFeil": "Bruk skal når det er en plan: I morgen skal jeg på jobb."
@@ -368,7 +502,14 @@
           "type": "sorter_setning",
           "id": "e09-s06-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["Jeg", "kommer", "til", "å", "lære", "mer."],
+          "biter": [
+            "Jeg",
+            "kommer",
+            "til",
+            "å",
+            "lære",
+            "mer."
+          ],
           "tilbakemeldingRiktig": "Riktig. Jeg kommer til å lære mer.",
           "tilbakemeldingFeil": "Start med Jeg kommer til å. Deretter lære mer."
         }

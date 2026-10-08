@@ -4,13 +4,34 @@
   "tittel": "Finn jobber",
   "ingress": "Du søker i jobbportalen. Du lagrer søket og slår på varsel. Så leser du trefflisten og nøkkelord i annonsene.",
   "startSceneId": "e03-s01",
-  "tillatteFlagg": ["har_lagret_sok"],
-  "ordIds": ["sokeord", "heltid", "deltid", "soknadsfrist", "stillingsprosent", "tiltredelse", "kontaktperson", "lagermedarbeider", "butikkmedarbeider"],
+  "tillatteFlagg": [
+    "har_lagret_sok"
+  ],
+  "ordIds": [
+    "sokeord",
+    "heltid",
+    "deltid",
+    "soknadsfrist",
+    "stillingsprosent",
+    "tiltredelse",
+    "kontaktperson",
+    "lagermedarbeider",
+    "butikkmedarbeider"
+  ],
   "oppsummering": [
-    { "tekst": "Valgte søkeord, sted og heltid eller deltid." },
-    { "tekst": "Lagret søket og slo på varsel.", "visHvisFlagg": "har_lagret_sok" },
-    { "tekst": "Leste trefflisten: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson." },
-    { "tekst": "Øvde på sammensatte ord, datoer og tall i annonsetekst." }
+    {
+      "tekst": "Valgte søkeord, sted og heltid eller deltid."
+    },
+    {
+      "tekst": "Lagret søket og slo på varsel.",
+      "visHvisFlagg": "har_lagret_sok"
+    },
+    {
+      "tekst": "Leste trefflisten: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson."
+    },
+    {
+      "tekst": "Øvde på sammensatte ord, datoer og tall i annonsetekst."
+    }
   ],
   "scener": [
     {
@@ -40,8 +61,8 @@
           "instruksjon": "Les påstanden. Velg sant eller usant.",
           "paastand": "Jobbportalen viser ekte stillinger hos NAV.",
           "riktigErSant": false,
-          "tilbakemeldingRiktig": "Riktig. Dette er en øvingsversjon. Ingen ekte jobber.",
-          "tilbakemeldingFeil": "Les banneret. Dette er øving, ikke en ekte jobbportal."
+          "tilbakemeldingRiktig": "Riktig. Jobbportalen er en del av spillet.",
+          "tilbakemeldingFeil": "Jobbportalen er en del av spillet, ikke en ekte NAV-side."
         },
         {
           "type": "flervalg",
@@ -49,9 +70,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva er et søkeord?",
           "alternativer": [
-            { "id": "a", "tekst": "Et passord til e-post" },
-            { "id": "b", "tekst": "Et ord du skriver når du leter etter jobb, for eksempel butikk" },
-            { "id": "c", "tekst": "Navnet på veilederen" }
+            {
+              "id": "a",
+              "tekst": "Et passord til e-post"
+            },
+            {
+              "id": "b",
+              "tekst": "Et ord du skriver når du leter etter jobb, for eksempel butikk"
+            },
+            {
+              "id": "c",
+              "tekst": "Navnet på veilederen"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Søkeord kan være butikk, lager eller helse.",
@@ -85,26 +115,67 @@
           "id": "e03-s02-ps",
           "instruksjon": "Velg søkeord, sted og heltid eller deltid. Kryss av for varsel. Trykk Lagre søket.",
           "sokkeord": [
-            { "id": "butikk", "tekst": "butikk" },
-            { "id": "lager", "tekst": "lager" },
-            { "id": "helse", "tekst": "helse" },
-            { "id": "renhold", "tekst": "renhold" }
+            {
+              "id": "butikk",
+              "tekst": "butikk"
+            },
+            {
+              "id": "lager",
+              "tekst": "lager"
+            },
+            {
+              "id": "helse",
+              "tekst": "helse"
+            },
+            {
+              "id": "renhold",
+              "tekst": "renhold"
+            }
           ],
           "steder": [
-            { "id": "molde", "tekst": "Molde" },
-            { "id": "vestnes", "tekst": "Vestnes" },
-            { "id": "aukra", "tekst": "Aukra" }
+            {
+              "id": "molde",
+              "tekst": "Molde"
+            },
+            {
+              "id": "vestnes",
+              "tekst": "Vestnes"
+            },
+            {
+              "id": "aukra",
+              "tekst": "Aukra"
+            }
           ],
           "stillinger": [
-            { "id": "heltid", "tekst": "Heltid" },
-            { "id": "deltid", "tekst": "Deltid" }
+            {
+              "id": "heltid",
+              "tekst": "Heltid"
+            },
+            {
+              "id": "deltid",
+              "tekst": "Deltid"
+            }
           ],
           "riktigPerPerson": {
-            "olena": { "sokkeordId": "butikk", "stedId": "molde", "stillingId": "heltid" },
-            "taras": { "sokkeordId": "lager", "stedId": "molde", "stillingId": "heltid" },
-            "sofiia": { "sokkeordId": "helse", "stedId": "molde", "stillingId": "deltid" }
+            "olena": {
+              "sokkeordId": "butikk",
+              "stedId": "molde",
+              "stillingId": "heltid"
+            },
+            "taras": {
+              "sokkeordId": "lager",
+              "stedId": "molde",
+              "stillingId": "heltid"
+            },
+            "sofiia": {
+              "sokkeordId": "helse",
+              "stedId": "molde",
+              "stillingId": "deltid"
+            }
           },
-          "flagg": ["har_lagret_sok"],
+          "flagg": [
+            "har_lagret_sok"
+          ],
           "tilbakemeldingRiktig": "Riktig. Søket er lagret, og varsel er på. Se treffene i portalen.",
           "tilbakemeldingFeil": "Tenk på personens yrkesmål. Velg Molde. Husk å slå på varsel."
         }
@@ -136,10 +207,26 @@
           "id": "e03-s03-ma",
           "instruksjon": "Koble ordet til forklaringen.",
           "par": [
-            { "id": "p1", "venstre": "søknadsfrist", "hoyre": "siste dag du kan søke" },
-            { "id": "p2", "venstre": "stillingsprosent", "hoyre": "hvor mye du skal jobbe, for eksempel 100 %" },
-            { "id": "p3", "venstre": "tiltredelse", "hoyre": "når du skal begynne i jobben" },
-            { "id": "p4", "venstre": "kontaktperson", "hoyre": "personen du kan spørre i bedriften" }
+            {
+              "id": "p1",
+              "venstre": "søknadsfrist",
+              "hoyre": "siste dag du kan søke"
+            },
+            {
+              "id": "p2",
+              "venstre": "stillingsprosent",
+              "hoyre": "hvor mye du skal jobbe, for eksempel 100 %"
+            },
+            {
+              "id": "p3",
+              "venstre": "tiltredelse",
+              "hoyre": "når du skal begynne i jobben"
+            },
+            {
+              "id": "p4",
+              "venstre": "kontaktperson",
+              "hoyre": "personen du kan spørre i bedriften"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Disse fire ordene står i nesten alle annonser.",
           "tilbakemeldingFeil": "Prøv igjen. Frist = siste dag. Prosent = hvor mye. Tiltredelse = start."
@@ -163,7 +250,7 @@
           "id": "til-dato",
           "tekst": "Øv på datoer og tall",
           "nesteSceneId": "e03-s05",
-          "tilbakemelding": "Siste øving: dato og prosent."
+          "tilbakemelding": "Siste oppgave: dato og prosent."
         }
       ],
       "oppgaver": [
@@ -172,7 +259,11 @@
           "id": "e03-s04-ob",
           "instruksjon": "Velg ordet som passer.",
           "setning": "Vi søker _____ lagermedarbeider til lageret.",
-          "ord": ["en", "den", "et"],
+          "ord": [
+            "en",
+            "den",
+            "et"
+          ],
           "riktig": "en",
           "tilbakemeldingRiktig": "Riktig. «En lagermedarbeider» er ubestemt form. Jobben er ny for deg.",
           "tilbakemeldingFeil": "Når vi presenterer en jobb, sier vi «en lagermedarbeider», ikke «den»."
@@ -183,9 +274,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvilke to ord er lagermedarbeider satt sammen av?",
           "alternativer": [
-            { "id": "a", "tekst": "lage + rmedarbeider" },
-            { "id": "b", "tekst": "lager + medarbeider" },
-            { "id": "c", "tekst": "lag + ermedarbeider" }
+            {
+              "id": "a",
+              "tekst": "lage + rmedarbeider"
+            },
+            {
+              "id": "b",
+              "tekst": "lager + medarbeider"
+            },
+            {
+              "id": "c",
+              "tekst": "lag + ermedarbeider"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Mange yrker er sammensatte ord: butikk + medarbeider.",
@@ -220,9 +320,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva betyr 15.11.2026 i en annonse?",
           "alternativer": [
-            { "id": "a", "tekst": "15. november 2026" },
-            { "id": "b", "tekst": "11. mai 2026" },
-            { "id": "c", "tekst": "klokka 15.11" }
+            {
+              "id": "a",
+              "tekst": "15. november 2026"
+            },
+            {
+              "id": "b",
+              "tekst": "11. mai 2026"
+            },
+            {
+              "id": "c",
+              "tekst": "klokka 15.11"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. I Norge skriver vi dag.måned.år.",

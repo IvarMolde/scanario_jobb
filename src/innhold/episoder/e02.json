@@ -4,14 +4,39 @@
   "tittel": "Hvem er jeg som arbeidstaker?",
   "ingress": "Linn ber om oppdatert CV. Du sorterer erfaring og velger egenskaper. Så skriver du CV-setninger med har jobbet og jobbet.",
   "startSceneId": "e02-s01",
-  "tillatteFlagg": ["har_oppdatert_cv", "cv_mangler_referanse"],
-  "ordIds": ["cv", "erfaring", "utdanning", "sertifikat", "egenskap", "punktlig", "referanse", "perfektum", "preteritum"],
+  "tillatteFlagg": [
+    "har_oppdatert_cv",
+    "cv_mangler_referanse"
+  ],
+  "ordIds": [
+    "cv",
+    "erfaring",
+    "utdanning",
+    "sertifikat",
+    "egenskap",
+    "punktlig",
+    "referanse",
+    "perfektum",
+    "preteritum"
+  ],
   "oppsummering": [
-    { "tekst": "Leste e-post fra veilederen om oppdatert CV." },
-    { "tekst": "Sorterte erfaring, utdanning, språk og sertifikater." },
-    { "tekst": "Valgte egenskaper og koblet dem til eksempler." },
-    { "tekst": "Oppdaterte CV-en med preteritum og perfektum.", "visHvisFlagg": "har_oppdatert_cv" },
-    { "tekst": "Sendte CV uten referanse. Linn minnet om referanse.", "visHvisFlagg": "cv_mangler_referanse" }
+    {
+      "tekst": "Leste e-post fra veilederen om oppdatert CV."
+    },
+    {
+      "tekst": "Sorterte erfaring, utdanning, språk og sertifikater."
+    },
+    {
+      "tekst": "Valgte egenskaper og koblet dem til eksempler."
+    },
+    {
+      "tekst": "Oppdaterte CV-en med preteritum og perfektum.",
+      "visHvisFlagg": "har_oppdatert_cv"
+    },
+    {
+      "tekst": "Sendte CV uten referanse. Linn minnet om referanse.",
+      "visHvisFlagg": "cv_mangler_referanse"
+    }
   ],
   "scener": [
     {
@@ -33,7 +58,7 @@
       },
       "epost": {
         "id": "e02-cv",
-        "fra": "Linn Holm (øvingsversjon)",
+        "fra": "Linn Holm",
         "emne": "Kan du oppdatere CVen?",
         "innhold": "Hei. Etter møtet vårt trenger jeg en oppdatert CV. Skriv hva du har gjort i jobb, hvilken skole du har, språk og sertifikater. Husk en referanse hvis du kan. Hilsen Linn"
       },
@@ -61,9 +86,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva skal stå i CVen, ifølge Linn?",
           "alternativer": [
-            { "id": "a", "tekst": "Bare navn og telefon" },
-            { "id": "b", "tekst": "Jobb, skole, språk, sertifikater og gjerne referanse" },
-            { "id": "c", "tekst": "Bare hobbyer" }
+            {
+              "id": "a",
+              "tekst": "Bare navn og telefon"
+            },
+            {
+              "id": "b",
+              "tekst": "Jobb, skole, språk, sertifikater og gjerne referanse"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare hobbyer"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. CV er et oversiktsdokument over det du kan og har gjort.",
@@ -97,24 +131,96 @@
           "id": "e02-s02-sk",
           "instruksjon": "Trykk først på en opplysning. Trykk deretter på riktig boks.",
           "kategorier": [
-            { "id": "erfaring", "tittel": "Erfaring" },
-            { "id": "utdanning", "tittel": "Utdanning" },
-            { "id": "sprak", "tittel": "Språk" },
-            { "id": "sertifikater", "tittel": "Sertifikater" }
+            {
+              "id": "erfaring",
+              "tittel": "Erfaring"
+            },
+            {
+              "id": "utdanning",
+              "tittel": "Utdanning"
+            },
+            {
+              "id": "sprak",
+              "tittel": "Språk"
+            },
+            {
+              "id": "sertifikater",
+              "tittel": "Sertifikater"
+            }
           ],
           "elementer": [
-            { "id": "o1", "tekst": "Tre år i sportsbutikk", "kategori": "erfaring", "personId": "olena" },
-            { "id": "o2", "tekst": "Videregående skole i Polen", "kategori": "utdanning", "personId": "olena" },
-            { "id": "o3", "tekst": "Polsk, norsk og engelsk", "kategori": "sprak", "personId": "olena" },
-            { "id": "o4", "tekst": "Hygienebevis", "kategori": "sertifikater", "personId": "olena" },
-            { "id": "t1", "tekst": "To år som hjelpearbeider på bygg", "kategori": "erfaring", "personId": "taras" },
-            { "id": "t2", "tekst": "Yrkesfag bygg", "kategori": "utdanning", "personId": "taras" },
-            { "id": "t3", "tekst": "Bulgarsk og norsk", "kategori": "sprak", "personId": "taras" },
-            { "id": "t4", "tekst": "Førerkort klasse B", "kategori": "sertifikater", "personId": "taras" },
-            { "id": "s1", "tekst": "To år med omsorg i hjemmet", "kategori": "erfaring", "personId": "sofiia" },
-            { "id": "s2", "tekst": "Kurs i omsorg", "kategori": "utdanning", "personId": "sofiia" },
-            { "id": "s3", "tekst": "Ukrainsk, norsk og polsk", "kategori": "sprak", "personId": "sofiia" },
-            { "id": "s4", "tekst": "Førstehjelpskurs", "kategori": "sertifikater", "personId": "sofiia" }
+            {
+              "id": "o1",
+              "tekst": "Tre år i sportsbutikk",
+              "kategori": "erfaring",
+              "personId": "olena"
+            },
+            {
+              "id": "o2",
+              "tekst": "Videregående skole i Polen",
+              "kategori": "utdanning",
+              "personId": "olena"
+            },
+            {
+              "id": "o3",
+              "tekst": "Polsk, norsk og engelsk",
+              "kategori": "sprak",
+              "personId": "olena"
+            },
+            {
+              "id": "o4",
+              "tekst": "Hygienebevis",
+              "kategori": "sertifikater",
+              "personId": "olena"
+            },
+            {
+              "id": "t1",
+              "tekst": "To år som hjelpearbeider på bygg",
+              "kategori": "erfaring",
+              "personId": "taras"
+            },
+            {
+              "id": "t2",
+              "tekst": "Yrkesfag bygg",
+              "kategori": "utdanning",
+              "personId": "taras"
+            },
+            {
+              "id": "t3",
+              "tekst": "Bulgarsk og norsk",
+              "kategori": "sprak",
+              "personId": "taras"
+            },
+            {
+              "id": "t4",
+              "tekst": "Førerkort klasse B",
+              "kategori": "sertifikater",
+              "personId": "taras"
+            },
+            {
+              "id": "s1",
+              "tekst": "To år med omsorg i hjemmet",
+              "kategori": "erfaring",
+              "personId": "sofiia"
+            },
+            {
+              "id": "s2",
+              "tekst": "Kurs i omsorg",
+              "kategori": "utdanning",
+              "personId": "sofiia"
+            },
+            {
+              "id": "s3",
+              "tekst": "Ukrainsk, norsk og polsk",
+              "kategori": "sprak",
+              "personId": "sofiia"
+            },
+            {
+              "id": "s4",
+              "tekst": "Førstehjelpskurs",
+              "kategori": "sertifikater",
+              "personId": "sofiia"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Du har delt opplysningene i fire deler. Slik bygger du en CV.",
           "tilbakemeldingFeil": "Prøv igjen. Jobb = erfaring. Skole = utdanning. Språk = språk. Førerkort og kursbevis = sertifikater."
@@ -149,15 +255,78 @@
           "min": 3,
           "max": 3,
           "egenskaper": [
-            { "id": "noyaktig", "ord": "nøyaktig", "eksempel": "Jeg er nøyaktig. Jeg sjekker prisen to ganger.", "personer": ["olena"] },
-            { "id": "blid", "ord": "blid", "eksempel": "Jeg er blid. Jeg smiler til kundene.", "personer": ["olena"] },
-            { "id": "punktlig", "ord": "punktlig", "eksempel": "Jeg er punktlig. Jeg kommer alltid i god tid.", "personer": ["olena"] },
-            { "id": "sterk", "ord": "sterk", "eksempel": "Jeg er sterk. Jeg kan løfte tunge esker.", "personer": ["taras"] },
-            { "id": "rolig", "ord": "rolig", "eksempel": "Jeg er rolig. Jeg blir ikke sint når det er travelt.", "personer": ["taras"] },
-            { "id": "palitelig", "ord": "pålitelig", "eksempel": "Jeg er pålitelig. Jeg gjør det jeg har sagt.", "personer": ["taras"] },
-            { "id": "omsorgsfull", "ord": "omsorgsfull", "eksempel": "Jeg er omsorgsfull. Jeg passer godt på andre.", "personer": ["sofiia"] },
-            { "id": "talmodig", "ord": "tålmodig", "eksempel": "Jeg er tålmodig. Jeg forklarer sakte.", "personer": ["sofiia"] },
-            { "id": "ansvarlig", "ord": "ansvarlig", "eksempel": "Jeg er ansvarlig. Jeg sier ifra hvis noe er galt.", "personer": ["sofiia"] }
+            {
+              "id": "noyaktig",
+              "ord": "nøyaktig",
+              "eksempel": "Jeg er nøyaktig. Jeg sjekker prisen to ganger.",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "blid",
+              "ord": "blid",
+              "eksempel": "Jeg er blid. Jeg smiler til kundene.",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "punktlig",
+              "ord": "punktlig",
+              "eksempel": "Jeg er punktlig. Jeg kommer alltid i god tid.",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "sterk",
+              "ord": "sterk",
+              "eksempel": "Jeg er sterk. Jeg kan løfte tunge esker.",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "rolig",
+              "ord": "rolig",
+              "eksempel": "Jeg er rolig. Jeg blir ikke sint når det er travelt.",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "palitelig",
+              "ord": "pålitelig",
+              "eksempel": "Jeg er pålitelig. Jeg gjør det jeg har sagt.",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "omsorgsfull",
+              "ord": "omsorgsfull",
+              "eksempel": "Jeg er omsorgsfull. Jeg passer godt på andre.",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "talmodig",
+              "ord": "tålmodig",
+              "eksempel": "Jeg er tålmodig. Jeg forklarer sakte.",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "ansvarlig",
+              "ord": "ansvarlig",
+              "eksempel": "Jeg er ansvarlig. Jeg sier ifra hvis noe er galt.",
+              "personer": [
+                "sofiia"
+              ]
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Du bruker adjektiv og et konkret eksempel. Slik forklarer vi egenskaper i Norge.",
           "tilbakemeldingFeil": "Velg egenskapene som står på personens liste. Koble deretter hvert ord til setningen som passer."
@@ -181,15 +350,22 @@
           "id": "med-referanse",
           "tekst": "Legg inn referanse og lagre",
           "nesteSceneId": "e02-s06",
-          "flagg": ["har_oppdatert_cv"],
-          "fjernFlagg": ["cv_mangler_referanse"],
+          "flagg": [
+            "har_oppdatert_cv"
+          ],
+          "fjernFlagg": [
+            "cv_mangler_referanse"
+          ],
           "tilbakemelding": "Bra. CVen har nå også en referanse."
         },
         {
           "id": "uten-referanse",
           "tekst": "Lagre uten referanse",
           "nesteSceneId": "e02-s05",
-          "flagg": ["har_oppdatert_cv", "cv_mangler_referanse"],
+          "flagg": [
+            "har_oppdatert_cv",
+            "cv_mangler_referanse"
+          ],
           "tilbakemelding": "CVen er oppdatert, men referanse mangler."
         }
       ],
@@ -203,20 +379,64 @@
               "id": "erfaring",
               "tittel": "Erfaring",
               "alternativer": [
-                { "id": "e-o", "tekst": "Jeg har jobbet i sportsbutikk i tre år.", "personer": ["olena"] },
-                { "id": "e-t", "tekst": "Jeg har jobbet på bygg i to år.", "personer": ["taras"] },
-                { "id": "e-s", "tekst": "Jeg har hjulpet eldre hjemme i to år.", "personer": ["sofiia"] },
-                { "id": "e-x", "tekst": "Jeg har jobbe i butikk.", "personer": [] }
+                {
+                  "id": "e-o",
+                  "tekst": "Jeg har jobbet i sportsbutikk i tre år.",
+                  "personer": [
+                    "olena"
+                  ]
+                },
+                {
+                  "id": "e-t",
+                  "tekst": "Jeg har jobbet på bygg i to år.",
+                  "personer": [
+                    "taras"
+                  ]
+                },
+                {
+                  "id": "e-s",
+                  "tekst": "Jeg har hjulpet eldre hjemme i to år.",
+                  "personer": [
+                    "sofiia"
+                  ]
+                },
+                {
+                  "id": "e-x",
+                  "tekst": "Jeg har jobbe i butikk.",
+                  "personer": []
+                }
               ]
             },
             {
               "id": "utdanning",
               "tittel": "Utdanning",
               "alternativer": [
-                { "id": "u-o", "tekst": "Jeg har videregående skole fra Polen.", "personer": ["olena"] },
-                { "id": "u-t", "tekst": "Jeg har yrkesfag bygg fra Bulgaria.", "personer": ["taras"] },
-                { "id": "u-s", "tekst": "Jeg har kurs i omsorg.", "personer": ["sofiia"] },
-                { "id": "u-x", "tekst": "Jeg går på skole i går.", "personer": [] }
+                {
+                  "id": "u-o",
+                  "tekst": "Jeg har videregående skole fra Polen.",
+                  "personer": [
+                    "olena"
+                  ]
+                },
+                {
+                  "id": "u-t",
+                  "tekst": "Jeg har yrkesfag bygg fra Bulgaria.",
+                  "personer": [
+                    "taras"
+                  ]
+                },
+                {
+                  "id": "u-s",
+                  "tekst": "Jeg har kurs i omsorg.",
+                  "personer": [
+                    "sofiia"
+                  ]
+                },
+                {
+                  "id": "u-x",
+                  "tekst": "Jeg går på skole i går.",
+                  "personer": []
+                }
               ]
             }
           ],
@@ -244,7 +464,7 @@
       },
       "epost": {
         "id": "e02-ref",
-        "fra": "Linn Holm (øvingsversjon)",
+        "fra": "Linn Holm",
         "emne": "Kan du legge inn en referanse?",
         "innhold": "Hei. Takk for CVen. Kan du legge inn en referanse? Det kan være en tidligere leder. Hilsen Linn"
       },
@@ -253,15 +473,21 @@
           "id": "legg-inn-ref",
           "tekst": "Legg inn referanse",
           "nesteSceneId": "e02-s06",
-          "flagg": ["har_oppdatert_cv"],
-          "fjernFlagg": ["cv_mangler_referanse"],
+          "flagg": [
+            "har_oppdatert_cv"
+          ],
+          "fjernFlagg": [
+            "cv_mangler_referanse"
+          ],
           "tilbakemelding": "Bra. Nå har CVen en referanse."
         },
         {
           "id": "ga-videre-uten",
           "tekst": "Gå videre uten referanse",
           "nesteSceneId": "e02-s06",
-          "flagg": ["cv_mangler_referanse"],
+          "flagg": [
+            "cv_mangler_referanse"
+          ],
           "tilbakemelding": "Du kan gå videre. Senere i kurset husker vi at referanse mangler."
         }
       ],
@@ -272,9 +498,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva er en referanse i en CV?",
           "alternativer": [
-            { "id": "a", "tekst": "Et telefonnummer til NAV" },
-            { "id": "b", "tekst": "En person som kan si at du er en god arbeidstaker" },
-            { "id": "c", "tekst": "En stillingsannonse" }
+            {
+              "id": "a",
+              "tekst": "Et telefonnummer til NAV"
+            },
+            {
+              "id": "b",
+              "tekst": "En person som kan si at du er en god arbeidstaker"
+            },
+            {
+              "id": "c",
+              "tekst": "En stillingsannonse"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. I Norge spør arbeidsgiver ofte om en tidligere leder.",
@@ -293,7 +528,7 @@
         "bildeAlt": "Setningene Jeg jobbet og Jeg har jobbet side om side.",
         "lyd": "e02-s06-verb.wav"
       },
-      "tekst": "Siste øving: verbform.\n\nPreteritum: Jeg jobbet i butikk i 2022.\n\nPerfektum: Jeg har jobbet i butikk i tre år.",
+      "tekst": "Siste oppgave: verbform.\n\nPreteritum: Jeg jobbet i butikk i 2022.\n\nPerfektum: Jeg har jobbet i butikk i tre år.",
       "valg": [
         {
           "id": "avslutt-e02",
@@ -308,7 +543,11 @@
           "id": "e02-s06-ob",
           "instruksjon": "Velg verbet som passer.",
           "setning": "Jeg _____ i butikk i tre år. Jeg kan det fortsatt.",
-          "ord": ["har jobbet", "jobbet", "skal jobbe"],
+          "ord": [
+            "har jobbet",
+            "jobbet",
+            "skal jobbe"
+          ],
           "riktig": "har jobbet",
           "tilbakemeldingRiktig": "Riktig. Perfektum (har + verb) bruker vi når erfaringen fortsatt gjelder.",
           "tilbakemeldingFeil": "Når jobben fortsatt er en del av deg, sier vi «jeg har jobbet», ikke bare «jeg jobbet»."

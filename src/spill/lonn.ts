@@ -67,8 +67,8 @@ export function skattetrekkDenneMaaned(
     return {
       belop: trekk,
       beskrivelse: skattekort.trekkprosent
-        ? `Omtrentlig trekk ${skattekort.trekkprosent} % (øving)`
-        : 'Omtrentlig månedstrekk (øving)',
+        ? `Omtrentlig trekk ${skattekort.trekkprosent} %`
+        : 'Omtrentlig månedstrekk',
     }
   }
   if (forhold.skattekortType === 'frikort') {
@@ -129,7 +129,7 @@ export function byggLonnsslipp(
     hittilFeriegrunnlag: forhold.inntektHittil + brutto,
     kontakt: arbeid.kontaktLonn,
     forenkling:
-      'Dette er en øvingsversjon. Ingen formue, rentefradrag, arbeidsfradrag for unge eller innsatssone. Månedstrekket er omtrentlig. Ekte tabelltrekk varierer.',
+      'Månedstrekket er omtrentlig. Tabelltrekk kan variere.',
   }
 }
 

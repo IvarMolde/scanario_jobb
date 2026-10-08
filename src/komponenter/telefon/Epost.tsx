@@ -9,7 +9,7 @@ export function Epost({ eposter }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>E-post</h1>
-        <p>Øvingsinnboks. Ingen ekte e-post.</p>
+        <p>Innboksen din.</p>
       </header>
       {eposter.length === 0 ? (
         <p className="tom-tilstand">Innboksen er tom.</p>

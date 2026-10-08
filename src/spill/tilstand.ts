@@ -216,10 +216,9 @@ function unik<T>(liste: T[]): T[] {
 function velkomstEpost(): Epost {
   return {
     id: 'ovingsmail',
-    fra: 'Øvingsversjon – Jobbreisen',
-    emne: 'Velkommen til øvingsversjonen',
-    innhold:
-      'Dette er en øvingsapp. Ingen ekte e-post blir sendt. Ingen personopplysninger blir lagret utenfor denne enheten.',
+    fra: 'Jobbreisen',
+    emne: 'Velkommen',
+    innhold: 'Hei. Her øver du på å søke jobb. Lykke til!',
   }
 }
 
@@ -390,7 +389,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
             ...state.eposter,
             {
               id: `elev-epost-${crypto.randomUUID()}`,
-              fra: 'Deg (øving)',
+              fra: 'Deg',
               emne: handling.emne ?? 'Spørsmål om lønn',
               innhold: handling.tekst,
             },

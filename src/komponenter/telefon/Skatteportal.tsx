@@ -24,7 +24,7 @@ type Steg =
   | 'beregning'
   | 'kvittering'
 
-const METODER = ['Kodebrikke (øving)', 'SMS-kode (øving)', 'Passord (øving)'] as const
+const METODER = ['Kodebrikke', 'SMS-kode', 'Passord'] as const
 
 export function Skatteportal() {
   const { innhold, person, fremdrift, lagreSkattekort } = useSpill()
@@ -42,7 +42,7 @@ export function Skatteportal() {
       <div>
         <header className="hjem-hode">
           <h1>Skatteøving</h1>
-          <p>Øvingsversjon. Ikke skatteetaten.no.</p>
+          <p>Se skattekortet ditt.</p>
         </header>
         <p>Velg en person først.</p>
       </div>
@@ -78,12 +78,12 @@ export function Skatteportal() {
           SØ
         </div>
         <h1>Skatteøving</h1>
-        <p>Øvingsversjon. Eget navn og eget utseende. Ikke skatteetaten.no. Ingenting sendes noe sted.</p>
+        <p>Se og endre skattekortet ditt.</p>
       </header>
 
       {steg === 'start' ? (
         <div>
-          <p>Her øver du på skattekort. Logg bare inn på ekte sider med den ekte adressen.</p>
+          <p>Her kan du se skattekortet og endre forventet inntekt.</p>
           <div className="handlinger">
             <button type="button" className="knapp" onClick={() => setSteg('metode')}>
               Logg inn
@@ -95,7 +95,6 @@ export function Skatteportal() {
       {steg === 'metode' ? (
         <div>
           <h2>Velg innloggingsmetode</h2>
-          <p>Alle knappene er fiktive.</p>
           <div className="valggruppe">
             {METODER.map((m) => (
               <button
@@ -138,7 +137,7 @@ export function Skatteportal() {
       {steg === 'min-side' ? (
         <div>
           <h2>Min side</h2>
-          <p>Du er innlogget som {person.fornavn}. Dette er øving.</p>
+          <p>Du er innlogget som {person.fornavn}.</p>
           <div className="handlinger">
             <button type="button" className="knapp" onClick={() => setSteg('kort')}>
               Skattekort
@@ -286,7 +285,7 @@ function LoginSkjema({
         const fnrOk = fnr.replaceAll(' ', '') === forventetFnr.replaceAll(' ', '')
         const kodeOk = kode.trim() === forventetKode
         if (!fnrOk || !kodeOk) {
-          onFeil('Feil nummer eller kode. Se personkortet og Meldinger. Dette er øving.')
+          onFeil('Feil nummer eller kode. Se personkortet og Meldinger.')
           return
         }
         onFeil(null)
@@ -295,11 +294,10 @@ function LoginSkjema({
     >
       <h2>Logg inn</h2>
       <p>
-        Skriv inn det fiktive fødselsnummeret til {person.fornavn}. Koden kommer som SMS i Meldinger.
-        Ingen ekte data.
+        Skriv inn fødselsnummeret til {person.fornavn}. Koden kommer som SMS i Meldinger.
       </p>
       <label htmlFor="skatt-fnr">
-        <span className="skjema-hjelp">Fødselsnummer (øving)</span>
+        <span className="skjema-hjelp">Fødselsnummer</span>
         <input
           id="skatt-fnr"
           value={fnr}

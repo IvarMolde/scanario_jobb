@@ -1,16 +1,52 @@
 {
   "holdeplasser": [
-    { "id": "aarolia-skole", "navn": "Årølia skole", "sone": "aarolia" },
-    { "id": "aaro-flyplass", "navn": "Årø flyplass", "sone": "aaro" },
-    { "id": "kviltorp-skole", "navn": "Kviltorp skole", "sone": "kviltorp" },
-    { "id": "bergmo-omsorg", "navn": "Bergmo omsorgssenter", "sone": "sentrum" },
-    { "id": "molde-rutebilstasjon", "navn": "Molde rutebilstasjon", "sone": "sentrum" }
+    {
+      "id": "aarolia-skole",
+      "navn": "Årølia skole",
+      "sone": "aarolia"
+    },
+    {
+      "id": "aaro-flyplass",
+      "navn": "Årø flyplass",
+      "sone": "aaro"
+    },
+    {
+      "id": "kviltorp-skole",
+      "navn": "Kviltorp skole",
+      "sone": "kviltorp"
+    },
+    {
+      "id": "bergmo-omsorg",
+      "navn": "Bergmo omsorgssenter",
+      "sone": "sentrum"
+    },
+    {
+      "id": "molde-rutebilstasjon",
+      "navn": "Molde rutebilstasjon",
+      "sone": "sentrum"
+    }
   ],
   "linjer": [
-    { "id": "linje-10", "nummer": "10", "navn": "Kviltorp–Sentrum" },
-    { "id": "linje-20", "nummer": "20", "navn": "Årølia–Sentrum" },
-    { "id": "linje-30", "nummer": "30", "navn": "Sentrum–Årø" },
-    { "id": "linje-40", "nummer": "40", "navn": "Sentrum–Bergmo" }
+    {
+      "id": "linje-10",
+      "nummer": "10",
+      "navn": "Kviltorp–Sentrum"
+    },
+    {
+      "id": "linje-20",
+      "nummer": "20",
+      "navn": "Årølia–Sentrum"
+    },
+    {
+      "id": "linje-30",
+      "nummer": "30",
+      "navn": "Sentrum–Årø"
+    },
+    {
+      "id": "linje-40",
+      "nummer": "40",
+      "navn": "Sentrum–Bergmo"
+    }
   ],
   "avganger": [
     {
@@ -125,21 +161,21 @@
       "til": "molde-rutebilstasjon",
       "ankomst": "09:00",
       "riktigAvgangId": "l10-0825",
-      "bedrift": "Havna Handel (øvingsversjon)"
+      "bedrift": "Havna Handel"
     },
     "taras": {
       "fra": "aarolia-skole",
       "til": "aaro-flyplass",
       "ankomst": "07:00",
       "riktigAvgangId": "l20-0610",
-      "bedrift": "Fjordlager AS (øvingsversjon)"
+      "bedrift": "Fjordlager AS"
     },
     "sofiia": {
       "fra": "molde-rutebilstasjon",
       "til": "bergmo-omsorg",
       "ankomst": "08:00",
       "riktigAvgangId": "l40-0740",
-      "bedrift": "Molde Omsorg (øvingsversjon)"
+      "bedrift": "Molde Omsorg"
     }
   }
 }

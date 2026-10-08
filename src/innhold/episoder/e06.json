@@ -4,13 +4,33 @@
   "tittel": "Søk jobben",
   "ingress": "Du vurderer match mot den valgte annonsen. Du bygger en søknad av ferdige avsnitt og retter en feil i utkastet.",
   "startSceneId": "e06-s01",
-  "tillatteFlagg": ["soknad_tilpasset"],
-  "ordIds": ["soknad", "fordi", "formelt", "avslag", "kompetanse", "logistikk", "match", "egenskap"],
+  "tillatteFlagg": [
+    "soknad_tilpasset"
+  ],
+  "ordIds": [
+    "soknad",
+    "fordi",
+    "formelt",
+    "avslag",
+    "kompetanse",
+    "logistikk",
+    "match",
+    "egenskap"
+  ],
   "oppsummering": [
-    { "tekst": "Vurderte CV-punkter mot annonsen med matchvurdering." },
-    { "tekst": "Bygget søknaden av innledning, hvorfor meg og avslutning.", "visHvisFlagg": "soknad_tilpasset" },
-    { "tekst": "Øvde på leddsetninger med fordi, som og at. Plasserte ikke i leddsetning." },
-    { "tekst": "Så forskjell på formelt og uformelt språk i en søknad." }
+    {
+      "tekst": "Vurderte CV-punkter mot annonsen med matchvurdering."
+    },
+    {
+      "tekst": "Bygget søknaden av innledning, hvorfor meg og avslutning.",
+      "visHvisFlagg": "soknad_tilpasset"
+    },
+    {
+      "tekst": "Øvde på leddsetninger med fordi, som og at. Plasserte ikke i leddsetning."
+    },
+    {
+      "tekst": "Så forskjell på formelt og uformelt språk i en søknad."
+    }
   ],
   "scener": [
     {
@@ -40,9 +60,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hva skal du legge vekt på i søknaden?",
           "alternativer": [
-            { "id": "a", "tekst": "Punkter fra CV-en som passer til annonsen" },
-            { "id": "b", "tekst": "Bare hobbyene dine" },
-            { "id": "c", "tekst": "Bare navnet på veilederen" }
+            {
+              "id": "a",
+              "tekst": "Punkter fra CV-en som passer til annonsen"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare hobbyene dine"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare navnet på veilederen"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Søknaden skal vise hvorfor du passer til denne jobben.",
@@ -53,7 +82,11 @@
           "id": "e06-s01-ob",
           "instruksjon": "Velg ordet som passer i setningen.",
           "setning": "Jeg søker jobben _____ jeg har relevant erfaring.",
-          "ord": ["fordi", "men", "eller"],
+          "ord": [
+            "fordi",
+            "men",
+            "eller"
+          ],
           "riktig": "fordi",
           "tilbakemeldingRiktig": "Riktig. Fordi innleder en leddsetning som gir grunn.",
           "tilbakemeldingFeil": "{{fordi}} forklarer hvorfor. Jeg søker fordi jeg har erfaring."
@@ -90,7 +123,11 @@
             "taras": "fjordlager",
             "sofiia": "molde-omsorg"
           },
-          "kategorier": ["kompetanse", "egenskaper", "logistikk"],
+          "kategorier": [
+            "kompetanse",
+            "egenskaper",
+            "logistikk"
+          ],
           "tilbakemeldingRiktig": "Bra. Nå vet du hvilke CV-punkter som passer i søknaden.",
           "tilbakemeldingFeil": "Se på personens erfaring og egenskaper. Vet ikke er ikke det riktige svaret."
         }
@@ -125,7 +162,11 @@
             {
               "id": "in1",
               "tekst": "Jeg viser til stillingsannonsen. Jeg søker jobben fordi jeg har erfaring som passer.",
-              "personer": ["olena", "taras", "sofiia"]
+              "personer": [
+                "olena",
+                "taras",
+                "sofiia"
+              ]
             },
             {
               "id": "in2",
@@ -142,17 +183,23 @@
             {
               "id": "hv1",
               "tekst": "Jeg har jobbet i sportsbutikk, og jeg er blid og punktlig. Nå vil jeg gjerne jobbe i matbutikk.",
-              "personer": ["olena"]
+              "personer": [
+                "olena"
+              ]
             },
             {
               "id": "hv2",
               "tekst": "Jeg har jobbet på bygg, og jeg er sterk og pålitelig. Jeg har førerkort klasse B.",
-              "personer": ["taras"]
+              "personer": [
+                "taras"
+              ]
             },
             {
               "id": "hv3",
               "tekst": "Jeg har jobbet i omsorg, og jeg er tålmodig og omsorgsfull. Jeg har førstehjelpskurs.",
-              "personer": ["sofiia"]
+              "personer": [
+                "sofiia"
+              ]
             },
             {
               "id": "hv4",
@@ -164,7 +211,11 @@
             {
               "id": "av1",
               "tekst": "Jeg håper at jeg hører fra dere. Vennlig hilsen [navn]",
-              "personer": ["olena", "taras", "sofiia"]
+              "personer": [
+                "olena",
+                "taras",
+                "sofiia"
+              ]
             },
             {
               "id": "av2",
@@ -172,7 +223,9 @@
               "personer": []
             }
           ],
-          "flagg": ["soknad_tilpasset"],
+          "flagg": [
+            "soknad_tilpasset"
+          ],
           "tilbakemeldingRiktig": "Bra. Du bruker formelt språk og punkter som passer til personen.",
           "tilbakemeldingFeil": "Velg avsnitt som passer til CV-en. Unngå hei, hade og kommandoer."
         }
@@ -206,9 +259,18 @@
           "tekst": "Jeg søker fordi jeg har ikke erfaring som passer.",
           "feilOrd": "ikke",
           "alternativer": [
-            { "id": "a", "tekst": "Jeg søker fordi jeg ikke har erfaring som passer." },
-            { "id": "b", "tekst": "Jeg søker fordi ikke jeg har erfaring som passer." },
-            { "id": "c", "tekst": "Jeg søker ikke fordi jeg har erfaring som passer." }
+            {
+              "id": "a",
+              "tekst": "Jeg søker fordi jeg ikke har erfaring som passer."
+            },
+            {
+              "id": "b",
+              "tekst": "Jeg søker fordi ikke jeg har erfaring som passer."
+            },
+            {
+              "id": "c",
+              "tekst": "Jeg søker ikke fordi jeg har erfaring som passer."
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. I leddsetning står ikke etter jeg: fordi jeg ikke har …",
@@ -218,7 +280,15 @@
           "type": "sorter_setning",
           "id": "e06-s04-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["Jeg", "håper", "at", "jeg", "hører", "fra", "dere."],
+          "biter": [
+            "Jeg",
+            "håper",
+            "at",
+            "jeg",
+            "hører",
+            "fra",
+            "dere."
+          ],
           "tilbakemeldingRiktig": "Riktig. At innleder en leddsetning: at jeg hører fra dere.",
           "tilbakemeldingFeil": "Start med Jeg håper. Deretter at jeg hører fra dere."
         }
@@ -251,9 +321,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvilken avslutning er formell?",
           "alternativer": [
-            { "id": "a", "tekst": "Hade da, ring meg." },
-            { "id": "b", "tekst": "Vennlig hilsen" },
-            { "id": "c", "tekst": "Yo!!!" }
+            {
+              "id": "a",
+              "tekst": "Hade da, ring meg."
+            },
+            {
+              "id": "b",
+              "tekst": "Vennlig hilsen"
+            },
+            {
+              "id": "c",
+              "tekst": "Yo!!!"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Vennlig hilsen er formelt. Det passer i en søknad.",
@@ -264,9 +343,21 @@
           "id": "e06-s05-ma",
           "instruksjon": "Trykk først på ordet til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "fordi", "hoyre": "gir en grunn" },
-            { "id": "p2", "venstre": "som", "hoyre": "forteller mer om et ord foran" },
-            { "id": "p3", "venstre": "at", "hoyre": "innleder en leddsetning etter håper eller vet" }
+            {
+              "id": "p1",
+              "venstre": "fordi",
+              "hoyre": "gir en grunn"
+            },
+            {
+              "id": "p2",
+              "venstre": "som",
+              "hoyre": "forteller mer om et ord foran"
+            },
+            {
+              "id": "p3",
+              "venstre": "at",
+              "hoyre": "innleder en leddsetning etter håper eller vet"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Fordi, som og at innleder leddsetninger.",
           "tilbakemeldingFeil": "Fordi = grunn. Som = mer info. At = etter håper eller vet."

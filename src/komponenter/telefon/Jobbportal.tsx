@@ -14,7 +14,7 @@ export function Jobbportal({ annonser, lagretSok }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>Jobbportal</h1>
-        <p>Øvingsversjon. Ingen ekte stillinger.</p>
+        <p>Søk etter stillinger.</p>
       </header>
       {lagretSok ? (
         <p className="tilbakemelding info" role="status">

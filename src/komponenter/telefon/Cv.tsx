@@ -12,7 +12,7 @@ export function Cv({ person, harOppdatert, manglerReferanse }: Props) {
       <div>
         <header className="hjem-hode">
           <h1>CV</h1>
-          <p>Øvingsversjon.</p>
+          <p>Din CV.</p>
         </header>
         <p className="tom-tilstand">Velg en person først.</p>
       </div>
@@ -23,7 +23,7 @@ export function Cv({ person, harOppdatert, manglerReferanse }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>CV</h1>
-        <p>Øvingsversjon. Ingen ekte personopplysninger.</p>
+        <p>Din CV.</p>
       </header>
       <article className="kort">
         <h2>

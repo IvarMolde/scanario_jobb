@@ -3,7 +3,7 @@
   "utbetalingsdato": "30.11.2026",
   "maanederIgjen": 2,
   "engangskode": "482193",
-  "kontaktLonn": "Mona Lie (øvingsnavn), lønnskontoret",
+  "kontaktLonn": "Mona Lie, lønnskontoret",
   "personer": {
     "olena": {
       "skattekortType": "frikort",
@@ -24,7 +24,7 @@
       "kontonummerSkjult": "**** 4321",
       "arbeidsgiver": {
         "navn": "Havna Handel",
-        "adresse": "Havnegata 4, 6413 Molde (øving)",
+        "adresse": "Havnegata 4, 6413 Molde",
         "orgnr": "999 111 222"
       }
     },
@@ -47,7 +47,7 @@
       "kontonummerSkjult": "**** 8877",
       "arbeidsgiver": {
         "navn": "Fjordlager",
-        "adresse": "Industriveien 12, 6415 Molde (øving)",
+        "adresse": "Industriveien 12, 6415 Molde",
         "orgnr": "999 222 333"
       }
     },
@@ -70,7 +70,7 @@
       "kontonummerSkjult": "**** 6655",
       "arbeidsgiver": {
         "navn": "Molde Omsorg",
-        "adresse": "Kirkegata 8, 6413 Molde (øving)",
+        "adresse": "Kirkegata 8, 6413 Molde",
         "orgnr": "999 333 444"
       }
     }

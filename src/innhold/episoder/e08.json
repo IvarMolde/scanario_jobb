@@ -4,14 +4,36 @@
   "tittel": "Jobbintervjuet",
   "ingress": "Du forbereder deg, øver på intervjusvar og stiller et spørsmål til arbeidsgiveren.",
   "startSceneId": "e08-s01",
-  "tillatteFlagg": ["forberedt_intervju"],
-  "ordIds": ["intervju", "erfaring", "cv", "hoflig", "punktlig", "hilse", "inversjon", "perfektum"],
+  "tillatteFlagg": [
+    "forberedt_intervju"
+  ],
+  "ordIds": [
+    "intervju",
+    "erfaring",
+    "cv",
+    "hoflig",
+    "punktlig",
+    "hilse",
+    "inversjon",
+    "perfektum"
+  ],
   "oppsummering": [
-    { "tekst": "Øvde på vanlige intervjuspørsmål og hva som er et godt svar." },
-    { "tekst": "Visste hva du tar med, og hvordan du hilser." },
-    { "tekst": "Svarte med hele setninger. Ikke for kort, og ikke for langt." },
-    { "tekst": "Stilte et spørsmål til arbeidsgiveren." },
-    { "tekst": "Du var forberedt til intervjuet.", "visHvisFlagg": "forberedt_intervju" }
+    {
+      "tekst": "Øvde på vanlige intervjuspørsmål og hva som er et godt svar."
+    },
+    {
+      "tekst": "Visste hva du tar med, og hvordan du hilser."
+    },
+    {
+      "tekst": "Svarte med hele setninger. Ikke for kort, og ikke for langt."
+    },
+    {
+      "tekst": "Stilte et spørsmål til arbeidsgiveren."
+    },
+    {
+      "tekst": "Du var forberedt til intervjuet.",
+      "visHvisFlagg": "forberedt_intervju"
+    }
   ],
   "scener": [
     {
@@ -40,9 +62,21 @@
           "id": "e08-s01-ma",
           "instruksjon": "Trykk først på spørsmålet til venstre. Trykk deretter på forklaringen til høyre.",
           "par": [
-            { "id": "p1", "venstre": "Fortell om deg selv", "hoyre": "Hvem du er, og hva du har gjort" },
-            { "id": "p2", "venstre": "Hvorfor vil du ha jobben?", "hoyre": "Hva som passer hos dem" },
-            { "id": "p3", "venstre": "Har du spørsmål til oss?", "hoyre": "Du kan spørre om arbeidstid" }
+            {
+              "id": "p1",
+              "venstre": "Fortell om deg selv",
+              "hoyre": "Hvem du er, og hva du har gjort"
+            },
+            {
+              "id": "p2",
+              "venstre": "Hvorfor vil du ha jobben?",
+              "hoyre": "Hva som passer hos dem"
+            },
+            {
+              "id": "p3",
+              "venstre": "Har du spørsmål til oss?",
+              "hoyre": "Du kan spørre om arbeidstid"
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Øv på disse tre spørsmålene.",
           "tilbakemeldingFeil": "Fortell om deg selv = hvem du er. Hvorfor = hvorfor jobben passer."
@@ -53,9 +87,18 @@
           "instruksjon": "Velg det beste svaret.",
           "spoersmal": "Hva er et godt intervjusvar?",
           "alternativer": [
-            { "id": "a", "tekst": "Ett ord. For eksempel: Butikk." },
-            { "id": "b", "tekst": "En hel setning om erfaring, uten å snakke for lenge." },
-            { "id": "c", "tekst": "En lang historie om hele livet." }
+            {
+              "id": "a",
+              "tekst": "Ett ord. For eksempel: Butikk."
+            },
+            {
+              "id": "b",
+              "tekst": "En hel setning om erfaring, uten å snakke for lenge."
+            },
+            {
+              "id": "c",
+              "tekst": "En lang historie om hele livet."
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. En hel setning. Ikke for kort. Ikke for langt.",
@@ -90,9 +133,18 @@
           "instruksjon": "Velg det du tar med.",
           "spoersmal": "Hva tar du med til intervjuet?",
           "alternativer": [
-            { "id": "a", "tekst": "CV og ID" },
-            { "id": "b", "tekst": "Middag og en høyttaler" },
-            { "id": "c", "tekst": "Ingenting" }
+            {
+              "id": "a",
+              "tekst": "CV og ID"
+            },
+            {
+              "id": "b",
+              "tekst": "Middag og en høyttaler"
+            },
+            {
+              "id": "c",
+              "tekst": "Ingenting"
+            }
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Ta med CV og ID.",
@@ -102,7 +154,14 @@
           "type": "sorter_setning",
           "id": "e08-s02-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["God", "morgen.", "Hyggelig", "å", "møte", "deg."],
+          "biter": [
+            "God",
+            "morgen.",
+            "Hyggelig",
+            "å",
+            "møte",
+            "deg."
+          ],
           "tilbakemeldingRiktig": "Riktig. God morgen. Hyggelig å møte deg.",
           "tilbakemeldingFeil": "Start med God morgen. Avslutt med Hyggelig å møte deg."
         }
@@ -119,7 +178,7 @@
         "bildeAlt": "Kari Strand sitter ved et bord og stiller spørsmål.",
         "lyd": "e08-s03-q.wav"
       },
-      "tekst": "Kari Strand (øvingsnavn) hilser.\n\nGod morgen. Hyggelig å møte deg.\n\nLytt. Velg et godt svar. Ikke for kort. Ikke for langt.",
+      "tekst": "Kari Strand hilser.\n\nGod morgen. Hyggelig å møte deg.\n\nLytt. Velg et godt svar. Ikke for kort. Ikke for langt.",
       "valg": [
         {
           "id": "til-q2",
@@ -136,15 +195,78 @@
           "spoersmal": "Fortell om deg selv.",
           "spoersmalLyd": "e08-s03-q.wav",
           "alternativer": [
-            { "id": "olena-kort", "tekst": "Butikk.", "kvalitet": "kort", "personer": ["olena"] },
-            { "id": "olena-langt", "tekst": "Jeg er født i 1994, og jeg har tre søsken, og jeg liker kaffe, og jeg har bodd mange steder, og jeg kan fortelle om hele livet mitt nå.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "I Polen jobbet jeg i sportsbutikk i tre år. Jeg har erfaring med kasse og kunder.", "kvalitet": "godt", "personer": ["olena"] },
-            { "id": "taras-kort", "tekst": "Bygg.", "kvalitet": "kort", "personer": ["taras"] },
-            { "id": "taras-langt", "tekst": "Jeg kan fortelle om alle husene jeg har bygget, og om bussen, og om været, og om alt jeg har gjort siden jeg var liten.", "kvalitet": "langt", "personer": ["taras"] },
-            { "id": "taras-godt", "tekst": "I Bulgaria jobbet jeg på bygg i to år. Jeg har førerkort. Nå vil jeg gjerne jobbe på lager.", "kvalitet": "godt", "personer": ["taras"] },
-            { "id": "sofiia-kort", "tekst": "Omsorg.", "kvalitet": "kort", "personer": ["sofiia"] },
-            { "id": "sofiia-langt", "tekst": "Jeg har hjulpet mange mennesker, og jeg kan fortelle om hver eneste dag, og om familien min, og om alt jeg tenker på jobben.", "kvalitet": "langt", "personer": ["sofiia"] },
-            { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre i to år. Jeg har kurs i omsorg og førstehjelp.", "kvalitet": "godt", "personer": ["sofiia"] }
+            {
+              "id": "olena-kort",
+              "tekst": "Butikk.",
+              "kvalitet": "kort",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-langt",
+              "tekst": "Jeg er født i 1994, og jeg har tre søsken, og jeg liker kaffe, og jeg har bodd mange steder, og jeg kan fortelle om hele livet mitt nå.",
+              "kvalitet": "langt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-godt",
+              "tekst": "I Polen jobbet jeg i sportsbutikk i tre år. Jeg har erfaring med kasse og kunder.",
+              "kvalitet": "godt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "taras-kort",
+              "tekst": "Bygg.",
+              "kvalitet": "kort",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-langt",
+              "tekst": "Jeg kan fortelle om alle husene jeg har bygget, og om bussen, og om været, og om alt jeg har gjort siden jeg var liten.",
+              "kvalitet": "langt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-godt",
+              "tekst": "I Bulgaria jobbet jeg på bygg i to år. Jeg har førerkort. Nå vil jeg gjerne jobbe på lager.",
+              "kvalitet": "godt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "sofiia-kort",
+              "tekst": "Omsorg.",
+              "kvalitet": "kort",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-langt",
+              "tekst": "Jeg har hjulpet mange mennesker, og jeg kan fortelle om hver eneste dag, og om familien min, og om alt jeg tenker på jobben.",
+              "kvalitet": "langt",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-godt",
+              "tekst": "I Ukraina jobbet jeg med eldre i to år. Jeg har kurs i omsorg og førstehjelp.",
+              "kvalitet": "godt",
+              "personer": [
+                "sofiia"
+              ]
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. En hel setning om erfaring. Det er et godt svar.",
           "tilbakemeldingFeil": "Ett ord er for kort. En lang historie er for mye. Si det viktigste."
@@ -179,15 +301,78 @@
           "spoersmal": "Hvorfor vil du ha denne jobben?",
           "spoersmalLyd": "e08-s04-q.wav",
           "alternativer": [
-            { "id": "olena-kort", "tekst": "Penger.", "kvalitet": "kort", "personer": ["olena"] },
-            { "id": "olena-langt", "tekst": "Jeg vil ha jobben fordi jeg trenger penger, og fordi bussen går, og fordi jeg liker Molde, og fordi jeg kan snakke lenge om dette.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "Jeg søker fordi jeg har jobbet i butikk, og fordi jeg er blid med kunder. Nå vil jeg gjerne jobbe i matbutikk.", "kvalitet": "godt", "personer": ["olena"] },
-            { "id": "taras-kort", "tekst": "Ja.", "kvalitet": "kort", "personer": ["taras"] },
-            { "id": "taras-langt", "tekst": "Jeg vil ha alle jobber, og jeg kan fortelle om hver stilling jeg har sett, og om alle vennene mine som også søker.", "kvalitet": "langt", "personer": ["taras"] },
-            { "id": "taras-godt", "tekst": "Jeg søker fordi jeg har jobbet på bygg, og fordi jeg har førerkort.", "kvalitet": "godt", "personer": ["taras"] },
-            { "id": "sofiia-kort", "tekst": "Helse.", "kvalitet": "kort", "personer": ["sofiia"] },
-            { "id": "sofiia-langt", "tekst": "Jeg kan snakke lenge om hvorfor omsorg er viktig i hele verden, og om alt jeg har lest, og om alle kursene.", "kvalitet": "langt", "personer": ["sofiia"] },
-            { "id": "sofiia-godt", "tekst": "Jeg søker fordi jeg har hjulpet eldre, og fordi jeg er tålmodig.", "kvalitet": "godt", "personer": ["sofiia"] }
+            {
+              "id": "olena-kort",
+              "tekst": "Penger.",
+              "kvalitet": "kort",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-langt",
+              "tekst": "Jeg vil ha jobben fordi jeg trenger penger, og fordi bussen går, og fordi jeg liker Molde, og fordi jeg kan snakke lenge om dette.",
+              "kvalitet": "langt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-godt",
+              "tekst": "Jeg søker fordi jeg har jobbet i butikk, og fordi jeg er blid med kunder. Nå vil jeg gjerne jobbe i matbutikk.",
+              "kvalitet": "godt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "taras-kort",
+              "tekst": "Ja.",
+              "kvalitet": "kort",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-langt",
+              "tekst": "Jeg vil ha alle jobber, og jeg kan fortelle om hver stilling jeg har sett, og om alle vennene mine som også søker.",
+              "kvalitet": "langt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-godt",
+              "tekst": "Jeg søker fordi jeg har jobbet på bygg, og fordi jeg har førerkort.",
+              "kvalitet": "godt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "sofiia-kort",
+              "tekst": "Helse.",
+              "kvalitet": "kort",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-langt",
+              "tekst": "Jeg kan snakke lenge om hvorfor omsorg er viktig i hele verden, og om alt jeg har lest, og om alle kursene.",
+              "kvalitet": "langt",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-godt",
+              "tekst": "Jeg søker fordi jeg har hjulpet eldre, og fordi jeg er tålmodig.",
+              "kvalitet": "godt",
+              "personer": [
+                "sofiia"
+              ]
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Du sier fordi, og du knytter svaret til erfaringen din.",
           "tilbakemeldingFeil": "Si hvorfor med en hel setning. Bruk fordi og erfaringen din."
@@ -222,15 +407,78 @@
           "spoersmal": "Hva har du gjort før?",
           "spoersmalLyd": "e08-s05-q.wav",
           "alternativer": [
-            { "id": "olena-kort", "tekst": "Jobbet.", "kvalitet": "kort", "personer": ["olena"] },
-            { "id": "olena-langt", "tekst": "Jeg har gjort så mye at jeg nesten ikke vet hvor jeg skal starte, og jeg kan telle opp hver dag på jobben i tre år.", "kvalitet": "langt", "personer": ["olena"] },
-            { "id": "olena-godt", "tekst": "I Polen jobbet jeg i sportsbutikk. Jeg har jobbet med kasse i tre år.", "kvalitet": "godt", "personer": ["olena"] },
-            { "id": "taras-kort", "tekst": "Bygde.", "kvalitet": "kort", "personer": ["taras"] },
-            { "id": "taras-langt", "tekst": "Jeg har løftet, båret, ryddet, ventet, kjørt og gjort alt mulig, og jeg kan fortsette lenge.", "kvalitet": "langt", "personer": ["taras"] },
-            { "id": "taras-godt", "tekst": "I Bulgaria jobbet jeg på bygg. Jeg har jobbet med sikkerhet og tunge løft.", "kvalitet": "godt", "personer": ["taras"] },
-            { "id": "sofiia-kort", "tekst": "Hjalp.", "kvalitet": "kort", "personer": ["sofiia"] },
-            { "id": "sofiia-langt", "tekst": "Jeg har hjulpet så mange at jeg kan snakke i en time om hver person jeg har møtt.", "kvalitet": "langt", "personer": ["sofiia"] },
-            { "id": "sofiia-godt", "tekst": "I Ukraina jobbet jeg med eldre. Jeg har hjulpet hjemme i to år.", "kvalitet": "godt", "personer": ["sofiia"] }
+            {
+              "id": "olena-kort",
+              "tekst": "Jobbet.",
+              "kvalitet": "kort",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-langt",
+              "tekst": "Jeg har gjort så mye at jeg nesten ikke vet hvor jeg skal starte, og jeg kan telle opp hver dag på jobben i tre år.",
+              "kvalitet": "langt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "olena-godt",
+              "tekst": "I Polen jobbet jeg i sportsbutikk. Jeg har jobbet med kasse i tre år.",
+              "kvalitet": "godt",
+              "personer": [
+                "olena"
+              ]
+            },
+            {
+              "id": "taras-kort",
+              "tekst": "Bygde.",
+              "kvalitet": "kort",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-langt",
+              "tekst": "Jeg har løftet, båret, ryddet, ventet, kjørt og gjort alt mulig, og jeg kan fortsette lenge.",
+              "kvalitet": "langt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "taras-godt",
+              "tekst": "I Bulgaria jobbet jeg på bygg. Jeg har jobbet med sikkerhet og tunge løft.",
+              "kvalitet": "godt",
+              "personer": [
+                "taras"
+              ]
+            },
+            {
+              "id": "sofiia-kort",
+              "tekst": "Hjalp.",
+              "kvalitet": "kort",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-langt",
+              "tekst": "Jeg har hjulpet så mange at jeg kan snakke i en time om hver person jeg har møtt.",
+              "kvalitet": "langt",
+              "personer": [
+                "sofiia"
+              ]
+            },
+            {
+              "id": "sofiia-godt",
+              "tekst": "I Ukraina jobbet jeg med eldre. Jeg har hjulpet hjemme i to år.",
+              "kvalitet": "godt",
+              "personer": [
+                "sofiia"
+              ]
+            }
           ],
           "tilbakemeldingRiktig": "Riktig. Start med stedet. Deretter: Jeg har jobbet …",
           "tilbakemeldingFeil": "Start med stedet, for eksempel I Polen, I Bulgaria eller I Ukraina. Bruk også har jobbet."
@@ -262,7 +510,15 @@
           "type": "sorter_setning",
           "id": "e08-s06-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["I", "hjemlandet", "jobbet", "jeg", "i", "tre", "år."],
+          "biter": [
+            "I",
+            "hjemlandet",
+            "jobbet",
+            "jeg",
+            "i",
+            "tre",
+            "år."
+          ],
           "tilbakemeldingRiktig": "Riktig. I hjemlandet jobbet jeg i tre år.",
           "tilbakemeldingFeil": "Start med I hjemlandet. Deretter jobbet jeg."
         },
@@ -271,7 +527,11 @@
           "id": "e08-s06-ob",
           "instruksjon": "Velg ordet som passer i setningen.",
           "setning": "Jeg _____ jobbet i tre år.",
-          "ord": ["har", "skal", "ikke"],
+          "ord": [
+            "har",
+            "skal",
+            "ikke"
+          ],
           "riktig": "har",
           "tilbakemeldingRiktig": "Riktig. Jeg har jobbet. Det er perfektum.",
           "tilbakemeldingFeil": "Bruk har + jobbet når du snakker om erfaring."
@@ -295,7 +555,9 @@
           "id": "avslutt-e08",
           "tekst": "Se oppsummering",
           "nesteSceneId": "oppsummering",
-          "flagg": ["forberedt_intervju"],
+          "flagg": [
+            "forberedt_intervju"
+          ],
           "tilbakemelding": "Du er ferdig med intervjuet. Du var forberedt."
         }
       ],
@@ -306,9 +568,18 @@
           "instruksjon": "Velg det høflige spørsmålet.",
           "spoersmal": "Hva spør du Kari om?",
           "alternativer": [
-            { "id": "a", "tekst": "Hvor mye tjener sjefen?" },
-            { "id": "b", "tekst": "Hva er arbeidstiden, og når får jeg opplæring?" },
-            { "id": "c", "tekst": "Kan jeg få fri hver dag?" }
+            {
+              "id": "a",
+              "tekst": "Hvor mye tjener sjefen?"
+            },
+            {
+              "id": "b",
+              "tekst": "Hva er arbeidstiden, og når får jeg opplæring?"
+            },
+            {
+              "id": "c",
+              "tekst": "Kan jeg få fri hver dag?"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Arbeidstid og opplæring er et godt spørsmål.",
@@ -318,7 +589,11 @@
           "type": "sorter_setning",
           "id": "e08-s07-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": ["Hva", "er", "arbeidstiden?"],
+          "biter": [
+            "Hva",
+            "er",
+            "arbeidstiden?"
+          ],
           "tilbakemeldingRiktig": "Riktig. Hva er arbeidstiden?",
           "tilbakemeldingFeil": "Start med Hva er. Deretter arbeidstiden?"
         }

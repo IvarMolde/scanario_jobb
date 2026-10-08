@@ -1341,18 +1341,6 @@ a {
   margin-bottom: 0.35rem;
 }
 
-.ovingsmerke {
-  display: inline-block;
-  margin: 0 0 0.75rem;
-  padding: 0.2rem 0.55rem;
-  border: 2px solid var(--ovring-ramme);
-  background: var(--ovring-bg);
-  color: var(--ovring-tekst);
-  font-weight: 700;
-  font-size: 0.85rem;
-  border-radius: 6px;
-}
-
 .skattekort-dokument,
 .lonnsslipp-dokument {
   background: #fff;

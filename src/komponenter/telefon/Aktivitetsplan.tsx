@@ -12,7 +12,7 @@ export function Aktivitetsplan({ aktiviteter, soknadTekst }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>Aktivitetsplan</h1>
-        <p>Øvingsversjon. Ingen ekte NAV-tjeneste.</p>
+        <p>Dine aktiviteter.</p>
       </header>
       <p className="plan-maal">Mål: Registrer jobbene. Følg status og frist.</p>
       {aktiviteter.length === 0 ? (

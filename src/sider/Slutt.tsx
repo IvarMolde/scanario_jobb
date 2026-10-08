@@ -12,7 +12,7 @@ export function Slutt() {
       year: 'numeric',
     }),
   )
-  const navn = person ? `${person.fornavn} ${person.etternavn}` : 'Øvingspersonen'
+  const navn = person ? `${person.fornavn} ${person.etternavn}` : 'Eleven'
   const episoder = innhold.scenario.episoder.filter((ep) => fremdrift.fullforteEpisoder.includes(ep.id))
   const punkter = innhold.slutt.reisePunkter.filter((p) => {
     if (p.visHvisFlagg && !fremdrift.flagg.includes(p.visHvisFlagg)) return false
@@ -51,7 +51,7 @@ export function Slutt() {
           ))}
         </ol>
         <p className="bevis-dato">Dato: {dato}</p>
-        <p className="bevis-fot">Øvingsversjon. Ingen elevdata er lagret.</p>
+        <p className="bevis-fot">Ingen elevdata er lagret.</p>
       </article>
       <div className="handlinger">
         <button type="button" className="knapp" onClick={() => window.print()}>

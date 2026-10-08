@@ -26,7 +26,7 @@ export function Hjem({ onAapne, ulesteSms, ulestEpost }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>Hjem</h1>
-        <p>Åpne en app. Dette er en øvingsversjon.</p>
+        <p>Åpne en app.</p>
       </header>
       <div className="app-rutenett">
         {HJEM_APPER.map((app) => {

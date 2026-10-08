@@ -36,8 +36,7 @@ export function SkattekortDokument({
   const nyForventet = forventetAarsinntekt(forhold, maanederIgjen)
 
   return (
-    <article className="skattekort-dokument" aria-label="Skattekort, øvingsversjon">
-      <p className="ovingsmerke">Øvingsversjon · ikke Skatteetatens side</p>
+    <article className="skattekort-dokument" aria-label="Skattekort">
       <h2>
         Skattekort · {person.fornavn} {person.etternavn}
       </h2>

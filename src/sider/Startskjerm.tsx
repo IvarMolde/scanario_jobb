@@ -11,10 +11,7 @@ export function Startskjerm() {
     <div className="startside" id="oppgave-innhold" tabIndex={-1}>
       <p className="ingress">{innhold.scenario.kurs} · Nivå {innhold.scenario.nivaa}</p>
       <h1>Velkommen til Jobbreisen</h1>
-      <p>
-        Du øver på å søke jobb. Først velger du morsmål. Deretter velger du en fiktiv person.
-        Dette er en øvingsversjon. Ingen ekte NAV-side og ingen ekte Skatteetat-side.
-      </p>
+      <p>Du øver på å søke jobb. Først velger du morsmål. Deretter velger du en person.</p>
       <h2 id="velg-morsmal">1. Velg morsmål</h2>
       <p>Ordkort vises på dette språket.</p>
       <div className="morsmal-valg" role="group" aria-labelledby="velg-morsmal">
@@ -59,7 +56,7 @@ export function Startskjerm() {
                 <br />
                 {person.forerkort ? `Førerkort ${person.forerkortType ?? ''}` : 'Ikke førerkort'}
                 <br />
-                Fødselsnummer (øving): {person.fodselsnummer}
+                Fødselsnummer: {person.fodselsnummer}
               </span>
             </button>
             <p>{person.presentasjon}</p>

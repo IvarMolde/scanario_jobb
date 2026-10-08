@@ -4,13 +4,37 @@
   "tittel": "Melding til NAV-veilederen",
   "ingress": "Du skal møte veilederen i morgen. Først leser du kalenderen. Så sender du en høflig melding.",
   "startSceneId": "e01-s01",
-  "tillatteFlagg": ["hoflig_melding", "uhoflig_sms"],
-  "ordIds": ["veileder", "mote", "kalender", "melding", "bekrefte", "hoflig", "avtale", "klokka", "gjerne", "nav"],
+  "tillatteFlagg": [
+    "hoflig_melding",
+    "uhoflig_sms"
+  ],
+  "ordIds": [
+    "veileder",
+    "mote",
+    "kalender",
+    "melding",
+    "bekrefte",
+    "hoflig",
+    "avtale",
+    "klokka",
+    "gjerne",
+    "nav"
+  ],
   "oppsummering": [
-    { "tekst": "Leste kalenderen og fant møtet tirsdag klokka 10.00." },
-    { "tekst": "Sendte en høflig melding med hilsen, tydelig innhold og avslutning.", "visHvisFlagg": "hoflig_melding" },
-    { "tekst": "Sendte en melding som var uklar eller for kort. Linn ba om en tydeligere tekst.", "visHvisFlagg": "uhoflig_sms" },
-    { "tekst": "Øvde på verbformen «jeg kommer» i en SMS." }
+    {
+      "tekst": "Leste kalenderen og fant møtet tirsdag klokka 10.00."
+    },
+    {
+      "tekst": "Sendte en høflig melding med hilsen, tydelig innhold og avslutning.",
+      "visHvisFlagg": "hoflig_melding"
+    },
+    {
+      "tekst": "Sendte en melding som var uklar eller for kort. Linn ba om en tydeligere tekst.",
+      "visHvisFlagg": "uhoflig_sms"
+    },
+    {
+      "tekst": "Øvde på verbformen «jeg kommer» i en SMS."
+    }
   ],
   "scener": [
     {
@@ -30,7 +54,7 @@
         "tittel": "Møte med NAV-veileder Linn Holm",
         "dag": "Tirsdag",
         "tid": "10:00",
-        "sted": "NAV Molde (øvingsversjon)"
+        "sted": "NAV Molde"
       },
       "valg": [
         {
@@ -56,9 +80,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Når er møtet med Linn?",
           "alternativer": [
-            { "id": "a", "tekst": "I dag klokka 09.15" },
-            { "id": "b", "tekst": "I morgen klokka 10.00" },
-            { "id": "c", "tekst": "I morgen klokka 12.00" }
+            {
+              "id": "a",
+              "tekst": "I dag klokka 09.15"
+            },
+            {
+              "id": "b",
+              "tekst": "I morgen klokka 10.00"
+            },
+            {
+              "id": "c",
+              "tekst": "I morgen klokka 12.00"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Kalenderen viser tirsdag klokka 10.00. Det er i morgen.",
@@ -96,7 +129,11 @@
           "id": "e01-s02-ob",
           "instruksjon": "Velg ordet som passer i setningen.",
           "setning": "Kunne du _____ tiden for møtet?",
-          "ord": ["bekrefte", "glemme", "rope"],
+          "ord": [
+            "bekrefte",
+            "glemme",
+            "rope"
+          ],
           "riktig": "bekrefte",
           "tilbakemeldingRiktig": "Riktig. «Kunne du bekrefte» er en høflig måte å spørre på. Modalverbet kunne gjør spørsmålet mykere.",
           "tilbakemeldingFeil": "Tenk på ordet {{bekrefte}}. Du vil at Linn skal si ja til tiden."
@@ -105,7 +142,15 @@
           "type": "sorter_setning",
           "id": "e01-s02-ss",
           "instruksjon": "Trykk på ordene i riktig rekkefølge. Lag en høflig setning.",
-          "biter": ["Jeg", "vil", "gjerne", "bekrefte", "møtet", "i", "morgen."],
+          "biter": [
+            "Jeg",
+            "vil",
+            "gjerne",
+            "bekrefte",
+            "møtet",
+            "i",
+            "morgen."
+          ],
           "tilbakemeldingRiktig": "Riktig. «Jeg vil gjerne» er høflig. Gjerne viser at du ønsker noe på en snill måte.",
           "tilbakemeldingFeil": "Start med Jeg. Så kommer vil gjerne. Deretter bekrefte møtet i morgen."
         }
@@ -130,9 +175,21 @@
           "id": "e01-s03-bm",
           "instruksjon": "Velg én hilsen, ett innhold og én avslutning. Send deretter meldingen.",
           "hilsen": [
-            { "id": "h1", "tekst": "Hei Linn,", "hoflig": true },
-            { "id": "h2", "tekst": "Hei!", "hoflig": false },
-            { "id": "h3", "tekst": "Hva skjer", "hoflig": false }
+            {
+              "id": "h1",
+              "tekst": "Hei Linn,",
+              "hoflig": true
+            },
+            {
+              "id": "h2",
+              "tekst": "Hei!",
+              "hoflig": false
+            },
+            {
+              "id": "h3",
+              "tekst": "Hva skjer",
+              "hoflig": false
+            }
           ],
           "innhold": [
             {
@@ -140,16 +197,40 @@
               "tekst": "Jeg vil gjerne bekrefte møtet i morgen klokka 10.00.",
               "hoflig": true
             },
-            { "id": "i2", "tekst": "ok i morgen", "hoflig": false },
-            { "id": "i3", "tekst": "Du må møte meg i dag.", "hoflig": false }
+            {
+              "id": "i2",
+              "tekst": "ok i morgen",
+              "hoflig": false
+            },
+            {
+              "id": "i3",
+              "tekst": "Du må møte meg i dag.",
+              "hoflig": false
+            }
           ],
           "avslutning": [
-            { "id": "a1", "tekst": "Vennlig hilsen", "hoflig": true },
-            { "id": "a2", "tekst": "Hilsen [navn]", "hoflig": true },
-            { "id": "a3", "tekst": "Bye", "hoflig": false }
+            {
+              "id": "a1",
+              "tekst": "Vennlig hilsen",
+              "hoflig": true
+            },
+            {
+              "id": "a2",
+              "tekst": "Hilsen [navn]",
+              "hoflig": true
+            },
+            {
+              "id": "a3",
+              "tekst": "Bye",
+              "hoflig": false
+            }
           ],
-          "flaggHoflig": ["hoflig_melding"],
-          "flaggUhoflig": ["uhoflig_sms"],
+          "flaggHoflig": [
+            "hoflig_melding"
+          ],
+          "flaggUhoflig": [
+            "uhoflig_sms"
+          ],
           "nesteHoflig": "e01-s04a",
           "nesteUhoflig": "e01-s04b",
           "tilbakemeldingRiktig": "Bra. Du bruker høflig hilsen, en hel setning med «Jeg vil gjerne», og en vennlig avslutning. Slik skriver vi til en veileder.",
@@ -198,9 +279,18 @@
           "instruksjon": "Les eller lytt til svaret fra Linn. Velg det som stemmer.",
           "spoersmal": "Hva sier Linn?",
           "alternativer": [
-            { "id": "a", "tekst": "Møtet er i dag." },
-            { "id": "b", "tekst": "Møtet er i morgen klokka 10.00." },
-            { "id": "c", "tekst": "Møtet er avlyst." }
+            {
+              "id": "a",
+              "tekst": "Møtet er i dag."
+            },
+            {
+              "id": "b",
+              "tekst": "Møtet er i morgen klokka 10.00."
+            },
+            {
+              "id": "c",
+              "tekst": "Møtet er avlyst."
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Linn skriver: «Ja, vi møtes i morgen klokka 10.00.» Hun bekrefter tiden.",
@@ -269,7 +359,9 @@
           "id": "ga-videre-likevel",
           "tekst": "Gå videre uten ny melding",
           "nesteSceneId": "e01-s05",
-          "flagg": ["uhoflig_sms"],
+          "flagg": [
+            "uhoflig_sms"
+          ],
           "tilbakemelding": "Du kan gå videre. Senere i kurset husker vi at meldingen var uklar. Du kan øve mer nå hvis du vil."
         }
       ],
@@ -280,9 +372,18 @@
           "instruksjon": "Velg det riktige svaret.",
           "spoersmal": "Hvorfor spør Linn på nytt?",
           "alternativer": [
-            { "id": "a", "tekst": "Hun vil bytte dag." },
-            { "id": "b", "tekst": "Meldingen var uklar eller for kort." },
-            { "id": "c", "tekst": "Hun er sint." }
+            {
+              "id": "a",
+              "tekst": "Hun vil bytte dag."
+            },
+            {
+              "id": "b",
+              "tekst": "Meldingen var uklar eller for kort."
+            },
+            {
+              "id": "c",
+              "tekst": "Hun er sint."
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. En kort melding uten tid og hilsen er vanskelig å forstå. Linn ber om en tydeligere tekst.",
@@ -318,9 +419,18 @@
           "tekst": "Hei Linn. Jeg komme i morgen klokka 10.00.",
           "feilOrd": "komme",
           "alternativer": [
-            { "id": "a", "tekst": "kom" },
-            { "id": "b", "tekst": "kommer" },
-            { "id": "c", "tekst": "å komme" }
+            {
+              "id": "a",
+              "tekst": "kom"
+            },
+            {
+              "id": "b",
+              "tekst": "kommer"
+            },
+            {
+              "id": "c",
+              "tekst": "å komme"
+            }
           ],
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. I presens sier vi «jeg kommer». Etter jeg får verbet -er: kommer.",

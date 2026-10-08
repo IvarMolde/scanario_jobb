@@ -43,7 +43,7 @@ export function Jobbmagasin({ annonser, startId, onVelgOrd, onBytt }: Props) {
       <header className="hjem-hode">
         <h1>Jobbmagasinet</h1>
         <p>
-          Øvingsversjon. Annonse {indeks + 1} av {annonser.length}.
+          Annonse {indeks + 1} av {annonser.length}.
         </p>
       </header>
       <div className="magasin-nav">

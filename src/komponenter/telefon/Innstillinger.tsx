@@ -19,7 +19,7 @@ export function Innstillinger({ person, morsmal, onMorsmal, onNullstill, onTilba
       {person ? (
         <p>
           Du spiller som <strong>{person.fornavn} {person.etternavn}</strong>.
-          Fødselsnummer (øving): {person.fodselsnummer}.
+          Fødselsnummer: {person.fodselsnummer}.
         </p>
       ) : null}
       <h2 id="velg-morsmal-innstillinger">Morsmål</h2>

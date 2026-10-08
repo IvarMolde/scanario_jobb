@@ -11,10 +11,10 @@ export function Lonn() {
     <div>
       <header className="hjem-hode">
         <h1>Lønn</h1>
-        <p>Øvingsversjon. Fiktiv lønnsslipp. Ingen ekte utbetaling.</p>
+        <p>Din lønnsslipp.</p>
       </header>
       {!slipp ? (
-        <p>Lønnsslippen kommer når du har en jobb i øvingen.</p>
+        <p>Lønnsslippen kommer når du har en jobb.</p>
       ) : (
         <>
           <LonnsslippDokument slipp={slipp} />

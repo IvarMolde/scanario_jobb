@@ -26,7 +26,7 @@ export function Reiseplanlegger({ ruter, personId, lagret }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>Reiseplanlegger</h1>
-        <p>Øvingsversjon. Fiktive linjer i Molde. Ingen ekte rutetabell.</p>
+        <p>Finn buss i Molde.</p>
       </header>
       {oppdrag ? (
         <p className="plan-maal">

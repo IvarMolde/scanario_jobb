@@ -9,7 +9,7 @@ export function Kalender({ hendelser }: Props) {
     <div>
       <header className="hjem-hode">
         <h1>Kalender</h1>
-        <p>Dine avtaler i øvingsversjonen</p>
+        <p>Dine avtaler</p>
       </header>
       {hendelser.length === 0 ? (
         <p className="tom-tilstand">Ingen avtaler ennå.</p>
