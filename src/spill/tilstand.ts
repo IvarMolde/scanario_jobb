@@ -214,20 +214,12 @@ export function parseFremdrift(raw: unknown): Fremdrift {
     soknadTekst: resultat.data.soknadTekst ?? null,
     lagretReise: resultat.data.lagretReise ?? null,
     skattekort: resultat.data.skattekort ?? null,
+    eposter: resultat.data.eposter.filter((e) => e.id !== 'ovingsmail'),
   }
 }
 
 function unik<T>(liste: T[]): T[] {
   return [...new Set(liste)]
-}
-
-function velkomstEpost(): Epost {
-  return {
-    id: 'ovingsmail',
-    fra: 'Jobbreisen',
-    emne: 'Velkommen',
-    innhold: 'Hei. Her øver du på å søke jobb. Lykke til!',
-  }
 }
 
 export function anvendScene(state: Fremdrift, scene: Scene): Fremdrift {
@@ -322,9 +314,6 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
       return { ...state, visning: 'episoder', aktivApp: 'hjem' }
     case 'START_EPISODE': {
       const fjern = new Set(handling.tillatteFlagg)
-      const eposter = state.eposter.some((e) => e.id === 'ovingsmail')
-        ? state.eposter
-        : [velkomstEpost(), ...state.eposter]
       const start: Fremdrift = {
         ...state,
         visning: 'scene',
@@ -345,7 +334,9 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         lagretReise: fjern.has('kom_presis') ? null : state.lagretReise,
         skattekort: fjern.has('endret_skattekort') ? null : state.skattekort,
         sms: state.sms.filter((s) => !s.id.startsWith(`${handling.episodeId}-`)),
-        eposter: eposter.filter((e) => e.id === 'ovingsmail' || !e.id.startsWith(`${handling.episodeId}-`)),
+        eposter: state.eposter.filter(
+          (e) => e.id !== 'ovingsmail' && !e.id.startsWith(`${handling.episodeId}-`),
+        ),
         kalender: state.kalender.filter((k) => !k.id.startsWith(`${handling.episodeId}-`)),
         varsler: state.varsler.filter((v) => !v.id.startsWith(`${handling.episodeId}-`)),
       }

@@ -105,7 +105,7 @@ export function Telefon() {
                 utkast={fremdrift.smsUtkast}
               />
             ) : null}
-            {app === 'epost' ? <Epost eposter={fremdrift.eposter} /> : null}
+            {app === 'epost' ? <Epost eposter={fremdrift.eposter} person={person} /> : null}
             {app === 'kalender' ? <Kalender hendelser={fremdrift.kalender} /> : null}
             {app === 'cv' ? (
               <Cv

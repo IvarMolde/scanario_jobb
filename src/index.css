@@ -844,6 +844,177 @@ a {
   padding: 2rem 1rem;
 }
 
+.epost-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.epost-hode {
+  padding: 0.15rem 0.15rem 0.7rem;
+}
+
+.epost-hode h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: var(--marine);
+}
+
+.epost-hode p,
+.epost-innboks-merke {
+  margin: 0.15rem 0 0;
+  color: var(--dempet);
+  font-size: 0.9rem;
+}
+
+.epost-les-topp {
+  padding: 0 0 0.55rem;
+}
+
+.epost-tilbake {
+  background: none;
+  border: 0;
+  padding: 0.35rem 0.1rem;
+  min-height: 44px;
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.epost-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.epost-rad {
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--linje);
+  border-radius: 12px;
+  padding: 0.7rem 0.75rem;
+  cursor: pointer;
+}
+
+.epost-rad:hover {
+  background: #f3f7fa;
+  border-color: #a8bec9;
+}
+
+.epost-rad-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+}
+
+.epost-rad-fra {
+  font-weight: 700;
+  color: var(--marine);
+  font-size: 0.95rem;
+}
+
+.epost-rad-emne {
+  font-weight: 600;
+  color: var(--tekst);
+  font-size: 0.92rem;
+}
+
+.epost-rad-preview {
+  color: var(--dempet);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.epost-melding {
+  background: #fff;
+  border: 1px solid var(--linje);
+  border-radius: 14px;
+  padding: 0.9rem 0.95rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-height: 0;
+  overflow: auto;
+}
+
+.epost-emne {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: var(--marine);
+}
+
+.epost-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--linje);
+}
+
+.epost-avatar {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #003057;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.epost-avatar--liten {
+  width: 38px;
+  height: 38px;
+  font-size: 0.8rem;
+}
+
+.epost-meta-tekst {
+  min-width: 0;
+}
+
+.epost-fra,
+.epost-til {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.epost-fra {
+  color: var(--tekst);
+  font-size: 0.98rem;
+}
+
+.epost-til {
+  color: var(--dempet);
+  font-size: 0.88rem;
+}
+
+.epost-brødtekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.epost-brødtekst p {
+  margin: 0;
+  color: var(--tekst);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
 .varsel {
   position: absolute;
   top: 68px;
