@@ -5,6 +5,6 @@
   <path d="M188 132c8-24 56-24 64 0" fill="#3A2A22"/>
   <path d="M170 210c12-36 88-36 100 0v40H170z" fill="#D6E4EA"/>
   <rect x="320" y="110" width="240" height="120" rx="16" fill="#fff" stroke="#005F73" stroke-width="3"/>
-  <text x="340" y="160" fill="#003057" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Ja, vi motes</text>
+  <text x="340" y="160" fill="#003057" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Ja, vi møtes</text>
   <text x="340" y="188" fill="#003057" font-family="Segoe UI, Arial" font-size="18">i morgen klokka 10.00</text>
 </svg>
