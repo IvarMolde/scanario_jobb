@@ -59,10 +59,10 @@
           "type": "sant_usant",
           "id": "e03-s01-su",
           "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "Jobbportalen viser ekte stillinger hos NAV.",
-          "riktigErSant": false,
-          "tilbakemeldingRiktig": "Riktig. Jobbportalen er en del av spillet.",
-          "tilbakemeldingFeil": "Jobbportalen er en del av spillet, ikke en ekte NAV-side."
+          "paastand": "Finn.no er et eksempel på en portal hvor man kan finne ledige jobber.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Finn.no er en kjent jobbportal med mange ledige stillinger.",
+          "tilbakemeldingFeil": "Påstanden er sant. Finn.no er et eksempel på en portal der du kan søke jobb."
         },
         {
           "type": "flervalg",
