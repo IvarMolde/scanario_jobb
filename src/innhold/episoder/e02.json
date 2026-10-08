@@ -344,7 +344,7 @@
         "bildeAlt": "En CV på et bord med arbeidserfaring og utdanning.",
         "lyd": "e02-s04-setninger.wav"
       },
-      "tekst": "I CV bruker vi ofte {{perfektum}}: «Jeg har jobbet …»\n\n{{preteritum|Preteritum}}: «Jeg jobbet …» når tiden er slutt og tydelig.\n\nVelg setningene som passer personen.",
+      "tekst": "Både {{perfektum}} og {{preteritum}} forteller om fortid. Begge sier hva du har gjort før. Forskjellen er hvordan vi ser på tiden.\n\n{{perfektum}} bruker vi med har + verb: «Jeg har jobbet …» Vi bruker den når erfaringen fortsatt gjelder, eller når tiden ikke er viktig. I CV er dette vanlig.\n\n{{preteritum|Preteritum}} bruker vi når tiden er slutt og tydelig: «Jeg jobbet …» Da tenker vi på en ferdig periode, for eksempel i fjor eller i 2020.\n\nEksempler:\n\n• Perfektum: «Jeg har jobbet i butikk.» (erfaringen gjelder fortsatt)\n• Preteritum: «Jeg jobbet i butikk i 2021.» (tiden er ferdig)\n• Perfektum: «Jeg har hjulpet eldre hjemme.» (du kan bruke erfaringen nå)\n\nVelg setningene som passer personen.",
       "valg": [
         {
           "id": "med-referanse",
