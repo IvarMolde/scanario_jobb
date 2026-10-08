@@ -65,6 +65,9 @@ function validerEpisode(episode: Episode, ordliste: Ord[], annonser: Annonse[]):
     }
 
     for (const oppgave of scene.oppgaver) {
+      if (oppgave.instruksjonLyd && !oppgave.lydManus) {
+        feil.push(`${oppgave.id}: instruksjonLyd krever lydManus (tekst å lese inn)`)
+      }
       if (oppgave.type === 'bygg_melding') {
         for (const neste of [oppgave.nesteHoflig, oppgave.nesteUhoflig]) {
           if (neste !== OPPSUMMERING_ID && neste !== SLUTT_ID && !sceneIder.has(neste)) {

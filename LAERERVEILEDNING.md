@@ -14,6 +14,29 @@ Kort veiledning for MBO ved Molde voksenopplæringssenter. Nivå: A2, bokmål. �
 
 **Bytte bilder og lyd:** Legg inn en ny fil med **samme filnavn** i `public/media/bilder` eller `public/media/lyd`. JSON trenger ikke endres. Navn: `e01-s02-meldinger.svg`, `e01-s02-melding.wav`.
 
+## Innspilling av lyd (logistikk)
+
+Nå ligger det **plassholder-lyd** (korte toner). Bytt dem ut med innlest tale. Filnavnet styrer plasseringen. Du endrer ikke JSON.
+
+1. Åpne innspillingslista: `?laerer=1` (fane **Innspilling**), eller filen `INNSPILLING.md`.
+2. Filtrer på én episode. Les teksten som står under filnavnet. Det er det eleven hører på det stedet.
+3. Ta opp med telefon eller datamaskin. Snakk sakte, tydelig, bokmål, A2. Pause mellom setninger.
+4. Eksporter som `wav` (eller `mp3` hvis du også endrer endelsen i JSON). **Filnavnet må være identisk**, for eksempel `e07-s01-anrop.wav`.
+5. Legg fila i `public/media/lyd` og overskriv plassholderen.
+6. Sjekk i spillet: knappen «Lytt til teksten» på scenen, «Lytt» på lytt-oppgaver, «Spørsmål fra intervjueren» i episode 8.
+
+Tre slags klipp:
+
+| Rolle | Hva du leser | Hvor det spilles |
+| --- | --- | --- |
+| Scene | Sceneteksten (uten klammer) | «Lytt til teksten» |
+| Intervju | Bare spørsmålet fra Kari | Episode 8, oppgaven |
+| Annen stemme | Eget manus (talemelding, kollega) | Lytt-oppgave eller scene med `manus` |
+
+Startskjermen har tre personklipp (`olena-presentasjon.wav` og så videre).
+
+Oppdater lista etter innholdsendringer: `npm run lydmanus`.
+
 **Bytte skattesatser:** Rediger `src/innhold/satser-2026.json` (kilde står i fila). Kjør `npm test` og `npm run valider`.
 
 ## Tid og mål

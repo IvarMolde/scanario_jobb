@@ -23,7 +23,8 @@
       "media": {
         "bilde": "e07-s01-anrop.svg",
         "bildeAlt": "En telefon med tapt anrop og talemelding.",
-        "lyd": "e07-s01-anrop.wav"
+        "lyd": "e07-s01-anrop.wav",
+        "manus": "Hei, dette er Kari Strand. Jeg ringer fra Havna Handel. Vi vil gjerne kalle deg inn til intervju. Jeg sender også en SMS. Ha en fin dag."
       },
       "tekst": "Du har et tapt {{anrop}}.\n\nDet ligger en {{talemelding}}.\n\nLytt. Hvem ringte? Hva vil de?",
       "varsel": {

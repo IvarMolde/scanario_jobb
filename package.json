@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "valider": "tsx scripts/valider.ts",
     "test": "tsx scripts/test-skatt.ts",
+    "lydmanus": "tsx scripts/lag-lydmanus.ts",
     "lag-lyd": "tsx scripts/lag-lyd.ts",
     "lag-bilder": "tsx scripts/lag-bilder.ts"
   },

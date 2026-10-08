@@ -64,6 +64,7 @@ npm run build
 npm run preview
 npm run valider
 npm test
+npm run lydmanus
 npm run lag-lyd
 npm run lag-bilder
 ```

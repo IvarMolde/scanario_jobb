@@ -291,6 +291,7 @@
           "id": "e11-s06-ly",
           "instruksjon": "Lytt. En kollega forklarer feriepenger.",
           "instruksjonLyd": "e11-s06-kollega.wav",
+          "lydManus": "Hei. Feriepenger er 10,2 prosent av lønna. Du tjener dem i år. Du får dem neste år, når du har ferie.",
           "spoersmal": "Når får du feriepengene?",
           "alternativer": [
             { "id": "a", "tekst": "Neste år. De opptjenes i år." },

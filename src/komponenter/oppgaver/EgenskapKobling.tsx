@@ -17,6 +17,7 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
   )
   const [valgte, setValgte] = useState<string[]>(ferdig ? mine.map((e) => e.id) : [])
   const [valgtEgenskap, setValgtEgenskap] = useState<string | null>(null)
+  const [hint, setHint] = useState<string | null>(null)
   const [par, setPar] = useState<Record<string, string>>(
     ferdig ? Object.fromEntries(mine.map((e) => [e.id, e.eksempel])) : {},
   )
@@ -87,7 +88,10 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
                   className="knapp knapp-sekundaer"
                   aria-pressed={valgtEgenskap === id}
                   disabled={Boolean(par[id])}
-                  onClick={() => setValgtEgenskap(id)}
+                  onClick={() => {
+                    setValgtEgenskap(id)
+                    setHint(null)
+                  }}
                 >
                   {e.ord}
                   {par[id] ? ` — ${par[id]}` : ''}
@@ -101,14 +105,25 @@ export function EgenskapKobling({ oppgave, person, ferdig, onSvar }: Props) {
                 key={tekst}
                 type="button"
                 className="brikke"
-                disabled={!valgtEgenskap}
-                onClick={() => koble(tekst)}
+                onClick={() => {
+                  if (!valgtEgenskap) {
+                    setHint('Velg en egenskap først.')
+                    return
+                  }
+                  setHint(null)
+                  koble(tekst)
+                }}
               >
                 {tekst}
               </button>
             ))}
           </div>
         </>
+      ) : null}
+      {hint ? (
+        <p className="tilbakemelding info" role="status">
+          {hint}
+        </p>
       ) : null}
       <TilbakemeldingBoks
         status={status}

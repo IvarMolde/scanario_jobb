@@ -7,6 +7,16 @@ export interface OrdToken {
   visning: string
 }
 
+export function tilLesetekst(tekst: string): string {
+  return tekst
+    .replace(
+      /\{\{([^}|]+)(?:\|([^}]+))?\}\}/g,
+      (_hele, id: string, visning?: string) => visning ?? id.replaceAll('_', ' '),
+    )
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
+
 export function trekkUtOrdId(tekst: string): string[] {
   const ider = new Set<string>()
   const kopi = tekst.matchAll(TOKEN)

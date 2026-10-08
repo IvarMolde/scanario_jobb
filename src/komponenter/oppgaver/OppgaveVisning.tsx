@@ -71,7 +71,10 @@ export function OppgaveVisning({
     <section className="oppgave" aria-labelledby={`oppgave-${oppgave.id}`}>
       <h3 id={`oppgave-${oppgave.id}`}>Oppgave</h3>
       <p>{oppgave.instruksjon}</p>
-      <Lydspiller fil={oppgave.instruksjonLyd} etikett="Instruksjon" />
+      <Lydspiller
+        fil={oppgave.instruksjonLyd}
+        etikett={oppgave.type === 'lytt_og_velg' ? 'Lytt' : 'Instruksjon'}
+      />
       {oppgave.type === 'flervalg' || oppgave.type === 'lytt_og_velg' ? (
         <Flervalg oppgave={oppgave} ferdig={ferdig} onSvar={onSvar} />
       ) : null}

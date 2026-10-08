@@ -76,6 +76,7 @@ export const mediaSkjema = z.object({
   bilde: z.string().optional(),
   bildeAlt: z.string().optional(),
   lyd: z.string().optional(),
+  manus: z.string().min(1).optional(),
 })
 
 export const varselSkjema = z.object({
@@ -113,6 +114,7 @@ const oppgaveFelles = {
   id: z.string().min(1),
   instruksjon: z.string().min(1),
   instruksjonLyd: z.string().optional(),
+  lydManus: z.string().min(1).optional(),
   tilbakemeldingRiktig: z.string().min(1),
   tilbakemeldingFeil: z.string().min(1),
 }

@@ -12,6 +12,7 @@ interface Props {
 export function Matching({ oppgave, ferdig, onSvar }: Props) {
   const hoyre = useMemo(() => stokk(oppgave.par.map((p) => p.hoyre)), [oppgave.par])
   const [valgtVenstre, setValgtVenstre] = useState<string | null>(null)
+  const [hint, setHint] = useState<string | null>(null)
   const [par, setPar] = useState<Record<string, string>>(
     ferdig ? Object.fromEntries(oppgave.par.map((p) => [p.id, p.hoyre])) : {},
   )
@@ -39,7 +40,10 @@ export function Matching({ oppgave, ferdig, onSvar }: Props) {
             className="knapp knapp-sekundaer"
             aria-pressed={valgtVenstre === p.id}
             disabled={status === 'ok' || Boolean(par[p.id])}
-            onClick={() => setValgtVenstre(p.id)}
+            onClick={() => {
+              setValgtVenstre(p.id)
+              setHint(null)
+            }}
           >
             {p.venstre}
             {par[p.id] ? ` — ${par[p.id]}` : ''}
@@ -53,13 +57,25 @@ export function Matching({ oppgave, ferdig, onSvar }: Props) {
             key={tekst}
             type="button"
             className="brikke"
-            disabled={status === 'ok' || !valgtVenstre}
-            onClick={() => koble(tekst)}
+            disabled={status === 'ok'}
+            onClick={() => {
+              if (!valgtVenstre) {
+                setHint('Velg et ord til venstre først.')
+                return
+              }
+              setHint(null)
+              koble(tekst)
+            }}
           >
             {tekst}
           </button>
         ))}
       </div>
+      {hint ? (
+        <p className="tilbakemelding info" role="status">
+          {hint}
+        </p>
+      ) : null}
       <TilbakemeldingBoks
         status={status}
         riktig={oppgave.tilbakemeldingRiktig}

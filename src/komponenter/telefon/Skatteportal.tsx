@@ -84,9 +84,11 @@ export function Skatteportal() {
       {steg === 'start' ? (
         <div>
           <p>Her øver du på skattekort. Logg bare inn på ekte sider med den ekte adressen.</p>
-          <button type="button" className="knapp" onClick={() => setSteg('metode')}>
-            Logg inn
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp" onClick={() => setSteg('metode')}>
+              Logg inn
+            </button>
+          </div>
         </div>
       ) : null}
 
@@ -137,9 +139,11 @@ export function Skatteportal() {
         <div>
           <h2>Min side</h2>
           <p>Du er innlogget som {person.fornavn}. Dette er øving.</p>
-          <button type="button" className="knapp" onClick={() => setSteg('kort')}>
-            Skattekort
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp" onClick={() => setSteg('kort')}>
+              Skattekort
+            </button>
+          </div>
         </div>
       ) : null}
 
@@ -173,9 +177,11 @@ export function Skatteportal() {
             {innhold.arbeid.maanederIgjen} × {formatKr(maanedslonnFraTimer(forhold))} ={' '}
             {formatKr(maanedslonnFraTimer(forhold) * innhold.arbeid.maanederIgjen)}.
           </p>
-          <button type="button" className="knapp" onClick={() => setSteg('endre-hittil')}>
-            Neste
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp" onClick={() => setSteg('endre-hittil')}>
+              Neste
+            </button>
+          </div>
         </div>
       ) : null}
 
@@ -186,9 +192,11 @@ export function Skatteportal() {
           <p>
             Forventet inntekt i år: {formatKr(forventetAarsinntekt(forhold, innhold.arbeid.maanederIgjen))}.
           </p>
-          <button type="button" className="knapp" onClick={() => setSteg('endre-fradrag')}>
-            Neste
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp" onClick={() => setSteg('endre-fradrag')}>
+              Neste
+            </button>
+          </div>
         </div>
       ) : null}
 
@@ -207,9 +215,11 @@ export function Skatteportal() {
               Fagforeningskontingent, {formatKr(SATSER_2026.fagforeningAar)} i året (valgfritt)
             </label>
           </p>
-          <button type="button" className="knapp" onClick={() => setSteg('beregning')}>
-            Se beregning
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp" onClick={() => setSteg('beregning')}>
+              Se beregning
+            </button>
+          </div>
         </div>
       ) : null}
 
@@ -234,9 +244,11 @@ export function Skatteportal() {
             skattekort={fremdrift.skattekort}
             maanederIgjen={innhold.arbeid.maanederIgjen}
           />
-          <button type="button" className="knapp knapp-sekundaer" onClick={() => setSteg('min-side')}>
-            Min side
-          </button>
+          <div className="handlinger">
+            <button type="button" className="knapp knapp-sekundaer" onClick={() => setSteg('min-side')}>
+              Min side
+            </button>
+          </div>
         </div>
       ) : null}
     </div>

@@ -19,6 +19,7 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
     [elementer],
   )
   const [valgt, setValgt] = useState<string | null>(null)
+  const [hint, setHint] = useState<string | null>(null)
   const [plassert, setPlassert] = useState<Record<string, string>>(ferdig ? fasit : {})
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
 
@@ -44,7 +45,10 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
             className="brikke"
             aria-pressed={valgt === e.id}
             disabled={status === 'ok' || Boolean(plassert[e.id])}
-            onClick={() => setValgt(e.id)}
+            onClick={() => {
+              setValgt(e.id)
+              setHint(null)
+            }}
           >
             {e.tekst}
           </button>
@@ -56,8 +60,15 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
             key={kat.id}
             type="button"
             className="kategori-boks"
-            disabled={status === 'ok' || !valgt}
-            onClick={() => plasser(kat.id)}
+            disabled={status === 'ok'}
+            onClick={() => {
+              if (!valgt) {
+                setHint('Velg et kort først.')
+                return
+              }
+              setHint(null)
+              plasser(kat.id)
+            }}
           >
             <strong>{kat.tittel}</strong>
             <ul>
@@ -70,6 +81,11 @@ export function SorterKategori({ oppgave, person, ferdig, onSvar }: Props) {
           </button>
         ))}
       </div>
+      {hint ? (
+        <p className="tilbakemelding info" role="status">
+          {hint}
+        </p>
+      ) : null}
       <TilbakemeldingBoks
         status={status}
         riktig={oppgave.tilbakemeldingRiktig}

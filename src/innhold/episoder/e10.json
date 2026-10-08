@@ -311,6 +311,7 @@
           "id": "e10-s06-ly",
           "instruksjon": "Lytt. En kollega forteller om restskatt.",
           "instruksjonLyd": "e10-s06-kollega.wav",
+          "lydManus": "Hei. Jeg heter Mona. I fjor endret jeg ikke skattekortet. Da ble det trukket for lite skatt. Neste år måtte jeg betale restskatt. Restskatt er skatt du skylder, fordi trekket var for lavt.",
           "spoersmal": "Hva er restskatt?",
           "alternativer": [
             { "id": "a", "tekst": "Skatt du må betale neste år, fordi det ble trukket for lite." },
