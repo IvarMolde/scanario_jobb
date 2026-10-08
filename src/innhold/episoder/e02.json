@@ -381,14 +381,14 @@
               "alternativer": [
                 {
                   "id": "e-o",
-                  "tekst": "Jeg har jobbet i sportsbutikk i tre år.",
+                  "tekst": "Jeg har jobbet i en sportsbutikk i tre år.",
                   "personer": [
                     "olena"
                   ]
                 },
                 {
                   "id": "e-t",
-                  "tekst": "Jeg har jobbet på bygg i to år.",
+                  "tekst": "Jeg har jobbet på en byggeplass i to år.",
                   "personer": [
                     "taras"
                   ]
@@ -402,7 +402,7 @@
                 },
                 {
                   "id": "e-x",
-                  "tekst": "Jeg har jobbe i butikk.",
+                  "tekst": "Jeg har jobbet i en butikk.",
                   "personer": []
                 }
               ]
@@ -420,7 +420,7 @@
                 },
                 {
                   "id": "u-t",
-                  "tekst": "Jeg har yrkesfag bygg fra Bulgaria.",
+                  "tekst": "Jeg har yrkesfaglig utdanning som bygningsarbeider fra Bulgaria.",
                   "personer": [
                     "taras"
                   ]
@@ -434,14 +434,14 @@
                 },
                 {
                   "id": "u-x",
-                  "tekst": "Jeg går på skole i går.",
+                  "tekst": "Jeg går på videregående skole nå, og er ferdig om 3 måneder.",
                   "personer": []
                 }
               ]
             }
           ],
           "tilbakemeldingRiktig": "Riktig. «Jeg har jobbet» er perfektum. Vi bruker det når erfaringen fortsatt gjelder.",
-          "tilbakemeldingFeil": "Se på personens jobb og skole. Unngå setninger med feil verbform, som «har jobbe»."
+          "tilbakemeldingFeil": "Se på personens jobb og skole. Velg setningen som passer personen din."
         }
       ]
     },
