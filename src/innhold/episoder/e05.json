@@ -99,6 +99,48 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Innen fredag betyr senest på fredag. Ikke senere.",
           "tilbakemeldingFeil": "{{innen}} betyr før tiden er ute. Innen fredag = senest fredag."
+        },
+        {
+          "type": "ordbank",
+          "id": "e05-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I Aktivitetsplanen registrerer du _____.",
+          "ord": [
+            "aktiviteter",
+            "oppskrifter",
+            "filmer"
+          ],
+          "riktig": "aktiviteter",
+          "tilbakemeldingRiktig": "Riktig. Planen viser hva du skal gjøre i jobbsøket.",
+          "tilbakemeldingFeil": "Aktivitetsplanen handler om jobbsøk-aktiviteter."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e05-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Status forteller hvor langt du har kommet med en jobb.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. For eksempel «skal søke» eller «sendt søknad».",
+          "tilbakemeldingFeil": "Status er et viktig felt i planen."
+        },
+        {
+          "type": "matching",
+          "id": "e05-s01-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "frist",
+              "hoyre": "siste dag for å søke"
+            },
+            {
+              "id": "p2",
+              "venstre": "status",
+              "hoyre": "hvor langt du har kommet"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Frist og status brukes i planen.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     },
@@ -148,6 +190,57 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Innen står foran tid: innen fredag.",
           "tilbakemeldingFeil": "Start med Søk. Deretter innen. Så fredag."
+        },
+        {
+          "type": "flervalg",
+          "id": "e05-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken preposisjon passer: «møtet er _____ tirsdag»?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "på"
+            },
+            {
+              "id": "b",
+              "tekst": "under"
+            },
+            {
+              "id": "c",
+              "tekst": "mellom"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Vi sier «på tirsdag».",
+          "tilbakemeldingFeil": "Med ukedag bruker vi ofte «på»."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e05-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Vi sier «den 12. oktober» om en dato.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Slik sier vi dato på norsk.",
+          "tilbakemeldingFeil": "Husk «den» foran datoen."
+        },
+        {
+          "type": "matching",
+          "id": "e05-s02-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "på",
+              "hoyre": "brukes ofte med ukedag"
+            },
+            {
+              "id": "p2",
+              "venstre": "den",
+              "hoyre": "brukes ofte foran dato"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. På + dag, den + dato.",
+          "tilbakemeldingFeil": "Tenk på eksemplene i teksten."
         }
       ]
     },
@@ -172,6 +265,67 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e05-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva må du fylle inn når du registrerer en aktivitet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Status og frist"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare favorittmat"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare skostørrelse"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Status og frist er viktige felt.",
+          "tilbakemeldingFeil": "Se på skjemaet i Aktivitetsplanen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e05-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Statusen «skal søke» betyr at du _____ har søkt.",
+          "ord": [
+            "ikke",
+            "alltid",
+            "aldri skal"
+          ],
+          "riktig": "ikke",
+          "tilbakemeldingRiktig": "Riktig. «Skal søke» er før du sender søknaden.",
+          "tilbakemeldingFeil": "Les statusene nøye."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e05-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er viktig å registrere riktig frist.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da husker du siste søknadsdag.",
+          "tilbakemeldingFeil": "Frist hjelper deg å søke i tide."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e05-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "registrert",
+            "aktiviteten",
+            "i",
+            "planen."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har registrert.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har registrert aktiviteten i planen."
+        },
         {
           "type": "registrer_aktiviteter",
           "id": "e05-s03-ra",
@@ -226,6 +380,68 @@
       },
       "valg": [],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e05-s04-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva skal meldingen til Linn handle om?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "At du har registrert aktiviteter"
+            },
+            {
+              "id": "b",
+              "tekst": "At du vil ha gratis pizza"
+            },
+            {
+              "id": "c",
+              "tekst": "At bussen er blå"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du melder fra om aktivitetsplanen.",
+          "tilbakemeldingFeil": "Les oppgaven om melding til Linn."
+        },
+        {
+          "type": "ordbank",
+          "id": "e05-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Hei Linn, jeg har _____ aktivitetene.",
+          "ord": [
+            "registrert",
+            "spist",
+            "slettet"
+          ],
+          "riktig": "registrert",
+          "tilbakemeldingRiktig": "Riktig. Du forteller at planen er oppdatert.",
+          "tilbakemeldingFeil": "Bruk et verb som passer til Aktivitetsplanen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e05-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "En melding til veilederen bør være høflig og tydelig.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Hei, innhold og hilsen.",
+          "tilbakemeldingFeil": "Husk høflig språk til Linn."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e05-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "lagt",
+            "inn",
+            "fristen",
+            "i",
+            "planen."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Tydelig melding om det du har gjort.",
+          "tilbakemeldingFeil": "Prøv igjen med har lagt inn."
+        },
         {
           "type": "bygg_melding",
           "id": "e05-s04-bm",
@@ -333,6 +549,76 @@
           "riktigErSant": false,
           "tilbakemeldingRiktig": "Riktig. Linn sier: Søk innen datoen. Ikke senere.",
           "tilbakemeldingFeil": "Les SMS-en. Linn ber deg søke innen datoen i annonsen."
+        },
+        {
+          "type": "flervalg",
+          "id": "e05-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva ber Linn deg ofte huske?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Å søke innen fristen"
+            },
+            {
+              "id": "b",
+              "tekst": "Å glemme planen"
+            },
+            {
+              "id": "c",
+              "tekst": "Å slette CVen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Frist er viktig i jobbsøk.",
+          "tilbakemeldingFeil": "Les svaret fra Linn."
+        },
+        {
+          "type": "ordbank",
+          "id": "e05-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Søk _____ datoen.",
+          "ord": [
+            "innen",
+            "uten",
+            "bak"
+          ],
+          "riktig": "innen",
+          "tilbakemeldingRiktig": "Riktig. «Innen» betyr før fristen er ute.",
+          "tilbakemeldingFeil": "Linn snakker om å søke i tide."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e05-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk",
+            "for",
+            "meldingen,",
+            "hilsen",
+            "Linn."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En kort og høflig avslutning.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk for meldingen, hilsen Linn."
+        },
+        {
+          "type": "matching",
+          "id": "e05-s05-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "innen",
+              "hoyre": "før en frist"
+            },
+            {
+              "id": "p2",
+              "venstre": "aktivitet",
+              "hoyre": "noe du skal gjøre i planen"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Nyttige ord i svaret fra Linn.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     }

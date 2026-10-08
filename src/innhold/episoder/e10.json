@@ -107,6 +107,66 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Brutto, netto, trekk og fradrag.",
           "tilbakemeldingFeil": "Brutto er før trekk. Netto er på konto. Skattetrekk går til skatt."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s01-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor skal du sjekke skattekortet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Fordi trekkprosenten skal stemme med ny jobb"
+            },
+            {
+              "id": "b",
+              "tekst": "Fordi du skal bestille pizza"
+            },
+            {
+              "id": "c",
+              "tekst": "Fordi bussen er sen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Ny jobb kan bety nytt skattekort.",
+          "tilbakemeldingFeil": "Les SMS-en fra lønnskontoret."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Du må sjekke _____.",
+          "ord": [
+            "skattekortet",
+            "filmen",
+            "været"
+          ],
+          "riktig": "skattekortet",
+          "tilbakemeldingRiktig": "Riktig. Skattekortet styrer trekk i lønna.",
+          "tilbakemeldingFeil": "SMS-en handler om skattekort."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s01-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Skattekortet påvirker hvor mye som trekkes i skatt.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Feil kort kan gi for lite eller for mye trekk.",
+          "tilbakemeldingFeil": "Derfor er det viktig å oppdatere."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s01-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "må",
+            "sjekke",
+            "skattekortet",
+            "mitt."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En tydelig setning.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg må sjekke skattekortet mitt."
         }
       ]
     },
@@ -176,6 +236,66 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Sjekk adressen. Ikke gi bort koden.",
           "tilbakemeldingFeil": "Se etter feil adresse, hastverk og spørsmål om kode."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s02-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er et typisk tegn på svindel-SMS?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Merkelig lenke og press om å klikke raskt"
+            },
+            {
+              "id": "b",
+              "tekst": "Offisiell avsender uten lenke"
+            },
+            {
+              "id": "c",
+              "tekst": "En melding fra veilederen din uten krav"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Vær forsiktig med rare lenker.",
+          "tilbakemeldingFeil": "Ikke logg inn via mistenkelige lenker."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Denne SMS-en ser ut som _____.",
+          "ord": [
+            "svindel",
+            "en buss",
+            "en blomst"
+          ],
+          "riktig": "svindel",
+          "tilbakemeldingRiktig": "Riktig. Noen meldinger prøver å lure deg.",
+          "tilbakemeldingFeil": "Se etter feil og rare lenker."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du skal alltid klikke på lenker i rare SMS-er.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Ikke klikk. Gå til riktig side selv.",
+          "tilbakemeldingFeil": "Bruk offisiell adresse."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s02-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "klikket",
+            "ikke",
+            "på",
+            "lenken."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Det var et trygt valg.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg klikket ikke på lenken."
         }
       ]
     },
@@ -208,6 +328,66 @@
           "riktigErSant": true,
           "tilbakemeldingRiktig": "Sant. Aldri via en merkelig lenke i SMS.",
           "tilbakemeldingFeil": "Det er sant. Bruk den ekte adressen."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s03a-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor er det bra at du sa nei til den rare lenken?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Fordi du unngår svindel"
+            },
+            {
+              "id": "b",
+              "tekst": "Fordi du mister jobben"
+            },
+            {
+              "id": "c",
+              "tekst": "Fordi du skal betale mer skatt"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Å si nei beskytter deg.",
+          "tilbakemeldingFeil": "God nettvett på jobb og privat."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s03a-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg sa _____ til den mistenkelige lenken.",
+          "ord": [
+            "nei",
+            "ja",
+            "kanskje"
+          ],
+          "riktig": "nei",
+          "tilbakemeldingRiktig": "Riktig. Nei til svindel.",
+          "tilbakemeldingFeil": "Ikke logg inn via ulik lenke."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s03a-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er trygt å bruke den ekte adressen til Skatteetaten.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Gå direkte til riktig side.",
+          "tilbakemeldingFeil": "Ikke bruk lenker fra rare SMS-er."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s03a-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "går",
+            "til",
+            "riktig",
+            "nettside."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Trygt valg.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg går til riktig nettside."
         }
       ]
     },
@@ -254,6 +434,65 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Sjekk adressen først.",
           "tilbakemeldingFeil": "Ikke send koden. Ikke bruk lenke i en merkelig SMS."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s03b-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du hvis du kommer til feil side?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Går ut og bruker riktig adresse"
+            },
+            {
+              "id": "b",
+              "tekst": "Skriver inn bankkort med en gang"
+            },
+            {
+              "id": "c",
+              "tekst": "Deler passordet med alle"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Stopp hvis siden ser feil ut.",
+          "tilbakemeldingFeil": "Sjekk adressen nøye."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s03b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Denne siden er _____. Jeg går ut.",
+          "ord": [
+            "feil",
+            "perfekt",
+            "min"
+          ],
+          "riktig": "feil",
+          "tilbakemeldingRiktig": "Riktig. Ikke logg inn på feil side.",
+          "tilbakemeldingFeil": "Se etter rare adresser."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s03b-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du skal logge inn selv om adressen ser rar ut.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Feil adresse = gå ut.",
+          "tilbakemeldingFeil": "Bruk bare kjente, trygge sider."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s03b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Dette",
+            "er",
+            "feil",
+            "side."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Kort og klart.",
+          "tilbakemeldingFeil": "Prøv igjen: Dette er feil side."
         }
       ]
     },
@@ -306,6 +545,71 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Slik logger du inn .",
           "tilbakemeldingFeil": "Start med Startside. Deretter Logg inn. Så metode, kode, Min side, Skattekort."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s04-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du først i Skatteøving?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Logger inn"
+            },
+            {
+              "id": "b",
+              "tekst": "Sletter kontoen"
+            },
+            {
+              "id": "c",
+              "tekst": "Sender lønnsslippen til en fremmed"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Innlogging er første steg.",
+          "tilbakemeldingFeil": "Følg trinnene i øvingen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg må _____ inn før jeg endrer skattekortet.",
+          "ord": [
+            "logge",
+            "løpe",
+            "synge"
+          ],
+          "riktig": "logge",
+          "tilbakemeldingRiktig": "Riktig. Logg inn på den trygge siden.",
+          "tilbakemeldingFeil": "Innlogging kommer før endring."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du skal bare logge inn på den ekte øvingssiden i spillet.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Følg den trygge flyten i spillet.",
+          "tilbakemeldingFeil": "Ikke bruk rare lenker utenfor øvingen."
+        },
+        {
+          "type": "matching",
+          "id": "e10-s04-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "logge inn",
+              "hoyre": "skrive brukernavn og passord for å åpne siden"
+            },
+            {
+              "id": "p2",
+              "venstre": "skattekort",
+              "hoyre": "dokument som styrer skattetrekk"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Viktige ord før du endrer kortet.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     },
@@ -330,6 +634,66 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e10-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor trenger du tall fra arbeidsavtalen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "For å fylle inn riktig forventet inntekt"
+            },
+            {
+              "id": "b",
+              "tekst": "For å bestille buss"
+            },
+            {
+              "id": "c",
+              "tekst": "For å velge favorittfarge"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Inntektstall påvirker skattekortet.",
+          "tilbakemeldingFeil": "Bruk månedslønn og perioder fra avtalen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "_____ er pengene du tjener før skatt i måneden.",
+          "ord": [
+            "Månedslønn",
+            "Busskort",
+            "Ferie"
+          ],
+          "riktig": "Månedslønn",
+          "tilbakemeldingRiktig": "Riktig. Månedslønn er et nøkkeltall.",
+          "tilbakemeldingFeil": "Finn tallet i avtalen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Feil tall kan gi feil trekkprosent.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Derfor må tallene være riktige.",
+          "tilbakemeldingFeil": "Sjekk avtalen før du fyller inn."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "fyller",
+            "inn",
+            "riktig",
+            "månedslønn."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Tydelig og konkret.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg fyller inn riktig månedslønn."
+        },
         {
           "type": "fyll_tall",
           "id": "e10-s05-ft",
@@ -436,6 +800,46 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Restskatt kommer når trekk var for lavt.",
           "tilbakemeldingFeil": "Restskatt er skatt du skylder neste år."
+        },
+        {
+          "type": "ordbank",
+          "id": "e10-s06-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Hvis du ikke endrer skattekortet, kan trekket bli _____.",
+          "ord": [
+            "feil",
+            "lilla",
+            "søtt"
+          ],
+          "riktig": "feil",
+          "tilbakemeldingRiktig": "Riktig. For lite eller for mye trekk.",
+          "tilbakemeldingFeil": "Les om hva som kan skje."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s06-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Hvis»-setninger snakker om mulige følger.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Hvis A, så B.",
+          "tilbakemeldingFeil": "Dette er nyttig språk om skatt og jobb."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s06-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Hvis",
+            "jeg",
+            "ikke",
+            "endrer,",
+            "kan",
+            "trekket",
+            "bli",
+            "feil."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En klar hvis-setning.",
+          "tilbakemeldingFeil": "Prøv igjen med hele setningen."
         }
       ]
     },
@@ -481,6 +885,52 @@
           "riktig": "må",
           "tilbakemeldingRiktig": "Riktig. Må + infinitiv: må endre.",
           "tilbakemeldingFeil": "Bruk må: Hvis du tjener mer, må du endre."
+        },
+        {
+          "type": "flervalg",
+          "id": "e10-s07-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr bekreftelsen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "At det nye skattekortet er registrert"
+            },
+            {
+              "id": "b",
+              "tekst": "At du har mistet jobben"
+            },
+            {
+              "id": "c",
+              "tekst": "At bussen er innstilt"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du har fullført endringen.",
+          "tilbakemeldingFeil": "Les kvitteringen nøye."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e10-s07-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å sjekke tallene på bekreftelsen.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Kontroller at trekket ser riktig ut.",
+          "tilbakemeldingFeil": "Finn riktig felt i dokumentet."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e10-s07-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "fått",
+            "nytt",
+            "skattekort."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har fått.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har fått nytt skattekort."
         },
         {
           "type": "finn_i_dokument",

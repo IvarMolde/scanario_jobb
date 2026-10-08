@@ -86,6 +86,53 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Søkeord kan være butikk, lager eller helse.",
           "tilbakemeldingFeil": "Et søkeord er et ord du leter med, ikke et passord."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Du skal søke jobb i en _____.",
+          "ord": [
+            "jobbportal",
+            "bakeri",
+            "kino"
+          ],
+          "riktig": "jobbportal",
+          "tilbakemeldingRiktig": "Riktig. Jobbportalen er stedet du søker.",
+          "tilbakemeldingFeil": "Teksten handler om jobbportalen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e03-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "I en jobbportal kan du søke med søkeord, sted og type stilling.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Det er vanlige felt i et jobbsøk.",
+          "tilbakemeldingFeil": "Les teksten om hvordan du søker."
+        },
+        {
+          "type": "matching",
+          "id": "e03-s01-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "annonse",
+              "hoyre": "tekst om en ledig jobb"
+            },
+            {
+              "id": "p2",
+              "venstre": "stilling",
+              "hoyre": "en jobb du kan søke på"
+            },
+            {
+              "id": "p3",
+              "venstre": "frist",
+              "hoyre": "siste dag du kan søke"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Dette er viktige ord i jobbsøk.",
+          "tilbakemeldingFeil": "Les forklaringene i episoden."
         }
       ]
     },
@@ -110,6 +157,66 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e03-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor er det lurt å lagre et søk?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Da kan du få varsel om nye jobber"
+            },
+            {
+              "id": "b",
+              "tekst": "Da sletter du CVen"
+            },
+            {
+              "id": "c",
+              "tekst": "Da betaler du skatt"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Et lagret søk kan gi varsel.",
+          "tilbakemeldingFeil": "Når søket er lagret, kan du følge med på nye treff."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg vil _____ søket mitt.",
+          "ord": [
+            "lagre",
+            "glemme",
+            "spise"
+          ],
+          "riktig": "lagre",
+          "tilbakemeldingRiktig": "Riktig. Du lagrer søket i portalen.",
+          "tilbakemeldingFeil": "Oppgaven handler om å lagre søket."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e03-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du bør velge søkeord som passer jobben du vil ha.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Gode søkeord gir bedre treff.",
+          "tilbakemeldingFeil": "Tenk på yrket og stedet når du søker."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e03-s02-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "lagret",
+            "søket",
+            "mitt."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har lagret.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har lagret søket mitt."
+        },
         {
           "type": "portal_sok",
           "id": "e03-s02-ps",
@@ -230,6 +337,66 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Disse fire ordene står i nesten alle annonser.",
           "tilbakemeldingFeil": "Prøv igjen. Frist = siste dag. Prosent = hvor mye. Tiltredelse = start."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er et nøkkelord i en treffliste?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Et viktig ord som sier noe om jobben"
+            },
+            {
+              "id": "b",
+              "tekst": "Et passord til Facebook"
+            },
+            {
+              "id": "c",
+              "tekst": "Navnet på bussen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Nøkkelord hjelper deg å forstå annonsen raskt.",
+          "tilbakemeldingFeil": "Nøkkelord er viktige ord i trefflisten."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Se på _____ før du åpner annonsen.",
+          "ord": [
+            "nøkkelordene",
+            "værmeldingen",
+            "filmen"
+          ],
+          "riktig": "nøkkelordene",
+          "tilbakemeldingRiktig": "Riktig. Nøkkelord gir deg rask info.",
+          "tilbakemeldingFeil": "Teksten handler om nøkkelord i trefflisten."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e03-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Frist forteller hvor mye du tjener i måneden.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Frist er siste dag du kan søke.",
+          "tilbakemeldingFeil": "Frist er en dato, ikke lønn."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e03-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Søknadsfristen",
+            "er",
+            "den",
+            "15.",
+            "november."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik kan du si en frist.",
+          "tilbakemeldingFeil": "Prøv igjen med datoen i riktig rekkefølge."
         }
       ]
     },
@@ -290,6 +457,43 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Mange yrker er sammensatte ord: butikk + medarbeider.",
           "tilbakemeldingFeil": "Del ordet etter meningen: lager og medarbeider."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e03-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "En stillingsannonse forteller hva arbeidsgiveren søker.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Annonsen beskriver jobben og kravene.",
+          "tilbakemeldingFeil": "Les annonsen for å se hva som kreves."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s04-ob2",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I annonsen står det ofte hvilke _____ du må ha.",
+          "ord": [
+            "krav",
+            "ferier",
+            "filmer"
+          ],
+          "riktig": "krav",
+          "tilbakemeldingRiktig": "Riktig. Krav er det arbeidsgiveren må ha.",
+          "tilbakemeldingFeil": "Se etter ord som må, bør og krav."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e03-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "lest",
+            "annonsen",
+            "nøye."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har lest.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har lest annonsen nøye."
         }
       ]
     },
@@ -345,6 +549,57 @@
           "riktigErSant": false,
           "tilbakemeldingRiktig": "Riktig. 50 % er deltid. 100 % er heltid.",
           "tilbakemeldingFeil": "Heltid er som regel 100 %. 50 % er halv stilling, altså deltid."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Søknadsfristen er en _____.",
+          "ord": [
+            "dato",
+            "buss",
+            "farge"
+          ],
+          "riktig": "dato",
+          "tilbakemeldingRiktig": "Riktig. Frist er en dato.",
+          "tilbakemeldingFeil": "Frist forteller hvilken dag du må søke innen."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s05-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr 100 % stilling?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Fulltid"
+            },
+            {
+              "id": "b",
+              "tekst": "Halv tid"
+            },
+            {
+              "id": "c",
+              "tekst": "Ingen jobb"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. 100 % er vanligvis fulltid.",
+          "tilbakemeldingFeil": "Prosenten viser hvor stor stillingen er."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e03-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jobben",
+            "starter",
+            "den",
+            "1.",
+            "desember."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik sier vi startdato.",
+          "tilbakemeldingFeil": "Prøv igjen med datoen på slutten."
         }
       ]
     }

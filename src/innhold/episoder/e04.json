@@ -88,6 +88,48 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Kan du rekke jobben med buss? Må du ha førerkort?",
           "tilbakemeldingFeil": "Logistikk her er tid og reise, ikke lønn."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I jobbmagasinet finner du flere _____.",
+          "ord": [
+            "annonser",
+            "oppskrifter",
+            "filmer"
+          ],
+          "riktig": "annonser",
+          "tilbakemeldingRiktig": "Riktig. Magasinet viser øvingsannonser.",
+          "tilbakemeldingFeil": "Jobbmagasinet handler om stillingsannonser."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du bør lese flere annonser før du velger jobb.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da kan du sammenligne.",
+          "tilbakemeldingFeil": "Episoden handler om å se på flere jobber."
+        },
+        {
+          "type": "matching",
+          "id": "e04-s01-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "annonse",
+              "hoyre": "tekst om ledig stilling"
+            },
+            {
+              "id": "p2",
+              "venstre": "arbeidsgiver",
+              "hoyre": "bedriften som søker folk"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Viktige ord i jobbmagasinet.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     },
@@ -165,6 +207,52 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. «Ikke» står etter det første verbet: Du trenger ikke …",
           "tilbakemeldingFeil": "I norsk står «ikke» ofte etter første verb: Du trenger ikke førerkort."
+        },
+        {
+          "type": "flervalg",
+          "id": "e04-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr «må» i en annonse?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Et krav du skal oppfylle"
+            },
+            {
+              "id": "b",
+              "tekst": "Et ønske som er helt valgfritt"
+            },
+            {
+              "id": "c",
+              "tekst": "At jobben er ferdig"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. «Må» er et krav.",
+          "tilbakemeldingFeil": "Skill mellom må, bør og det er en fordel."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "«Det er en fordel» betyr at noe er _____, men ikke et hardt krav.",
+          "ord": [
+            "bra",
+            "forbudt",
+            "umulig"
+          ],
+          "riktig": "bra",
+          "tilbakemeldingRiktig": "Riktig. En fordel er positivt, men ikke alltid nødvendig.",
+          "tilbakemeldingFeil": "Fordel er noe arbeidsgiveren liker."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Bør» er sterkere enn «må».",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. «Må» er sterkere. «Bør» er et ønske.",
+          "tilbakemeldingFeil": "Må = krav. Bør = ønske."
         }
       ]
     },
@@ -190,6 +278,66 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e04-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva sjekker du når du matcher en butikkjobb?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Kompetanse, egenskaper og reise"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare favorittfarge"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare vær"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Match har flere deler.",
+          "tilbakemeldingFeil": "Se på kompetanse, egenskaper og logistikk."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Kundebehandling er viktig i _____.",
+          "ord": [
+            "butikk",
+            "skogen",
+            "flyet"
+          ],
+          "riktig": "butikk",
+          "tilbakemeldingRiktig": "Riktig. Butikkjobb handler ofte om kunder.",
+          "tilbakemeldingFeil": "Tenk på hva en butikkmedarbeider gjør."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Hvis jobben ligger langt unna, må du tenke på reise.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Reise er en del av match.",
+          "tilbakemeldingFeil": "Logistikk handler også om veien til jobb."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e04-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Denne",
+            "jobben",
+            "passer",
+            "ganske",
+            "godt."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik kan du oppsummere en match.",
+          "tilbakemeldingFeil": "Prøv igjen: Denne jobben passer ganske godt."
+        },
         {
           "type": "match_sjekkliste",
           "id": "e04-s03-ms",
@@ -228,6 +376,66 @@
       ],
       "oppgaver": [
         {
+          "type": "flervalg",
+          "id": "e04-s04-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva trenger du ofte på lager?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Førerkort eller styrke til å løfte"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare sangstemme"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare en sykkelhjelm til kontoret"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Lagerjobb kan kreve førerkort eller fysisk arbeid.",
+          "tilbakemeldingFeil": "Les annonsen om lagerkrav."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "På lageret _____ jeg tunge esker.",
+          "ord": [
+            "løfter",
+            "synger",
+            "baker"
+          ],
+          "riktig": "løfter",
+          "tilbakemeldingRiktig": "Riktig. Løfte er vanlig på lager.",
+          "tilbakemeldingFeil": "Tenk på typiske lageroppgaver."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Førerkort klasse B kan være et krav i lagerjobb.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Noen lagerjobber krever bil.",
+          "tilbakemeldingFeil": "Sjekk kravene i annonsen."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e04-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "førerkort",
+            "klasse",
+            "B."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Dette kan stå i CVen.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har førerkort klasse B."
+        },
+        {
           "type": "match_sjekkliste",
           "id": "e04-s04-ms",
           "instruksjon": "Vurder kompetanse, egenskaper og logistikk for lagerjobben.",
@@ -265,6 +473,66 @@
       ],
       "oppgaver": [
         {
+          "type": "flervalg",
+          "id": "e04-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er viktig i omsorgsjobb?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Omsorg, tålmodighet og ansvar"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare å løpe fort"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare å lage mat til seg selv"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Omsorgsyrker handler om å hjelpe andre.",
+          "tilbakemeldingFeil": "Tenk på egenskaper i hjemmetjenesten."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg er _____ når jeg forklarer sakte til brukeren.",
+          "ord": [
+            "tålmodig",
+            "sint",
+            "sen"
+          ],
+          "riktig": "tålmodig",
+          "tilbakemeldingRiktig": "Riktig. Tålmodig passer godt i omsorg.",
+          "tilbakemeldingFeil": "Tålmodig betyr at du venter og forklarer rolig."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Deltid kan bety at du jobber mindre enn 100 %.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Deltid er ikke full stilling.",
+          "tilbakemeldingFeil": "Les annonsen om stillingsprosent."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e04-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "hjulpet",
+            "eldre",
+            "hjemme."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En god erfaring i omsorg.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har hjulpet eldre hjemme."
+        },
+        {
           "type": "match_sjekkliste",
           "id": "e04-s05-ms",
           "instruksjon": "Vurder kompetanse, egenskaper og logistikk for omsorgsjobben.",
@@ -300,6 +568,68 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e04-s06-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvor mange jobber skal du velge?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "To eller tre"
+            },
+            {
+              "id": "b",
+              "tekst": "Null"
+            },
+            {
+              "id": "c",
+              "tekst": "Tjue"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du skal velge 2 eller 3 stillinger.",
+          "tilbakemeldingFeil": "Instruksen sier to eller tre jobber."
+        },
+        {
+          "type": "ordbank",
+          "id": "e04-s06-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ to jobber jeg vil søke på.",
+          "ord": [
+            "velger",
+            "glemmer",
+            "sletter"
+          ],
+          "riktig": "velger",
+          "tilbakemeldingRiktig": "Riktig. Nå velger du jobber.",
+          "tilbakemeldingFeil": "Oppgaven er å velge jobber."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s06-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å velge jobber som passer deg.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Match og interesse styrer valget.",
+          "tilbakemeldingFeil": "Velg jobber du faktisk kan søke på."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e04-s06-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "vil",
+            "gjerne",
+            "søke",
+            "på",
+            "disse",
+            "jobbene."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En høflig og tydelig setning.",
+          "tilbakemeldingFeil": "Prøv igjen med «vil gjerne»."
+        },
         {
           "type": "velg_jobber",
           "id": "e04-s06-vj",

@@ -96,6 +96,44 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Kalenderen viser tirsdag klokka 10.00. Det er i morgen.",
           "tilbakemeldingFeil": "Se på den gule avtalen i kalenderen. Dagen er tirsdag. Tiden er 10.00."
+        },
+        {
+          "type": "ordbank",
+          "id": "e01-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Møtet med Linn står i _____.",
+          "ord": [
+            "kalenderen",
+            "kjøleskapet",
+            "bussen"
+          ],
+          "riktig": "kalenderen",
+          "tilbakemeldingRiktig": "Riktig. Du finner møtet i kalenderen.",
+          "tilbakemeldingFeil": "Se på kalenderen på telefonen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Linn Holm er veileder hos NAV.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Linn Holm er NAV-veilederen din.",
+          "tilbakemeldingFeil": "Linn er veilederen du skal møte."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e01-s01-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Møtet",
+            "er",
+            "i",
+            "morgen",
+            "klokka",
+            "10.00."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik sier vi tidspunktet klart.",
+          "tilbakemeldingFeil": "Prøv igjen: Møtet er i morgen klokka 10.00."
         }
       ]
     },
@@ -153,6 +191,57 @@
           ],
           "tilbakemeldingRiktig": "Riktig. «Jeg vil gjerne» er høflig. Gjerne viser at du ønsker noe på en snill måte.",
           "tilbakemeldingFeil": "Start med Jeg. Så kommer vil gjerne. Deretter bekrefte møtet i morgen."
+        },
+        {
+          "type": "flervalg",
+          "id": "e01-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken start er mest høflig i en melding til veilederen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Hva skjer"
+            },
+            {
+              "id": "b",
+              "tekst": "Kunne du …"
+            },
+            {
+              "id": "c",
+              "tekst": "Du må"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. «Kunne du …» er en høflig måte å spørre på.",
+          "tilbakemeldingFeil": "Til en veileder er «Kunne du …» eller «Jeg vil gjerne …» bedre."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Jeg vil gjerne» er en høflig måte å si hva du ønsker.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. «Gjerne» gjør setningen mykere og mer høflig.",
+          "tilbakemeldingFeil": "Teksten anbefaler «Jeg vil gjerne …»."
+        },
+        {
+          "type": "matching",
+          "id": "e01-s02-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "høflig",
+              "hoyre": "snill og respektfull i språket"
+            },
+            {
+              "id": "p2",
+              "venstre": "bekrefte",
+              "hoyre": "si at noe stemmer eller at du kommer"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Disse ordene er viktige i meldingen.",
+          "tilbakemeldingFeil": "Les teksten om høflig melding en gang til."
         }
       ]
     },
@@ -170,6 +259,68 @@
       "tekst": "Bygg en {{melding}} til Linn.\n\nVelg hilsen, innhold og avslutning.\n\nEn {{hoflig|høflig}} melding har hei, hele setninger og vennlig hilsen.",
       "valg": [],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e01-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva bør en høflig melding til Linn inneholde?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Bare ett ord: ok"
+            },
+            {
+              "id": "b",
+              "tekst": "Hilsen, tydelig innhold og vennlig avslutning"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare emojis"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Hei, hele setninger og vennlig hilsen.",
+          "tilbakemeldingFeil": "En veileder trenger hilsen, innhold og avslutning."
+        },
+        {
+          "type": "ordbank",
+          "id": "e01-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "En _____ melding har hei og hele setninger.",
+          "ord": [
+            "høflig",
+            "sint",
+            "tom"
+          ],
+          "riktig": "høflig",
+          "tilbakemeldingRiktig": "Riktig. En høflig melding er tydelig og vennlig.",
+          "tilbakemeldingFeil": "Teksten sier at en høflig melding har hei og hele setninger."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Bye» er en god avslutning til NAV-veilederen.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. «Vennlig hilsen» eller «Hilsen» er bedre.",
+          "tilbakemeldingFeil": "Til en veileder bruker vi vanligvis norsk avslutning, ikke «Bye»."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e01-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Hei",
+            "Linn,",
+            "jeg",
+            "vil",
+            "gjerne",
+            "bekrefte",
+            "møtet."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Dette er en høflig start på meldingen.",
+          "tilbakemeldingFeil": "Start med Hei Linn, deretter jeg vil gjerne bekrefte møtet."
+        },
         {
           "type": "bygg_melding",
           "id": "e01-s03-bm",
@@ -319,6 +470,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig!. Du klarte å finne riktig forklaring til de tre ordene",
           "tilbakemeldingFeil": "Prøv igjen. Les forklaringen sakte. Tenk på hva ordet gjør i en melding til veilederen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e01-s04a-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Linn _____ møtet i morgen.",
+          "ord": [
+            "bekrefter",
+            "glemmer",
+            "avlyser"
+          ],
+          "riktig": "bekrefter",
+          "tilbakemeldingRiktig": "Riktig. Hun sier ja til tiden.",
+          "tilbakemeldingFeil": "Les SMS-en. Linn sier ja til møtet."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s04a-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Linn skriver at møtet er avlyst.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Hun bekrefter møtet i morgen klokka 10.00.",
+          "tilbakemeldingFeil": "Linn sier: «Ja, vi møtes i morgen klokka 10.00.»"
+        },
+        {
+          "type": "flervalg",
+          "id": "e01-s04a-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken dag er møtet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "I dag"
+            },
+            {
+              "id": "b",
+              "tekst": "I morgen"
+            },
+            {
+              "id": "c",
+              "tekst": "Neste uke"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Møtet er i morgen.",
+          "tilbakemeldingFeil": "SMS-en sier «i morgen»."
         }
       ]
     },
@@ -388,6 +585,63 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. En kort melding uten tid og hilsen er vanskelig å forstå. Linn ber om en tydeligere tekst.",
           "tilbakemeldingFeil": "Linn er ikke sint. Hun trenger mer informasjon: hvem, hva og når."
+        },
+        {
+          "type": "ordbank",
+          "id": "e01-s04b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Linn ber om en _____ melding.",
+          "ord": [
+            "tydeligere",
+            "lengre",
+            "sint"
+          ],
+          "riktig": "tydeligere",
+          "tilbakemeldingRiktig": "Riktig. Hun forstår ikke den korte meldingen.",
+          "tilbakemeldingFeil": "Linn spør om en tydeligere melding."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s04b-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "En uklar melding kan gjøre at veilederen må spørre på nytt.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Derfor trenger meldingen tid og tydelig språk.",
+          "tilbakemeldingFeil": "Når meldingen er uklar, spør Linn på nytt."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e01-s04b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Kan",
+            "du",
+            "sende",
+            "en",
+            "tydeligere",
+            "melding?"
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik spør Linn høflig.",
+          "tilbakemeldingFeil": "Prøv igjen: Kan du sende en tydeligere melding?"
+        },
+        {
+          "type": "matching",
+          "id": "e01-s04b-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "uklar",
+              "hoyre": "vanskelig å forstå"
+            },
+            {
+              "id": "p2",
+              "venstre": "tydelig",
+              "hoyre": "lett å forstå"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Nå skiller du mellom uklar og tydelig.",
+          "tilbakemeldingFeil": "Tenk på hva Linn trenger for å forstå deg."
         }
       ]
     },
@@ -435,6 +689,67 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. I presens sier vi «jeg kommer». Etter jeg får verbet -er: kommer.",
           "tilbakemeldingFeil": "Dette ordet er riktig. Finn verbet som er feil, eller velg formen «kommer»."
+        },
+        {
+          "type": "flervalg",
+          "id": "e01-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken form er riktig: «Jeg _____ i morgen.»",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "komme"
+            },
+            {
+              "id": "b",
+              "tekst": "kommer"
+            },
+            {
+              "id": "c",
+              "tekst": "å komme"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Etter jeg sier vi «kommer» i presens.",
+          "tilbakemeldingFeil": "Etter jeg får verbet ofte -er: kommer."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e01-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "I setningen «Jeg komme i morgen» er verbet feil.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Det skal være «jeg kommer».",
+          "tilbakemeldingFeil": "«Komme» uten -r er feil etter jeg."
+        },
+        {
+          "type": "ordbank",
+          "id": "e01-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ i morgen klokka 10.00.",
+          "ord": [
+            "kommer",
+            "komme",
+            "kommet"
+          ],
+          "riktig": "kommer",
+          "tilbakemeldingRiktig": "Riktig. Presens: jeg kommer.",
+          "tilbakemeldingFeil": "Husk -er etter jeg i presens."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e01-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "kommer",
+            "i",
+            "morgen",
+            "klokka",
+            "10.00."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Nå er setningen korrekt.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg kommer i morgen klokka 10.00."
         }
       ]
     }

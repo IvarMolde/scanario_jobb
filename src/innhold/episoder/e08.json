@@ -103,6 +103,45 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. En hel setning. Ikke for kort. Ikke for langt.",
           "tilbakemeldingFeil": "Ikke svar med ett ord. Ikke fortell alt. Si det viktigste i hele setninger."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "«Fortell om deg selv» er et vanlig _____ på intervju.",
+          "ord": [
+            "spørsmål",
+            "tog",
+            "vær"
+          ],
+          "riktig": "spørsmål",
+          "tilbakemeldingRiktig": "Riktig. Dette spørsmålet kommer ofte.",
+          "tilbakemeldingFeil": "Forbered et kort svar."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å øve på vanlige intervjuspørsmål.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Øving gjør deg tryggere.",
+          "tilbakemeldingFeil": "Les lista med spørsmål."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s01-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Kan",
+            "du",
+            "fortelle",
+            "litt",
+            "om",
+            "deg",
+            "selv?"
+          ],
+          "tilbakemeldingRiktig": "Riktig. Et vanlig intervjuspørsmål.",
+          "tilbakemeldingFeil": "Prøv igjen med hele spørsmålet."
         }
       ]
     },
@@ -164,6 +203,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. God morgen. Hyggelig å møte deg.",
           "tilbakemeldingFeil": "Start med God morgen. Avslutt med Hyggelig å møte deg."
+        },
+        {
+          "type": "flervalg",
+          "id": "e08-s02-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva bør du ta med til intervju?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "CV og ID"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare en pute"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare en fotball"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. CV og ID er vanlig å ha med.",
+          "tilbakemeldingFeil": "Les lista over hva du skal pakke."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ med CV og ID.",
+          "ord": [
+            "tar",
+            "kaster",
+            "gjemmer"
+          ],
+          "riktig": "tar",
+          "tilbakemeldingRiktig": "Riktig. Ta med det du trenger.",
+          "tilbakemeldingFeil": "Pakk det du skal ha i mappa."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er greit å komme for sent til intervju uten å si ifra.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Kom i god tid, og si ifra hvis noe skjer.",
+          "tilbakemeldingFeil": "Punktlighet er viktig."
         }
       ]
     },
@@ -188,6 +273,68 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e08-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva bør svaret «fortell om deg selv» inneholde?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Kort om erfaring, utdanning og mål"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare hva du spiste i går"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare et nei"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Hold det kort og relevant for jobben.",
+          "tilbakemeldingFeil": "Knytt svaret til arbeid."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg har _____ i butikk i tre år.",
+          "ord": [
+            "jobbet",
+            "svømt",
+            "sovet"
+          ],
+          "riktig": "jobbet",
+          "tilbakemeldingRiktig": "Riktig. Fortell om relevant erfaring.",
+          "tilbakemeldingFeil": "Bruk erfaring fra CVen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Svaret bør være forståelig og ikke for langt.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Et godt svar er klart og passe langt.",
+          "tilbakemeldingFeil": "Unngå både for kort og alt for langt."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "heter",
+            "Sofiia,",
+            "og",
+            "jeg",
+            "har",
+            "omsorgserfaring."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En tydelig start.",
+          "tilbakemeldingFeil": "Prøv igjen med navn og erfaring."
+        },
         {
           "type": "intervju_svar",
           "id": "e08-s03-is",
@@ -295,6 +442,70 @@
       ],
       "oppgaver": [
         {
+          "type": "flervalg",
+          "id": "e08-s04-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr spørsmålet «Hvorfor denne jobben?»",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Hvorfor vil du ha akkurat denne stillingen"
+            },
+            {
+              "id": "b",
+              "tekst": "Hvilken farge du liker"
+            },
+            {
+              "id": "c",
+              "tekst": "Når bussen går"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. De vil høre motivasjonen din.",
+          "tilbakemeldingFeil": "Koble svaret til annonsen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg søker _____ jeg liker å hjelpe mennesker.",
+          "ord": [
+            "fordi",
+            "uten",
+            "bak"
+          ],
+          "riktig": "fordi",
+          "tilbakemeldingRiktig": "Riktig. «Fordi» gir en grunn.",
+          "tilbakemeldingFeil": "Forklar motivasjonen med fordi."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å nevne noe konkret fra annonsen.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da viser du at du har forberedt deg.",
+          "tilbakemeldingFeil": "Les annonsen før intervjuet."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "vil",
+            "gjerne",
+            "jobbe",
+            "her",
+            "fordi",
+            "jeg",
+            "har",
+            "erfaring."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Motivert og konkret.",
+          "tilbakemeldingFeil": "Prøv igjen med «fordi»."
+        },
+        {
           "type": "intervju_svar",
           "id": "e08-s04-is",
           "instruksjon": "Lytt. Velg det gode svaret med fordi.",
@@ -400,6 +611,67 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e08-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva spør de om når de sier «Hva har du gjort før?»",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Om tidligere jobb og erfaring"
+            },
+            {
+              "id": "b",
+              "tekst": "Om favorittfilm"
+            },
+            {
+              "id": "c",
+              "tekst": "Om været i går"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. De vil høre om erfaringen din.",
+          "tilbakemeldingFeil": "Bruk perfektum: jeg har …"
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ hjulpet eldre hjemme.",
+          "ord": [
+            "har",
+            "skal",
+            "vil"
+          ],
+          "riktig": "har",
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har hjulpet.",
+          "tilbakemeldingFeil": "Har + verb forteller om erfaring."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du kan bruke eksempler fra tidligere jobb.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Eksempler gjør svaret sterkere.",
+          "tilbakemeldingFeil": "Fortell kort hva du faktisk gjorde."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e08-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "jobbet",
+            "i",
+            "butikk",
+            "før."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En klar erfaringssetning.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har jobbet i butikk før."
+        },
         {
           "type": "intervju_svar",
           "id": "e08-s05-is",
@@ -535,6 +807,52 @@
           "riktig": "har",
           "tilbakemeldingRiktig": "Riktig. Jeg har jobbet. Det er perfektum.",
           "tilbakemeldingFeil": "Bruk har + jobbet når du snakker om erfaring."
+        },
+        {
+          "type": "flervalg",
+          "id": "e08-s06-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er inversjon?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "At verb kommer før subjekt i noen setninger"
+            },
+            {
+              "id": "b",
+              "tekst": "At du sover på jobb"
+            },
+            {
+              "id": "c",
+              "tekst": "At du sletter CVen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. For eksempel: «I Ukraina jobbet jeg …»",
+          "tilbakemeldingFeil": "Når et ledd står først, bytter verb og subjekt plass."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s06-ob2",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I fjor _____ jeg i butikk.",
+          "ord": [
+            "jobbet",
+            "har jobbet",
+            "skal jobbe"
+          ],
+          "riktig": "jobbet",
+          "tilbakemeldingRiktig": "Riktig. Med «i fjor» passer preteritum.",
+          "tilbakemeldingFeil": "Tydelig ferdig tid → preteritum."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s06-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Jeg har jobbet» er perfektum.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Har + verb = perfektum.",
+          "tilbakemeldingFeil": "Husk forskjellen på har jobbet og jobbet."
         }
       ]
     },
@@ -596,6 +914,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Hva er arbeidstiden?",
           "tilbakemeldingFeil": "Start med Hva er. Deretter arbeidstiden?"
+        },
+        {
+          "type": "flervalg",
+          "id": "e08-s07-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor bør du stille spørsmål til arbeidsgiveren?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "For å vise interesse og forstå jobben bedre"
+            },
+            {
+              "id": "b",
+              "tekst": "For å være uforskammet"
+            },
+            {
+              "id": "c",
+              "tekst": "For å avlyse intervjuet"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Et godt spørsmål viser at du er forberedt.",
+          "tilbakemeldingFeil": "Spør om arbeidstid, oppgaver eller opplæring."
+        },
+        {
+          "type": "ordbank",
+          "id": "e08-s07-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Hva er _____ på denne arbeidsplassen?",
+          "ord": [
+            "arbeidstiden",
+            "favorittfargen",
+            "hundenavnet"
+          ],
+          "riktig": "arbeidstiden",
+          "tilbakemeldingRiktig": "Riktig. Arbeidstid er et nyttig spørsmål.",
+          "tilbakemeldingFeil": "Velg et praktisk spørsmål."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e08-s07-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Hva er arbeidstiden?» er et høflig og nyttig spørsmål.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Det er konkret og relevant.",
+          "tilbakemeldingFeil": "Øv på å stille korte spørsmål."
         }
       ]
     }

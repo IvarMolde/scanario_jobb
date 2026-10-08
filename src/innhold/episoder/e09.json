@@ -66,17 +66,6 @@
       ],
       "oppgaver": [
         {
-          "type": "reiseplan",
-          "id": "e09-s01-rp",
-          "instruksjon": "Velg en avgang som kommer minst ti minutter før du skal være der.",
-          "bufferMin": 10,
-          "flagg": [
-            "kom_presis"
-          ],
-          "tilbakemeldingRiktig": "Riktig. Du kommer før tiden, med buffer.",
-          "tilbakemeldingFeil": "Se ankomsten. Du trenger ti minutter før start. Velg en tidligere buss, eller gå likevel."
-        },
-        {
           "type": "flervalg",
           "id": "e09-s01-fv",
           "instruksjon": "Velg det riktige svaret.",
@@ -98,6 +87,63 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Buffer er ekstra tid.",
           "tilbakemeldingFeil": "Buffer er ekstra tid før du skal være på jobb."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s01-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor planlegger du reisen før intervjuet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "For å komme i tide"
+            },
+            {
+              "id": "b",
+              "tekst": "For å være sen med vilje"
+            },
+            {
+              "id": "c",
+              "tekst": "For å glemme adressen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. God tid gir mindre stress.",
+          "tilbakemeldingFeil": "Velg en buss som kommer tidlig nok."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg sjekker _____ i reiseplanleggeren.",
+          "ord": [
+            "rutetabellen",
+            "oppskriften",
+            "filmen"
+          ],
+          "riktig": "rutetabellen",
+          "tilbakemeldingRiktig": "Riktig. Rutetabellen viser avganger.",
+          "tilbakemeldingFeil": "Se på linje, avgang og ankomst."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e09-s01-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt med litt buffer før intervjuet.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da tåler du litt forsinkelse.",
+          "tilbakemeldingFeil": "Kom gjerne litt før."
+        },
+        {
+          "type": "reiseplan",
+          "id": "e09-s01-rp",
+          "instruksjon": "Velg en avgang som kommer minst ti minutter før du skal være der.",
+          "bufferMin": 10,
+          "flagg": [
+            "kom_presis"
+          ],
+          "tilbakemeldingRiktig": "Riktig. Du kommer før tiden, med buffer.",
+          "tilbakemeldingFeil": "Se ankomsten. Du trenger ti minutter før start. Velg en tidligere buss, eller gå likevel."
         }
       ]
     },
@@ -129,6 +175,66 @@
       },
       "valg": [],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e09-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva bør du gjøre hvis bussen er forsinket?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Sende beskjed til Kari"
+            },
+            {
+              "id": "b",
+              "tekst": "Si ingenting"
+            },
+            {
+              "id": "c",
+              "tekst": "Slette kalenderen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Si ifra så tidlig du kan.",
+          "tilbakemeldingFeil": "En kort, høflig melding er nok."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Bussen er _____. Jeg kommer litt senere.",
+          "ord": [
+            "forsinket",
+            "lilla",
+            "spist"
+          ],
+          "riktig": "forsinket",
+          "tilbakemeldingRiktig": "Riktig. Si tydelig hva som er galt.",
+          "tilbakemeldingFeil": "Bruk ordet forsinket."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e09-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er uhøflig å si ifra om forsinkelse.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Det er høflig og ansvarlig å si ifra.",
+          "tilbakemeldingFeil": "Arbeidsgiver vil vite at du er på vei."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e09-s02-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Hei",
+            "Kari,",
+            "bussen",
+            "er",
+            "forsinket."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Kort og tydelig beskjed.",
+          "tilbakemeldingFeil": "Prøv igjen: Hei Kari, bussen er forsinket."
+        },
         {
           "type": "bygg_melding",
           "id": "e09-s02-bm",
@@ -218,6 +324,77 @@
           "riktigErSant": true,
           "tilbakemeldingRiktig": "Sant. Si ifra. Da vet arbeidsgiveren hva som skjer.",
           "tilbakemeldingFeil": "Det er sant. Si ifra når bussen er forsinket."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s03a-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor takker Kari for beskjeden?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Fordi det er ansvarlig å si ifra"
+            },
+            {
+              "id": "b",
+              "tekst": "Fordi hun er sint"
+            },
+            {
+              "id": "c",
+              "tekst": "Fordi du ikke skal komme"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Beskjed om forsinkelse er bra.",
+          "tilbakemeldingFeil": "Les svaret fra Kari."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s03a-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Takk for _____.",
+          "ord": [
+            "beskjeden",
+            "bussen",
+            "regnet"
+          ],
+          "riktig": "beskjeden",
+          "tilbakemeldingRiktig": "Riktig. Kari takker for at du sa ifra.",
+          "tilbakemeldingFeil": "Se hva Kari skriver."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e09-s03a-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk",
+            "for",
+            "at",
+            "du",
+            "sa",
+            "ifra."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En vennlig respons.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk for at du sa ifra."
+        },
+        {
+          "type": "matching",
+          "id": "e09-s03a-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "beskjed",
+              "hoyre": "informasjon du sender til noen"
+            },
+            {
+              "id": "p2",
+              "venstre": "forsinket",
+              "hoyre": "kommer senere enn planlagt"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Nyttige ord når noe skjer på veien.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     },
@@ -273,6 +450,66 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. En kort melding kan gi et kort svar.",
           "tilbakemeldingFeil": "Kari svarer kort fordi meldingen din var brå. Neste gang: hei og hele setninger."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s03b-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er viktig i et kort svar fra Kari?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "At du forstår om alt er greit"
+            },
+            {
+              "id": "b",
+              "tekst": "At du sletter meldingen med en gang"
+            },
+            {
+              "id": "c",
+              "tekst": "At du ignorerer den"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Les svaret nøye.",
+          "tilbakemeldingFeil": "Kari kan bekrefte at det går bra."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s03b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Kari sender et _____ svar.",
+          "ord": [
+            "kort",
+            "tomt",
+            "usynlig"
+          ],
+          "riktig": "kort",
+          "tilbakemeldingRiktig": "Riktig. Svaret kan være kort, men viktig.",
+          "tilbakemeldingFeil": "Les hele meldingen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e09-s03b-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du kan svare høflig med «Takk».",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Et kort takk er ofte nok.",
+          "tilbakemeldingFeil": "Hold tonen vennlig."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e09-s03b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk,",
+            "da",
+            "ses",
+            "vi",
+            "snart."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Kort og hyggelig.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk, da ses vi snart."
         }
       ]
     },
@@ -362,6 +599,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Prosent, tid og prøvetid.",
           "tilbakemeldingFeil": "Stillingsprosent = 80 %. Arbeidstid = 09.00–15.30. Prøvetid = seks måneder."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s04-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er en arbeidsavtale?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Et dokument om jobb, lønn og arbeidstid"
+            },
+            {
+              "id": "b",
+              "tekst": "En matoppskrift"
+            },
+            {
+              "id": "c",
+              "tekst": "En bussbillett"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Avtalen forteller om vilkårene.",
+          "tilbakemeldingFeil": "Les de viktigste punktene."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg har fått et _____.",
+          "ord": [
+            "jobbtilbud",
+            "regnvær",
+            "spill"
+          ],
+          "riktig": "jobbtilbud",
+          "tilbakemeldingRiktig": "Riktig. Et tilbud betyr at de vil ansette deg.",
+          "tilbakemeldingFeil": "Les hva tilbudet inneholder."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e09-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Prøvetid betyr at både du og arbeidsgiver kan avslutte i en periode.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Prøvetid er vanlig i starten.",
+          "tilbakemeldingFeil": "Sjekk hva som står om prøvetid."
         }
       ]
     },
@@ -431,6 +714,52 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Det er et godt spørsmål første dag.",
           "tilbakemeldingFeil": "Spør hvem du kan snakke med når du lurer på noe."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s05-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er lurt på første arbeidsdag?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Komme i tide og hilse høflig"
+            },
+            {
+              "id": "b",
+              "tekst": "Komme tre timer for sent uten beskjed"
+            },
+            {
+              "id": "c",
+              "tekst": "Ignorere kollegaene"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Førsteinntrykket betyr mye.",
+          "tilbakemeldingFeil": "Si «god morgen» og vær punktlig."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "_____ morgen! Jeg er ny her.",
+          "ord": [
+            "God",
+            "Dårlig",
+            "Ingen"
+          ],
+          "riktig": "God",
+          "tilbakemeldingRiktig": "Riktig. «God morgen» er en høflig hilsen.",
+          "tilbakemeldingFeil": "Start dagen med en vennlig hilsen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e09-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er greit å spørre hvis du er usikker på en oppgave.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Å spørre viser ansvar.",
+          "tilbakemeldingFeil": "Bedre å spørre enn å gjette feil."
         }
       ]
     },
@@ -512,6 +841,43 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Jeg kommer til å lære mer.",
           "tilbakemeldingFeil": "Start med Jeg kommer til å. Deretter lære mer."
+        },
+        {
+          "type": "flervalg",
+          "id": "e09-s06-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilken setning handler om framtida?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Jeg skal begynne klokka åtte."
+            },
+            {
+              "id": "b",
+              "tekst": "Jeg jobbet i går."
+            },
+            {
+              "id": "c",
+              "tekst": "Jeg har spist lunsj."
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. «Skal» peker framover.",
+          "tilbakemeldingFeil": "Skill mellom fortid og framtid."
+        },
+        {
+          "type": "ordbank",
+          "id": "e09-s06-ob2",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg _____ komme til å lære mye den første uka.",
+          "ord": [
+            "kommer",
+            "kom",
+            "har kommet"
+          ],
+          "riktig": "kommer",
+          "tilbakemeldingRiktig": "Riktig. «Kommer til å» snakker om framtida.",
+          "tilbakemeldingFeil": "Bruk «kommer til å» om det som skal skje."
         }
       ]
     }

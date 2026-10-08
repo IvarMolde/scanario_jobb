@@ -90,6 +90,48 @@
           "riktig": "fordi",
           "tilbakemeldingRiktig": "Riktig. Fordi innleder en leddsetning som gir grunn.",
           "tilbakemeldingFeil": "{{fordi}} forklarer hvorfor. Jeg søker fordi jeg har erfaring."
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I søknaden skriver du hvorfor _____ passer for deg.",
+          "ord": [
+            "jobben",
+            "været",
+            "filmen"
+          ],
+          "riktig": "jobben",
+          "tilbakemeldingRiktig": "Riktig. Søknaden kobler deg til stillingen.",
+          "tilbakemeldingFeil": "Tenk på match mellom deg og annonsen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e06-s01-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å bruke ord fra annonsen i søknaden.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da viser du at du har lest kravene.",
+          "tilbakemeldingFeil": "Les annonsen før du skriver."
+        },
+        {
+          "type": "matching",
+          "id": "e06-s01-ma1",
+          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "par": [
+            {
+              "id": "p1",
+              "venstre": "søknad",
+              "hoyre": "brev der du ber om jobben"
+            },
+            {
+              "id": "p2",
+              "venstre": "kompetanse",
+              "hoyre": "det du kan fra jobb og kurs"
+            }
+          ],
+          "tilbakemeldingRiktig": "Riktig. Viktige ord før du skriver søknad.",
+          "tilbakemeldingFeil": "Les forklaringene en gang til."
         }
       ]
     },
@@ -114,6 +156,66 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e06-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du i en match mot annonsen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Sjekker hva som passer og ikke passer"
+            },
+            {
+              "id": "b",
+              "tekst": "Sletter annonsen med en gang"
+            },
+            {
+              "id": "c",
+              "tekst": "Ignorerer alle krav"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du vurderer kompetanse, egenskaper og mer.",
+          "tilbakemeldingFeil": "Match handler om å sammenligne deg og jobben."
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Denne erfaringen _____ godt til annonsen.",
+          "ord": [
+            "passer",
+            "synger",
+            "sover"
+          ],
+          "riktig": "passer",
+          "tilbakemeldingRiktig": "Riktig. «Passer» er et viktig ord i match.",
+          "tilbakemeldingFeil": "Tenk på om CV-en møter kravene."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e06-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Hvis noe ikke passer, kan du likevel være ærlig i vurderingen.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Ærlig match hjelper deg videre.",
+          "tilbakemeldingFeil": "Ikke kryss av «passer» hvis det ikke stemmer."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e06-s02-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "erfaring",
+            "som",
+            "passer."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Kort og tydelig.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har erfaring som passer."
+        },
         {
           "type": "match_sjekkliste",
           "id": "e06-s02-ms",
@@ -154,6 +256,67 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e06-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvilke deler har søknaden ofte?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Innledning, hvorfor meg, og avslutning"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare emojis"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare et telefonnummer"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. En søknad har flere korte avsnitt.",
+          "tilbakemeldingFeil": "Bygg søknaden i tre deler."
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "I innledningen sier du hvilken _____ du søker på.",
+          "ord": [
+            "stilling",
+            "ferie",
+            "farge"
+          ],
+          "riktig": "stilling",
+          "tilbakemeldingRiktig": "Riktig. Start med jobben du søker.",
+          "tilbakemeldingFeil": "Vær tydelig på hvilken annonse det gjelder."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e06-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Avslutningen kan være «Vennlig hilsen».",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Det er en vanlig, høflig avslutning.",
+          "tilbakemeldingFeil": "Bruk formelt og vennlig språk."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e06-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "søker",
+            "på",
+            "stillingen",
+            "som",
+            "butikkmedarbeider."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En klar innledning.",
+          "tilbakemeldingFeil": "Prøv igjen med stillingstittelen."
+        },
         {
           "type": "bygg_soknad",
           "id": "e06-s03-bs",
@@ -291,6 +454,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. At innleder en leddsetning: at jeg hører fra dere.",
           "tilbakemeldingFeil": "Start med Jeg håper. Deretter at jeg hører fra dere."
+        },
+        {
+          "type": "flervalg",
+          "id": "e06-s04-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du i «finn og rett»?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Finner feil ord og velger riktig form"
+            },
+            {
+              "id": "b",
+              "tekst": "Sletter hele søknaden"
+            },
+            {
+              "id": "c",
+              "tekst": "Ringer politiet"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du retter språket i utkastet.",
+          "tilbakemeldingFeil": "Se etter ordet som er feil."
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg søker _____ jeg har erfaring fra butikk.",
+          "ord": [
+            "fordi",
+            "uten",
+            "bak"
+          ],
+          "riktig": "fordi",
+          "tilbakemeldingRiktig": "Riktig. «Fordi» forklarer grunnen.",
+          "tilbakemeldingFeil": "Bruk «fordi» når du gir en grunn."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e06-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å rette feil før du sender søknaden.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Et korrekt språk gir et bedre inntrykk.",
+          "tilbakemeldingFeil": "Finn feilen og rett den."
         }
       ]
     },
@@ -361,6 +570,41 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Fordi, som og at innleder leddsetninger.",
           "tilbakemeldingFeil": "Fordi = grunn. Som = mer info. At = etter håper eller vet."
+        },
+        {
+          "type": "ordbank",
+          "id": "e06-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "«Vennlig hilsen» er _____ språk.",
+          "ord": [
+            "formelt",
+            "barnslig",
+            "sint"
+          ],
+          "riktig": "formelt",
+          "tilbakemeldingRiktig": "Riktig. Det er høflig og formelt nok til søknad.",
+          "tilbakemeldingFeil": "Skill mellom formelt og uformelt."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e06-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«Hei du!!» er et godt eksempel på formelt språk i søknad.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Det er for uformelt.",
+          "tilbakemeldingFeil": "I søknad bruker vi mer formelt språk."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e06-s05-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Med",
+            "vennlig",
+            "hilsen"
+          ],
+          "tilbakemeldingRiktig": "Riktig. En kort og høflig avslutning.",
+          "tilbakemeldingFeil": "Prøv igjen: Med vennlig hilsen."
         }
       ]
     }

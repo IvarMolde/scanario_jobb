@@ -94,6 +94,66 @@
           "riktigErSant": true,
           "tilbakemeldingRiktig": "Sant. Der står netto utbetalt.",
           "tilbakemeldingFeil": "Det er sant. Netto er det du får på konto."
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s01-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er en lønnsslipp?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Et dokument som viser lønn, trekk og utbetaling"
+            },
+            {
+              "id": "b",
+              "tekst": "En bussbillett"
+            },
+            {
+              "id": "c",
+              "tekst": "En handleliste"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Lønnsslippen forklarer pengene du får.",
+          "tilbakemeldingFeil": "Les e-posten om at slippen er klar."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Lønnsslippen er _____.",
+          "ord": [
+            "klar",
+            "lilla",
+            "usynlig"
+          ],
+          "riktig": "klar",
+          "tilbakemeldingRiktig": "Riktig. Nå kan du åpne den.",
+          "tilbakemeldingFeil": "E-posten sier at den er klar."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s01-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du bør lese lønnsslippen når den kommer.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da kan du oppdage feil tidlig.",
+          "tilbakemeldingFeil": "Sjekk brutto, trekk og netto."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s01-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "fått",
+            "lønnsslippen",
+            "min."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har fått.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har fått lønnsslippen min."
         }
       ]
     },
@@ -141,6 +201,66 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Brutto minus trekk blir netto.",
           "tilbakemeldingFeil": "Brutto er før trekk. Netto er på konto."
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s02a-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er trekk på lønnsslippen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Penger som trekkes, for eksempel skatt"
+            },
+            {
+              "id": "b",
+              "tekst": "En bonus du alltid får ekstra"
+            },
+            {
+              "id": "c",
+              "tekst": "Navnet på sjefen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Trekk er penger som går ut før du får netto.",
+          "tilbakemeldingFeil": "Se på skattetrekket."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s02a-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Etter nytt skattekort kan _____ endre seg.",
+          "ord": [
+            "trekket",
+            "været",
+            "bussfargen"
+          ],
+          "riktig": "trekket",
+          "tilbakemeldingRiktig": "Riktig. Nytt kort kan gi nytt trekk.",
+          "tilbakemeldingFeil": "Sammenlign med det du forventet."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s02a-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Brutto er beløpet før trekk.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Netto er det du får på konto.",
+          "tilbakemeldingFeil": "Skill mellom brutto og netto."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s02a-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Trekket",
+            "ser",
+            "riktig",
+            "ut",
+            "nå."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En klar vurdering.",
+          "tilbakemeldingFeil": "Prøv igjen: Trekket ser riktig ut nå."
         }
       ]
     },
@@ -187,6 +307,66 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Ny lønn krever ofte nytt skattekort.",
           "tilbakemeldingFeil": "Trekket følger skattekortet. Du endret det ikke."
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s02b-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du hvis trekket ser feil ut?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Sjekker tallene og spør hvis du er usikker"
+            },
+            {
+              "id": "b",
+              "tekst": "Ignorerer det alltid"
+            },
+            {
+              "id": "c",
+              "tekst": "Sletter arbeidsavtalen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Si ifra hvis noe ikke stemmer.",
+          "tilbakemeldingFeil": "Sammenlign med skattekort og timer."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s02b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Trekket ser _____. Jeg må sjekke.",
+          "ord": [
+            "feil",
+            "perfekt",
+            "usynlig"
+          ],
+          "riktig": "feil",
+          "tilbakemeldingRiktig": "Riktig. Da undersøker du videre.",
+          "tilbakemeldingFeil": "Ikke gjett – sjekk dokumentene."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s02b-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lov å spørre lønnskontoret hvis noe er uklart.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Spør høflig og konkret.",
+          "tilbakemeldingFeil": "Ta vare på lønnsslippen."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s02b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Kan",
+            "dere",
+            "sjekke",
+            "trekket",
+            "mitt?"
+          ],
+          "tilbakemeldingRiktig": "Riktig. Et høflig spørsmål.",
+          "tilbakemeldingFeil": "Prøv igjen: Kan dere sjekke trekket mitt?"
         }
       ]
     },
@@ -211,6 +391,67 @@
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e11-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er netto utbetalt?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Pengene du får på konto etter trekk"
+            },
+            {
+              "id": "b",
+              "tekst": "Lønn før skatt"
+            },
+            {
+              "id": "c",
+              "tekst": "Bare feriepengene"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Netto er det som utbetales.",
+          "tilbakemeldingFeil": "Finn feltet på slippen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "_____ utbetalt er det jeg får på konto.",
+          "ord": [
+            "Netto",
+            "Brutto",
+            "Ingen"
+          ],
+          "riktig": "Netto",
+          "tilbakemeldingRiktig": "Riktig. Netto = etter trekk.",
+          "tilbakemeldingFeil": "Se etter ordet netto."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Brutto og netto er det samme beløpet.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Brutto er før trekk. Netto er etter.",
+          "tilbakemeldingFeil": "Sammenlign linjene på slippen."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "får",
+            "dette",
+            "beløpet",
+            "på",
+            "konto."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Tydelig formulering.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg får dette beløpet på konto."
+        },
         {
           "type": "finn_i_dokument",
           "id": "e11-s03-fi",
@@ -266,6 +507,66 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Timer ganger timelønn.",
           "tilbakemeldingFeil": "Les timelista og timelønna. 128 ganger timelønn."
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s04-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvordan regner du ofte ut lønn?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Timer ganger timelønn"
+            },
+            {
+              "id": "b",
+              "tekst": "Timer minus buss"
+            },
+            {
+              "id": "c",
+              "tekst": "Timer pluss vær"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Antall timer × timelønn.",
+          "tilbakemeldingFeil": "Sjekk tallene i oppgaven."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "128 _____ 200 kroner er bruttolønn før trekk.",
+          "ord": [
+            "ganger",
+            "minus",
+            "uten"
+          ],
+          "riktig": "ganger",
+          "tilbakemeldingRiktig": "Riktig. Vi ganger timer med timelønn.",
+          "tilbakemeldingFeil": "Bruk gange-tegnet i hodet: ×"
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Hvis timene mangler, kan lønna bli for lav.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Derfor er det viktig å sjekke timene.",
+          "tilbakemeldingFeil": "Sammenlign timeliste og lønnsslipp."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Timer",
+            "ganger",
+            "timelønn",
+            "gir",
+            "brutto."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En enkel regel.",
+          "tilbakemeldingFeil": "Prøv igjen: Timer ganger timelønn gir brutto."
         }
       ]
     },
@@ -283,6 +584,52 @@
       "tekst": "Kalenderen: 128 vanlige timer og 4 timer {{overtid}}.\n\nLønnsslippen viser ikke overtiden.\n\nOvertid: 50 prosent ekstra per time.\n\nSend høflig e-post til lønnskontoret.",
       "valg": [],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e11-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva gjør du hvis overtid mangler på slippen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Sjekker timelista og spør høflig"
+            },
+            {
+              "id": "b",
+              "tekst": "Sier ingenting noen gang"
+            },
+            {
+              "id": "c",
+              "tekst": "Sletter timelista"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Ta kontakt med en klar beskjed.",
+          "tilbakemeldingFeil": "Vis hvilke timer som mangler."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Fire timer _____ på lønnsslippen.",
+          "ord": [
+            "mangler",
+            "synger",
+            "sover"
+          ],
+          "riktig": "mangler",
+          "tilbakemeldingRiktig": "Riktig. Da må du si ifra.",
+          "tilbakemeldingFeil": "Sammenlign med timelista."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å være konkret når du spør om lønn.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Oppgi dato, timer og beløp hvis du kan.",
+          "tilbakemeldingFeil": "En høflig melding hjelper."
+        },
         {
           "type": "finn_i_dokument",
           "id": "e11-s05-fi",
@@ -400,6 +747,59 @@
           "riktigErSant": false,
           "tilbakemeldingRiktig": "Usant. Netto er brutto minus trekk. Netto er lavere.",
           "tilbakemeldingFeil": "Påstanden er usann. Netto er lavere enn brutto."
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s06-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er feriepenger?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Penger du tjener opp til ferie, ofte utbetalt senere"
+            },
+            {
+              "id": "b",
+              "tekst": "En bot fra politiet"
+            },
+            {
+              "id": "c",
+              "tekst": "Et busskort"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Feriepenger beregnes av lønn.",
+          "tilbakemeldingFeil": "I Norge er 10,2 % vanlig i mange tilfeller."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s06-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Feriepengene er _____ prosent.",
+          "ord": [
+            "10,2",
+            "100",
+            "0"
+          ],
+          "riktig": "10,2",
+          "tilbakemeldingRiktig": "Riktig. 10,2 % er et vanlig tall i øvingen.",
+          "tilbakemeldingFeil": "Les teksten om feriepenger."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e11-s06-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "tjener",
+            "opp",
+            "feriepenger",
+            "når",
+            "jeg",
+            "jobber."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En klar forklaring.",
+          "tilbakemeldingFeil": "Prøv igjen med hele setningen."
         }
       ]
     },
@@ -462,6 +862,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Et høflig spørsmål.",
           "tilbakemeldingFeil": "Start med Kan du sjekke. Deretter lønnsslippen for november?"
+        },
+        {
+          "type": "flervalg",
+          "id": "e11-s07-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva betyr «per time»?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "For hver time"
+            },
+            {
+              "id": "b",
+              "tekst": "For hele året uten pause"
+            },
+            {
+              "id": "c",
+              "tekst": "Aldri"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Per = for hver.",
+          "tilbakemeldingFeil": "Skill mellom per, for og hittil."
+        },
+        {
+          "type": "ordbank",
+          "id": "e11-s07-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "_____ i år har jeg tjent …",
+          "ord": [
+            "Hittil",
+            "Bak",
+            "Uten"
+          ],
+          "riktig": "Hittil",
+          "tilbakemeldingRiktig": "Riktig. Hittil i år = fra januar til nå.",
+          "tilbakemeldingFeil": "Dette er nyttig på lønnsslippen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e11-s07-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "«For november» betyr beløpet som gjelder den måneden.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. «For» knytter beløpet til perioden.",
+          "tilbakemeldingFeil": "Les linjene nøye."
         }
       ]
     }

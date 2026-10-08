@@ -115,6 +115,43 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Lytt først. Les deretter SMS-en.",
           "tilbakemeldingFeil": "Et tapt anrop kan være viktig. Lytt til talemeldingen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s01-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Du har et _____ anrop på telefonen.",
+          "ord": [
+            "tapt",
+            "spist",
+            "malt"
+          ],
+          "riktig": "tapt",
+          "tilbakemeldingRiktig": "Riktig. Et tapt anrop betyr at du ikke rakk å svare.",
+          "tilbakemeldingFeil": "Se varselet om tapt anrop."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s01-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "En talemelding kan fortelle hvorfor bedriften ringte.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Lytt nøye til innholdet.",
+          "tilbakemeldingFeil": "Talemeldingen gir viktig informasjon."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e07-s01-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "et",
+            "tapt",
+            "anrop."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Kort og klart.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har et tapt anrop."
         }
       ]
     },
@@ -189,6 +226,52 @@
           "riktig": "Når",
           "tilbakemeldingRiktig": "Riktig. Når er et spørreord om tid.",
           "tilbakemeldingFeil": "Spørreordet når spør om tid."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s02a-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er en innkalling?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "En beskjed om at du er bedt inn til intervju"
+            },
+            {
+              "id": "b",
+              "tekst": "En bussbillett"
+            },
+            {
+              "id": "c",
+              "tekst": "En matoppskrift"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Innkalling betyr at du er invitert til intervju.",
+          "tilbakemeldingFeil": "Les SMS-en fra bedriften."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s02a-ob2",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Intervjuet er _____ tirsdag.",
+          "ord": [
+            "på",
+            "under",
+            "mellom"
+          ],
+          "riktig": "på",
+          "tilbakemeldingRiktig": "Riktig. Vi sier «på tirsdag».",
+          "tilbakemeldingFeil": "Ukedag tar ofte preposisjonen «på»."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s02a-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du bør lese tid og sted i SMS-en nøye.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Tid og sted er viktige detaljer.",
+          "tilbakemeldingFeil": "Sjekk klokkeslett og adresse."
         }
       ]
     },
@@ -258,6 +341,41 @@
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Tirsdag klokka 10.00 står i SMS-en.",
           "tilbakemeldingFeil": "Les den korte SMS-en. Dagen er tirsdag. Klokka er 10.00."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s02b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Bedriften sender en kort _____.",
+          "ord": [
+            "SMS",
+            "bok",
+            "film"
+          ],
+          "riktig": "SMS",
+          "tilbakemeldingRiktig": "Riktig. Du får beskjed på SMS.",
+          "tilbakemeldingFeil": "Les den korte meldingen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s02b-su2",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Selv en kort SMS kan være viktig.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Den kan handle om intervju eller svar.",
+          "tilbakemeldingFeil": "Ikke overse korte meldinger fra bedrifter."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e07-s02b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk",
+            "for",
+            "meldingen."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En høflig og kort respons.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk for meldingen."
         }
       ]
     },
@@ -275,6 +393,68 @@
       "tekst": "Bekreft tiden.\n\nSi at du kommer på tirsdag {{klokka}} 10.00.\n\nBruk hei og vennlig hilsen.",
       "valg": [],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e07-s03-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvordan bør du bekrefte et intervju?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Høflig, med dag og klokkeslett"
+            },
+            {
+              "id": "b",
+              "tekst": "Bare med «ok»"
+            },
+            {
+              "id": "c",
+              "tekst": "Med sinte ord"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Bekreft tidspunktet klart.",
+          "tilbakemeldingFeil": "Skriv hele setninger."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s03-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg kommer _____ til intervjuet.",
+          "ord": [
+            "gjerne",
+            "aldri",
+            "sint"
+          ],
+          "riktig": "gjerne",
+          "tilbakemeldingRiktig": "Riktig. «Gjerne» er høflig.",
+          "tilbakemeldingFeil": "Bruk «Jeg kommer gjerne …»."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s03-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å gjenta tidspunktet når du bekrefter.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da unngår du misforståelser.",
+          "tilbakemeldingFeil": "Skriv dag og klokke i svaret."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e07-s03-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "kommer",
+            "gjerne",
+            "på",
+            "tirsdag",
+            "klokka",
+            "10."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En tydelig bekreftelse.",
+          "tilbakemeldingFeil": "Prøv igjen med tidspunktet."
+        },
         {
           "type": "bygg_melding",
           "id": "e07-s03-bm",
@@ -405,6 +585,64 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Hei, ja til tiden, og vennlig hilsen.",
           "tilbakemeldingFeil": "Velg svaret med hei, ja til tirsdag klokka 10.00 og vennlig hilsen."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s03b-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor må du rette svaret?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Fordi noe i teksten er feil eller uklart"
+            },
+            {
+              "id": "b",
+              "tekst": "Fordi du skal slette telefonen"
+            },
+            {
+              "id": "c",
+              "tekst": "Fordi det er søndag"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Du øver på å skrive et bedre svar.",
+          "tilbakemeldingFeil": "Finn det som ikke stemmer."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s03b-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg må _____ svaret før jeg sender.",
+          "ord": [
+            "rette",
+            "gjemme",
+            "male"
+          ],
+          "riktig": "rette",
+          "tilbakemeldingRiktig": "Riktig. Rett feil først.",
+          "tilbakemeldingFeil": "Oppgaven handler om å rette opp."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s03b-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Et klart svar gjør det lettere for bedriften.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Tydelig språk er viktig.",
+          "tilbakemeldingFeil": "Skriv kort, høflig og klart."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e07-s03b-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk",
+            "for",
+            "innkallingen."
+          ],
+          "tilbakemeldingRiktig": "Riktig. En høflig start.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk for innkallingen."
         }
       ]
     },
@@ -463,6 +701,66 @@
           "riktigId": "b",
           "tilbakemeldingRiktig": "Riktig. Takk og lykke til er høflig, også når svaret er nei.",
           "tilbakemeldingFeil": "Ikke krangle. Si takk for svaret. Det er {{formelt}} og {{hoflig|høflig}}."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s04-fv2",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hva er et avslag?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Beskjed om at du ikke får jobben"
+            },
+            {
+              "id": "b",
+              "tekst": "En lønnsøkning"
+            },
+            {
+              "id": "c",
+              "tekst": "En bussbillett"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Avslag betyr at de ikke tilbyr deg jobben nå.",
+          "tilbakemeldingFeil": "Les e-posten fra bedriften."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s04-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Takk for _____. Dessverre fikk jeg ikke jobben.",
+          "ord": [
+            "søknaden",
+            "bussen",
+            "været"
+          ],
+          "riktig": "søknaden",
+          "tilbakemeldingRiktig": "Riktig. Bedrifter takker ofte for søknaden i et avslag.",
+          "tilbakemeldingFeil": "Se hvordan avslag ofte er formulert."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s04-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Et avslag betyr at du aldri kan søke jobb igjen.",
+          "riktigErSant": false,
+          "tilbakemeldingRiktig": "Riktig. Du kan søke andre jobber.",
+          "tilbakemeldingFeil": "Avslag gjelder denne stillingen, ikke hele framtida."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e07-s04-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Takk",
+            "for",
+            "svar",
+            "på",
+            "søknaden."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Høflig og rolig.",
+          "tilbakemeldingFeil": "Prøv igjen: Takk for svar på søknaden."
         }
       ]
     },
@@ -537,6 +835,52 @@
           ],
           "tilbakemeldingRiktig": "Riktig. På + dag. Klokka + tid. Om + del av døgnet.",
           "tilbakemeldingFeil": "På tirsdag = dag. Klokka ti = tid. Om morgenen = del av døgnet."
+        },
+        {
+          "type": "flervalg",
+          "id": "e07-s05-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvor legger du inn intervjuet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "I kalenderen"
+            },
+            {
+              "id": "b",
+              "tekst": "I kjøleskapet"
+            },
+            {
+              "id": "c",
+              "tekst": "I skoene"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Kalenderen hjelper deg å huske tiden.",
+          "tilbakemeldingFeil": "Bruk kalender-appen."
+        },
+        {
+          "type": "ordbank",
+          "id": "e07-s05-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Intervjuet står _____ tirsdag.",
+          "ord": [
+            "på",
+            "bak",
+            "uten"
+          ],
+          "riktig": "på",
+          "tilbakemeldingRiktig": "Riktig. På + ukedag.",
+          "tilbakemeldingFeil": "Husk preposisjonen «på»."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e07-s05-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Det er lurt å legge inn både tid og sted.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Da er du forberedt.",
+          "tilbakemeldingFeil": "Sjekk at avtalen er komplett."
         }
       ]
     }
