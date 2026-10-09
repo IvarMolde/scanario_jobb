@@ -2518,6 +2518,7 @@ a {
   display: flex;
   gap: 0.65rem;
   align-items: flex-start;
+  margin: 0 0 0.85rem;
   padding: 0.55rem 0.65rem;
   border: 1px solid #d7e0e6;
   border-radius: 10px;
@@ -2607,6 +2608,19 @@ a {
 .portal-sok-sjekkliste li.ok span {
   background: #146c43;
   color: #fff;
+}
+
+.portal-sok-sjekkliste li.mangler-varsel {
+  border-style: solid;
+  border-color: #c47a12;
+  background: #fff6e8;
+  color: #7a4500;
+}
+
+.portal-sok-sjekkliste li.mangler-varsel span {
+  background: #c47a12;
+  color: #fff;
+  font-weight: 800;
 }
 
 .portal-sok-statusok {
@@ -2945,6 +2959,13 @@ a {
   opacity: 0.85;
 }
 
+.arbeidsplassen-chip-varsel {
+  border: 2px solid #146c43;
+  background: #e5f4ec;
+  color: #0d5c3b;
+  cursor: default;
+}
+
 .arbeidsplassen-placeholder {
   color: #6a7a85;
   font-size: 0.95rem;
@@ -3154,23 +3175,48 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
-  min-height: 44px;
+  min-height: 48px;
   margin-bottom: 0.55rem;
+  padding: 0.7rem 0.8rem;
+  border: 2px solid #c47a12;
+  border-radius: 10px;
+  background: #fff6e8;
   font-weight: 600;
   cursor: pointer;
 }
 
+.arbeidsplassen-varsel.er-pa {
+  border-color: #146c43;
+  background: #e5f4ec;
+  color: #0d5c3b;
+}
+
+.arbeidsplassen-varsel.er-av {
+  border-color: #c47a12;
+  background: #fff6e8;
+  color: #7a4500;
+}
+
 .arbeidsplassen-varsel input {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-top: 0.15rem;
-  accent-color: var(--ap-blaa);
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.1rem;
+  accent-color: #146c43;
+  flex-shrink: 0;
 }
 
 .arbeidsplassen-varsel-hint {
   margin: 0 0 0.85rem !important;
   color: #7a5000;
   font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.arbeidsplassen-varsel-ok {
+  margin: 0 0 0.85rem !important;
+  color: #0d5c3b;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .arbeidsplassen-lagre-handlinger {

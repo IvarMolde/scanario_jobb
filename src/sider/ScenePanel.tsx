@@ -72,7 +72,10 @@ export function ScenePanel() {
       ) : null}
       <SceneBilde fil={scene.media.bilde} alt={scene.media.bildeAlt ?? scene.tittel} prioritet />
       <Lydspiller fil={scene.media.lyd} etikett="Lytt til teksten" />
-      <KlikkbarTekst tekst={scene.tekst} onVelgOrd={velgOrd} />
+      <KlikkbarTekst
+        tekst={(person && scene.tekstPerPerson?.[person.id]) || scene.tekst}
+        onVelgOrd={velgOrd}
+      />
       {scene.oppgaver.map((oppgave, indeks) => (
         <OppgaveVisning
           key={oppgave.id}

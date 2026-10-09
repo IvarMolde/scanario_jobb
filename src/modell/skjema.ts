@@ -401,6 +401,7 @@ export const sceneSkjema = z.object({
   app: appIdSkjema,
   media: mediaSkjema,
   tekst: z.string().min(1),
+  tekstPerPerson: z.record(z.string(), z.string().min(1)).optional(),
   varsel: varselSkjema.optional(),
   kalenderhendelse: kalenderhendelseSkjema.optional(),
   smsTraad: smsTraadSkjema.optional(),

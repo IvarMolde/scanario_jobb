@@ -147,7 +147,12 @@
         "bildeAlt": "Søkefelt med varsel avkrysset.",
         "lyd": "e03-s02-sok.wav"
       },
-      "tekst": "Velg søkeord som passer målet ditt.\n\nOlena: butikk og heltid i Molde.\n\nTaras: lager og heltid i Molde.\n\nSofiia: helse og deltid i Molde.\n\nLagre søket og slå på varsel.",
+      "tekst": "Velg søkeord som passer målet ditt.\n\nLagre søket og slå på varsel.",
+      "tekstPerPerson": {
+        "olena": "Velg søkeord som passer målet ditt.\n\nOlena: butikk og heltid i Molde.\n\nLagre søket og slå på varsel.",
+        "taras": "Velg søkeord som passer målet ditt.\n\nTaras: lager og heltid i Molde.\n\nLagre søket og slå på varsel.",
+        "sofiia": "Velg søkeord som passer målet ditt.\n\nSofiia: helse og deltid i Molde.\n\nLagre søket og slå på varsel."
+      },
       "valg": [
         {
           "id": "til-treff",
@@ -160,7 +165,7 @@
         {
           "type": "portal_sok",
           "id": "e03-s02-ps",
-          "instruksjon": "Les kravene for søk i Molde. Trykk Start oppgave. Velg riktig søkeord, sted og heltid eller deltid for personen din. Lagre søket og slå på varsel.",
+          "instruksjon": "Les kravene for personen din. Trykk Start oppgave. Velg riktig søkeord, sted og heltid eller deltid. Lagre søket og slå på varsel.",
           "sokkeord": [
             {
               "id": "butikk",
