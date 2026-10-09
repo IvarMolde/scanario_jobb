@@ -434,13 +434,13 @@
         "bildeAlt": "lager pluss medarbeider blir lagermedarbeider.",
         "lyd": "e03-s04-annonse.wav"
       },
-      "tekst": "I annonsen står det: «Vi søker en {{butikkmedarbeider}}» eller «en {{lagermedarbeider}}».\n\nUbestemt form: en medarbeider.\n\nBestemt form: medarbeideren.\n\n{{lagermedarbeider|Lagermedarbeider}} er lager + medarbeider.",
+      "tekst": "Et sammensatt ord er ett ord som er laget av to eller flere ord. Du leser betydningen fra begge delene.\n\nEksempler:\n• lager + medarbeider = {{lagermedarbeider}}\n• butikk + medarbeider = {{butikkmedarbeider}}\n• søke + ord = {{sokeord|søkeord}}\n• helt + tid = {{heltid}}\n\nI annonsen står det: «Vi søker en butikkmedarbeider» eller «en lagermedarbeider».\n\nUbestemt form: en medarbeider.\nBestemt form: medarbeideren.",
       "valg": [
         {
           "id": "til-dato",
-          "tekst": "Øv på datoer og tall",
+          "tekst": "Gå videre",
           "nesteSceneId": "e03-s05",
-          "tilbakemelding": "Siste oppgave: dato og prosent."
+          "tilbakemelding": "Siste del: dato og prosent."
         }
       ],
       "oppgaver": [
@@ -478,45 +478,68 @@
             }
           ],
           "riktigId": "b",
-          "tilbakemeldingRiktig": "Riktig. Mange yrker er sammensatte ord: butikk + medarbeider.",
-          "tilbakemeldingFeil": "Del ordet etter meningen: lager og medarbeider."
+          "tilbakemeldingRiktig": "Riktig. Del ordet etter meningen: lager og medarbeider.",
+          "tilbakemeldingFeil": "Tenk på stedet (lager) og personen (medarbeider)."
         },
         {
-          "type": "sant_usant",
-          "id": "e03-s04-su1",
-          "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "En stillingsannonse forteller hva arbeidsgiveren søker.",
-          "riktigErSant": true,
-          "tilbakemeldingRiktig": "Riktig. Annonsen beskriver jobben og kravene.",
-          "tilbakemeldingFeil": "Les annonsen for å se hva som kreves."
-        },
-        {
-          "type": "ordbank",
-          "id": "e03-s04-ob2",
-          "instruksjon": "Velg ordet som passer i setningen.",
-          "setning": "I annonsen står det ofte hvilke _____ du må ha.",
-          "ord": [
-            "krav",
-            "ferier",
-            "filmer"
+          "type": "flervalg",
+          "id": "e03-s04-fv2",
+          "instruksjon": "Sett sammen ordet. Velg riktig svar.",
+          "spoersmal": "butikk + medarbeider = ?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "butikkmedarbeider"
+            },
+            {
+              "id": "b",
+              "tekst": "medarbeiderbutikk"
+            },
+            {
+              "id": "c",
+              "tekst": "butikk arbeider"
+            }
           ],
-          "riktig": "krav",
-          "tilbakemeldingRiktig": "Riktig. Krav er det arbeidsgiveren må ha.",
-          "tilbakemeldingFeil": "Se etter ord som må, bør og krav."
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. butikk + medarbeider = butikkmedarbeider. Første ord står først.",
+          "tilbakemeldingFeil": "Det første ordet kommer først: butikk + medarbeider = butikkmedarbeider."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s04-fv3",
+          "instruksjon": "Sett sammen ordet. Velg riktig svar.",
+          "spoersmal": "søke + ord = ?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "ordsøke"
+            },
+            {
+              "id": "b",
+              "tekst": "søkeord"
+            },
+            {
+              "id": "c",
+              "tekst": "søke ord"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. søke + ord = søkeord. Det er ett ord, uten mellomrom.",
+          "tilbakemeldingFeil": "Skriv det som ett ord: søkeord."
         },
         {
           "type": "sorter_setning",
           "id": "e03-s04-ss1",
-          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "instruksjon": "Trykk på delene i riktig rekkefølge. Lag det sammensatte ordet.",
           "biter": [
-            "Jeg",
-            "har",
-            "lest",
-            "annonsen",
-            "nøye."
+            "lager",
+            "+",
+            "medarbeider",
+            "=",
+            "lagermedarbeider"
           ],
-          "tilbakemeldingRiktig": "Riktig. Perfektum: har lest.",
-          "tilbakemeldingFeil": "Prøv igjen: Jeg har lest annonsen nøye."
+          "tilbakemeldingRiktig": "Riktig. lager + medarbeider = lagermedarbeider.",
+          "tilbakemeldingFeil": "Rekkefølgen er: lager + medarbeider = lagermedarbeider."
         }
       ]
     },
