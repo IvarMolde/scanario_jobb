@@ -220,7 +220,7 @@ export function Skatteportal() {
               : undefined
           }
           onAapneMeldinger={metode === 'SMS-kode' ? () => aapneApp('meldinger') : undefined}
-          onAapneNotater={metode === 'Passord' ? () => aapneApp('notater') : undefined}
+          onAapneNotater={() => aapneApp('notater')}
         />
       ) : null}
 
@@ -425,7 +425,7 @@ function LoginSkjema({
   onOk: () => void
   onVisKodebrikke?: () => void
   onAapneMeldinger?: () => void
-  onAapneNotater?: () => void
+  onAapneNotater: () => void
 }) {
   const kodeEtikett =
     metode === 'Kodebrikke'
@@ -436,10 +436,10 @@ function LoginSkjema({
 
   const hjelp =
     metode === 'Kodebrikke'
-      ? 'Åpne kodebrikken, kopier koden og lim den inn her.'
+      ? `Fødselsnummeret til ${person.fornavn} står i Notater. Åpne kodebrikken, kopier koden og lim den inn her.`
       : metode === 'SMS-kode'
-        ? `Skriv inn fødselsnummeret til ${person.fornavn}. Les koden i Meldinger.`
-        : `Skriv inn fødselsnummeret til ${person.fornavn}. Passordet står i Notater → Passord.`
+        ? `Fødselsnummeret til ${person.fornavn} står i Notater. Les koden i Meldinger.`
+        : `Fødselsnummeret og passordet til ${person.fornavn} står i Notater.`
 
   return (
     <form
@@ -451,10 +451,10 @@ function LoginSkjema({
         if (!fnrOk || !kodeOk) {
           onFeil(
             metode === 'Passord'
-              ? 'Feil nummer eller passord. Se personkortet og Notater.'
+              ? 'Feil nummer eller passord. Se Notater (Fødselsnummer og Passord).'
               : metode === 'SMS-kode'
-                ? 'Feil nummer eller kode. Se personkortet og Meldinger.'
-                : 'Feil nummer eller kode. Se personkortet og kodebrikken.',
+                ? 'Feil nummer eller kode. Se Notater og Meldinger.'
+                : 'Feil nummer eller kode. Se Notater og kodebrikken.',
           )
           return
         }
@@ -465,6 +465,9 @@ function LoginSkjema({
       <h2>Logg inn</h2>
       <p>{hjelp}</p>
       <div className="handlinger">
+        <button type="button" className="knapp knapp-sekundaer" onClick={onAapneNotater}>
+          Åpne Notater
+        </button>
         {onVisKodebrikke ? (
           <button type="button" className="knapp knapp-sekundaer" onClick={onVisKodebrikke}>
             Vis kodebrikke
@@ -473,11 +476,6 @@ function LoginSkjema({
         {onAapneMeldinger ? (
           <button type="button" className="knapp knapp-sekundaer" onClick={onAapneMeldinger}>
             Åpne Meldinger
-          </button>
-        ) : null}
-        {onAapneNotater ? (
-          <button type="button" className="knapp knapp-sekundaer" onClick={onAapneNotater}>
-            Åpne Notater
           </button>
         ) : null}
       </div>

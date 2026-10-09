@@ -494,6 +494,12 @@ a {
   font-variant-numeric: tabular-nums;
 }
 
+.notat-fnr {
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  word-break: break-word;
+}
+
 .notat-hjelp {
   color: var(--dempet);
   font-size: 0.95rem;
