@@ -2544,3 +2544,449 @@ a {
     background: #fff;
   }
 }
+
+
+.portal-sok {
+  margin-top: 0.35rem;
+}
+
+.arbeidsplassen-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  background: rgba(10, 24, 40, 0.58);
+  backdrop-filter: blur(5px);
+  animation: person-hjelp-fade 0.2s ease;
+}
+
+.arbeidsplassen {
+  --ap-blaa: #0056b4;
+  --ap-blaa-mork: #003a70;
+  --ap-mint: #e3f1ea;
+  --ap-kant: #c7d4de;
+  --ap-tekst: #262626;
+  position: relative;
+  width: min(1120px, 100%);
+  max-height: min(92dvh, 900px);
+  overflow: auto;
+  background: #f7f9fb;
+  border-radius: 14px;
+  box-shadow: 0 28px 64px rgba(0, 30, 50, 0.38);
+  color: var(--ap-tekst);
+  animation: person-hjelp-opp 0.28s cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+
+.arbeidsplassen-topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid var(--ap-kant);
+}
+
+.arbeidsplassen-merke {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.arbeidsplassen-logo {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 8px;
+  background: var(--ap-blaa);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.arbeidsplassen-navn {
+  margin: 0;
+  font-weight: 700;
+  color: var(--ap-blaa);
+}
+
+.arbeidsplassen-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5b6b75;
+}
+
+.arbeidsplassen-lukk {
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--ap-kant);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ap-blaa);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arbeidsplassen-sokeflate {
+  margin: 0.85rem 1rem 0;
+  padding: 1rem 1.1rem 1.15rem;
+  background: linear-gradient(180deg, #dceee4 0%, var(--ap-mint) 100%);
+  border: 1px solid #b7d5c6;
+  border-radius: 12px;
+}
+
+.arbeidsplassen-sokeflate-hode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.arbeidsplassen-sokeflate-hode h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #16324a;
+}
+
+.arbeidsplassen-lagre-lenke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  background: transparent;
+  color: var(--ap-blaa);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.arbeidsplassen-lagre-lenke:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.arbeidsplassen-lagre-ikon {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  box-shadow: inset 0 -0.35rem 0 currentColor;
+}
+
+.arbeidsplassen-sokefelt {
+  background: #fff;
+  border: 1px solid #8aa4b5;
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem 0.65rem;
+}
+
+.arbeidsplassen-sokefelt-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  color: #4a5c68;
+}
+
+.arbeidsplassen-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-height: 2.2rem;
+  align-items: center;
+}
+
+.arbeidsplassen-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 36px;
+  padding: 0.2rem 0.55rem;
+  border: none;
+  border-radius: 999px;
+  background: #d9ebff;
+  color: #003a70;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arbeidsplassen-chip:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.arbeidsplassen-placeholder {
+  color: #6a7a85;
+  font-size: 0.95rem;
+}
+
+.arbeidsplassen-innhold {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.arbeidsplassen-filtre {
+  background: #fff;
+  border: 1px solid var(--ap-kant);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem 1rem;
+}
+
+.arbeidsplassen-gruppe {
+  border: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.arbeidsplassen-gruppe legend {
+  font-weight: 700;
+  color: #16324a;
+  margin-bottom: 0.35rem;
+}
+
+.arbeidsplassen-hjelp {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: #5b6b75;
+}
+
+.arbeidsplassen-valg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin: 0.15rem 0;
+  padding: 0.15rem 0.35rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.arbeidsplassen-valg:hover {
+  background: #f0f6fb;
+}
+
+.arbeidsplassen-valg input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--ap-blaa);
+}
+
+.arbeidsplassen-valg.innrykk {
+  margin-left: 0.65rem;
+}
+
+.arbeidsplassen-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.arbeidsplassen-toggle span {
+  display: grid;
+  place-items: center;
+  min-height: 40px;
+  border: 1px solid var(--ap-kant);
+  border-radius: 8px;
+  font-weight: 600;
+  color: #5b6b75;
+  background: #fff;
+}
+
+.arbeidsplassen-toggle .aktiv {
+  background: var(--ap-blaa);
+  border-color: var(--ap-blaa);
+  color: #fff;
+}
+
+.arbeidsplassen-fylke {
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--ap-kant);
+  border-radius: 8px;
+  background: #f8fbfd;
+}
+
+.arbeidsplassen-fylke strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--ap-blaa);
+}
+
+.arbeidsplassen-treff {
+  background: #fff;
+  border: 1px solid var(--ap-kant);
+  border-radius: 10px;
+  padding: 0.85rem 1rem 1rem;
+  min-height: 280px;
+}
+
+.arbeidsplassen-treff-hode {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--ap-kant);
+}
+
+.arbeidsplassen-treff-hode p {
+  margin: 0;
+}
+
+.arbeidsplassen-sorter {
+  color: #5b6b75;
+  font-size: 0.9rem;
+}
+
+.arbeidsplassen-tom {
+  margin: 1.5rem 0;
+  color: #5b6b75;
+}
+
+.arbeidsplassen-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.arbeidsplassen-kort {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--ap-kant);
+}
+
+.arbeidsplassen-kort:last-child {
+  border-bottom: none;
+}
+
+.arbeidsplassen-ny {
+  margin: 0 0 0.2rem;
+  color: var(--ap-blaa);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.arbeidsplassen-kort h3 {
+  margin: 0 0 0.25rem;
+  color: var(--ap-blaa);
+  font-size: 1.15rem;
+}
+
+.arbeidsplassen-under {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+}
+
+.arbeidsplassen-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
+  margin: 0 0 0.25rem;
+  color: #445560;
+}
+
+.arbeidsplassen-frist {
+  margin: 0;
+  color: #5b6b75;
+  font-size: 0.92rem;
+}
+
+.arbeidsplassen-lagre-dialog {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(8, 20, 32, 0.45);
+  border-radius: 14px;
+}
+
+.arbeidsplassen-lagre-kort {
+  width: min(100%, 420px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.1rem 1.15rem 1.2rem;
+  box-shadow: 0 18px 40px rgba(0, 30, 50, 0.28);
+}
+
+.arbeidsplassen-lagre-kort h3 {
+  margin: 0 0 0.5rem;
+  color: #16324a;
+}
+
+.arbeidsplassen-lagre-kort p {
+  margin: 0 0 0.85rem;
+}
+
+.arbeidsplassen-varsel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 44px;
+  margin-bottom: 0.55rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arbeidsplassen-varsel input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.15rem;
+  accent-color: var(--ap-blaa);
+}
+
+.arbeidsplassen-varsel-hint {
+  margin: 0 0 0.85rem !important;
+  color: #7a5000;
+  font-size: 0.92rem;
+}
+
+.arbeidsplassen-lagre-handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: flex-end;
+}
+
+.arbeidsplassen-suksess {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 1rem 1rem;
+  padding: 0.85rem 1rem;
+  background: #e5f4ec;
+  border: 1px solid #146c43;
+  border-radius: 10px;
+}
+
+.arbeidsplassen-suksess p {
+  margin: 0;
+}
+
+.arbeidsplassen-feil {
+  margin: 0 1rem 1rem;
+}
+
+@media (max-width: 820px) {
+  .arbeidsplassen-innhold {
+    grid-template-columns: 1fr;
+  }
+
+  .arbeidsplassen-sokeflate-hode {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

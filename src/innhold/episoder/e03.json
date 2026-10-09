@@ -220,7 +220,7 @@
         {
           "type": "portal_sok",
           "id": "e03-s02-ps",
-          "instruksjon": "Velg søkeord, sted og heltid eller deltid. Kryss av for varsel. Trykk Lagre søket.",
+          "instruksjon": "Åpne Arbeidsplassen. Velg søkeord, sted og heltid eller deltid. Trykk Lagre søk, slå på varsel, og lagre.",
           "sokkeord": [
             {
               "id": "butikk",

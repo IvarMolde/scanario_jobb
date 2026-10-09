@@ -124,6 +124,7 @@ export function OppgaveVisning({
           oppgave={oppgave}
           person={person}
           ferdig={ferdig}
+          annonser={annonser}
           onSvar={onSvar}
           onLagreSok={onLagreSok}
         />
