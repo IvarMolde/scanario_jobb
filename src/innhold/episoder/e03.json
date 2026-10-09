@@ -144,7 +144,7 @@
       "app": "jobbportal",
       "media": {
         "bilde": "e03-s02-sok.svg",
-        "bildeAlt": "Søkefelt med varsel avkrysset.",
+        "bildeAlt": "Jobbportal med filtre, treff og en tydelig Lagre søk-knapp. Varsel er på.",
         "lyd": "e03-s02-sok.wav"
       },
       "tekst": "Velg søkeord som passer målet ditt.\n\nLagre søket og slå på varsel.",
