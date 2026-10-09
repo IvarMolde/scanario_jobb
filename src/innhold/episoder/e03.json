@@ -158,66 +158,6 @@
       ],
       "oppgaver": [
         {
-          "type": "flervalg",
-          "id": "e03-s02-fv1",
-          "instruksjon": "Velg det riktige svaret.",
-          "spoersmal": "Hvorfor er det lurt å lagre et søk?",
-          "alternativer": [
-            {
-              "id": "a",
-              "tekst": "Da kan du få varsel om nye jobber"
-            },
-            {
-              "id": "b",
-              "tekst": "Da sletter du CVen"
-            },
-            {
-              "id": "c",
-              "tekst": "Da betaler du skatt"
-            }
-          ],
-          "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. Et lagret søk kan gi varsel.",
-          "tilbakemeldingFeil": "Når søket er lagret, kan du følge med på nye treff."
-        },
-        {
-          "type": "ordbank",
-          "id": "e03-s02-ob1",
-          "instruksjon": "Velg ordet som passer i setningen.",
-          "setning": "Jeg vil _____ søket mitt.",
-          "ord": [
-            "lagre",
-            "glemme",
-            "spise"
-          ],
-          "riktig": "lagre",
-          "tilbakemeldingRiktig": "Riktig. Du lagrer søket i portalen.",
-          "tilbakemeldingFeil": "Oppgaven handler om å lagre søket."
-        },
-        {
-          "type": "sant_usant",
-          "id": "e03-s02-su1",
-          "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "Du bør velge søkeord som passer jobben du vil ha.",
-          "riktigErSant": true,
-          "tilbakemeldingRiktig": "Riktig. Gode søkeord gir bedre treff.",
-          "tilbakemeldingFeil": "Tenk på yrket og stedet når du søker."
-        },
-        {
-          "type": "sorter_setning",
-          "id": "e03-s02-ss1",
-          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": [
-            "Jeg",
-            "har",
-            "lagret",
-            "søket",
-            "mitt."
-          ],
-          "tilbakemeldingRiktig": "Riktig. Perfektum: har lagret.",
-          "tilbakemeldingFeil": "Prøv igjen: Jeg har lagret søket mitt."
-        },
-        {
           "type": "portal_sok",
           "id": "e03-s02-ps",
           "instruksjon": "Les kravene for søk i Molde. Trykk Start oppgave. Velg riktig søkeord, sted og heltid eller deltid for personen din. Lagre søket og slå på varsel.",
@@ -285,6 +225,66 @@
           ],
           "tilbakemeldingRiktig": "Riktig. Søket er lagret, og varsel er på. Se treffene i portalen.",
           "tilbakemeldingFeil": "Tenk på personens yrkesmål. Velg Molde. Husk å slå på varsel."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s02-fv1",
+          "instruksjon": "Velg det riktige svaret.",
+          "spoersmal": "Hvorfor er det lurt å lagre et søk?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Da kan du få varsel om nye jobber"
+            },
+            {
+              "id": "b",
+              "tekst": "Da sletter du CVen"
+            },
+            {
+              "id": "c",
+              "tekst": "Da betaler du skatt"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Et lagret søk kan gi varsel.",
+          "tilbakemeldingFeil": "Når søket er lagret, kan du følge med på nye treff."
+        },
+        {
+          "type": "ordbank",
+          "id": "e03-s02-ob1",
+          "instruksjon": "Velg ordet som passer i setningen.",
+          "setning": "Jeg vil _____ søket mitt.",
+          "ord": [
+            "lagre",
+            "glemme",
+            "spise"
+          ],
+          "riktig": "lagre",
+          "tilbakemeldingRiktig": "Riktig. Du lagrer søket i portalen.",
+          "tilbakemeldingFeil": "Oppgaven handler om å lagre søket."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e03-s02-su1",
+          "instruksjon": "Les påstanden. Velg sant eller usant.",
+          "paastand": "Du bør velge søkeord som passer jobben du vil ha.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Gode søkeord gir bedre treff.",
+          "tilbakemeldingFeil": "Tenk på yrket og stedet når du søker."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e03-s02-ss1",
+          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
+          "biter": [
+            "Jeg",
+            "har",
+            "lagret",
+            "søket",
+            "mitt."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Perfektum: har lagret.",
+          "tilbakemeldingFeil": "Prøv igjen: Jeg har lagret søket mitt."
         }
       ]
     },

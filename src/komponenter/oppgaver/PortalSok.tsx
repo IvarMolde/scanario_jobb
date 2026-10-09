@@ -66,14 +66,83 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
   const stedTekst = oppgave.steder.find((a) => a.id === stedId)?.tekst
   const stillingTekst = oppgave.stillinger.find((a) => a.id === stillingId)?.tekst
 
-  const labelFor = (personId: string) => {
+  const oppgaveLinje = (personId: string) => {
     const f = oppgave.riktigPerPerson[personId]
     if (!f) return ''
     const ord = oppgave.sokkeord.find((a) => a.id === f.sokkeordId)?.tekst ?? f.sokkeordId
     const sted = oppgave.steder.find((a) => a.id === f.stedId)?.tekst ?? f.stedId
     const stilling = oppgave.stillinger.find((a) => a.id === f.stillingId)?.tekst ?? f.stillingId
-    return `${ord} · ${sted} · ${stilling.toLowerCase()} · varsel`
+    return `${PERSON_NAVN[personId] ?? personId}: ${ord} og ${stilling.toLowerCase()} i ${sted}.`
   }
+
+  const kravPanel = (variant: 'side' | 'modal') => (
+    <div
+      className={`portal-sok-krav${variant === 'modal' ? ' portal-sok-krav-modal' : ''}`}
+      aria-label="Oppgavetekst"
+    >
+      <h4>{variant === 'modal' ? 'Oppgavetekst' : 'Krav for lagret søk i Molde'}</h4>
+      <p className="portal-sok-krav-ingress">
+        Velg søkeord som passer målet ditt. Lagre søket og slå på varsel.
+      </p>
+      <ul className="portal-sok-personliste">
+        {Object.keys(oppgave.riktigPerPerson).map((id) => {
+          const erDeg = id === person.id
+          const ferdigForDeg = erDeg && status === 'ok'
+          return (
+            <li
+              key={id}
+              className={[
+                'portal-sok-personrad',
+                erDeg ? 'er-deg' : '',
+                ferdigForDeg ? 'er-ok' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')}
+            >
+              <span className="portal-sok-personmerke" aria-hidden="true">
+                {ferdigForDeg ? '✓' : erDeg ? '●' : '○'}
+              </span>
+              <div>
+                <strong>
+                  {PERSON_NAVN[id] ?? id}
+                  {erDeg ? ' (deg)' : ''}
+                </strong>
+                <p>{oppgaveLinje(id)}</p>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+
+      {status === 'ok' ? (
+        <div className="portal-sok-statusok" role="status">
+          <p>
+            <strong>Alle krav er oppfylt.</strong> Søket for {PERSON_NAVN[person.id] ?? person.fornavn}{' '}
+            er lagret med riktig søkeord, Molde, stilling og varsel.
+          </p>
+        </div>
+      ) : (
+        <ul className="portal-sok-sjekkliste" aria-label="Dine krav">
+          <li className={kravOppfylt.sokkeord ? 'ok' : ''}>
+            <span aria-hidden="true">{kravOppfylt.sokkeord ? '✓' : '1'}</span>
+            Riktig søkeord
+          </li>
+          <li className={kravOppfylt.sted ? 'ok' : ''}>
+            <span aria-hidden="true">{kravOppfylt.sted ? '✓' : '2'}</span>
+            Sted: Molde
+          </li>
+          <li className={kravOppfylt.stilling ? 'ok' : ''}>
+            <span aria-hidden="true">{kravOppfylt.stilling ? '✓' : '3'}</span>
+            Riktig heltid eller deltid
+          </li>
+          <li className={kravOppfylt.varsel ? 'ok' : ''}>
+            <span aria-hidden="true">{kravOppfylt.varsel ? '✓' : '4'}</span>
+            Varsel er på
+          </li>
+        </ul>
+      )}
+    </div>
+  )
 
   const lagre = () => {
     if (!kanLagre || !sokkeordId || !stedId || !stillingId) return
@@ -100,69 +169,7 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
 
   return (
     <div className={`portal-sok${status === 'ok' ? ' portal-sok-ok' : ''}`}>
-      <div className="portal-sok-krav" aria-label="Krav for søk i Molde">
-        <h4>Krav for lagret søk i Molde</h4>
-        <p className="portal-sok-krav-ingress">
-          Velg søkeord, sted og heltid eller deltid som passer personen din. Slå på varsel når du lagrer.
-        </p>
-        <ul className="portal-sok-personliste">
-          {Object.keys(oppgave.riktigPerPerson).map((id) => {
-            const erDeg = id === person.id
-            const ferdigForDeg = erDeg && status === 'ok'
-            return (
-              <li
-                key={id}
-                className={[
-                  'portal-sok-personrad',
-                  erDeg ? 'er-deg' : '',
-                  ferdigForDeg ? 'er-ok' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                <span className="portal-sok-personmerke" aria-hidden="true">
-                  {ferdigForDeg ? '✓' : erDeg ? '●' : '○'}
-                </span>
-                <div>
-                  <strong>
-                    {PERSON_NAVN[id] ?? id}
-                    {erDeg ? ' (deg)' : ''}
-                  </strong>
-                  <p>{labelFor(id)}</p>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-
-        {status === 'ok' ? (
-          <div className="portal-sok-statusok" role="status">
-            <p>
-              <strong>Alle krav er oppfylt.</strong> Søket for {PERSON_NAVN[person.id] ?? person.fornavn}{' '}
-              er lagret med riktig søkeord, Molde, stilling og varsel.
-            </p>
-          </div>
-        ) : (
-          <ul className="portal-sok-sjekkliste" aria-label="Dine krav">
-            <li className={kravOppfylt.sokkeord ? 'ok' : ''}>
-              <span aria-hidden="true">{kravOppfylt.sokkeord ? '✓' : '1'}</span>
-              Riktig søkeord
-            </li>
-            <li className={kravOppfylt.sted ? 'ok' : ''}>
-              <span aria-hidden="true">{kravOppfylt.sted ? '✓' : '2'}</span>
-              Sted: Molde
-            </li>
-            <li className={kravOppfylt.stilling ? 'ok' : ''}>
-              <span aria-hidden="true">{kravOppfylt.stilling ? '✓' : '3'}</span>
-              Riktig heltid eller deltid
-            </li>
-            <li className={kravOppfylt.varsel ? 'ok' : ''}>
-              <span aria-hidden="true">{kravOppfylt.varsel ? '✓' : '4'}</span>
-              Varsel er på
-            </li>
-          </ul>
-        )}
-      </div>
+      {kravPanel('side')}
 
       {!aapen ? (
         <button
@@ -209,6 +216,8 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
                 Lukk
               </button>
             </header>
+
+            <div className="arbeidsplassen-oppgavebanner">{kravPanel('modal')}</div>
 
             <section className="arbeidsplassen-sokeflate">
               <div className="arbeidsplassen-sokeflate-hode">

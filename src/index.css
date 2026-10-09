@@ -2779,6 +2779,38 @@ a {
   border-bottom: 1px solid var(--ap-kant);
 }
 
+.arbeidsplassen-oppgavebanner {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 0.65rem 0.85rem 0.35rem;
+  background: #eef4f8;
+  border-bottom: 1px solid var(--ap-kant);
+}
+
+.arbeidsplassen-oppgavebanner .portal-sok-krav-modal {
+  margin: 0;
+  padding: 0.7rem 0.8rem 0.85rem;
+  background: #fff;
+  border-color: #7aa8bc;
+}
+
+.arbeidsplassen-oppgavebanner .portal-sok-krav-modal h4 {
+  font-size: 1rem;
+}
+
+.arbeidsplassen-oppgavebanner .portal-sok-personliste {
+  margin-bottom: 0.55rem;
+}
+
+.arbeidsplassen-oppgavebanner .portal-sok-personrad {
+  padding: 0.4rem 0.55rem;
+}
+
+.arbeidsplassen-oppgavebanner .portal-sok-sjekkliste {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
 .arbeidsplassen-merke {
   display: flex;
   align-items: center;
