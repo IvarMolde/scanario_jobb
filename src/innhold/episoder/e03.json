@@ -220,7 +220,7 @@
         {
           "type": "portal_sok",
           "id": "e03-s02-ps",
-          "instruksjon": "Åpne Arbeidsplassen. Velg søkeord, sted og heltid eller deltid. Trykk Lagre søk, slå på varsel, og lagre.",
+          "instruksjon": "Les kravene for søk i Molde. Trykk Start oppgave. Velg riktig søkeord, sted og heltid eller deltid for personen din. Lagre søket og slå på varsel.",
           "sokkeord": [
             {
               "id": "butikk",

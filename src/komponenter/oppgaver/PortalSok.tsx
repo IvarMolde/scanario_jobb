@@ -13,16 +13,31 @@ interface Props {
   onLagreSok: (sok: LagretSok, flagg: string[]) => void
 }
 
+const PERSON_NAVN: Record<string, string> = {
+  olena: 'Olena',
+  taras: 'Taras',
+  sofiia: 'Sofiia',
+}
+
 export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSok }: Props) {
   const tittelId = useId()
   const lagret = ferdig ? oppgave.riktigPerPerson[person.id] : undefined
-  const [aapen, setAapen] = useState(!ferdig)
+  const [aapen, setAapen] = useState(false)
   const [visLagreDialog, setVisLagreDialog] = useState(false)
   const [sokkeordId, setSokkeordId] = useState<string | null>(lagret?.sokkeordId ?? null)
   const [stedId, setStedId] = useState<string | null>(lagret?.stedId ?? null)
   const [stillingId, setStillingId] = useState<string | null>(lagret?.stillingId ?? null)
   const [varsel, setVarsel] = useState(ferdig)
   const [status, setStatus] = useState<'ok' | 'feil' | null>(ferdig ? 'ok' : null)
+
+  const fasit = oppgave.riktigPerPerson[person.id]
+  const kravOppfylt = {
+    sokkeord: Boolean(fasit && sokkeordId === fasit.sokkeordId),
+    sted: Boolean(fasit && stedId === fasit.stedId),
+    stilling: Boolean(fasit && stillingId === fasit.stillingId),
+    varsel: varsel === true,
+  }
+  const alleKravOk = kravOppfylt.sokkeord && kravOppfylt.sted && kravOppfylt.stilling && kravOppfylt.varsel
 
   useEffect(() => {
     if (!aapen) return
@@ -51,9 +66,17 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
   const stedTekst = oppgave.steder.find((a) => a.id === stedId)?.tekst
   const stillingTekst = oppgave.stillinger.find((a) => a.id === stillingId)?.tekst
 
+  const labelFor = (personId: string) => {
+    const f = oppgave.riktigPerPerson[personId]
+    if (!f) return ''
+    const ord = oppgave.sokkeord.find((a) => a.id === f.sokkeordId)?.tekst ?? f.sokkeordId
+    const sted = oppgave.steder.find((a) => a.id === f.stedId)?.tekst ?? f.stedId
+    const stilling = oppgave.stillinger.find((a) => a.id === f.stillingId)?.tekst ?? f.stillingId
+    return `${ord} · ${sted} · ${stilling.toLowerCase()} · varsel`
+  }
+
   const lagre = () => {
     if (!kanLagre || !sokkeordId || !stedId || !stillingId) return
-    const fasit = oppgave.riktigPerPerson[person.id]
     const riktig =
       Boolean(fasit) &&
       fasit.sokkeordId === sokkeordId &&
@@ -62,11 +85,9 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
       varsel
     setStatus(riktig ? 'ok' : 'feil')
     onSvar(riktig)
+    setVisLagreDialog(false)
     if (riktig) {
       onLagreSok({ sokkeordId, stedId, stillingId, varsel: true }, oppgave.flagg)
-      setVisLagreDialog(false)
-    } else {
-      setVisLagreDialog(false)
     }
   }
 
@@ -78,11 +99,85 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
   }
 
   return (
-    <div className="portal-sok">
+    <div className={`portal-sok${status === 'ok' ? ' portal-sok-ok' : ''}`}>
+      <div className="portal-sok-krav" aria-label="Krav for søk i Molde">
+        <h4>Krav for lagret søk i Molde</h4>
+        <p className="portal-sok-krav-ingress">
+          Velg søkeord, sted og heltid eller deltid som passer personen din. Slå på varsel når du lagrer.
+        </p>
+        <ul className="portal-sok-personliste">
+          {Object.keys(oppgave.riktigPerPerson).map((id) => {
+            const erDeg = id === person.id
+            const ferdigForDeg = erDeg && status === 'ok'
+            return (
+              <li
+                key={id}
+                className={[
+                  'portal-sok-personrad',
+                  erDeg ? 'er-deg' : '',
+                  ferdigForDeg ? 'er-ok' : '',
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
+              >
+                <span className="portal-sok-personmerke" aria-hidden="true">
+                  {ferdigForDeg ? '✓' : erDeg ? '●' : '○'}
+                </span>
+                <div>
+                  <strong>
+                    {PERSON_NAVN[id] ?? id}
+                    {erDeg ? ' (deg)' : ''}
+                  </strong>
+                  <p>{labelFor(id)}</p>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+
+        {status === 'ok' ? (
+          <div className="portal-sok-statusok" role="status">
+            <p>
+              <strong>Alle krav er oppfylt.</strong> Søket for {PERSON_NAVN[person.id] ?? person.fornavn}{' '}
+              er lagret med riktig søkeord, Molde, stilling og varsel.
+            </p>
+          </div>
+        ) : (
+          <ul className="portal-sok-sjekkliste" aria-label="Dine krav">
+            <li className={kravOppfylt.sokkeord ? 'ok' : ''}>
+              <span aria-hidden="true">{kravOppfylt.sokkeord ? '✓' : '1'}</span>
+              Riktig søkeord
+            </li>
+            <li className={kravOppfylt.sted ? 'ok' : ''}>
+              <span aria-hidden="true">{kravOppfylt.sted ? '✓' : '2'}</span>
+              Sted: Molde
+            </li>
+            <li className={kravOppfylt.stilling ? 'ok' : ''}>
+              <span aria-hidden="true">{kravOppfylt.stilling ? '✓' : '3'}</span>
+              Riktig heltid eller deltid
+            </li>
+            <li className={kravOppfylt.varsel ? 'ok' : ''}>
+              <span aria-hidden="true">{kravOppfylt.varsel ? '✓' : '4'}</span>
+              Varsel er på
+            </li>
+          </ul>
+        )}
+      </div>
+
       {!aapen ? (
-        <button type="button" className="knapp knapp-amber" onClick={() => setAapen(true)}>
-          {status === 'ok' ? 'Se søket i Arbeidsplassen' : 'Åpne Arbeidsplassen'}
+        <button
+          type="button"
+          className={`knapp portal-sok-start${status === 'ok' ? ' portal-sok-start-ok' : ' knapp-amber'}`}
+          onClick={() => setAapen(true)}
+        >
+          {status === 'ok' ? 'Se lagret søk' : 'Start oppgave'}
         </button>
+      ) : null}
+
+      {status === 'ok' && !aapen ? (
+        <p className="portal-sok-ferdigtekst" role="status">
+          Oppgaven er fullført. Alle kravene er markert i grønt.
+        </p>
       ) : null}
 
       {aapen ? (
@@ -166,7 +261,9 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
                     </button>
                   ) : null}
                   {!sokkeordTekst && !stedTekst && !stillingTekst ? (
-                    <span className="arbeidsplassen-placeholder">Velg søkeord, sted og stilling til venstre</span>
+                    <span className="arbeidsplassen-placeholder">
+                      Velg søkeord, sted og stilling til venstre
+                    </span>
                   ) : null}
                 </div>
               </div>
@@ -196,7 +293,7 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
                     <span className="aktiv">Sted</span>
                     <span>Reisevei</span>
                   </div>
-                  <p className="arbeidsplassen-hjelp">Velg kommune.</p>
+                  <p className="arbeidsplassen-hjelp">Velg kommune. For denne oppgaven: Molde.</p>
                   <div className="arbeidsplassen-fylke">
                     <strong>Møre og Romsdal</strong>
                     {oppgave.steder.map((alt) => (
@@ -287,7 +384,12 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
                     <span>Slå på varsel når nye jobber kommer</span>
                   </label>
                   {!varsel ? (
-                    <p className="arbeidsplassen-varsel-hint">Husk varsel – da får du beskjed om nye stillinger.</p>
+                    <p className="arbeidsplassen-varsel-hint">
+                      Husk varsel – da får du beskjed om nye stillinger.
+                    </p>
+                  ) : null}
+                  {alleKravOk ? (
+                    <p className="arbeidsplassen-klar">Alle krav ser riktige ut. Du kan lagre.</p>
                   ) : null}
                   <div className="arbeidsplassen-lagre-handlinger">
                     <button
@@ -308,7 +410,7 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
             {status === 'ok' ? (
               <div className="arbeidsplassen-suksess" role="status">
                 <p>
-                  <strong>Søket er lagret.</strong> Varsel er på. Du kan lukke vinduet og gå videre.
+                  <strong>Søket er lagret.</strong> Varsel er på. Alle krav er oppfylt.
                 </p>
                 <button type="button" className="knapp" onClick={() => setAapen(false)}>
                   Lukk Arbeidsplassen
@@ -329,7 +431,7 @@ export function PortalSok({ oppgave, person, ferdig, annonser, onSvar, onLagreSo
         </div>
       ) : null}
 
-      {!aapen || status === 'ok' ? (
+      {!aapen ? (
         <TilbakemeldingBoks
           status={status}
           riktig={oppgave.tilbakemeldingRiktig}

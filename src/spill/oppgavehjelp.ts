@@ -12,7 +12,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   sorter_kategori: 'Trykk på et kort. Trykk så på boksen det hører til.',
   egenskap_kobling: 'Velg tre egenskaper. Trykk på ordet, og velg forklaringen som passer.',
   cv_valg: 'Trykk på setningen som passer personen.',
-  portal_sok: 'Åpne Arbeidsplassen. Velg søkeord, sted og heltid eller deltid. Lagre søket og slå på varsel.',
+  portal_sok: 'Les kravene for Molde. Trykk Start oppgave. Velg søkeord, sted og heltid eller deltid. Lagre søket og slå på varsel.',
   match_sjekkliste: 'Trykk på Passer eller Passer ikke.',
   registrer_aktiviteter: 'Velg status og dato for hver jobb.',
   bygg_soknad: 'Velg en start, en grunn og en slutt.',

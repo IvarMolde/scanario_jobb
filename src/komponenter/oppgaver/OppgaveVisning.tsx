@@ -70,10 +70,18 @@ export function OppgaveVisning({
         : undefined
     : undefined
 
+  const portalFullfort = oppgave.type === 'portal_sok' && ferdig
+
   return (
-    <section className="oppgave" aria-labelledby={`oppgave-${oppgave.id}`}>
-      <div className="oppgave-hode">
-        <h3 id={`oppgave-${oppgave.id}`}>Oppgave {nummer}</h3>
+    <section
+      className={['oppgave', portalFullfort ? 'oppgave-fullfort' : ''].filter(Boolean).join(' ')}
+      aria-labelledby={`oppgave-${oppgave.id}`}
+    >
+      <div className={`oppgave-hode${portalFullfort ? ' oppgave-hode-ok' : ''}`}>
+        <h3 id={`oppgave-${oppgave.id}`}>
+          Oppgave {nummer}
+          {portalFullfort ? <span className="oppgave-ok-merke"> Fullført</span> : null}
+        </h3>
         <p className="oppgave-hjelp">{oppgaveHjelp(oppgave.type)}</p>
         {visEgenInstruksjon(oppgave.instruksjon, oppgave.type) ? (
           <p className="oppgave-instruksjon">{oppgave.instruksjon}</p>

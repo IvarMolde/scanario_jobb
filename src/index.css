@@ -2461,6 +2461,196 @@ a {
   line-height: 1.4;
 }
 
+.oppgave-fullfort {
+  border: 2px solid #146c43;
+  border-radius: 12px;
+  padding: 0.85rem 0.9rem 1rem;
+  background: linear-gradient(180deg, #f3faf6 0%, #ffffff 42%);
+  box-shadow: 0 0 0 1px rgba(20, 108, 67, 0.12);
+}
+
+.oppgave-hode-ok {
+  background: #e5f4ec;
+  border-color: #8fcdb0;
+  border-left-color: #146c43;
+}
+
+.oppgave-ok-merke {
+  margin-left: 0.35rem;
+  color: #0d5c3b;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.portal-sok-krav {
+  margin: 0 0 0.85rem;
+  padding: 0.85rem 0.95rem 1rem;
+  background: #fff;
+  border: 1px solid #c5d0d6;
+  border-radius: 12px;
+}
+
+.portal-sok-ok .portal-sok-krav {
+  border-color: #8fcdb0;
+  background: #f3faf6;
+}
+
+.portal-sok-krav h4 {
+  margin: 0 0 0.35rem;
+  color: var(--marine);
+  font-size: 1.05rem;
+}
+
+.portal-sok-krav-ingress {
+  margin: 0 0 0.75rem;
+  color: var(--dempet);
+}
+
+.portal-sok-personliste {
+  list-style: none;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.portal-sok-personrad {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #d7e0e6;
+  border-radius: 10px;
+  background: #f8fbfd;
+}
+
+.portal-sok-personrad.er-deg {
+  border-color: #7aa8bc;
+  background: #eef6fa;
+}
+
+.portal-sok-personrad.er-ok {
+  border-color: #146c43;
+  background: #e5f4ec;
+}
+
+.portal-sok-personrad p {
+  margin: 0.15rem 0 0;
+  color: var(--dempet);
+  font-size: 0.95rem;
+}
+
+.portal-sok-personrad strong {
+  color: var(--marine);
+}
+
+.portal-sok-personmerke {
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-top: 0.1rem;
+  border-radius: 999px;
+  background: #d9e6ee;
+  color: var(--marine);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.portal-sok-personrad.er-ok .portal-sok-personmerke {
+  background: #146c43;
+  color: #fff;
+}
+
+.portal-sok-sjekkliste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.4rem;
+}
+
+.portal-sok-sjekkliste li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 42px;
+  padding: 0.35rem 0.55rem;
+  border: 1px dashed #b7c6cf;
+  border-radius: 8px;
+  color: var(--dempet);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.portal-sok-sjekkliste li span {
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: #e4edf2;
+  color: var(--marine);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.portal-sok-sjekkliste li.ok {
+  border-style: solid;
+  border-color: #146c43;
+  background: #e5f4ec;
+  color: #0d5c3b;
+}
+
+.portal-sok-sjekkliste li.ok span {
+  background: #146c43;
+  color: #fff;
+}
+
+.portal-sok-statusok {
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  background: #e5f4ec;
+  border: 1px solid #146c43;
+  color: #0d5c3b;
+}
+
+.portal-sok-statusok p {
+  margin: 0;
+}
+
+.portal-sok-start {
+  min-width: min(100%, 220px);
+}
+
+.portal-sok-start-ok {
+  background: #146c43;
+  border-color: #146c43;
+  color: #fff;
+}
+
+.portal-sok-start-ok:hover {
+  background: #0f5636;
+  border-color: #0f5636;
+}
+
+.portal-sok-ferdigtekst {
+  margin: 0.55rem 0 0;
+  color: #0d5c3b;
+  font-weight: 600;
+}
+
+.arbeidsplassen-klar {
+  margin: 0 0 0.85rem !important;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  background: #e5f4ec;
+  color: #0d5c3b;
+  font-weight: 600;
+}
+
 .spill-nav {
   display: flex;
   flex-wrap: wrap;
