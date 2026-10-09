@@ -1122,7 +1122,11 @@ a {
 }
 
 .scene-bilde {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   background: #d9e6ee;
   min-height: 140px;
@@ -1132,6 +1136,7 @@ a {
 
 .scene-bilde[src$='.svg'] {
   object-fit: contain;
+  object-position: center;
   background: #e8eef2;
 }
 
