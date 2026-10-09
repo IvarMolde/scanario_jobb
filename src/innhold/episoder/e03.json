@@ -304,16 +304,85 @@
         "bildeAlt": "Stillingsannonse med nøkkelinformasjon: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson. Lagre søk er markert.",
         "lyd": "e03-s03-treff.wav"
       },
-      "tekst": "Les treffene i portalen.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier om jobben er heltid eller deltid.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",
+      "tekst": "Se på bildet av annonsen. Du kan klikke på bildet for å gjøre det større.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier hvor mye du skal jobbe.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",
       "valg": [
         {
           "id": "til-annonse",
-          "tekst": "Les en annonsetekst",
+          "tekst": "Gå videre",
           "nesteSceneId": "e03-s04",
           "tilbakemelding": "Nå øver du på form og sammensatte ord."
         }
       ],
       "oppgaver": [
+        {
+          "type": "flervalg",
+          "id": "e03-s03-fv1",
+          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "spoersmal": "Når er søknadsfristen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "1. januar 2027"
+            },
+            {
+              "id": "b",
+              "tekst": "15. november 2026"
+            },
+            {
+              "id": "c",
+              "tekst": "10. oktober 2026"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Søknadsfristen er 15. november 2026.",
+          "tilbakemeldingFeil": "Se i boksen Nøkkelinformasjon. Finn ordet søknadsfrist."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s03-fv2",
+          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "spoersmal": "Hva er stillingsprosenten?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "50 %"
+            },
+            {
+              "id": "b",
+              "tekst": "100 %"
+            },
+            {
+              "id": "c",
+              "tekst": "73,3 %"
+            }
+          ],
+          "riktigId": "c",
+          "tilbakemeldingRiktig": "Riktig. Stillingsprosenten er 73,3 %.",
+          "tilbakemeldingFeil": "Se i boksen Nøkkelinformasjon. Finn ordet stillingsprosent."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s03-fv3",
+          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "spoersmal": "Hva heter de to kontaktpersonene?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Kari Nordmann og Ola Privat"
+            },
+            {
+              "id": "b",
+              "tekst": "Linn Holm og Kari Strand"
+            },
+            {
+              "id": "c",
+              "tekst": "Liv Hauge og Per Hansen"
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Kontaktpersonene er Kari Nordmann og Ola Privat.",
+          "tilbakemeldingFeil": "Se under Kontaktpersoner for stillingen. Der står navnene."
+        },
         {
           "type": "matching",
           "id": "e03-s03-ma",
@@ -344,64 +413,13 @@
           "tilbakemeldingFeil": "Prøv igjen. Frist = siste dag. Prosent = hvor mye. Tiltredelse = start."
         },
         {
-          "type": "flervalg",
-          "id": "e03-s03-fv1",
-          "instruksjon": "Velg det riktige svaret.",
-          "spoersmal": "Hva er et nøkkelord i en treffliste?",
-          "alternativer": [
-            {
-              "id": "a",
-              "tekst": "Et viktig ord som sier noe om jobben"
-            },
-            {
-              "id": "b",
-              "tekst": "Et passord til Facebook"
-            },
-            {
-              "id": "c",
-              "tekst": "Navnet på bussen"
-            }
-          ],
-          "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. Nøkkelord hjelper deg å forstå annonsen raskt.",
-          "tilbakemeldingFeil": "Nøkkelord er viktige ord i trefflisten."
-        },
-        {
-          "type": "ordbank",
-          "id": "e03-s03-ob1",
-          "instruksjon": "Velg ordet som passer i setningen.",
-          "setning": "Se på _____ før du åpner annonsen.",
-          "ord": [
-            "nøkkelordene",
-            "værmeldingen",
-            "filmen"
-          ],
-          "riktig": "nøkkelordene",
-          "tilbakemeldingRiktig": "Riktig. Nøkkelord gir deg rask info.",
-          "tilbakemeldingFeil": "Teksten handler om nøkkelord i trefflisten."
-        },
-        {
           "type": "sant_usant",
           "id": "e03-s03-su1",
           "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "Frist forteller hvor mye du tjener i måneden.",
+          "paastand": "Søknadsfrist forteller hvor mye du tjener i måneden.",
           "riktigErSant": false,
-          "tilbakemeldingRiktig": "Riktig. Frist er siste dag du kan søke.",
-          "tilbakemeldingFeil": "Frist er en dato, ikke lønn."
-        },
-        {
-          "type": "sorter_setning",
-          "id": "e03-s03-ss1",
-          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": [
-            "Søknadsfristen",
-            "er",
-            "den",
-            "15.",
-            "november."
-          ],
-          "tilbakemeldingRiktig": "Riktig. Slik kan du si en frist.",
-          "tilbakemeldingFeil": "Prøv igjen med datoen i riktig rekkefølge."
+          "tilbakemeldingRiktig": "Riktig. Søknadsfrist er siste dag du kan søke.",
+          "tilbakemeldingFeil": "Søknadsfrist er en dato, ikke lønn."
         }
       ]
     },

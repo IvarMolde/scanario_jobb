@@ -70,7 +70,12 @@ export function ScenePanel() {
       {valgtOrd ? (
         <Ordkort ord={valgtOrd} morsmal={morsmal} onLukk={() => velgOrd(null)} />
       ) : null}
-      <SceneBilde fil={scene.media.bilde} alt={scene.media.bildeAlt ?? scene.tittel} prioritet />
+      <SceneBilde
+        fil={scene.media.bilde}
+        alt={scene.media.bildeAlt ?? scene.tittel}
+        prioritet
+        kanZoom
+      />
       <Lydspiller fil={scene.media.lyd} etikett="Lytt til teksten" />
       <KlikkbarTekst
         tekst={(person && scene.tekstPerPerson?.[person.id]) || scene.tekst}

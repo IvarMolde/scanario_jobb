@@ -1121,6 +1121,32 @@ a {
   margin: 0 0 1rem;
 }
 
+.scene-bilde-knapp {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.8rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: default;
+  position: relative;
+}
+
+.scene-bilde-knapp.kan-zoom {
+  cursor: zoom-in;
+}
+
+.scene-bilde-knapp:disabled {
+  cursor: default;
+}
+
+.scene-bilde-knapp:focus-visible {
+  outline: 3px solid var(--marine);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
 .scene-bilde {
   display: block;
   width: 100%;
@@ -1135,6 +1161,11 @@ a {
   margin-bottom: 0.8rem;
 }
 
+.scene-bilde-knapp .scene-bilde {
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
 .scene-bilde[src$='.svg'] {
   object-fit: contain;
   object-position: center;
@@ -1147,6 +1178,75 @@ a {
 .scene-bilde[src$='.webp'] {
   object-fit: cover;
   object-position: top center;
+}
+
+.scene-bilde-zoomhint {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(0, 48, 87, 0.88);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 30, 50, 0.25);
+}
+
+.bilde-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  background: rgba(8, 20, 32, 0.72);
+  backdrop-filter: blur(6px);
+  animation: person-hjelp-fade 0.2s ease;
+}
+
+.bilde-zoom-ramme {
+  width: min(960px, 100%);
+  max-height: min(94dvh, 920px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 28px 64px rgba(0, 30, 50, 0.4);
+  animation: person-hjelp-opp 0.28s cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+
+.bilde-zoom-topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.bilde-zoom-tittel {
+  margin: 0;
+  color: var(--marine);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.bilde-zoom-img {
+  display: block;
+  width: 100%;
+  max-height: min(78dvh, 780px);
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 10px;
+  background: #e8eef2;
+}
+
+.bilde-zoom-hjelp {
+  margin: 0;
+  color: var(--dempet);
+  font-size: 0.92rem;
 }
 
 .plassholder-bilde {
