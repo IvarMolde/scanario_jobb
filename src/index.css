@@ -1874,6 +1874,125 @@ a {
   color: #14532d;
 }
 
+.modus-valg {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0.75rem 0 1.4rem;
+}
+
+.modus-kort {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 1.05rem 1.1rem 1.15rem;
+  text-align: left;
+  border: 2px solid #c5d5df;
+  border-radius: 14px;
+  background: linear-gradient(165deg, #f7fafc 0%, #eef4f8 100%);
+  color: var(--marine);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.modus-kort:hover {
+  border-color: #8fb0c4;
+  background: linear-gradient(165deg, #f3f8fb 0%, #e6f0f6 100%);
+  box-shadow: 0 4px 14px rgba(15, 50, 75, 0.08);
+}
+
+.modus-kort:focus-visible {
+  outline: 3px solid #0b5cab;
+  outline-offset: 2px;
+}
+
+.modus-kort.er-valgt {
+  border-color: #146c43;
+  background: linear-gradient(165deg, #edf8f1 0%, #dff0e6 100%);
+  box-shadow: 0 0 0 2px rgba(20, 108, 67, 0.22);
+}
+
+.modus-kort-merke {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  background: #1a3a52;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.modus-kort.er-valgt .modus-kort-merke {
+  background: #146c43;
+}
+
+.modus-kort-tittel {
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--marine);
+}
+
+.modus-kort-tekst {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: #3d5566;
+}
+
+.modus-bytte {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.9rem;
+  padding: 0.3rem;
+  border-radius: 12px;
+  background: #e8eef3;
+  border: 1px solid #c9d7e2;
+}
+
+.modus-bytte-knapp {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #3d5566;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.modus-bytte-knapp:hover {
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--marine);
+}
+
+.modus-bytte-knapp.er-valgt {
+  background: #fff;
+  color: #14532d;
+  box-shadow: 0 1px 4px rgba(15, 50, 75, 0.1);
+}
+
+.modus-bytte-knapp:focus-visible {
+  outline: 3px solid #0b5cab;
+  outline-offset: 1px;
+}
+
 .episodekort {
   width: 100%;
   text-align: left;
@@ -1892,6 +2011,37 @@ a {
   flex-shrink: 0;
   font-size: 1.15rem;
   line-height: 1;
+}
+
+.episodekort-nummer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #1a3a52;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.episodekort--fullfort .episodekort-nummer {
+  background: #146c43;
+}
+
+.episodekort--neste .episodekort-nummer {
+  background: #b45309;
+}
+
+.episodekort--aapen .episodekort-nummer {
+  background: #0b5cab;
+}
+
+.episodekort--laast .episodekort-nummer {
+  background: #9a6a6a;
 }
 
 .episodekort-tittel {
@@ -1923,8 +2073,25 @@ a {
   color: #3d2a00;
 }
 
+.episodekort-merke--aapen {
+  background: #0b5cab;
+  color: #fff;
+}
+
 .episodekort-tekst {
   margin: 0;
+}
+
+.episodekort--aapen {
+  background: #eef5fb;
+  border-color: #9bbdd8;
+  color: #123a55;
+}
+
+.episodekort--aapen:hover:not(:disabled) {
+  background: #e2eef8;
+  border-color: #6f9fc4;
+  box-shadow: 0 0 0 2px rgba(11, 92, 171, 0.16);
 }
 
 .episodekort--fullfort {
@@ -1982,6 +2149,73 @@ a {
   color: var(--marine);
   font-size: 2rem;
   margin: 0.6rem 0;
+}
+
+.spill-intro {
+  margin: 1rem 0 1.75rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid #c5d5df;
+  border-radius: 14px;
+  background: linear-gradient(165deg, #f8fbfd 0%, #eef4f8 100%);
+}
+
+.spill-intro-sprak {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.95rem;
+}
+
+.spill-intro-sprak-knapp {
+  appearance: none;
+  border: 1px solid #b7c9d6;
+  background: #fff;
+  color: #3d5566;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.spill-intro-sprak-knapp:hover {
+  border-color: #8fb0c4;
+  color: var(--marine);
+  background: #f3f8fb;
+}
+
+.spill-intro-sprak-knapp.er-valgt {
+  border-color: #146c43;
+  background: #e7f5ec;
+  color: #14532d;
+  box-shadow: 0 0 0 2px rgba(20, 108, 67, 0.18);
+}
+
+.spill-intro-sprak-knapp:focus-visible {
+  outline: 3px solid #0b5cab;
+  outline-offset: 2px;
+}
+
+.spill-intro-innhold h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.2rem;
+  color: var(--marine);
+}
+
+.spill-intro-innhold p {
+  margin: 0 0 0.7rem;
+  line-height: 1.55;
+  color: #2f4554;
+}
+
+.spill-intro-innhold p:last-child {
+  margin-bottom: 0;
 }
 
 .statistikk {
@@ -3629,6 +3863,20 @@ a {
   .arbeidsplassen-sokeflate-hode {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .modus-valg {
+    grid-template-columns: 1fr;
+  }
+
+  .modus-bytte {
+    display: flex;
+    width: 100%;
+  }
+
+  .modus-bytte-knapp {
+    flex: 1 1 0;
+    text-align: center;
   }
 }
 

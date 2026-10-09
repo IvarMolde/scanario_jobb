@@ -9,6 +9,8 @@ import type { LagretSkattekort } from './skatt'
 
 export type Visning = 'start' | 'episoder' | 'scene' | 'oppsummering' | 'slutt' | 'innstillinger'
 
+export type SpillModus = 'scenario' | 'valgfri'
+
 export interface OppgaveResultat {
   oppgaveId: string
   type: string
@@ -47,6 +49,7 @@ export type CvReferanse = {
 export interface Fremdrift {
   personId: string | null
   morsmal: Morsmal | null
+  spillModus: SpillModus | null
   visning: Visning
   aktivEpisodeId: string | null
   aktivSceneId: string | null
@@ -76,10 +79,12 @@ export interface Fremdrift {
 }
 
 const visningSkjema = z.enum(['start', 'episoder', 'scene', 'oppsummering', 'slutt', 'innstillinger'])
+const spillModusSkjema = z.enum(['scenario', 'valgfri'])
 
 const fremdriftSkjema = z.object({
   personId: z.string().nullable(),
   morsmal: morsmalSkjema.nullable(),
+  spillModus: spillModusSkjema.nullable().optional(),
   visning: visningSkjema,
   aktivEpisodeId: z.string().nullable(),
   aktivSceneId: z.string().nullable(),
@@ -200,6 +205,7 @@ export function tomFremdrift(): Fremdrift {
   return {
     personId: null,
     morsmal: null,
+    spillModus: null,
     visning: 'start',
     aktivEpisodeId: null,
     aktivSceneId: null,
@@ -234,6 +240,7 @@ export function parseFremdrift(raw: unknown): Fremdrift {
   if (!resultat.success) return tomFremdrift()
   return {
     ...resultat.data,
+    spillModus: resultat.data.spillModus ?? null,
     smsUtkast: resultat.data.smsUtkast ?? null,
     sceneHistorikk: resultat.data.sceneHistorikk ?? [],
     valgteJobber: resultat.data.valgteJobber ?? [],
@@ -308,6 +315,7 @@ export function anvendScene(state: Fremdrift, scene: Scene): Fremdrift {
 export type Handling =
   | { type: 'VELG_PERSON'; id: string }
   | { type: 'VELG_MORSMAL'; morsmal: Morsmal }
+  | { type: 'VELG_SPILL_MODUS'; modus: SpillModus }
   | { type: 'START_SPILL' }
   | { type: 'START_EPISODE'; episodeId: string; startScene: Scene; tillatteFlagg: string[] }
   | { type: 'GA_TIL_SCENE'; scene: Scene; fraTilbake?: boolean }
@@ -350,8 +358,10 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
       return { ...state, personId: handling.id }
     case 'VELG_MORSMAL':
       return { ...state, morsmal: handling.morsmal }
+    case 'VELG_SPILL_MODUS':
+      return { ...state, spillModus: handling.modus }
     case 'START_SPILL':
-      if (!state.personId || !state.morsmal) return state
+      if (!state.personId || !state.morsmal || !state.spillModus) return state
       return { ...state, visning: 'episoder', aktivApp: 'hjem' }
     case 'START_EPISODE': {
       const fjern = new Set(handling.tillatteFlagg)

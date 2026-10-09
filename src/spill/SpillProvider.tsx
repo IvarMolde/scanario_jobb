@@ -9,6 +9,7 @@ import {
 } from 'react'
 import { hentEpisode, hentOrd, hentPerson, hentScene, lastInnhold, type Innhold } from '../innhold/lastInnhold'
 import type { Aktivitet, AppId, Episode, Morsmal, Ord, Person, Scene, Valg } from '../modell/typer'
+import type { SpillModus } from './tilstand'
 import { OPPSUMMERING_ID, SLUTT_ID } from '../modell/typer'
 import { tilfeldigSekssiffer } from './koder'
 import type { LagretReise } from './reise'
@@ -34,6 +35,7 @@ interface SpillApi {
   oppgaverFerdige: boolean
   velgPerson: (id: string) => void
   velgMorsmal: (morsmal: Morsmal) => void
+  velgSpillModus: (modus: SpillModus) => void
   startSpill: () => void
   startEpisode: (id: string) => void
   aapneApp: (app: AppId) => void
@@ -174,6 +176,7 @@ function SpillProviderIndre({
       oppgaverFerdige,
       velgPerson: (id) => dispatch({ type: 'VELG_PERSON', id }),
       velgMorsmal: (morsmal) => dispatch({ type: 'VELG_MORSMAL', morsmal }),
+      velgSpillModus: (modus) => dispatch({ type: 'VELG_SPILL_MODUS', modus }),
       startSpill: () => dispatch({ type: 'START_SPILL' }),
       startEpisode: (id) => {
         const ep = hentEpisode(innhold, id)
