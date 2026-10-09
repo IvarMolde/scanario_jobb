@@ -3,6 +3,7 @@ import type { Aktivitet, AppId, Epost, Kalenderhendelse, Morsmal, Scene, Valg } 
 import { aktivitetStatusSkjema, appIdSkjema, morsmalSkjema } from '../modell/skjema'
 import { OPPSUMMERING_ID } from '../modell/typer'
 import { settStatus } from './aktiviteter'
+import { tilfeldigSekssiffer, type InnloggingKoder } from './koder'
 import type { LagretReise } from './reise'
 import type { LagretSkattekort } from './skatt'
 
@@ -71,6 +72,7 @@ export interface Fremdrift {
   lagretReise: LagretReise | null
   skattekort: LagretSkattekort | null
   cvReferanse: CvReferanse | null
+  innloggingKoder: InnloggingKoder | null
 }
 
 const visningSkjema = z.enum(['start', 'episoder', 'scene', 'oppsummering', 'slutt', 'innstillinger'])
@@ -184,6 +186,14 @@ const fremdriftSkjema = z.object({
     })
     .nullable()
     .optional(),
+  innloggingKoder: z
+    .object({
+      passord: z.string(),
+      kodebrikke: z.string().nullable(),
+      sms: z.string().nullable(),
+    })
+    .nullable()
+    .optional(),
 })
 
 export function tomFremdrift(): Fremdrift {
@@ -215,6 +225,7 @@ export function tomFremdrift(): Fremdrift {
     lagretReise: null,
     skattekort: null,
     cvReferanse: null,
+    innloggingKoder: null,
   }
 }
 
@@ -233,6 +244,7 @@ export function parseFremdrift(raw: unknown): Fremdrift {
     lagretReise: resultat.data.lagretReise ?? null,
     skattekort: resultat.data.skattekort ?? null,
     cvReferanse: resultat.data.cvReferanse ?? null,
+    innloggingKoder: resultat.data.innloggingKoder ?? null,
     eposter: resultat.data.eposter.filter((e) => e.id !== 'ovingsmail'),
   }
 }
@@ -327,6 +339,9 @@ export type Handling =
     }
   | { type: 'FULLFOR_SPILL' }
   | { type: 'APNE_SLUTT' }
+  | { type: 'SIKRE_PASSORD'; passord: string }
+  | { type: 'SETT_KODEBRIKKE'; kode: string }
+  | { type: 'MOTTA_SMS_KODE'; kode: string }
   | { type: 'NULLSTILL' }
 
 export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
@@ -360,6 +375,7 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
         lagretReise: fjern.has('kom_presis') ? null : state.lagretReise,
         skattekort: fjern.has('endret_skattekort') ? null : state.skattekort,
         cvReferanse: fjern.has('cv_mangler_referanse') || fjern.has('har_oppdatert_cv') ? null : state.cvReferanse,
+        innloggingKoder: null,
         sms: state.sms.filter((s) => !s.id.startsWith(`${handling.episodeId}-`)),
         eposter: state.eposter.filter(
           (e) => e.id !== 'ovingsmail' && !e.id.startsWith(`${handling.episodeId}-`),
@@ -553,6 +569,65 @@ export function reduser(state: Fremdrift, handling: Handling): Fremdrift {
     }
     case 'APNE_SLUTT':
       return { ...state, visning: 'slutt', aktivApp: 'hjem' }
+    case 'SIKRE_PASSORD': {
+      if (state.innloggingKoder?.passord) return state
+      return {
+        ...state,
+        innloggingKoder: {
+          passord: handling.passord,
+          kodebrikke: state.innloggingKoder?.kodebrikke ?? null,
+          sms: state.innloggingKoder?.sms ?? null,
+        },
+      }
+    }
+    case 'SETT_KODEBRIKKE': {
+      const passord = state.innloggingKoder?.passord ?? tilfeldigSekssiffer()
+      return {
+        ...state,
+        innloggingKoder: {
+          passord,
+          kodebrikke: handling.kode,
+          sms: state.innloggingKoder?.sms ?? null,
+        },
+      }
+    }
+    case 'MOTTA_SMS_KODE': {
+      const passord = state.innloggingKoder?.passord ?? tilfeldigSekssiffer()
+      const smsId = `skatt-sms-${handling.kode}`
+      const varselId = `skatt-varsel-${handling.kode}`
+      const smsFinnes = state.sms.some((m) => m.id === smsId)
+      return {
+        ...state,
+        innloggingKoder: {
+          passord,
+          kodebrikke: state.innloggingKoder?.kodebrikke ?? null,
+          sms: handling.kode,
+        },
+        smsKontakt: 'Skatteøving',
+        sms: smsFinnes
+          ? state.sms
+          : [
+              ...state.sms,
+              {
+                id: smsId,
+                fra: 'veileder',
+                tekst: `Engangskode: ${handling.kode}. Ikke del koden med andre.`,
+              },
+            ],
+        varsler: state.varsler.some((v) => v.id === varselId)
+          ? state.varsler
+          : [
+              ...state.varsler,
+              {
+                id: varselId,
+                type: 'sms',
+                fra: 'Skatteøving',
+                innhold: `Engangskode: ${handling.kode}. Ikke del koden.`,
+                lest: false,
+              },
+            ],
+      }
+    }
     case 'FULLFOR_EPISODE': {
       const id = state.aktivEpisodeId
       const historikk = state.aktivSceneId

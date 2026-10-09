@@ -411,6 +411,172 @@ a {
   will-change: transform;
 }
 
+.notater-app {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.notater-hode {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.notater-hode h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.notat-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.notat-rad {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #c5d0d6;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--marine);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.notat-rad:hover {
+  border-color: #7aa8bc;
+  background: #f3f8fb;
+}
+
+.notat-rad-pil {
+  font-size: 1.35rem;
+  color: #7a8690;
+}
+
+.notat-ark {
+  padding: 1rem;
+  border-radius: 14px;
+  background: #fffdf6;
+  border: 1px solid #e2d6b5;
+  box-shadow: 0 8px 20px rgba(80, 60, 0, 0.08);
+}
+
+.notat-ark p {
+  margin: 0 0 0.55rem;
+}
+
+.notat-passord {
+  text-align: center;
+}
+
+.notat-etikett {
+  color: var(--dempet);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.notat-kode {
+  margin: 0.65rem 0 !important;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--marine);
+  font-variant-numeric: tabular-nums;
+}
+
+.notat-hjelp {
+  color: var(--dempet);
+  font-size: 0.95rem;
+}
+
+.kodebrikke-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 96;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(8, 20, 32, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.kodebrikke-kort {
+  width: min(340px, 100%);
+  padding: 1rem 1.05rem 1.15rem;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 50px rgba(0, 30, 50, 0.35);
+}
+
+.kodebrikke-kort h2 {
+  margin: 0 0 0.75rem;
+  color: var(--marine);
+}
+
+.kodebrikke-enhet {
+  margin: 0 auto 0.85rem;
+  width: min(220px, 100%);
+  padding: 0.85rem 0.75rem 1rem;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #2a3038 0%, #12161c 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.kodebrikke-skjerm {
+  display: grid;
+  gap: 0.2rem;
+  place-items: center;
+  min-height: 72px;
+  padding: 0.55rem;
+  border-radius: 10px;
+  background: #0d1f18;
+  border: 2px solid #1f3d32;
+  color: #7dffb0;
+  font-variant-numeric: tabular-nums;
+}
+
+.kodebrikke-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  opacity: 0.75;
+}
+
+.kodebrikke-siffer {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.kodebrikke-knapp-rad {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.kodebrikke-knapp-rad span {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #4a5560;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.kodebrikke-hjelp {
+  margin: 0 0 0.75rem;
+  color: var(--dempet);
+}
+
 .telefon-hjelp {
   margin: 0;
   width: 100%;

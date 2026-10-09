@@ -17,6 +17,7 @@ import { Statuslinje } from './Statuslinje'
 import { Varsler } from './Varsler'
 import { Skatteportal } from './Skatteportal'
 import { Lonn } from './Lonn'
+import { Notater } from './Notater'
 
 const BUNN: AppId[] = ['hjem', 'meldinger', 'epost', 'kalender', 'innstillinger']
 const BLINK_MS = 5000
@@ -180,6 +181,7 @@ export function Telefon() {
             ) : null}
             {app === 'skatt' ? <Skatteportal /> : null}
             {app === 'lonn' ? <Lonn /> : null}
+            {app === 'notater' ? <Notater /> : null}
             {app === 'innstillinger' ? (
               <Innstillinger
                 person={person}

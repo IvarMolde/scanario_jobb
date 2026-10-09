@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import type { Arbeidsforhold, Person } from '../../modell/typer'
 import { SkattekortDokument } from '../skatt/SkattekortDokument'
 import { nyttSkattekortFraValg } from '../../spill/lonn'
@@ -24,18 +24,37 @@ type Steg =
   | 'beregning'
   | 'kvittering'
 
-const METODER = ['Kodebrikke', 'SMS-kode', 'Passord'] as const
+type Metode = 'Kodebrikke' | 'SMS-kode' | 'Passord'
+
+const METODER: Metode[] = ['Kodebrikke', 'SMS-kode', 'Passord']
 
 export function Skatteportal() {
-  const { innhold, person, fremdrift, lagreSkattekort } = useSpill()
+  const {
+    innhold,
+    person,
+    fremdrift,
+    lagreSkattekort,
+    sikrePassord,
+    settKodebrikkeKode,
+    mottaksSmsKode,
+    aapneApp,
+  } = useSpill()
   const [steg, setSteg] = useState<Steg>(fremdrift.skattekort?.loggetInn ? 'min-side' : 'start')
-  const [metode, setMetode] = useState<string | null>(null)
+  const [metode, setMetode] = useState<Metode | null>(null)
   const [fnr, setFnr] = useState('')
   const [kode, setKode] = useState('')
   const [loginFeil, setLoginFeil] = useState<string | null>(null)
+  const [visKodebrikke, setVisKodebrikke] = useState(false)
+  const [kodebrikkeVisning, setKodebrikkeVisning] = useState('')
+  const [kopiert, setKopiert] = useState(false)
+  const [smsHint, setSmsHint] = useState(false)
   const [fagforening, setFagforening] = useState(fremdrift.skattekort?.fagforening ?? false)
 
   const forhold = person ? innhold.arbeid.personer[person.id] : undefined
+
+  useEffect(() => {
+    sikrePassord()
+  }, [sikrePassord])
 
   if (!person || !forhold) {
     return (
@@ -48,6 +67,14 @@ export function Skatteportal() {
       </div>
     )
   }
+
+  const forventetKode = (() => {
+    const k = fremdrift.innloggingKoder
+    if (!k || !metode) return ''
+    if (metode === 'Kodebrikke') return k.kodebrikke ?? ''
+    if (metode === 'SMS-kode') return k.sms ?? ''
+    return k.passord
+  })()
 
   const lagreInnlogging = () => {
     lagreSkattekort(
@@ -69,6 +96,35 @@ export function Skatteportal() {
     const kort = nyttSkattekortFraValg(forhold, innhold.arbeid.maanederIgjen, fagforening)
     lagreSkattekort(kort, ['endret_skattekort'])
     setSteg('kvittering')
+  }
+
+  const velgMetode = (m: Metode) => {
+    setMetode(m)
+    setLoginFeil(null)
+    setKode('')
+    setSmsHint(false)
+    setKopiert(false)
+    if (m === 'Kodebrikke') {
+      const ny = settKodebrikkeKode()
+      setKodebrikkeVisning(ny)
+      setVisKodebrikke(true)
+    } else if (m === 'SMS-kode') {
+      mottaksSmsKode()
+      setSmsHint(true)
+    } else {
+      sikrePassord()
+    }
+  }
+
+  const kopierKode = async () => {
+    try {
+      await navigator.clipboard.writeText(kodebrikkeVisning)
+      setKopiert(true)
+      setKode(kodebrikkeVisning)
+    } catch {
+      setKode(kodebrikkeVisning)
+      setKopiert(true)
+    }
   }
 
   return (
@@ -95,6 +151,9 @@ export function Skatteportal() {
       {steg === 'metode' ? (
         <div>
           <h2>Velg innloggingsmetode</h2>
+          <p className="skjema-hjelp">
+            Kodebrikke viser en kode. SMS sender kode til Meldinger. Passord står i Notater.
+          </p>
           <div className="valggruppe">
             {METODER.map((m) => (
               <button
@@ -102,14 +161,32 @@ export function Skatteportal() {
                 type="button"
                 className="knapp knapp-sekundaer"
                 aria-pressed={metode === m}
-                onClick={() => setMetode(m)}
+                onClick={() => velgMetode(m)}
               >
                 {m}
               </button>
             ))}
           </div>
+          {smsHint ? (
+            <p className="tilbakemelding info" role="status">
+              Telefonen vibrerte. Åpne Meldinger for å se SMS-koden.
+            </p>
+          ) : null}
+          {metode === 'Passord' ? (
+            <p className="tilbakemelding info" role="status">
+              Åpne appen Notater og les notatet Passord.
+              <button type="button" className="knapp knapp-sekundaer" onClick={() => aapneApp('notater')}>
+                Åpne Notater
+              </button>
+            </p>
+          ) : null}
           <div className="handlinger">
-            <button type="button" className="knapp" disabled={!metode} onClick={() => setSteg('koder')}>
+            <button
+              type="button"
+              className="knapp"
+              disabled={!metode}
+              onClick={() => setSteg('koder')}
+            >
               Neste
             </button>
             <button type="button" className="knapp knapp-sekundaer" onClick={() => setSteg('start')}>
@@ -119,11 +196,12 @@ export function Skatteportal() {
         </div>
       ) : null}
 
-      {steg === 'koder' ? (
+      {steg === 'koder' && metode ? (
         <LoginSkjema
           person={person}
+          metode={metode}
           forventetFnr={forhold.fodselsnummer}
-          forventetKode={innhold.arbeid.engangskode}
+          forventetKode={forventetKode}
           fnr={fnr}
           kode={kode}
           feil={loginFeil}
@@ -131,6 +209,18 @@ export function Skatteportal() {
           onKode={setKode}
           onFeil={setLoginFeil}
           onOk={lagreInnlogging}
+          onVisKodebrikke={
+            metode === 'Kodebrikke'
+              ? () => {
+                  const ny = settKodebrikkeKode()
+                  setKodebrikkeVisning(ny)
+                  setVisKodebrikke(true)
+                  setKopiert(false)
+                }
+              : undefined
+          }
+          onAapneMeldinger={metode === 'SMS-kode' ? () => aapneApp('meldinger') : undefined}
+          onAapneNotater={metode === 'Passord' ? () => aapneApp('notater') : undefined}
         />
       ) : null}
 
@@ -250,12 +340,65 @@ export function Skatteportal() {
           </div>
         </div>
       ) : null}
+
+      {visKodebrikke ? (
+        <KodebrikkeDialog
+          kode={kodebrikkeVisning}
+          kopiert={kopiert}
+          onKopier={() => {
+            void kopierKode()
+          }}
+          onLukk={() => setVisKodebrikke(false)}
+        />
+      ) : null}
+    </div>
+  )
+}
+
+function KodebrikkeDialog({
+  kode,
+  kopiert,
+  onKopier,
+  onLukk,
+}: {
+  kode: string
+  kopiert: boolean
+  onKopier: () => void
+  onLukk: () => void
+}) {
+  const tittelId = useId()
+  return (
+    <div className="kodebrikke-overlay" role="dialog" aria-modal="true" aria-labelledby={tittelId}>
+      <div className="kodebrikke-kort">
+        <h2 id={tittelId}>Kodebrikke</h2>
+        <div className="kodebrikke-enhet" aria-hidden="true">
+          <div className="kodebrikke-skjerm">
+            <span className="kodebrikke-label">CODE</span>
+            <span className="kodebrikke-siffer">{kode}</span>
+          </div>
+          <div className="kodebrikke-knapp-rad">
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+        <p className="kodebrikke-hjelp">Kopier koden og lim den inn i feltet Engangskode.</p>
+        <div className="handlinger">
+          <button type="button" className="knapp" onClick={onKopier}>
+            {kopiert ? 'Kopiert' : 'Kopier kode'}
+          </button>
+          <button type="button" className="knapp knapp-sekundaer" onClick={onLukk}>
+            Lukk
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
 
 function LoginSkjema({
   person,
+  metode,
   forventetFnr,
   forventetKode,
   fnr,
@@ -265,8 +408,12 @@ function LoginSkjema({
   onKode,
   onFeil,
   onOk,
+  onVisKodebrikke,
+  onAapneMeldinger,
+  onAapneNotater,
 }: {
   person: Person
+  metode: Metode
   forventetFnr: string
   forventetKode: string
   fnr: string
@@ -276,16 +423,39 @@ function LoginSkjema({
   onKode: (v: string) => void
   onFeil: (v: string | null) => void
   onOk: () => void
+  onVisKodebrikke?: () => void
+  onAapneMeldinger?: () => void
+  onAapneNotater?: () => void
 }) {
+  const kodeEtikett =
+    metode === 'Kodebrikke'
+      ? 'Kode fra kodebrikke'
+      : metode === 'SMS-kode'
+        ? 'Engangskode fra SMS'
+        : 'Passord fra Notater'
+
+  const hjelp =
+    metode === 'Kodebrikke'
+      ? 'Åpne kodebrikken, kopier koden og lim den inn her.'
+      : metode === 'SMS-kode'
+        ? `Skriv inn fødselsnummeret til ${person.fornavn}. Les koden i Meldinger.`
+        : `Skriv inn fødselsnummeret til ${person.fornavn}. Passordet står i Notater → Passord.`
+
   return (
     <form
       className="plan-skjema"
       onSubmit={(e) => {
         e.preventDefault()
         const fnrOk = fnr.replaceAll(' ', '') === forventetFnr.replaceAll(' ', '')
-        const kodeOk = kode.trim() === forventetKode
+        const kodeOk = kode.trim() === forventetKode && forventetKode.length === 6
         if (!fnrOk || !kodeOk) {
-          onFeil('Feil nummer eller kode. Se personkortet og Meldinger.')
+          onFeil(
+            metode === 'Passord'
+              ? 'Feil nummer eller passord. Se personkortet og Notater.'
+              : metode === 'SMS-kode'
+                ? 'Feil nummer eller kode. Se personkortet og Meldinger.'
+                : 'Feil nummer eller kode. Se personkortet og kodebrikken.',
+          )
           return
         }
         onFeil(null)
@@ -293,9 +463,24 @@ function LoginSkjema({
       }}
     >
       <h2>Logg inn</h2>
-      <p>
-        Skriv inn fødselsnummeret til {person.fornavn}. Koden kommer som SMS i Meldinger.
-      </p>
+      <p>{hjelp}</p>
+      <div className="handlinger">
+        {onVisKodebrikke ? (
+          <button type="button" className="knapp knapp-sekundaer" onClick={onVisKodebrikke}>
+            Vis kodebrikke
+          </button>
+        ) : null}
+        {onAapneMeldinger ? (
+          <button type="button" className="knapp knapp-sekundaer" onClick={onAapneMeldinger}>
+            Åpne Meldinger
+          </button>
+        ) : null}
+        {onAapneNotater ? (
+          <button type="button" className="knapp knapp-sekundaer" onClick={onAapneNotater}>
+            Åpne Notater
+          </button>
+        ) : null}
+      </div>
       <label htmlFor="skatt-fnr">
         <span className="skjema-hjelp">Fødselsnummer</span>
         <input
@@ -308,7 +493,7 @@ function LoginSkjema({
         />
       </label>
       <label htmlFor="skatt-kode">
-        <span className="skjema-hjelp">Engangskode fra SMS</span>
+        <span className="skjema-hjelp">{kodeEtikett}</span>
         <input
           id="skatt-kode"
           value={kode}
@@ -316,6 +501,7 @@ function LoginSkjema({
           autoComplete="off"
           inputMode="numeric"
           aria-required="true"
+          placeholder="6 siffer"
         />
       </label>
       {feil ? (

@@ -507,21 +507,8 @@
         "bildeAlt": "Innlogging i appen Skatteøving.",
         "lyd": "e10-s04-login.wav"
       },
-      "tekst": "Åpne Skatteøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet. Koden kommer som SMS.\n\nKoden er 482193.",
-      "varsel": {
-        "type": "sms",
-        "fra": "Skatteøving",
-        "innhold": "Engangskode: 482193. Ikke del koden."
-      },
-      "smsTraad": {
-        "kontakt": "Skatteøving",
-        "meldinger": [
-          {
-            "fra": "veileder",
-            "tekst": "Engangskode: 482193. Ikke del koden med andre."
-          }
-        ]
-      },
+      "tekst": "Åpne Skatteøving.\n\nTrinn: startside, logg inn, velg metode, skriv nummer og kode, min side, skattekort.\n\nFødselsnummeret står på personkortet.\n\nVelg metode:\n• Kodebrikke – kopier koden fra brikken\n• SMS-kode – les koden i Meldinger\n• Passord – les notatet Passord i appen Notater",
+
       "valg": [
         {
           "id": "til-tall",

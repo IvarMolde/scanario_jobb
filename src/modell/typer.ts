@@ -132,6 +132,7 @@ export const APP_ETIKETTER: Record<AppId, string> = {
   skatt: 'Skatteøving',
   lonn: 'Lønn',
   innstillinger: 'Innstillinger',
+  notater: 'Notater',
 }
 
 export const FASE1_APPER: AppId[] = [
@@ -146,6 +147,7 @@ export const FASE1_APPER: AppId[] = [
   'skatt',
   'lonn',
   'innstillinger',
+  'notater',
 ]
 
 export const AKTIVITET_STATUS_NAVN: Record<AktivitetStatus, string> = {

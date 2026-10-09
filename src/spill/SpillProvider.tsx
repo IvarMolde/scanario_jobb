@@ -10,6 +10,7 @@ import {
 import { hentEpisode, hentOrd, hentPerson, hentScene, lastInnhold, type Innhold } from '../innhold/lastInnhold'
 import type { Aktivitet, AppId, Episode, Morsmal, Ord, Person, Scene, Valg } from '../modell/typer'
 import { OPPSUMMERING_ID, SLUTT_ID } from '../modell/typer'
+import { tilfeldigSekssiffer } from './koder'
 import type { LagretReise } from './reise'
 import type { LagretSkattekort } from './skatt'
 import { lagre, lastLagring, slettLagring } from './lagring'
@@ -61,6 +62,9 @@ interface SpillApi {
   lagreReise: (reise: LagretReise, flagg: string[]) => void
   lagreSkattekort: (skattekort: LagretSkattekort, flagg: string[]) => void
   lagreCvReferanse: (referanse: CvReferanse, valg: Valg) => void
+  sikrePassord: () => void
+  settKodebrikkeKode: () => string
+  mottaksSmsKode: () => string
   aapneSlutt: () => void
   nullstill: () => void
 }
@@ -232,6 +236,26 @@ function SpillProviderIndre({
           tilbakemelding: valg.tilbakemelding,
         })
         gaTilNeste(valg.nesteSceneId)
+      },
+      sikrePassord: () => {
+        if (fremdrift.innloggingKoder?.passord) return
+        dispatch({ type: 'SIKRE_PASSORD', passord: tilfeldigSekssiffer() })
+      },
+      settKodebrikkeKode: () => {
+        const kode = tilfeldigSekssiffer()
+        if (!fremdrift.innloggingKoder?.passord) {
+          dispatch({ type: 'SIKRE_PASSORD', passord: tilfeldigSekssiffer() })
+        }
+        dispatch({ type: 'SETT_KODEBRIKKE', kode })
+        return kode
+      },
+      mottaksSmsKode: () => {
+        const kode = tilfeldigSekssiffer()
+        if (!fremdrift.innloggingKoder?.passord) {
+          dispatch({ type: 'SIKRE_PASSORD', passord: tilfeldigSekssiffer() })
+        }
+        dispatch({ type: 'MOTTA_SMS_KODE', kode })
+        return kode
       },
       aapneSlutt: () => dispatch({ type: 'APNE_SLUTT' }),
       nullstill: () => {

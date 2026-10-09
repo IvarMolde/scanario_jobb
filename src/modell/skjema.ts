@@ -15,6 +15,7 @@ export const appIdSkjema = z.enum([
   'skatt',
   'lonn',
   'innstillinger',
+  'notater',
 ])
 
 export const personSkjema = z.object({

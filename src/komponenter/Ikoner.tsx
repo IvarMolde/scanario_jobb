@@ -93,6 +93,13 @@ export function AppIkon({ app }: { app: AppId }) {
           <path d="M12 3v3M12 18v3M4.2 6.2l2.1 2.1M17.7 15.7l2.1 2.1M3 12h3M18 12h3M4.2 17.8l2.1-2.1M17.7 8.3l2.1-2.1" />
         </svg>
       )
+    case 'notater':
+      return (
+        <svg {...felles}>
+          <path d="M6 3h9l3 3v15H6z" />
+          <path d="M15 3v4h4M8 11h8M8 15h8M8 19h5" />
+        </svg>
+      )
     default:
       return null
   }

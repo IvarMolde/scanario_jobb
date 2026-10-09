@@ -13,6 +13,7 @@ const HJEM_APPER: AppId[] = [
   'skatt',
   'lonn',
   'innstillinger',
+  'notater',
 ]
 
 interface Props {
