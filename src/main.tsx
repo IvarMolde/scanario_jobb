@@ -24,9 +24,7 @@ createRoot(rot).render(
     <a className="hopp-til-innhold hopp-til-oppgave knapp" href="#oppgave-innhold">
       Hopp til oppgaven
     </a>
-    <div className="ovingsbanner">
-      Jobbreisen – et spill utviklet av Ivar Øverland · Molde voksenopplæringssenter · MBO
-    </div>
+    <div className="ovingsbanner">Jobbreisen – et spill utviklet av Ivar Øverland</div>
     <main id="hovedinnhold">
       {laerer ? (
         <Laereroversikt />
