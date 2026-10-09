@@ -2,7 +2,7 @@ import type { Oppgave } from '../modell/typer'
 
 const HJELP: Record<Oppgave['type'], string> = {
   flervalg: 'Klikk på riktig svar.',
-  lytt_og_velg: 'Lytt først. Klikk deretter på riktig svar.',
+  lytt_og_velg: 'Les spørsmålet. Klikk deretter på riktig svar.',
   sant_usant: 'Les setningen. Trykk på Sant eller Usant.',
   ordbank: 'Trykk på ordet som passer i setningen.',
   sorter_setning: 'Trykk på ordene i den rekkefølgen de skal stå.',

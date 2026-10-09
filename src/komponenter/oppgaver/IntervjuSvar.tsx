@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import type { IntervjuSvarOppgave, Person } from '../../modell/typer'
 import { INTERVJU_KVALITET_NAVN } from '../../modell/typer'
-import { Lydspiller } from '../Lydspiller'
 import { TilbakemeldingBoks } from './TilbakemeldingBoks'
 
 interface Props {
@@ -27,7 +26,6 @@ export function IntervjuSvar({ oppgave, person, ferdig, onSvar }: Props) {
       <p>
         <strong>{oppgave.spoersmal}</strong>
       </p>
-      <Lydspiller fil={oppgave.spoersmalLyd} etikett="Spørsmål fra intervjueren" />
       <div className="valggruppe" role="group" aria-label={oppgave.spoersmal}>
         {alternativer.map((alt) => (
           <button

@@ -1457,13 +1457,6 @@ a {
   vertical-align: baseline;
 }
 
-.lydspiller {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0.6rem 0 1rem;
-}
-
 .tilbakemelding {
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
@@ -3079,7 +3072,6 @@ a {
   .ovingsbanner,
   .handlinger,
   .bunnmeny,
-  .lydspiller,
   .anrop,
   .hopp-til-innhold,
   .statuslinje,

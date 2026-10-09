@@ -1,6 +1,5 @@
 import { MORSMAL_ETIKETTER, type Morsmal } from '../modell/typer'
 import { useSpill } from '../spill/SpillProvider'
-import { Lydspiller } from '../komponenter/Lydspiller'
 import { SceneBilde } from '../komponenter/SceneBilde'
 
 export function Startskjerm() {
@@ -60,7 +59,6 @@ export function Startskjerm() {
               </span>
             </button>
             <p>{person.presentasjon}</p>
-            <Lydspiller fil={person.presentasjonLyd} etikett={`Hør ${person.fornavn}`} />
           </article>
         ))}
       </div>

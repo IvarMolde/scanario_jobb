@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { KlikkbarTekst } from '../komponenter/KlikkbarTekst'
-import { Lydspiller } from '../komponenter/Lydspiller'
 import { OppgaveVisning } from '../komponenter/oppgaver/OppgaveVisning'
 import { Ordkort } from '../komponenter/Ordkort'
 import { ReferanseSkjema } from '../komponenter/ReferanseSkjema'
@@ -76,7 +75,6 @@ export function ScenePanel() {
         prioritet
         kanZoom
       />
-      <Lydspiller fil={scene.media.lyd} etikett="Lytt til teksten" />
       <KlikkbarTekst
         tekst={(person && scene.tekstPerPerson?.[person.id]) || scene.tekst}
         onVelgOrd={velgOrd}

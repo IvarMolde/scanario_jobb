@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Lydspiller } from '../komponenter/Lydspiller'
 import { lastInnhold } from '../innhold/lastInnhold'
 import { LYD_ROLLE_NAVN, grupperLydklipp, samleLydklipp, type Lydklipp } from '../modell/lydmanus'
 import { bildeUrl, lydUrl, samleMedia } from '../modell/media'
@@ -153,7 +152,6 @@ export function Laereroversikt() {
                   <div className="handlinger">
                     <Kopier tekst={k.fil} etikett="Kopier filnavn" />
                     <Kopier tekst={k.les} etikett="Kopier tekst" />
-                    <Lydspiller fil={k.fil} etikett={`Hør ${k.fil}`} />
                   </div>
                 </article>
               ))}

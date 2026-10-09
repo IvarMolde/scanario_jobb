@@ -2,7 +2,6 @@ import type { Aktivitet, Annonse, Oppgave, Person, Ruter } from '../../modell/ty
 import { matchAnnonseId } from '../../spill/aktiviteter'
 import type { LagretReise } from '../../spill/reise'
 import type { LagretSok } from '../../spill/tilstand'
-import { Lydspiller } from '../Lydspiller'
 import { ByggMelding } from './ByggMelding'
 import { ByggSoknad } from './ByggSoknad'
 import { CvValg } from './CvValg'
@@ -88,10 +87,6 @@ export function OppgaveVisning({
           <p className="oppgave-instruksjon">{oppgave.instruksjon}</p>
         ) : null}
       </div>
-      <Lydspiller
-        fil={oppgave.instruksjonLyd}
-        etikett={oppgave.type === 'lytt_og_velg' ? 'Lytt' : 'Instruksjon'}
-      />
       {oppgave.type === 'flervalg' || oppgave.type === 'lytt_og_velg' ? (
         <Flervalg oppgave={oppgave} ferdig={ferdig} onSvar={onSvar} />
       ) : null}
