@@ -582,7 +582,7 @@
           "id": "e03-s05-sv2",
           "instruksjon": "Skriv stillingsprosenten med tall.",
           "spoersmal": "Skriv halv stilling i riktig tallform.",
-          "hint": "f.eks. 50%",
+          "hint": "f.eks. 10%",
           "riktigeSvar": [
             "50%",
             "50 %"
@@ -610,7 +610,7 @@
           "id": "e03-s05-sv4",
           "instruksjon": "Skriv stillingsprosenten med tall.",
           "spoersmal": "Skriv heltid i riktig tallform.",
-          "hint": "f.eks. 100%",
+          "hint": "f.eks. 10%",
           "riktigeSvar": [
             "100%",
             "100 %"
