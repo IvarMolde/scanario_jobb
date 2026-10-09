@@ -300,8 +300,8 @@
       "klokkeslett": "09:40",
       "app": "jobbportal",
       "media": {
-        "bilde": "e03-s03-treff.svg",
-        "bildeAlt": "En treffliste med søknadsfrist, stillingsprosent og kontaktperson.",
+        "bilde": "e03-s03-treff-foto.jpg",
+        "bildeAlt": "Stillingsannonse med nøkkelinformasjon: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson. Lagre søk er markert.",
         "lyd": "e03-s03-treff.wav"
       },
       "tekst": "Les treffene i portalen.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier om jobben er heltid eller deltid.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",

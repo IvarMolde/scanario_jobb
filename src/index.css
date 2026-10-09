@@ -1131,6 +1131,7 @@ a {
   background: #d9e6ee;
   min-height: 140px;
   object-fit: cover;
+  object-position: top center;
   margin-bottom: 0.8rem;
 }
 
@@ -1138,6 +1139,14 @@ a {
   object-fit: contain;
   object-position: center;
   background: #e8eef2;
+}
+
+.scene-bilde[src$='.jpg'],
+.scene-bilde[src$='.jpeg'],
+.scene-bilde[src$='.png'],
+.scene-bilde[src$='.webp'] {
+  object-fit: cover;
+  object-position: top center;
 }
 
 .plassholder-bilde {
