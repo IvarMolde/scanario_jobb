@@ -22,6 +22,7 @@ import { SorterSetning } from './SorterSetning'
 import { VelgJobber } from './VelgJobber'
 import { FyllTall } from './FyllTall'
 import { FinnIDokument } from './FinnIDokument'
+import { SkrivSvar } from './SkrivSvar'
 import { oppgaveHjelp, visEgenInstruksjon } from '../../spill/oppgavehjelp'
 
 interface Props {
@@ -193,6 +194,9 @@ export function OppgaveVisning({
       ) : null}
       {oppgave.type === 'fyll_tall' && person ? (
         <FyllTall oppgave={oppgave} personId={person.id} ferdig={ferdig} onSvar={onSvar} />
+      ) : null}
+      {oppgave.type === 'skriv_svar' ? (
+        <SkrivSvar oppgave={oppgave} ferdig={ferdig} onSvar={onSvar} />
       ) : null}
       {oppgave.type === 'finn_i_dokument' ? (
         <FinnIDokument oppgave={oppgave} ferdig={ferdig} onSvar={onSvar} />

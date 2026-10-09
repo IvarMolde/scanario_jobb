@@ -38,6 +38,7 @@ import type {
   intervjuSvarSkjema,
   reiseplanSkjema,
   fyllTallSkjema,
+  skrivSvarSkjema,
   finnIDokumentSkjema,
   satserSkjema,
   arbeidsforholdSkjema,
@@ -81,6 +82,7 @@ export type ByggSoknadOppgave = z.infer<typeof byggSoknadSkjema>
 export type IntervjuSvarOppgave = z.infer<typeof intervjuSvarSkjema>
 export type ReiseplanOppgave = z.infer<typeof reiseplanSkjema>
 export type FyllTallOppgave = z.infer<typeof fyllTallSkjema>
+export type SkrivSvarOppgave = z.infer<typeof skrivSvarSkjema>
 export type FinnIDokumentOppgave = z.infer<typeof finnIDokumentSkjema>
 export type Satser = z.infer<typeof satserSkjema>
 export type Arbeidsforhold = z.infer<typeof arbeidsforholdSkjema>

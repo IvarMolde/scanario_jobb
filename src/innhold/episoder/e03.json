@@ -554,7 +554,7 @@
         "bildeAlt": "Kalenderdato 15.11.2026 og tallet 100 prosent.",
         "lyd": "e03-s05-dato.wav"
       },
-      "tekst": "Søknadsfrist kan stå slik: 15.11.2026.\n\nDet er 15. november 2026.\n\n100 % er heltid. 50 % er halv stilling.",
+      "tekst": "I annonser står dato ofte med tall: 15.11.2026.\n\nI Norge skriver vi {{soknadsfrist|søknadsfrist}} slik: dag.måned.år.\n\nEksempel: 15. november 2026 = 15.11.2026.\n\n{{stillingsprosent|Stillingsprosent}} viser hvor stor jobben er:\n• 100 % = {{heltid}}\n• 50 % = halv stilling ({{deltid}})",
       "valg": [
         {
           "id": "avslutt-e03",
@@ -565,87 +565,75 @@
       ],
       "oppgaver": [
         {
-          "type": "flervalg",
-          "id": "e03-s05-fv",
-          "instruksjon": "Velg det riktige svaret.",
-          "spoersmal": "Hva betyr 15.11.2026 i en annonse?",
-          "alternativer": [
-            {
-              "id": "a",
-              "tekst": "15. november 2026"
-            },
-            {
-              "id": "b",
-              "tekst": "11. mai 2026"
-            },
-            {
-              "id": "c",
-              "tekst": "klokka 15.11"
-            }
+          "type": "skriv_svar",
+          "id": "e03-s05-sv1",
+          "instruksjon": "Skriv datoen med tall. Bruk riktig form.",
+          "spoersmal": "Skriv datoen 15. november 2026 med tall.",
+          "hint": "dd.mm.åååå",
+          "riktigeSvar": [
+            "15.11.2026"
           ],
-          "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. I Norge skriver vi dag.måned.år.",
-          "tilbakemeldingFeil": "Første tall er dag, andre er måned: 15. november."
+          "normalisering": "dato",
+          "tilbakemeldingRiktig": "Riktig. 15. november 2026 skrives 15.11.2026.",
+          "tilbakemeldingFeil": "Skriv dag.måned.år, for eksempel 15.11.2026."
         },
         {
-          "type": "sant_usant",
-          "id": "e03-s05-su",
-          "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "50 % stilling er heltid.",
-          "riktigErSant": false,
-          "tilbakemeldingRiktig": "Riktig. 50 % er deltid. 100 % er heltid.",
-          "tilbakemeldingFeil": "Heltid er som regel 100 %. 50 % er halv stilling, altså deltid."
+          "type": "skriv_svar",
+          "id": "e03-s05-sv2",
+          "instruksjon": "Skriv stillingsprosenten med tall.",
+          "spoersmal": "Skriv halv stilling i riktig tallform.",
+          "hint": "f.eks. 50%",
+          "riktigeSvar": [
+            "50%",
+            "50 %"
+          ],
+          "normalisering": "prosent",
+          "tilbakemeldingRiktig": "Riktig. Halv stilling er 50 %.",
+          "tilbakemeldingFeil": "Halv stilling er 50 %. Skriv 50%."
         },
         {
-          "type": "ordbank",
-          "id": "e03-s05-ob1",
-          "instruksjon": "Velg ordet som passer i setningen.",
-          "setning": "Søknadsfristen er en _____.",
-          "ord": [
-            "dato",
-            "buss",
-            "farge"
+          "type": "skriv_svar",
+          "id": "e03-s05-sv3",
+          "instruksjon": "Skriv datoen med tall.",
+          "spoersmal": "Skriv årets siste dag i riktig tallform.",
+          "hint": "dd.mm",
+          "riktigeSvar": [
+            "31.12",
+            "31.12.2026"
           ],
-          "riktig": "dato",
-          "tilbakemeldingRiktig": "Riktig. Frist er en dato.",
-          "tilbakemeldingFeil": "Frist forteller hvilken dag du må søke innen."
+          "normalisering": "dato",
+          "tilbakemeldingRiktig": "Riktig. Årets siste dag er 31.12.",
+          "tilbakemeldingFeil": "Desember er måned 12. Årets siste dag er 31.12."
         },
         {
-          "type": "flervalg",
-          "id": "e03-s05-fv2",
-          "instruksjon": "Velg det riktige svaret.",
-          "spoersmal": "Hva betyr 100 % stilling?",
-          "alternativer": [
-            {
-              "id": "a",
-              "tekst": "Fulltid"
-            },
-            {
-              "id": "b",
-              "tekst": "Halv tid"
-            },
-            {
-              "id": "c",
-              "tekst": "Ingen jobb"
-            }
+          "type": "skriv_svar",
+          "id": "e03-s05-sv4",
+          "instruksjon": "Skriv stillingsprosenten med tall.",
+          "spoersmal": "Skriv heltid i riktig tallform.",
+          "hint": "f.eks. 100%",
+          "riktigeSvar": [
+            "100%",
+            "100 %"
           ],
-          "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. 100 % er vanligvis fulltid.",
-          "tilbakemeldingFeil": "Prosenten viser hvor stor stillingen er."
+          "normalisering": "prosent",
+          "tilbakemeldingRiktig": "Riktig. Heltid er vanligvis 100 %.",
+          "tilbakemeldingFeil": "Heltid er 100 %. Skriv 100%."
         },
         {
-          "type": "sorter_setning",
-          "id": "e03-s05-ss1",
-          "instruksjon": "Trykk på ordene i riktig rekkefølge.",
-          "biter": [
-            "Jobben",
-            "starter",
-            "den",
-            "1.",
-            "desember."
+          "type": "skriv_svar",
+          "id": "e03-s05-sv5",
+          "instruksjon": "Skriv datoen med tall. Bruk riktig form.",
+          "spoersmal": "Skriv datoen 1. januar 2027 med tall.",
+          "hint": "dd.mm.åååå",
+          "riktigeSvar": [
+            "01.01.2027",
+            "1.1.2027",
+            "1.01.2027",
+            "01.1.2027"
           ],
-          "tilbakemeldingRiktig": "Riktig. Slik sier vi startdato.",
-          "tilbakemeldingFeil": "Prøv igjen med datoen på slutten."
+          "normalisering": "dato",
+          "tilbakemeldingRiktig": "Riktig. 1. januar 2027 kan skrives 01.01.2027.",
+          "tilbakemeldingFeil": "Skriv dag.måned.år, for eksempel 01.01.2027."
         }
       ]
     }

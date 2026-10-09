@@ -21,6 +21,7 @@ const TYPE_NAVN: Record<string, string> = {
   intervju_svar: 'Intervjusvar',
   reiseplan: 'Reiseplan',
   fyll_tall: 'Fyll inn tall',
+  skriv_svar: 'Skriv svar',
   finn_i_dokument: 'Finn i dokumentet',
 }
 

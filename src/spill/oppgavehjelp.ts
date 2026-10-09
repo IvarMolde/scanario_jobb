@@ -20,6 +20,7 @@ const HJELP: Record<Oppgave['type'], string> = {
   intervju_svar: 'Les spørsmålet. Trykk på svaret du vil si.',
   reiseplan: 'Trykk på bussen du vil ta. Trykk så på Sjekk tiden.',
   fyll_tall: 'Trykk på det riktige tallet.',
+  skriv_svar: 'Skriv svaret i feltet. Se hintet for riktig form.',
   finn_i_dokument: 'Trykk på linjen spørsmålet handler om.',
 }
 

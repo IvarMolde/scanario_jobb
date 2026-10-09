@@ -2214,6 +2214,76 @@ a {
   color: #7a8690;
 }
 
+.skriv-svar {
+  margin-top: 0.35rem;
+}
+
+.skriv-svar-spoersmal {
+  margin: 0 0 0.85rem;
+  color: var(--marine);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.skriv-svar-felt {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 2px solid #7aa8bc;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f7fbfe 0%, #eef5f9 100%);
+}
+
+.skriv-svar-etikett {
+  color: var(--marine);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.skriv-svar-felt input {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 0.55rem 0.8rem;
+  border: 2px solid var(--marine);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--marine);
+  font: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.skriv-svar-felt input::placeholder {
+  color: #8a96a0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.skriv-svar-felt input:focus {
+  outline: 3px solid rgba(238, 155, 0, 0.45);
+  border-color: #ee9b00;
+}
+
+.skriv-svar-felt input:disabled {
+  background: #e5f4ec;
+  border-color: #146c43;
+  color: #0d5c3b;
+}
+
+.skriv-svar-felt input[aria-invalid='true'] {
+  border-color: #b42318;
+  background: #fff7f6;
+}
+
+.skriv-svar-hint {
+  color: var(--dempet);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 .referanse-skjema-handlinger {
   display: flex;
   flex-wrap: wrap;

@@ -362,6 +362,15 @@ export const fyllTallSkjema = z.object({
   felt: z.array(fyllTallFeltSkjema).min(1),
 })
 
+export const skrivSvarSkjema = z.object({
+  type: z.literal('skriv_svar'),
+  ...oppgaveFelles,
+  spoersmal: z.string().min(1),
+  hint: z.string().min(1),
+  riktigeSvar: z.array(z.string().min(1)).min(1),
+  normalisering: z.enum(['tekst', 'dato', 'prosent']),
+})
+
 export const finnIDokumentSkjema = z.object({
   type: z.literal('finn_i_dokument'),
   ...oppgaveFelles,
@@ -390,6 +399,7 @@ export const oppgaveSkjema = z.discriminatedUnion('type', [
   intervjuSvarSkjema,
   reiseplanSkjema,
   fyllTallSkjema,
+  skrivSvarSkjema,
   finnIDokumentSkjema,
 ])
 
