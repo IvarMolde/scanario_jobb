@@ -430,8 +430,8 @@
       "klokkeslett": "09:55",
       "app": "jobbportal",
       "media": {
-        "bilde": "e03-s04-annonse.svg",
-        "bildeAlt": "Tekst med en butikkmedarbeider og en lagermedarbeider.",
+        "bilde": "e03-s04-sammensatt.svg",
+        "bildeAlt": "lager pluss medarbeider blir lagermedarbeider.",
         "lyd": "e03-s04-annonse.wav"
       },
       "tekst": "I annonsen står det: «Vi søker en {{butikkmedarbeider}}» eller «en {{lagermedarbeider}}».\n\nUbestemt form: en medarbeider.\n\nBestemt form: medarbeideren.\n\n{{lagermedarbeider|Lagermedarbeider}} er lager + medarbeider.",

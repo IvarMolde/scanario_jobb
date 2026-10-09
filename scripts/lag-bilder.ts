@@ -36,7 +36,8 @@ const filer: Array<[string, string, string, string]> = [
   // e03-s02-lagre-sok.svg er egen tegning (jobbportal med Lagre søk) – ikke overskriv
   // e03-s03-treff-foto.jpg er opplastet stillingsannonse – ikke overskriv
 
-  ['e03-s04-annonse.svg', 'Annonsetekst med sammensatte ord', 'Annonse', 'lager + medarbeider'],
+  // e03-s04-annonse.svg er egen tegning: lager + medarbeider = lagermedarbeider
+
   ['e03-s05-dato.svg', 'Dato og stillingsprosent', 'Dato og tall', '15.11.2026 · 100 %'],
   ['e04-s01-magasin.svg', 'Jobbmagasinet med flere annonser', 'Jobbmagasinet', 'Sju øvingsannonser'],
   ['e04-s02-krav.svg', 'Må, bør og det er en fordel', 'Krav og ønske', 'må · bør · fordel'],

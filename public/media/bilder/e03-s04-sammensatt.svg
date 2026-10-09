@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="lager pluss medarbeider blir lagermedarbeider">
+  <rect width="640" height="360" rx="12" fill="#E8EEF2"/>
+
+  <rect x="28" y="28" width="584" height="304" rx="16" fill="#FFFFFF" stroke="#003057" stroke-width="3"/>
+
+  <text x="320" y="72" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Sammensatt ord</text>
+  <text x="320" y="100" text-anchor="middle" fill="#5A6B75" font-family="Segoe UI, Arial, sans-serif" font-size="15">To ord blir ett nytt ord</text>
+
+  <!-- lager -->
+  <rect x="48" y="140" width="140" height="64" rx="12" fill="#FFF8EE" stroke="#EE9B00" stroke-width="3"/>
+  <text x="118" y="180" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">lager</text>
+
+  <!-- + -->
+  <text x="218" y="182" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="800">+</text>
+
+  <!-- medarbeider -->
+  <rect x="248" y="140" width="210" height="64" rx="12" fill="#E8F4F7" stroke="#005F73" stroke-width="3"/>
+  <text x="353" y="180" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">medarbeider</text>
+
+  <!-- = -->
+  <text x="492" y="182" text-anchor="middle" fill="#003057" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="800">=</text>
+
+  <!-- pil ned -->
+  <path d="M320 220 v28" fill="none" stroke="#003057" stroke-width="3" stroke-linecap="round"/>
+  <path d="M308 242 l12 16 12-16" fill="#003057"/>
+
+  <!-- resultat -->
+  <rect x="120" y="268" width="400" height="44" rx="12" fill="#003057"/>
+  <text x="320" y="297" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">lagermedarbeider</text>
+</svg>
