@@ -109,12 +109,13 @@ export function ScenePanel() {
         />
       ) : null}
       {oppgaverFerdige && !referanseValg && scene.valg.some((valg) => visValg(valg, fremdrift.flagg)) ? (
-        <div className="handlinger">
+        <div className="handlinger handlinger-videre" role="region" aria-label="Gå videre">
+          <p className="handlinger-hint">Oppgavene er ferdige. Trykk for å gå videre.</p>
           {scene.valg.filter((valg) => visValg(valg, fremdrift.flagg)).map((valg) => (
             <button
               key={valg.id}
               type="button"
-              className="knapp knapp-amber"
+              className="knapp knapp-amber knapp-videre"
               onClick={() => klikkValg(valg)}
             >
               {valg.tekst}

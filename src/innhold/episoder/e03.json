@@ -156,7 +156,7 @@
       "valg": [
         {
           "id": "til-treff",
-          "tekst": "Se trefflisten",
+          "tekst": "Gå videre",
           "nesteSceneId": "e03-s03",
           "tilbakemelding": "Nå leser du nøkkelord i treffene."
         }
