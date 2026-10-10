@@ -8,7 +8,7 @@
       "kommune": "molde",
       "sone": "sentrum",
       "stillingsprosent": "73,3 %",
-      "heltid": false,
+      "heltid": true,
       "soknadsfrist": "15.11.2026",
       "tiltredelse": "snarest",
       "kontaktperson": [
@@ -244,6 +244,7 @@
       "tiltredelse": "snarest",
       "kontaktperson": "Mona Lie",
       "sokkeord": [
+        "butikk",
         "kafe"
       ],
       "bilde": "annonse-kafe.jpg",

@@ -149,7 +149,7 @@
       },
       "tekst": "Velg søkeord som passer målet ditt.\n\nLagre søket og slå på varsel.",
       "tekstPerPerson": {
-        "olena": "Velg søkeord som passer målet ditt.\n\nOlena: butikk og deltid i Molde.\n\nLagre søket og slå på varsel.",
+        "olena": "Velg søkeord som passer målet ditt.\n\nOlena: butikk og heltid i Molde.\n\nLagre søket og slå på varsel.",
         "taras": "Velg søkeord som passer målet ditt.\n\nTaras: lager og heltid i Molde.\n\nLagre søket og slå på varsel.",
         "sofiia": "Velg søkeord som passer målet ditt.\n\nSofiia: helse og deltid i Molde.\n\nLagre søket og slå på varsel."
       },
@@ -212,7 +212,7 @@
             "olena": {
               "sokkeordId": "butikk",
               "stedId": "molde",
-              "stillingId": "deltid"
+              "stillingId": "heltid"
             },
             "taras": {
               "sokkeordId": "lager",
