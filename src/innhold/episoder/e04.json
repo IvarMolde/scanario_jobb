@@ -61,24 +61,24 @@
           "type": "flervalg",
           "id": "e04-s01-fv1",
           "instruksjon": "Åpne stillingen Butikkmedarbeider hos Bunnpris i Jobbmagasinet. Les annonsen, og velg riktig svar.",
-          "spoersmal": "Hvem er kontaktperson i annonsen for Butikkmedarbeider hos Bunnpris?",
+          "spoersmal": "Hvem er kontaktpersonene i annonsen for Butikkmedarbeider hos Bunnpris?",
           "alternativer": [
             {
               "id": "a",
-              "tekst": "Kari Strand"
+              "tekst": "Kari Nordmann og Ola Privat"
             },
             {
               "id": "b",
-              "tekst": "Erik Mo"
+              "tekst": "Erik Mo og Liv Hauge"
             },
             {
               "id": "c",
-              "tekst": "Liv Hauge"
+              "tekst": "Kari Strand og Mona Lie"
             }
           ],
           "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. I Bunnpris-annonsen står Kari Strand som kontaktperson.",
-          "tilbakemeldingFeil": "Bla til Butikkmedarbeider hos Bunnpris. Kontaktperson står nederst i listen."
+          "tilbakemeldingRiktig": "Riktig. I Bunnpris-annonsen står Kari Nordmann og Ola Privat.",
+          "tilbakemeldingFeil": "Bla til Butikkmedarbeider hos Bunnpris. Kontaktpersoner står nederst i listen."
         },
         {
           "type": "sant_usant",

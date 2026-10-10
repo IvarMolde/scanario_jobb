@@ -11,7 +11,10 @@
       "heltid": true,
       "soknadsfrist": "15.11.2026",
       "tiltredelse": "snarest",
-      "kontaktperson": "Kari Strand",
+      "kontaktperson": [
+        "Kari Nordmann",
+        "Ola Privat"
+      ],
       "sokkeord": [
         "butikk",
         "varehandel"

@@ -72,7 +72,11 @@ export function Jobbmagasin({ annonser, startId, onVelgOrd, onBytt }: Props) {
           <li>Søknadsfrist: {annonse.soknadsfrist}</li>
           <li>Stillingsprosent: {annonse.stillingsprosent}</li>
           <li>Tiltredelse: {annonse.tiltredelse}</li>
-          <li>Kontaktperson: {annonse.kontaktperson}</li>
+          <li>
+            {Array.isArray(annonse.kontaktperson) && annonse.kontaktperson.length > 1
+              ? `Kontaktpersoner: ${annonse.kontaktperson.join(' og ')}`
+              : `Kontaktperson: ${Array.isArray(annonse.kontaktperson) ? annonse.kontaktperson[0] : annonse.kontaktperson}`}
+          </li>
         </ul>
         <KlikkbarTekst tekst={annonse.tekst} onVelgOrd={onVelgOrd} />
       </article>

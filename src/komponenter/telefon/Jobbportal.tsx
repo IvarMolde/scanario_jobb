@@ -39,7 +39,11 @@ export function Jobbportal({ annonser, lagretSok }: Props) {
                 <li>Søknadsfrist: {a.soknadsfrist}</li>
                 <li>Stillingsprosent: {a.stillingsprosent}</li>
                 <li>Tiltredelse: {a.tiltredelse}</li>
-                <li>Kontaktperson: {a.kontaktperson}</li>
+                <li>
+                  {Array.isArray(a.kontaktperson) && a.kontaktperson.length > 1
+                    ? `Kontaktpersoner: ${a.kontaktperson.join(' og ')}`
+                    : `Kontaktperson: ${Array.isArray(a.kontaktperson) ? a.kontaktperson[0] : a.kontaktperson}`}
+                </li>
               </ul>
             </article>
           ))}

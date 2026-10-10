@@ -462,7 +462,7 @@ export const annonseSkjema = z.object({
   heltid: z.boolean(),
   soknadsfrist: z.string().min(1),
   tiltredelse: z.string().min(1),
-  kontaktperson: z.string().min(1),
+  kontaktperson: z.union([z.string().min(1), z.array(z.string().min(1)).min(1)]),
   sokkeord: z.array(z.string().min(1)).min(1),
   tekst: z.string().min(1),
   bilde: z.string().min(1),
