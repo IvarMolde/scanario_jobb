@@ -14,4 +14,5 @@ export const KOMMUNE_NAVN: Record<string, string> = {
   molde: 'Molde',
   vestnes: 'Vestnes',
   aukra: 'Aukra',
+  kristiansund: 'Kristiansund',
 }

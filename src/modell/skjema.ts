@@ -456,7 +456,7 @@ export const annonseSkjema = z.object({
   tittel: z.string().min(1),
   bedrift: z.string().min(1),
   sted: z.string().min(1),
-  kommune: z.enum(['molde', 'vestnes', 'aukra']),
+  kommune: z.enum(['molde', 'vestnes', 'aukra', 'kristiansund']),
   sone: z.enum(['kviltorp', 'aarolia', 'sentrum', 'aaro']),
   stillingsprosent: z.string().min(1),
   heltid: z.boolean(),

@@ -1395,6 +1395,15 @@ a {
   min-height: 160px;
 }
 
+/* Resepsjonist-annonse i Jobbportal / magasin */
+.app-innhold .scene-bilde[src*='annonse-resepsjon'] {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+  background: #eef3f8;
+  min-height: 150px;
+}
+
 /* Toma Renholder-plakat – fyller containeren */
 .app-innhold .scene-bilde[src*='annonse-renhold'] {
   aspect-ratio: 764 / 1024;

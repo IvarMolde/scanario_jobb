@@ -45,7 +45,7 @@
         "bildeAlt": "Jobbportalen med søkefelt, filtre for geografi og en liste med ledige stillinger.",
         "lyd": "e03-s01-portal.wav"
       },
-      "tekst": "Nå skal du finne jobber.\n\nEn jobbportal er en nettside der mange ledige stillinger ligger samlet. Det er lurt å bruke en portal fordi du slipper å lete hos hver bedrift for seg. Du kan søke raskt, sammenligne flere jobber, og se frist, sted og arbeidstid på ett sted. Hvis du lagrer søket, kan du også få varsel når det kommer nye stillinger som passer deg.\n\nI portalen skriver du {{sokeord|søkeord}}.\n\nDu velger sted: Molde, Vestnes eller Aukra.\n\nDu velger {{heltid}} eller {{deltid}}.",
+      "tekst": "Nå skal du finne jobber.\n\nEn jobbportal er en nettside der mange ledige stillinger ligger samlet. Det er lurt å bruke en portal fordi du slipper å lete hos hver bedrift for seg. Du kan søke raskt, sammenligne flere jobber, og se frist, sted og arbeidstid på ett sted. Hvis du lagrer søket, kan du også få varsel når det kommer nye stillinger som passer deg.\n\nI portalen skriver du {{sokeord|søkeord}}.\n\nDu velger sted: Molde, Kristiansund, Vestnes eller Aukra.\n\nDu velger {{heltid}} eller {{deltid}}.",
       "valg": [
         {
           "id": "til-sok",
@@ -149,7 +149,7 @@
       },
       "tekst": "Velg søkeord som passer målet ditt.\n\nLagre søket og slå på varsel.",
       "tekstPerPerson": {
-        "olena": "Velg søkeord som passer målet ditt.\n\nOlena: butikk og heltid i Molde.\n\nLagre søket og slå på varsel.",
+        "olena": "Velg søkeord som passer målet ditt.\n\nOlena: kontor og deltid i Kristiansund.\n\nLagre søket og slå på varsel. Da får du treffet Resepsjonist hos Nordic Front Desk AS.",
         "taras": "Velg søkeord som passer målet ditt.\n\nTaras: lager og heltid i Molde.\n\nLagre søket og slå på varsel.",
         "sofiia": "Velg søkeord som passer målet ditt.\n\nSofiia: helse og deltid i Molde.\n\nLagre søket og slå på varsel."
       },
@@ -172,6 +172,10 @@
               "tekst": "butikk"
             },
             {
+              "id": "kontor",
+              "tekst": "kontor"
+            },
+            {
               "id": "lager",
               "tekst": "lager"
             },
@@ -188,6 +192,10 @@
             {
               "id": "molde",
               "tekst": "Molde"
+            },
+            {
+              "id": "kristiansund",
+              "tekst": "Kristiansund"
             },
             {
               "id": "vestnes",
@@ -210,9 +218,9 @@
           ],
           "riktigPerPerson": {
             "olena": {
-              "sokkeordId": "butikk",
-              "stedId": "molde",
-              "stillingId": "heltid"
+              "sokkeordId": "kontor",
+              "stedId": "kristiansund",
+              "stillingId": "deltid"
             },
             "taras": {
               "sokkeordId": "lager",
@@ -229,7 +237,7 @@
             "har_lagret_sok"
           ],
           "tilbakemeldingRiktig": "Riktig. Søket er lagret, og varsel er på. Se treffene i portalen.",
-          "tilbakemeldingFeil": "Tenk på personens yrkesmål. Velg Molde. Husk å slå på varsel."
+          "tilbakemeldingFeil": "Tenk på personen og annonsen du skal lese. For Olena: kontor, Kristiansund og deltid. Husk å slå på varsel."
         },
         {
           "type": "flervalg",
@@ -304,7 +312,7 @@
         "bildeAlt": "Stillingsannonse med nøkkelinformasjon: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson. Lagre søk er markert.",
         "lyd": "e03-s03-treff.wav"
       },
-      "tekst": "Se på bildet av annonsen. Du kan klikke på bildet for å gjøre det større.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier hvor mye du skal jobbe.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",
+      "tekst": "Se på annonsen for Resepsjonist hos Nordic Front Desk AS. Bruk telefonen til venstre, og bildet her. Du kan klikke på bildet for å gjøre det større.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier hvor mye du skal jobbe.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",
       "valg": [
         {
           "id": "til-annonse",
@@ -316,8 +324,31 @@
       "oppgaver": [
         {
           "type": "flervalg",
+          "id": "e03-s03-fv0",
+          "instruksjon": "Se på annonsen på telefonen og i bildet. Velg riktig svar.",
+          "spoersmal": "Hvilken stilling ser du i treffet?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Butikkmedarbeider hos Bunnpris"
+            },
+            {
+              "id": "b",
+              "tekst": "Resepsjonist hos Nordic Front Desk AS"
+            },
+            {
+              "id": "c",
+              "tekst": "Lagermedarbeider hos Posten Bring"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Treffet er Resepsjonist hos Nordic Front Desk AS i Kristiansund.",
+          "tilbakemeldingFeil": "Se tittel og bedrift på telefonen, eller i bildet til høyre."
+        },
+        {
+          "type": "flervalg",
           "id": "e03-s03-fv1",
-          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "instruksjon": "Se på annonsen på telefonen og i bildet. Velg riktig svar.",
           "spoersmal": "Når er søknadsfristen?",
           "alternativer": [
             {
@@ -334,13 +365,13 @@
             }
           ],
           "riktigId": "b",
-          "tilbakemeldingRiktig": "Riktig. Søknadsfristen er 15. november 2026.",
-          "tilbakemeldingFeil": "Se i boksen Nøkkelinformasjon. Finn ordet søknadsfrist."
+          "tilbakemeldingRiktig": "Riktig. Søknadsfristen er 15. november 2026 (15.11.2026).",
+          "tilbakemeldingFeil": "Se søknadsfrist på telefonen, eller i boksen Nøkkelinformasjon."
         },
         {
           "type": "flervalg",
           "id": "e03-s03-fv2",
-          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "instruksjon": "Se på annonsen på telefonen og i bildet. Velg riktig svar.",
           "spoersmal": "Hva er stillingsprosenten?",
           "alternativer": [
             {
@@ -358,12 +389,35 @@
           ],
           "riktigId": "c",
           "tilbakemeldingRiktig": "Riktig. Stillingsprosenten er 73,3 %.",
-          "tilbakemeldingFeil": "Se i boksen Nøkkelinformasjon. Finn ordet stillingsprosent."
+          "tilbakemeldingFeil": "Se stillingsprosent på telefonen, eller i boksen Nøkkelinformasjon."
+        },
+        {
+          "type": "flervalg",
+          "id": "e03-s03-fv4",
+          "instruksjon": "Se på annonsen på telefonen. Velg riktig svar.",
+          "spoersmal": "Når er tiltredelsen?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "snarest"
+            },
+            {
+              "id": "b",
+              "tekst": "01.01.2027"
+            },
+            {
+              "id": "c",
+              "tekst": "15.11.2026"
+            }
+          ],
+          "riktigId": "b",
+          "tilbakemeldingRiktig": "Riktig. Tiltredelse er 01.01.2027 (1. januar 2027).",
+          "tilbakemeldingFeil": "Se feltet Tiltredelse på telefonen. Der står 01.01.2027."
         },
         {
           "type": "flervalg",
           "id": "e03-s03-fv3",
-          "instruksjon": "Se på annonsen. Velg riktig svar.",
+          "instruksjon": "Se på annonsen på telefonen. Velg riktig svar.",
           "spoersmal": "Hva heter de to kontaktpersonene?",
           "alternativer": [
             {
@@ -381,7 +435,7 @@
           ],
           "riktigId": "a",
           "tilbakemeldingRiktig": "Riktig. Kontaktpersonene er Kari Nordmann og Ola Privat.",
-          "tilbakemeldingFeil": "Se under Kontaktpersoner for stillingen. Der står navnene."
+          "tilbakemeldingFeil": "Se Kontaktpersoner på telefonen. Der står Kari Nordmann og Ola Privat."
         },
         {
           "type": "matching",

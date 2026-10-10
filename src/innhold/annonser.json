@@ -7,7 +7,7 @@
       "sted": "Molde sentrum",
       "kommune": "molde",
       "sone": "sentrum",
-      "stillingsprosent": "73,3 %",
+      "stillingsprosent": "100 %",
       "heltid": true,
       "soknadsfrist": "15.11.2026",
       "tiltredelse": "snarest",
@@ -57,6 +57,66 @@
           },
           "forklaringPasser": "Du kommer deg til sentrum med buss. Du trenger ikke førerkort.",
           "forklaringPasserIkke": "Reisen eller tiden passer dårlig."
+        }
+      ]
+    },
+    {
+      "id": "nordic-resepsjon",
+      "tittel": "Resepsjonist",
+      "bedrift": "Nordic Front Desk AS",
+      "sted": "Kristiansund",
+      "kommune": "kristiansund",
+      "sone": "sentrum",
+      "stillingsprosent": "73,3 %",
+      "heltid": false,
+      "soknadsfrist": "15.11.2026",
+      "tiltredelse": "01.01.2027",
+      "kontaktperson": [
+        "Kari Nordmann",
+        "Ola Privat"
+      ],
+      "sokkeord": [
+        "kontor",
+        "resepsjon"
+      ],
+      "bilde": "annonse-resepsjon.jpg",
+      "tekst": "Nordic Front Desk AS søker en engasjert og serviceinnstilt resepsjonist til et travelt kontorbygg i Kristiansund.\n\nDu {{maa|må}} like å møte mennesker. Det er en {{fordel}} om du har erfaring fra resepsjon eller kundeservice.\n\nArbeidstid: mandag til fredag, klokka 07.30–13.00. Deltid, 73,3 %.\n\nDu trenger ikke {{forerkort|førerkort}}.",
+      "krav": [
+        {
+          "id": "nr-komp",
+          "kategori": "kompetanse",
+          "tekst": "Erfaring fra kundeservice eller resepsjon er en fordel.",
+          "fasit": {
+            "olena": "passer",
+            "taras": "passer_ikke",
+            "sofiia": "passer_ikke"
+          },
+          "forklaringPasser": "Du har jobbet med kunder. Det passer til resepsjon.",
+          "forklaringPasserIkke": "Du har ikke erfaring fra resepsjon eller kundeservice."
+        },
+        {
+          "id": "nr-eg",
+          "kategori": "egenskaper",
+          "tekst": "Du bør være blid og serviceinnstilt.",
+          "fasit": {
+            "olena": "passer",
+            "taras": "passer_ikke",
+            "sofiia": "passer_ikke"
+          },
+          "forklaringPasser": "Du er blid. Det passer til resepsjon.",
+          "forklaringPasserIkke": "Blid og serviceinnstilt står ikke på din liste."
+        },
+        {
+          "id": "nr-log",
+          "kategori": "logistikk",
+          "tekst": "Deltid i Kristiansund. Arbeidstid 07.30–13.00. Ikke krav om førerkort.",
+          "fasit": {
+            "olena": "passer_ikke",
+            "taras": "passer_ikke",
+            "sofiia": "passer_ikke"
+          },
+          "forklaringPasser": "Du kan komme deg til Kristiansund.",
+          "forklaringPasserIkke": "Jobben er i Kristiansund. Det kan være langt fra Molde."
         }
       ]
     },
