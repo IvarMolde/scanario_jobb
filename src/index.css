@@ -1378,6 +1378,15 @@ a {
   min-height: 240px;
 }
 
+/* Pleieassistent / arbeidsplassen-annonse – fyller containeren */
+.app-innhold .scene-bilde[src*='annonse-omsorg'] {
+  aspect-ratio: 1008 / 559;
+  object-fit: cover;
+  object-position: center top;
+  background: #fff;
+  min-height: 160px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
