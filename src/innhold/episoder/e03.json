@@ -307,9 +307,10 @@
       "dag": "Onsdag",
       "klokkeslett": "09:40",
       "app": "jobbportal",
+      "annonseId": "nordic-resepsjon",
       "media": {
         "bilde": "e03-s03-treff-foto.jpg",
-        "bildeAlt": "Stillingsannonse med nøkkelinformasjon: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson. Lagre søk er markert.",
+        "bildeAlt": "Stillingsannonse for Resepsjonist hos Nordic Front Desk AS med nøkkelinformasjon: søknadsfrist, stillingsprosent, tiltredelse og kontaktperson.",
         "lyd": "e03-s03-treff.wav"
       },
       "tekst": "Se på annonsen for Resepsjonist hos Nordic Front Desk AS. Bruk telefonen til venstre, og bildet her. Du kan klikke på bildet for å gjøre det større.\n\n{{soknadsfrist|Søknadsfrist}} er siste dag du kan søke.\n\n{{stillingsprosent}} sier hvor mye du skal jobbe.\n\n{{tiltredelse}} er når du skal begynne.\n\n{{kontaktperson}} er den du kan spørre.",

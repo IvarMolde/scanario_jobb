@@ -158,7 +158,11 @@ export function Telefon() {
               />
             ) : null}
             {app === 'jobbportal' ? (
-              <Jobbportal annonser={innhold.annonser} lagretSok={fremdrift.lagretSok} />
+              <Jobbportal
+                annonser={innhold.annonser}
+                lagretSok={fremdrift.lagretSok}
+                fokusAnnonseId={scene?.annonseId ?? null}
+              />
             ) : null}
             {app === 'jobbmagasin' ? (
               <Jobbmagasin

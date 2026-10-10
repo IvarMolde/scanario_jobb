@@ -5,10 +5,26 @@ import type { LagretSok } from '../../spill/tilstand'
 interface Props {
   annonser: Annonse[]
   lagretSok: LagretSok | null
+  /** Når satt: vis denne annonsen som treff (scenen krever en bestemt stilling) */
+  fokusAnnonseId?: string | null
 }
 
-export function Jobbportal({ annonser, lagretSok }: Props) {
-  const treff = lagretSok ? filtrerAnnonser(annonser, lagretSok) : annonser
+function formatKontakt(person: Annonse['kontaktperson']): string {
+  if (Array.isArray(person) && person.length > 1) {
+    return `Kontaktpersoner: ${person.join(' og ')}`
+  }
+  const navn = Array.isArray(person) ? person[0] : person
+  return `Kontaktperson: ${navn}`
+}
+
+export function Jobbportal({ annonser, lagretSok, fokusAnnonseId }: Props) {
+  const fokusAnnonse = fokusAnnonseId
+    ? (annonser.find((a) => a.id === fokusAnnonseId) ?? null)
+    : null
+  const filtrerte = lagretSok ? filtrerAnnonser(annonser, lagretSok) : annonser
+  const treff = fokusAnnonse
+    ? [fokusAnnonse]
+    : filtrerte
 
   return (
     <div>
@@ -16,10 +32,11 @@ export function Jobbportal({ annonser, lagretSok }: Props) {
         <h1>Jobbportal</h1>
         <p>Søk etter stillinger.</p>
       </header>
-      {lagretSok ? (
+      {lagretSok || fokusAnnonse ? (
         <p className="tilbakemelding info" role="status">
           Søket er lagret
-          {lagretSok.varsel ? '. Varsel er på.' : '.'} {treff.length} treff.
+          {lagretSok && !lagretSok.varsel && !fokusAnnonse ? '.' : '. Varsel er på.'}{' '}
+          {treff.length} treff.
         </p>
       ) : (
         <p>Lagre et søk i oppgaven. Da ser du trefflisten her.</p>
@@ -39,11 +56,7 @@ export function Jobbportal({ annonser, lagretSok }: Props) {
                 <li>Søknadsfrist: {a.soknadsfrist}</li>
                 <li>Stillingsprosent: {a.stillingsprosent}</li>
                 <li>Tiltredelse: {a.tiltredelse}</li>
-                <li>
-                  {Array.isArray(a.kontaktperson) && a.kontaktperson.length > 1
-                    ? `Kontaktpersoner: ${a.kontaktperson.join(' og ')}`
-                    : `Kontaktperson: ${Array.isArray(a.kontaktperson) ? a.kontaktperson[0] : a.kontaktperson}`}
-                </li>
+                <li>{formatKontakt(a.kontaktperson)}</li>
               </ul>
             </article>
           ))}
