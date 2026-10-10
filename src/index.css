@@ -1360,6 +1360,14 @@ a {
   background: #e8e2d6;
 }
 
+.scene-bilde[src*='e04-s02-krav'] {
+  aspect-ratio: 1024 / 365;
+  object-fit: cover;
+  object-position: center center;
+  background: #f4f4f4;
+  min-height: 150px;
+}
+
 /* Bunnpris-plakat i Jobbmagasinet – flat plakat fyller containeren */
 .app-innhold .scene-bilde[src*='annonse-havna'] {
   aspect-ratio: 509 / 645;

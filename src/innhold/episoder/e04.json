@@ -216,8 +216,8 @@
       "app": "jobbmagasin",
       "annonseId": "havna-handel",
       "media": {
-        "bilde": "e04-s02-krav.svg",
-        "bildeAlt": "Tekst med ordene må, bør og det er en fordel.",
+        "bilde": "e04-s02-krav.jpg",
+        "bildeAlt": "Ledig stilling med krav: må, krav og fordel. Søknadsfrist snarest.",
         "lyd": "e04-s02-krav.wav"
       },
       "tekst": "Les annonsen i magasinet.\n\n{{maa|Må}} er et {{krav}}.\n\n{{bor|Bør}} er et råd.\n\n«Det er en {{fordel}}» er et ønske, ikke et krav.\n\n{{kan|Kan}} betyr at noe er mulig.",
