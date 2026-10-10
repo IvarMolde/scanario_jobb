@@ -1369,6 +1369,15 @@ a {
   min-height: 220px;
 }
 
+/* Posten Bring-plakat – fyller containeren uten å kutte innhold */
+.app-innhold .scene-bilde[src*='annonse-fjordlager'] {
+  aspect-ratio: 551 / 856;
+  object-fit: cover;
+  object-position: center center;
+  background: #f5f5f5;
+  min-height: 240px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
