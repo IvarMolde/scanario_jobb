@@ -1387,6 +1387,15 @@ a {
   min-height: 160px;
 }
 
+/* Toma Renholder-plakat – fyller containeren */
+.app-innhold .scene-bilde[src*='annonse-renhold'] {
+  aspect-ratio: 764 / 1024;
+  object-fit: cover;
+  object-position: center center;
+  background: #f7f8fa;
+  min-height: 240px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
