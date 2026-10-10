@@ -1396,6 +1396,15 @@ a {
   min-height: 240px;
 }
 
+/* Syd Moldetorget kafé-annonse – fyller containeren */
+.app-innhold .scene-bilde[src*='annonse-kafe'] {
+  aspect-ratio: 764 / 1024;
+  object-fit: cover;
+  object-position: center center;
+  background: #f3eee6;
+  min-height: 240px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
