@@ -43,11 +43,11 @@
       "klokkeslett": "09:15",
       "app": "jobbmagasin",
       "media": {
-        "bilde": "e04-s01-magasin.svg",
-        "bildeAlt": "Et magasin med flere stillingsannonser fra Molde.",
+        "bilde": "e04-s01-magasin.jpg",
+        "bildeAlt": "Jobbmagasinet på et bord, med overskriften Jobbmagasinet og tips til jobbsøkere.",
         "lyd": "e04-s01-magasin.wav"
       },
-      "tekst": "Bla gjennom magasinets annonser.\n\nAlle elever ser de samme sju annonsene.\n\n{{match|Match}} betyr: passer jobben til deg?\n\nDu ser på {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.",
+      "tekst": "Bla gjennom magasinets annonser.\n\nBruk telefonen til venstre: Når det står «Bruk telefon» under telefonen, åpner du appen Jobbmagasinet. Bla mellom annonsene med pilene, og les kravene i hver annonse.\n\n{{match|Match}} betyr: passer jobben til deg?\n\nDu ser på {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.",
       "valg": [
         {
           "id": "til-lese",

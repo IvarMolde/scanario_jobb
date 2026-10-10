@@ -343,7 +343,8 @@ a {
 .telefon-ramme.telefon-aktiv {
   box-shadow:
     var(--skygge),
-    0 0 0 3px #1b6b93,
+    0 0 0 3px #146c43,
+    0 0 16px 2px rgba(20, 108, 67, 0.28),
     inset 0 0 0 1px rgba(255, 255, 255, 0.12),
     inset 0 0 0 3px #0a1018;
 }
@@ -587,13 +588,14 @@ a {
   margin: 0;
   width: 100%;
   padding: 0.55rem 0.85rem;
-  background: #e7f1f6;
-  border: 2px solid #1b6b93;
+  background: #e5f4ec;
+  border: 2px solid #146c43;
   border-radius: 8px;
-  color: #0b3d54;
+  color: #14532d;
   font-weight: 800;
   font-size: 1.05rem;
   text-align: center;
+  box-shadow: 0 0 0 2px rgba(20, 108, 67, 0.18);
 }
 
 .telefon-skjerm {
@@ -1350,6 +1352,12 @@ a {
 .scene-bilde[src$='.webp'] {
   object-fit: cover;
   object-position: top center;
+}
+
+.scene-bilde[src*='e04-s01-magasin'] {
+  object-fit: cover;
+  object-position: center;
+  background: #e8e2d6;
 }
 
 .scene-bilde-zoomhint {
@@ -2894,7 +2902,7 @@ a {
 
   .telefon-ramme.telefon-aktiv {
     box-shadow: none;
-    outline: 3px solid #1b6b93;
+    outline: 3px solid #146c43;
     outline-offset: -3px;
   }
 

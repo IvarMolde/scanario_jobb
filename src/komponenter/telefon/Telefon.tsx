@@ -79,7 +79,7 @@ export function Telefon() {
     if (!nySceneKreverTelefon && !nyttVarsel && !nyMelding) return
 
     if (nySceneKreverTelefon || nyttVarsel || nyMelding) setBlinker(true)
-    if (nyMelding) {
+    if (nySceneKreverTelefon || nyMelding) {
       setVibrerer(true)
       if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') {
         if (hapticInterval.current != null) window.clearInterval(hapticInterval.current)
