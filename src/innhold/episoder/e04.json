@@ -47,7 +47,7 @@
         "bildeAlt": "Jobbmagasinet på et bord, med overskriften Jobbmagasinet og tips til jobbsøkere.",
         "lyd": "e04-s01-magasin.wav"
       },
-      "tekst": "Bla gjennom magasinets annonser.\n\nBruk telefonen til venstre: Når det står «Bruk telefon» under telefonen, åpner du appen Jobbmagasinet. Bla mellom annonsene med pilene, og les kravene i hver annonse.\n\n{{match|Match}} betyr: passer jobben til deg?\n\nDu ser på {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.",
+      "tekst": "Bla gjennom magasinets annonser.\n\nBruk telefonen til venstre: Når det står «Bruk telefon» under telefonen, åpner du appen Jobbmagasinet. Bla mellom annonsene med pilene, og les kravene i hver annonse.\n\nOppgavene under bruker annonsene. Hver oppgave sier hvilken ledig stilling du skal åpne for å finne svaret.\n\n{{match|Match}} betyr: passer jobben til deg?\n\nDu ser på {{kompetanse}}, {{egenskap|egenskaper}} og {{logistikk}}.",
       "valg": [
         {
           "id": "til-lese",
@@ -58,78 +58,153 @@
       ],
       "oppgaver": [
         {
-          "type": "sant_usant",
-          "id": "e04-s01-su",
-          "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "Hver elev får ulike annonser i magasinet.",
-          "riktigErSant": false,
-          "tilbakemeldingRiktig": "Riktig. Annonsene er like. Det riktige svaret avhenger av personen.",
-          "tilbakemeldingFeil": "Dere leser de samme annonsene. Matchen er ulike, fordi personene er ulike."
-        },
-        {
           "type": "flervalg",
-          "id": "e04-s01-fv",
-          "instruksjon": "Velg det riktige svaret.",
-          "spoersmal": "Hva er logistikk i en matchvurdering her?",
+          "id": "e04-s01-fv1",
+          "instruksjon": "Åpne stillingen Butikkmedarbeider hos Bunnpris i Jobbmagasinet. Les annonsen, og velg riktig svar.",
+          "spoersmal": "Hvem er kontaktperson i annonsen for Butikkmedarbeider hos Bunnpris?",
           "alternativer": [
             {
               "id": "a",
-              "tekst": "Arbeidstid, reisetid med buss og krav om førerkort"
+              "tekst": "Kari Strand"
             },
             {
               "id": "b",
-              "tekst": "Bare lønn"
+              "tekst": "Erik Mo"
             },
             {
               "id": "c",
-              "tekst": "Bare navnet på bedriften"
+              "tekst": "Liv Hauge"
             }
           ],
           "riktigId": "a",
-          "tilbakemeldingRiktig": "Riktig. Kan du rekke jobben med buss? Må du ha førerkort?",
-          "tilbakemeldingFeil": "Logistikk her er tid og reise, ikke lønn."
+          "tilbakemeldingRiktig": "Riktig. I Bunnpris-annonsen står Kari Strand som kontaktperson.",
+          "tilbakemeldingFeil": "Bla til Butikkmedarbeider hos Bunnpris. Kontaktperson står nederst i listen."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s01-su1",
+          "instruksjon": "Åpne stillingen Lagermedarbeider hos Posten Bring. Les kravene, og velg sant eller usant.",
+          "paastand": "I annonsen for Lagermedarbeider hos Posten Bring må du ha førerkort klasse B.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Der står det at du må ha førerkort klasse B.",
+          "tilbakemeldingFeil": "Les Lagermedarbeider hos Posten Bring. Der står «Du må ha førerkort klasse B»."
+        },
+        {
+          "type": "skriv_svar",
+          "id": "e04-s01-sv1",
+          "instruksjon": "Åpne stillingen Pleieassistent ved Kirkebakken. Finn søknadsfristen, og skriv datoen med tall.",
+          "spoersmal": "Hva er søknadsfristen for Pleieassistent ved Kirkebakken?",
+          "hint": "dd.mm.åååå",
+          "riktigeSvar": [
+            "10.11.2026"
+          ],
+          "normalisering": "dato",
+          "tilbakemeldingRiktig": "Riktig. Søknadsfristen er 10.11.2026.",
+          "tilbakemeldingFeil": "Åpne Pleieassistent ved Kirkebakken. Søknadsfrist står i listen øverst i annonsen."
+        },
+        {
+          "type": "skriv_svar",
+          "id": "e04-s01-sv2",
+          "instruksjon": "Åpne stillingen Pleieassistent ved Kirkebakken. Finn stillingsprosenten, og skriv tallet.",
+          "spoersmal": "Hvilken stillingsprosent har Pleieassistent ved Kirkebakken?",
+          "hint": "f.eks. 10%",
+          "riktigeSvar": [
+            "80%",
+            "80 %"
+          ],
+          "normalisering": "prosent",
+          "tilbakemeldingRiktig": "Riktig. Det er en 80 %-stilling (deltid).",
+          "tilbakemeldingFeil": "Åpne Pleieassistent ved Kirkebakken. Stillingsprosent står i listen. Skriv 80%."
         },
         {
           "type": "ordbank",
           "id": "e04-s01-ob1",
-          "instruksjon": "Velg ordet som passer i setningen.",
-          "setning": "I jobbmagasinet finner du flere _____.",
+          "instruksjon": "Åpne stillingen Renholder hos Toma AS. Les arbeidstiden, og velg ordet som passer.",
+          "setning": "Renholder hos Toma AS starter klokka _____ om morgenen.",
           "ord": [
-            "annonser",
-            "oppskrifter",
-            "filmer"
+            "06.00",
+            "09.00",
+            "15.00"
           ],
-          "riktig": "annonser",
-          "tilbakemeldingRiktig": "Riktig. Magasinet viser øvingsannonser.",
-          "tilbakemeldingFeil": "Jobbmagasinet handler om stillingsannonser."
-        },
-        {
-          "type": "sant_usant",
-          "id": "e04-s01-su2",
-          "instruksjon": "Les påstanden. Velg sant eller usant.",
-          "paastand": "Du bør lese flere annonser før du velger jobb.",
-          "riktigErSant": true,
-          "tilbakemeldingRiktig": "Riktig. Da kan du sammenligne.",
-          "tilbakemeldingFeil": "Episoden handler om å se på flere jobber."
+          "riktig": "06.00",
+          "tilbakemeldingRiktig": "Riktig. Arbeidstiden er 06.00–09.00.",
+          "tilbakemeldingFeil": "Bla til Renholder hos Toma AS. Der står arbeidstid tidlig om morgenen, 06.00–09.00."
         },
         {
           "type": "matching",
           "id": "e04-s01-ma1",
-          "instruksjon": "Trykk på ordet, og velg forklaringen som passer.",
+          "instruksjon": "Bla i Jobbmagasinet. Koble hver stilling til riktig bedrift.",
           "par": [
             {
               "id": "p1",
-              "venstre": "annonse",
-              "hoyre": "tekst om ledig stilling"
+              "venstre": "Butikkmedarbeider",
+              "hoyre": "Bunnpris"
             },
             {
               "id": "p2",
-              "venstre": "arbeidsgiver",
-              "hoyre": "bedriften som søker folk"
+              "venstre": "Lagermedarbeider",
+              "hoyre": "Posten Bring"
+            },
+            {
+              "id": "p3",
+              "venstre": "Pleieassistent",
+              "hoyre": "Kirkebakken"
+            },
+            {
+              "id": "p4",
+              "venstre": "Kafémedarbeider",
+              "hoyre": "Syd Moldetorget"
             }
           ],
-          "tilbakemeldingRiktig": "Riktig. Viktige ord i jobbmagasinet.",
-          "tilbakemeldingFeil": "Les forklaringene en gang til."
+          "tilbakemeldingRiktig": "Riktig. Du fant stillingene i magasinet.",
+          "tilbakemeldingFeil": "Bla mellom annonsene. Stillings­tittel og bedrift står øverst i hver annonse."
+        },
+        {
+          "type": "flervalg",
+          "id": "e04-s01-fv2",
+          "instruksjon": "Åpne stillingen Hjelpearbeider hos Jatre. Les om førerkort, og velg riktig svar.",
+          "spoersmal": "Er førerkort klasse B et hardt krav i annonsen for Hjelpearbeider hos Jatre?",
+          "alternativer": [
+            {
+              "id": "a",
+              "tekst": "Nei. Det er en fordel, ikke et krav."
+            },
+            {
+              "id": "b",
+              "tekst": "Ja. Du må ha førerkort B."
+            },
+            {
+              "id": "c",
+              "tekst": "Annonsen sier ingenting om førerkort."
+            }
+          ],
+          "riktigId": "a",
+          "tilbakemeldingRiktig": "Riktig. Der står at førerkort B er en fordel.",
+          "tilbakemeldingFeil": "Les Hjelpearbeider hos Jatre. «Førerkort B er en fordel» er ikke det samme som «må»."
+        },
+        {
+          "type": "sorter_setning",
+          "id": "e04-s01-ss1",
+          "instruksjon": "Åpne stillingen Lagermedarbeider hos Posten Bring. Sett sammen setningen slik den står i annonsen.",
+          "biter": [
+            "Du",
+            "må",
+            "ha",
+            "førerkort",
+            "klasse",
+            "B."
+          ],
+          "tilbakemeldingRiktig": "Riktig. Slik står kravet i Posten Bring-annonsen.",
+          "tilbakemeldingFeil": "Les Lagermedarbeider hos Posten Bring: Du må ha førerkort klasse B."
+        },
+        {
+          "type": "sant_usant",
+          "id": "e04-s01-su2",
+          "instruksjon": "Åpne stillingen Kafémedarbeider ved Syd Moldetorget. Les annonsen, og velg sant eller usant.",
+          "paastand": "I annonsen for Kafémedarbeider ved Syd Moldetorget trenger du ikke førerkort.",
+          "riktigErSant": true,
+          "tilbakemeldingRiktig": "Riktig. Der står at du ikke trenger førerkort.",
+          "tilbakemeldingFeil": "Bla til Kafémedarbeider ved Syd Moldetorget. Der står «Ikke førerkort»."
         }
       ]
     },
