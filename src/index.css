@@ -1405,6 +1405,15 @@ a {
   min-height: 240px;
 }
 
+/* Jatre Hjelpearbeider-plakat – fyller containeren */
+.app-innhold .scene-bilde[src*='annonse-bygg'] {
+  aspect-ratio: 764 / 1024;
+  object-fit: cover;
+  object-position: center center;
+  background: #f5f7fa;
+  min-height: 240px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
