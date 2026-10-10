@@ -1414,6 +1414,15 @@ a {
   min-height: 240px;
 }
 
+/* Bekkevoll miljøarbeider-plakat – fyller containeren */
+.app-innhold .scene-bilde[src*='annonse-solsiden'] {
+  aspect-ratio: 764 / 1024;
+  object-fit: cover;
+  object-position: center center;
+  background: #eef2f7;
+  min-height: 240px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;

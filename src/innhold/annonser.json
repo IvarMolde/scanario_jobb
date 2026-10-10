@@ -358,19 +358,19 @@
         "omsorg",
         "assistent"
       ],
-      "bilde": "annonse-solsiden.svg",
-      "tekst": "Bekkevoll ungdomsskole søker {{miljoarbeider|miljøarbeider}}.\n\nDu {{maa|må}} være ansvarlig. Norsk A2 {{kan}} være nok.\n\nHeltid. Ikke {{forerkort|førerkort}}.",
+      "bilde": "annonse-solsiden.jpg",
+      "tekst": "Bekkevoll ungdomsskole søker {{miljoarbeider|miljøarbeider}}.\n\nDu {{maa|må}} være ansvarlig. Du {{maa|må}} snakke godt norsk.\n\nHeltid. Ikke {{forerkort|førerkort}}.",
       "krav": [
         {
           "id": "sb-komp",
           "kategori": "kompetanse",
-          "tekst": "Erfaring fra omsorg. Norsk A2.",
+          "tekst": "Erfaring fra omsorg. Du må snakke godt norsk.",
           "fasit": {
             "olena": "passer_ikke",
             "taras": "passer_ikke",
             "sofiia": "passer"
           },
-          "forklaringPasser": "Du har omsorgserfaring og norsk A2. Det passer.",
+          "forklaringPasser": "Du har omsorgserfaring og snakker godt norsk. Det passer.",
           "forklaringPasserIkke": "Du har ikke erfaring fra omsorg."
         },
         {
