@@ -55,7 +55,14 @@ export function Jobbmagasin({ annonser, startId, onVelgOrd, onBytt }: Props) {
         </button>
       </div>
       <article className="kort">
-        <SceneBilde fil={annonse.bilde} alt={`${annonse.tittel} hos ${annonse.bedrift}`} />
+        <SceneBilde
+          key={annonse.id}
+          fil={annonse.bilde}
+          alt={`${annonse.tittel} hos ${annonse.bedrift}`}
+          kanZoom
+          zoomModus="telefon"
+          prioritet
+        />
         <h2>{annonse.tittel}</h2>
         <p>{annonse.bedrift}</p>
         <p>
