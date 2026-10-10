@@ -1360,6 +1360,15 @@ a {
   background: #e8e2d6;
 }
 
+/* Bunnpris-plakat i Jobbmagasinet – fyll containeren rundt plakaten */
+.app-innhold .scene-bilde[src*='annonse-havna'] {
+  aspect-ratio: 6 / 7;
+  object-fit: cover;
+  object-position: center center;
+  background: #f4e000;
+  min-height: 210px;
+}
+
 .scene-bilde-zoomhint {
   position: absolute;
   right: 0.7rem;
